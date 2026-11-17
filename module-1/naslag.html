@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naslag · Module 1 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 1</div>
+<div class="module-kop"><h1>Module 1 · HTML &amp; CSS basis</h1><p>Je bouwt je eerste eigen webpagina: een profielpagina met HTML, opgemaakt met CSS.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Aan de slag</a>
+<a href="blok-2.html"><small>2</small>Tags</a>
+<a href="blok-3.html"><small>3</small>Het skelet</a>
+<a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
+<a href="blok-5.html"><small>5</small>CSS koppelen</a>
+<a href="blok-6.html"><small>6</small>Selectors</a>
+<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
+<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html" class="actief">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Naslag</h2>
+    <h2>HTML</h2>
+<p class="sub">Alles van module 1 op een rij. Kijk hier eerst als je iets kwijt bent.</p>
+<p class="bestandsnaam">De tags die je nu kent</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Grote kop<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Kopje daaronder<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Een alinea tekst<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Regel met bolletje<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://nu.nl"</span><span class="p">&gt;</span>Kliktekst<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"foto.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Foto van Sam"</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="bestandsnaam">Een complete pagina</p>
+<div class="code"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"nl"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mijn pagina<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sam Jansen<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition onthoud">
+<p class="admonition-title">Onthoud</p>
+<p>Openen en sluiten hoort bij elkaar: <code>&lt;p&gt; ... &lt;/p&gt;</code>. Alleen <code>&lt;img&gt;</code> sluit je niet. Typ het skelet met ! en dan Tab.</p>
+</div>
+<h2>CSS</h2>
+<p class="bestandsnaam">Eigenschappen die je kent</p>
+<div class="code"><pre><span></span><code><span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="nt">navy</span><span class="o">;</span>
+<span class="nt">background-color</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">2965F1</span><span class="o">;</span>
+<span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="nt">Arial</span><span class="o">;</span>
+<span class="nt">font-size</span><span class="o">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<span class="nt">text-align</span><span class="o">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="nt">text-decoration</span><span class="o">:</span><span class="w"> </span><span class="nt">none</span><span class="o">;</span>
+<span class="nt">padding</span><span class="o">:</span><span class="w"> </span><span class="nt">12px</span><span class="w"> </span><span class="nt">24px</span><span class="o">;</span>
+<span class="nt">margin</span><span class="o">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<span class="nt">border</span><span class="o">:</span><span class="w"> </span><span class="nt">2px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span>
+<span class="nt">border-radius</span><span class="o">:</span><span class="w"> </span><span class="nt">8px</span><span class="o">;</span>
+</code></pre></div>
+<p class="bestandsnaam">Een complete style.css</p>
+<div class="code"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">kop</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">knop</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition onthoud">
+<p class="admonition-title">De vorm van elke regel</p>
+<p><code>selector { eigenschap: waarde; }</code> Een dubbele punt tussen eigenschap en waarde, en een puntkomma erachter.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Koppelen aan je HTML</p>
+<p>Zet <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> in de head, en houd beide bestanden in dezelfde map.</p>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="werkt-het-niet.html">← Werkt het niet?</a><a class="volgende" href="woordenlijst.html">Woordenlijst →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

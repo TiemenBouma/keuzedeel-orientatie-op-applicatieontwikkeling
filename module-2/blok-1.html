@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opfrissen · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html" class="actief"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 1</div>
+    <h2 class="paginatitel">Opfrissen</h2>
+    <h2>Nieuw gereedschap: Prettier</h2>
+<p class="sub">Deze extensie zet je code bij elke keer opslaan netjes recht.</p>
+<ol>
+<li><strong>Open VS Code.</strong> Kijk in de balk helemaal links.</li>
+<li><strong>Klik op het blokjes-icoon.</strong> Dat is Extensions. Sneltoets: Ctrl + Shift + X.</li>
+<li><strong>Zoek op: Prettier.</strong> Kies <strong>Prettier - Code formatter</strong> van Prettier.</li>
+<li><strong>Klik op Install.</strong> Onder de naam staat esbenp.prettier-vscode. Kijk goed.</li>
+<li><strong>Zet de instellingen erin.</strong> Druk Ctrl + Shift + P, typ <strong>settings json</strong> en kies <strong>Open User Settings (JSON)</strong>. Zet de regels hieronder tussen de accolades.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"editor.formatOnSave"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"editor.defaultFormatter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"esbenp.prettier-vscode"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"editor.formatOnPaste"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Wat doet het?</p>
+<p>Bij elke Ctrl + S zet Prettier je code netjes recht en springt hij goed in. Scheve of niet gesloten code valt meteen op. Handmatig rechtzetten: Shift + Alt + F.</p>
+</div>
+<div class="admonition let-op">
+<p class="admonition-title">Staat er al iets in je settings?</p>
+<p>Staan er al regels tussen de accolades? Zet dan een komma achter de laatste regel en plak de drie nieuwe regels eronder. Er hoort maar één paar accolades in het bestand.</p>
+</div>
+<h2>Waar waren we gebleven?</h2>
+<p class="sub">Elke pagina begint met hetzelfde skelet.</p>
+<ol>
+<li><strong>Typ ! en druk op Tab.</strong> In een leeg bestand dat op .html eindigt. VS Code typt het skelet voor je.</li>
+<li><strong>In de head zet je informatie.</strong> De <code>&lt;title&gt;</code> voor het tabblad, en de koppeling naar je CSS. style.css staat in dezelfde map.</li>
+<li><strong>In de body zet je de inhoud.</strong> Alles wat de bezoeker moet zien staat tussen <code>&lt;body&gt;</code> en <code>&lt;/body&gt;</code>.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"nl"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Sam Jansen<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sam Jansen<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition let-op">
+<p class="admonition-title">Let op die link-regel</p>
+<p>Zonder die regel in de head doet je style.css helemaal niets. Dit is fout nummer 1 van module 1.</p>
+</div>
+<h2>Tags en classes, kort herhaald</h2>
+<p class="bestandsnaam">index.html</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"kop"</span><span class="p">&gt;</span>Sam<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ik woon in Utrecht.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Gamen<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>Mail mij<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="bestandsnaam">style.css</p>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kop</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">navy</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">gray</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><strong>De punt staat alleen in je CSS.</strong> In je HTML schrijf je <code>class="kop"</code> zonder punt. In je CSS wordt dat <code>.kop { }</code>.</li>
+<li><strong>Een tagnaam pakt alles.</strong> <code>p { }</code> past elke alinea op je pagina aan. Een class gebruik je zo vaak als je wilt.</li>
+</ol>
+<details class="check">
+<summary>Check: opfrissen</summary>
+<p><strong>1. Welke regel koppelt je CSS aan je HTML?</strong></p>
+<ul>
+<li>A. <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
+<li>B. <code>&lt;css src="style.css"&gt;</code></li>
+<li>C. <code>&lt;style href="style.css"&gt;</code></li>
+<li>D. <code>&lt;link css="style.css"&gt;</code></li>
+</ul>
+<p><strong>2. In je HTML staat <code>class="kaart"</code>. Hoe schrijf je die selector in CSS?</strong></p>
+<ul>
+<li>A. <code>kaart { }</code></li>
+<li>B. <code>.kaart { }</code></li>
+<li>C. <code>#kaart { }</code></li>
+<li>D. <code>class kaart { }</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. A – <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</strong> Die regel zet je in de head. rel zegt wat voor bestand het is, href zegt waar het staat.</p>
+<p><strong>2. B – <code>.kaart { }</code>.</strong> Een class herken je in CSS aan de punt ervoor. Zonder punt zoekt de browser naar een tag die kaart heet, en die bestaat niet.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">1. Zet je werkmap voor les 2 klaar</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-1</code></p>
+<ol>
+<li>Maak een map <code>les2-jouwnaam</code>. Maak daarin een map <code>opdracht-1</code>.</li>
+<li>Open VS Code, kies File &gt; Open Folder en kies <code>les2-jouwnaam</code>.</li>
+<li>Maak in <code>opdracht-1</code> een bestand index.html. Typ ! en druk op Tab.</li>
+<li>Zet je naam in de <code>&lt;title&gt;</code>. Maak een <code>&lt;h1&gt;</code> en twee alinea's.</li>
+<li>Maak style.css, koppel hem in de head en geef de body een kleur.</li>
+<li>Open met Live Server en kijk of je kleur er staat.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<p><div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="code"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#E8EAF6</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je pagina heeft een eigen achtergrondkleur en in het tabblad staat je naam. Lukt het niet uit je hoofd? De naslag van module 1 mag erbij. Probeer het daarna nog een keer zonder.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="index.html">← Start</a><a class="volgende" href="blok-2.html">Blok 2 · Groeperen met div →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

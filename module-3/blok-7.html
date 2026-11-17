@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breedte en centreren · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Lettertypes</a>
+<a href="blok-3.html"><small>3</small>Google Fonts</a>
+<a href="blok-4.html"><small>4</small>Kleuren</a>
+<a href="blok-5.html"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html" class="actief"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 7</div>
+    <h2 class="paginatitel">Breedte en centreren</h2>
+    <h2>Hoe breed is een blok?</h2>
+<p class="sub">Uit zichzelf is een blok net zo breed als het scherm.</p>
+<ol>
+<li><strong>width.</strong> Een vaste breedte, zoals <code>width: 300px</code>. Op een klein scherm past dat soms niet. Die heb je nu niet nodig.</li>
+<li><strong>max-width.</strong> Nooit breder dan dit, bijvoorbeeld <code>max-width: 800px</code>. Op een klein scherm wordt hij smaller. Dit is de enige die je typt.</li>
+<li><strong>Procenten.</strong> <code>width: 50%</code> is de helft van het blok waar hij in staat.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">Boven: zo breed als het scherm. Onder: max-width, de rest blijft leeg.</div><iframe class="demo-frame" loading="lazy" title="Boven: zo breed als het scherm. Onder: max-width, de rest blijft leeg." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;div{background:#E8EAF6;border-radius:6px;padding:8px;margin-bottom:8px;font-size:13px}&lt;/style&gt;
+&lt;div&gt;Zonder max-width: zo breed als het scherm&lt;/div&gt;
+&lt;div style=&quot;max-width:60%&quot;&gt;Met max-width: stopt bij een vaste breedte&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Lange regels lezen lastig</p>
+<p>Bij heel lange regels raak je de draad kwijt. Daarom maken sites hun tekst meestal niet breder dan zo'n 800px.</p>
+</div>
+<h2>Een blok in het midden zetten</h2>
+<p class="sub">Met <code>margin: 0 auto</code> verdeelt de browser de lege ruimte eerlijk.</p>
+<ol>
+<li><strong>margin: 0 auto.</strong> 0 is boven en onder. auto is links en rechts: de browser verdeelt de lege ruimte gelijk.</li>
+<li><strong>Werkt alleen met een breedte.</strong> Zonder max-width is het blok al zo breed als het scherm. Dan valt er niets te verdelen.</li>
+<li><strong>Plaatjes die meekrimpen.</strong> img met <code>max-width: 100%</code> wordt nooit breder dan het blok waar hij in staat.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">main met max-width en margin: 0 auto</div><iframe class="demo-frame" loading="lazy" title="main met max-width en margin: 0 auto" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;body{background:#f6f7fc}main{max-width:60%;margin:0 auto;background:#E8EAF6;border-radius:6px;padding:12px;text-align:center}&lt;/style&gt;
+&lt;main&gt;main staat in het midden&lt;/main&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">Niet hetzelfde als text-align</p>
+<p><code>text-align: center</code> zet de tekst in het midden. <code>margin: 0 auto</code> zet het hele blok in het midden.</p>
+</div>
+<details class="check">
+<summary>Check: breedte en centreren</summary>
+<p><strong>1. Welke regel zet een blok met max-width in het midden?</strong></p>
+<ul>
+<li>A. <code>margin: 0 auto;</code></li>
+<li>B. <code>text-align: center;</code></li>
+<li>C. <code>padding: auto;</code></li>
+<li>D. <code>align: middle;</code></li>
+</ul>
+<p><strong>2. Wat doet max-width: 800px op een telefoon van 400px breed?</strong></p>
+<ul>
+<li>A. Het blok steekt uit het scherm</li>
+<li>B. De letters worden kleiner</li>
+<li>C. Het blok verdwijnt</li>
+<li>D. Het blok wordt smaller</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. A – <code>margin: 0 auto;</code></strong> auto verdeelt de lege ruimte links en rechts gelijk. text-align: center zet alleen de tekst in het midden, niet het blok.</p>
+<p><strong>2. D – het blok wordt smaller.</strong> max-width is een grens, geen vaste maat. Is het scherm smaller, dan wordt het blok gewoon mee smaller. Met <code>width: 800px</code> zou het wel uitsteken.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">7. Zet je inhoud in het midden</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-7</code></p>
+<ol>
+<li>Kopieer <code>opdracht-6</code> naar een nieuwe map <code>opdracht-7</code>.</li>
+<li>Geef main een max-width van 800px.</li>
+<li>Zet main in het midden met <code>margin: 0 auto</code>.</li>
+<li>Geef img een max-width van 100%.</li>
+<li>Maak je Chrome-venster smaller en kijk wat er gebeurt.</li>
+<li>Druk in de DevTools op Ctrl + Shift + M en kies bovenin een telefoon.</li>
+</ol>
+<details class="hint">
+<summary>Codehint</summary>
+<div class="code"><pre><span></span><code><span class="nt">main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Op een breed scherm staan je kaarten netjes in het midden. Op een telefoon steekt er niets uit, ook je foto niet.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-6.html">← Blok 6 · Verloop en schaduw</a><a class="volgende" href="blok-8.html">Blok 8 · Hover en overgang →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

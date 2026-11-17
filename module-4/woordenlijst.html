@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woordenlijst · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html" class="actief">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Woordenlijst</h2>
+    <p class="sub">De Engelse woorden van module 4, met de Nederlandse vertaling en uitleg in gewone taal. De woorden van module 1 t/m 3 staan in de woordenlijst van die modules.</p>
+<table>
+<thead>
+<tr>
+<th>Engels</th>
+<th>Nederlands</th>
+<th>Uitleg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>layout</strong></td>
+<td>indeling</td>
+<td>hoe de blokken op je pagina staan</td>
+</tr>
+<tr>
+<td><strong>block</strong></td>
+<td>blok</td>
+<td>pakt de hele breedte, begint op een nieuwe regel</td>
+</tr>
+<tr>
+<td><strong>inline</strong></td>
+<td>in de regel</td>
+<td>zo breed als de inhoud, staat naast andere</td>
+</tr>
+<tr>
+<td><strong>display</strong></td>
+<td>weergave</td>
+<td>block, inline of flex</td>
+</tr>
+<tr>
+<td><strong>flexbox</strong> (flexible box)</td>
+<td>flexibele doos</td>
+<td>items in een rij of kolom zetten</td>
+</tr>
+<tr>
+<td><strong>container</strong></td>
+<td>houder</td>
+<td>de doos met display: flex</td>
+</tr>
+<tr>
+<td><strong>item</strong></td>
+<td>onderdeel</td>
+<td>wat direct in de container staat</td>
+</tr>
+<tr>
+<td><strong>gap</strong></td>
+<td>tussenruimte</td>
+<td>ruimte tussen de items</td>
+</tr>
+<tr>
+<td><strong>direction</strong></td>
+<td>richting</td>
+<td>row of column</td>
+</tr>
+<tr>
+<td><strong>row</strong></td>
+<td>rij</td>
+<td>naast elkaar</td>
+</tr>
+<tr>
+<td><strong>column</strong></td>
+<td>kolom</td>
+<td>onder elkaar</td>
+</tr>
+<tr>
+<td><strong>justify</strong></td>
+<td>uitvullen</td>
+<td>verdelen in de hoofdrichting</td>
+</tr>
+<tr>
+<td><strong>align-items</strong></td>
+<td>items uitlijnen</td>
+<td>uitlijnen in de andere richting</td>
+</tr>
+<tr>
+<td><strong>start / end</strong></td>
+<td>begin / eind</td>
+<td>links of rechts, boven of onder</td>
+</tr>
+<tr>
+<td><strong>stretch</strong></td>
+<td>uitrekken</td>
+<td>items even hoog maken</td>
+</tr>
+<tr>
+<td><strong>space-between</strong></td>
+<td>ruimte ertussen</td>
+<td>eerste links, laatste rechts</td>
+</tr>
+<tr>
+<td><strong>wrap</strong></td>
+<td>laten doorlopen</td>
+<td>naar een nieuwe regel</td>
+</tr>
+<tr>
+<td><strong>min-width</strong></td>
+<td>minimale breedte</td>
+<td>nooit smaller dan dit</td>
+</tr>
+<tr>
+<td><strong>media query</strong></td>
+<td>schermvraag</td>
+<td>CSS die alleen bij een bepaalde breedte geldt</td>
+</tr>
+<tr>
+<td><strong>viewport</strong></td>
+<td>zichtbaar venster</td>
+<td>het stuk scherm waarin je pagina staat</td>
+</tr>
+</tbody>
+</table>
+    <div class="vorige-volgende"><a class="vorige" href="naslag.html">← Naslag</a><span></span></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

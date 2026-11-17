@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naslag · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html" class="actief">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Naslag</h2>
+    <h2>flexbox</h2>
+<p class="sub">Alles van blok 1 t/m 6 bij elkaar. Kijk hier eerst als je iets kwijt bent.</p>
+<p class="bestandsnaam">Op de container</p>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaarten</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">row</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p class="bestandsnaam">Op de items</p>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">breed</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition onthoud">
+<p class="admonition-title">Container en items</p>
+<p>De container is de doos met <code>display: flex</code>. Alleen wat er direct in staat, zijn items.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">De waarden op een rij</p>
+<p><strong>justify-content:</strong> flex-start, center, flex-end, space-between.<br>
+<strong>align-items:</strong> stretch, flex-start, center, flex-end.</p>
+</div>
+<h2>Header, menu en telefoon</h2>
+<p class="sub">Alles van blok 7 en 8, en de DevTools.</p>
+<p class="bestandsnaam">Header en menu</p>
+<div class="code"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">nav</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p class="bestandsnaam">Media query</p>
+<div class="code"><pre><span></span><code><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">600px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">header</span><span class="o">,</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">kaarten</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">DevTools</p>
+<p>F12 opent ze. Klik op het label flex voor de paarse lijnen. Het icoontje naast <code>display: flex</code> opent de flex-knoppen. Ctrl + Shift + M toont een telefoon.</p>
+</div>
+<div class="admonition onthoud">
+<p class="admonition-title">Onthoud</p>
+<p>Flex zet je op de ouder. De media query staat helemaal onderaan je style.css.</p>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="werkt-het-niet.html">← Werkt het niet?</a><a class="volgende" href="woordenlijst.html">Woordenlijst →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

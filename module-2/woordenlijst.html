@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woordenlijst · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html" class="actief">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Woordenlijst</h2>
+    <p class="sub">De Engelse woorden van module 2, met de Nederlandse vertaling en uitleg in gewone taal. De woorden van module 1 staan in de woordenlijst van module 1.</p>
+<table>
+<thead>
+<tr>
+<th>Engels</th>
+<th>Nederlands</th>
+<th>Uitleg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>div</strong> (division)</td>
+<td>vak, deel</td>
+<td>doos zonder betekenis om te groeperen</td>
+</tr>
+<tr>
+<td><strong>nesting / nested</strong></td>
+<td>nesten / genest</td>
+<td>een tag in een andere tag</td>
+</tr>
+<tr>
+<td><strong>indent</strong></td>
+<td>inspringen</td>
+<td>code naar rechts zetten met Tab</td>
+</tr>
+<tr>
+<td><strong>format</strong></td>
+<td>opmaken</td>
+<td>code netjes rechtzetten (Prettier)</td>
+</tr>
+<tr>
+<td><strong>semantic</strong></td>
+<td>betekenisvol</td>
+<td>de tag zegt wat het is</td>
+</tr>
+<tr>
+<td><strong>header</strong></td>
+<td>kopgedeelte</td>
+<td>bovenkant van je pagina</td>
+</tr>
+<tr>
+<td><strong>nav</strong> (navigation)</td>
+<td>navigatie</td>
+<td>het menu</td>
+</tr>
+<tr>
+<td><strong>main</strong></td>
+<td>hoofdinhoud</td>
+<td>waar het op de pagina om gaat</td>
+</tr>
+<tr>
+<td><strong>section</strong></td>
+<td>deel, sectie</td>
+<td>stuk pagina met een eigen kopje</td>
+</tr>
+<tr>
+<td><strong>footer</strong></td>
+<td>voettekst</td>
+<td>onderkant van je pagina</td>
+</tr>
+<tr>
+<td><strong>id</strong> (identifier)</td>
+<td>kenmerk</td>
+<td>naam die maar één keer mag</td>
+</tr>
+<tr>
+<td><strong>anchor link</strong></td>
+<td>ankerlink</td>
+<td>link met een hekje, blijft op de pagina</td>
+</tr>
+<tr>
+<td><strong>path</strong></td>
+<td>pad</td>
+<td>route naar een bestand</td>
+</tr>
+<tr>
+<td><strong>subfolder</strong></td>
+<td>submap</td>
+<td>map in een map, zoals images</td>
+</tr>
+<tr>
+<td><strong>index</strong></td>
+<td>inhoudsopgave</td>
+<td>index.html is de startpagina</td>
+</tr>
+<tr>
+<td><strong>menu bar</strong></td>
+<td>menubalk</td>
+<td>balk met links naar je pagina's</td>
+</tr>
+<tr>
+<td><strong>list-style</strong></td>
+<td>lijststijl</td>
+<td>wel of geen bolletjes</td>
+</tr>
+<tr>
+<td><strong>inline-block</strong></td>
+<td>op één regel, als blok</td>
+<td>zet elementen naast elkaar</td>
+</tr>
+<tr>
+<td><strong>hover</strong></td>
+<td>zweven</td>
+<td>hoe iets eruitziet onder je muis</td>
+</tr>
+<tr>
+<td><strong>active</strong></td>
+<td>actief</td>
+<td>de pagina waar je nu bent</td>
+</tr>
+<tr>
+<td><strong>shadow</strong></td>
+<td>schaduw</td>
+<td>box-shadow onder een element</td>
+</tr>
+</tbody>
+</table>
+    <div class="vorige-volgende"><a class="vorige" href="naslag.html">← Naslag</a><span></span></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

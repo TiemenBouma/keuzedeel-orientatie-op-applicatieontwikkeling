@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>justify-content · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html" class="actief"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 4</div>
+    <h2 class="paginatitel">justify-content</h2>
+    <h2>Items verdelen met justify-content</h2>
+<p class="sub">Waar komt de lege ruimte in de rij?</p>
+<ol>
+<li><strong>flex-start:</strong> alles links. Dit is de standaard.</li>
+<li><strong>center:</strong> alles in het midden.</li>
+<li><strong>flex-end:</strong> alles rechts.</li>
+<li><strong>space-between:</strong> eerste links, laatste rechts, de rest ertussen.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">Dezelfde drie items met vier waarden van justify-content</div><iframe class="demo-frame" loading="lazy" title="Dezelfde drie items met vier waarden van justify-content" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.r{display:flex;gap:6px;background:#f6f7fc;border:1px dashed #b8bddc;border-radius:6px;padding:6px;margin-bottom:8px}.r div{background:#2965F1;color:#fff;width:34px;text-align:center;border-radius:4px;padding:3px 0}small{display:block;font-family:Consolas,monospace;font-size:12px;color:#5b6075;margin-bottom:2px}&lt;/style&gt;
+&lt;small&gt;flex-start&lt;/small&gt;&lt;div class=&quot;r&quot; style=&quot;justify-content:flex-start&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;
+&lt;small&gt;center&lt;/small&gt;&lt;div class=&quot;r&quot; style=&quot;justify-content:center&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;
+&lt;small&gt;flex-end&lt;/small&gt;&lt;div class=&quot;r&quot; style=&quot;justify-content:flex-end&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;
+&lt;small&gt;space-between&lt;/small&gt;&lt;div class=&quot;r&quot; style=&quot;justify-content:space-between&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Alleen als er ruimte over is</p>
+<p>Vullen je items de hele rij al, dan valt er niets te verdelen. Dan zie je geen verschil.</p>
+</div>
+<h2>justify-content in je site</h2>
+<p class="sub">Twee waarden die je vaak ziet.</p>
+<ol>
+<li><strong>space-between.</strong> Het eerste item helemaal links, het laatste helemaal rechts. Goed voor een naam links en een menu rechts.</li>
+<li><strong>center.</strong> Alles in het midden. Bijvoorbeeld een rij knoppen of één kaart.</li>
+<li><strong>Op de container.</strong> Ook <code>justify-content</code> zet je op de doos met <code>display: flex</code>.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Zo ziet je footer eruit</div><iframe class="demo-frame" loading="lazy" title="Zo ziet je footer eruit" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;footer{display:flex;justify-content:space-between;background:#1B1F3B;color:#fff;padding:10px 14px;border-radius:6px;font-size:14px}&lt;/style&gt;
+&lt;footer&gt;&lt;span&gt;sam@mail.nl&lt;/span&gt;&lt;span&gt;Utrecht&lt;/span&gt;&lt;span&gt;© 2026 Sam Jansen&lt;/span&gt;&lt;/footer&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Probeer het met de flex-knop</p>
+<p>Klik bij Styles op het icoontje naast <code>display: flex</code>. Klik op de knoppen bij justify-content en kijk wat er gebeurt.</p>
+</div>
+<details class="check">
+<summary>Check: justify-content</summary>
+<p><strong>1. Je wilt je naam links en je menu rechts. Welke waarde kies je?</strong></p>
+<ul>
+<li>A. center</li>
+<li>B. flex-start</li>
+<li>C. space-between</li>
+<li>D. flex-end</li>
+</ul>
+<p><strong>2. Waar zet je justify-content?</strong></p>
+<ul>
+<li>A. Op de container</li>
+<li>B. Op elk item</li>
+<li>C. In de HTML</li>
+<li>D. Bij :hover</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. C – space-between.</strong> De lege ruimte komt tussen de items. Het eerste gaat helemaal naar links, het laatste helemaal naar rechts. Bij flex-start staan ze allebei links, bij flex-end allebei rechts.</p>
+<p><strong>2. A – op de container.</strong> Alles wat de rij regelt, zet je op de container: <code>display: flex</code>, <code>gap</code> en <code>justify-content</code>.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">4. Verdeel de ruimte</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-4</code></p>
+<ol>
+<li>Kopieer <code>opdracht-3</code> naar een nieuwe map <code>opdracht-4</code>.</li>
+<li>Probeer in de DevTools met de flex-knop alle waarden van justify-content op je footer.</li>
+<li>Kies de waarde die de drie dingen over de hele breedte verdeelt. Typ die over in style.css.</li>
+<li>Zet de kaarten in <code>.kaarten</code> in het midden van de rij.</li>
+<li>Kijk op contact.html: je ene kaart staat nu in het midden.</li>
+<li>Kijk op index.html: verandert er iets aan je kaarten? Waarom niet?</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">knoppen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="o">...</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>De dingen in je footer zijn verdeeld over de hele breedte. De kaart op je contactpagina staat in het midden.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-3.html">← Blok 3 · gap en richting</a><a class="volgende" href="blok-5.html">Blok 5 · align-items →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

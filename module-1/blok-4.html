@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koppen en lijstjes · Module 1 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 1</div>
+<div class="module-kop"><h1>Module 1 · HTML &amp; CSS basis</h1><p>Je bouwt je eerste eigen webpagina: een profielpagina met HTML, opgemaakt met CSS.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Aan de slag</a>
+<a href="blok-2.html"><small>2</small>Tags</a>
+<a href="blok-3.html"><small>3</small>Het skelet</a>
+<a href="blok-4.html" class="actief"><small>4</small>Koppen en lijstjes</a>
+<a href="blok-5.html"><small>5</small>CSS koppelen</a>
+<a href="blok-6.html"><small>6</small>Selectors</a>
+<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
+<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 4</div>
+    <h2 class="paginatitel">Koppen en lijstjes</h2>
+    <h2>Koppen en lijstjes</h2>
+<p class="sub">Zo krijgt je pagina structuur.</p>
+<ol>
+<li><strong>Koppen: h1 tot en met h6.</strong> h1 is de grootste, h6 de kleinste. Gebruik h1 voor de titel van je pagina en h2 voor de kopjes daaronder.</li>
+<li><strong>Lijstje: ul met li erin.</strong> De <code>&lt;ul&gt;</code> is de lijst zelf. Elke <code>&lt;li&gt;</code> is één regel met een bolletje ervoor.</li>
+<li><strong>Nummers in plaats van bolletjes?</strong> Gebruik dan <code>&lt;ol&gt;</code> in plaats van <code>&lt;ul&gt;</code>. De li's blijven precies hetzelfde.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Mijn hobby's<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Gamen<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Fietsen<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Tekenen<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Eerst dit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Daarna dit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">ul geeft bolletjes, ol geeft nummers</div><iframe class="demo-frame" loading="lazy" title="ul geeft bolletjes, ol geeft nummers" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;h2 style=&quot;margin:0 0 4px&quot;&gt;Mijn hobby&#x27;s&lt;/h2&gt;
+&lt;ul style=&quot;margin-top:0&quot;&gt;&lt;li&gt;Gamen&lt;/li&gt;&lt;li&gt;Fietsen&lt;/li&gt;&lt;li&gt;Tekenen&lt;/li&gt;&lt;/ul&gt;
+&lt;ol&gt;&lt;li&gt;Eerst dit&lt;/li&gt;&lt;li&gt;Daarna dit&lt;/li&gt;&lt;/ol&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Engelse woorden</p>
+<p>ul staat voor <em>unordered list</em> (lijst zonder volgorde), ol voor <em>ordered list</em> (lijst met volgorde), li voor <em>list item</em> (regel van de lijst).</p>
+</div>
+<h2>Links en plaatjes</h2>
+<p class="sub">Deze twee tags hebben extra informatie nodig. Die extra informatie heet een <strong>attribuut</strong> en zet je in de openingstag.</p>
+<ol>
+<li><strong>Een link: <code>&lt;a&gt;</code>.</strong> <code>href</code> is het adres waar de link naartoe gaat. De tekst tussen <code>&lt;a&gt;</code> en <code>&lt;/a&gt;</code> is wat je aanklikt.</li>
+<li><strong>Een plaatje: <code>&lt;img&gt;</code>.</strong> <code>src</code> is de bestandsnaam van je foto. <code>alt</code> beschrijft wat erop staat. <code>&lt;img&gt;</code> sluit je niet: er is geen <code>&lt;/img&gt;</code>.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://nu.nl"</span><span class="p">&gt;</span>Naar het nieuws<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"foto.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Foto van Sam"</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Een link, en een foto die niet gevonden wordt: dan zie je de alt-tekst</div><iframe class="demo-frame" loading="lazy" title="Een link, en een foto die niet gevonden wordt: dan zie je de alt-tekst" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;a href=&quot;#&quot;&gt;Naar het nieuws&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;bestaat-niet.jpg&quot; alt=&quot;Foto van Sam&quot; style=&quot;border:1px dashed #b8bddc;padding:20px&quot;&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition let-op">
+<p class="admonition-title">Let op: dezelfde map</p>
+<p>Je foto moet in dezelfde map staan als je index.html. Staat hij ergens anders, dan blijft de plek op je pagina leeg.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Waarom alt-tekst?</p>
+<p>Blinde bezoekers laten de tekst voorlezen door hun computer. En als je foto kapot is, zie je de alt-tekst staan.</p>
+</div>
+<details class="check">
+<summary>Check: koppen, lijstjes, links</summary>
+<p><strong>1. Welke tag maakt een lijstje met bolletjes?</strong></p>
+<ul>
+<li>A. <code>&lt;ol&gt;</code></li>
+<li>B. <code>&lt;li&gt;</code></li>
+<li>C. <code>&lt;ul&gt;</code></li>
+<li>D. <code>&lt;list&gt;</code></li>
+</ul>
+<p><strong>2. Wat hoort er bij <code>&lt;img&gt;</code> om het plaatje te vinden?</strong></p>
+<ul>
+<li>A. href</li>
+<li>B. src</li>
+<li>C. link</li>
+<li>D. file</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. C – <code>&lt;ul&gt;</code>.</strong> <code>&lt;ul&gt;</code> is de lijst met bolletjes. De <code>&lt;li&gt;</code> daarbinnen zijn de losse regels. <code>&lt;ol&gt;</code> geeft nummers.</p>
+<p><strong>2. B – src.</strong> src betekent source, oftewel bron. href gebruik je bij een link, niet bij een plaatje.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">4. Vul je pagina aan</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-4</code></p>
+<ol>
+<li>Maak map <code>opdracht-4</code> met een nieuw index.html: ! en dan Tab.</li>
+<li>Neem je h1 en je alinea's uit opdracht-3 over in de body.</li>
+<li>Zet een <code>&lt;h2&gt;</code> met Mijn hobby's en daaronder een lijstje met drie hobby's.</li>
+<li>Zet er een link in naar een site die je vaak gebruikt.</li>
+<li>Zet een foto in <code>opdracht-4</code> en toon hem met <code>&lt;img&gt;</code> en een alt-tekst.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Mijn hobby's<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je pagina heeft nu een kop, tekst, een lijstje, een werkende link en een plaatje.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-3.html">← Blok 3 · Het skelet</a><a class="volgende" href="blok-5.html">Blok 5 · CSS koppelen →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

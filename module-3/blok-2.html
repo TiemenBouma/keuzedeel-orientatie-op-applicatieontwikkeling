@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lettertypes · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html" class="actief"><small>2</small>Lettertypes</a>
+<a href="blok-3.html"><small>3</small>Google Fonts</a>
+<a href="blok-4.html"><small>4</small>Kleuren</a>
+<a href="blok-5.html"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 2</div>
+    <h2 class="paginatitel">Lettertypes</h2>
+    <h2>Een lettertype kiezen</h2>
+<p class="sub">Met <code>font-family</code> bepaal je welk lettertype de browser gebruikt.</p>
+<figure class="demo"><div class="demo-titel">Vier lettertypes die op elke Windows-laptop staan</div><iframe class="demo-frame" loading="lazy" title="Vier lettertypes die op elke Windows-laptop staan" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.r{display:flex;gap:10px;flex-wrap:wrap}.r div{flex:1;min-width:130px;background:#f6f7fc;border-radius:8px;padding:10px}.n{font-size:20px;margin-bottom:4px}small{color:#5b6075;font-family:Arial;font-size:12px}&lt;/style&gt;
+&lt;div class=&quot;r&quot;&gt;
+&lt;div&gt;&lt;div class=&quot;n&quot; style=&quot;font-family:Arial&quot;&gt;Sam Jansen&lt;/div&gt;&lt;small&gt;&lt;b&gt;Arial&lt;/b&gt; · zonder schreef. Strak en rustig.&lt;/small&gt;&lt;/div&gt;
+&lt;div&gt;&lt;div class=&quot;n&quot; style=&quot;font-family:Verdana&quot;&gt;Sam Jansen&lt;/div&gt;&lt;small&gt;&lt;b&gt;Verdana&lt;/b&gt; · extra breed. Makkelijk te lezen.&lt;/small&gt;&lt;/div&gt;
+&lt;div&gt;&lt;div class=&quot;n&quot; style=&quot;font-family:Georgia&quot;&gt;Sam Jansen&lt;/div&gt;&lt;small&gt;&lt;b&gt;Georgia&lt;/b&gt; · met schreef. Voelt als een boek.&lt;/small&gt;&lt;/div&gt;
+&lt;div&gt;&lt;div class=&quot;n&quot; style=&quot;font-family:&#x27;Courier New&#x27;&quot;&gt;Sam Jansen&lt;/div&gt;&lt;small&gt;&lt;b&gt;Courier New&lt;/b&gt; · allemaal even breed, zoals code.&lt;/small&gt;&lt;/div&gt;
+&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">Zet er altijd een reserve achter</p>
+<p><code>font-family: Verdana, sans-serif;</code> De komma betekent: anders dit. Heeft een computer Verdana niet, dan pakt de browser een ander lettertype zonder schreef.</p>
+</div>
+<h2>Dikte, schuin en regelafstand</h2>
+<p class="sub">Drie eigenschappen die je tekst beter leesbaar maken.</p>
+<ol>
+<li><strong>font-weight.</strong> Hoe dik de letters zijn. <code>bold</code> is dik, <code>normal</code> is gewoon.</li>
+<li><strong>font-style.</strong> <code>italic</code> maakt je tekst schuin. <code>normal</code> zet het weer recht.</li>
+<li><strong>line-height.</strong> De ruimte tussen de regels. Zonder px erachter: <code>1.5</code> is anderhalf keer zo hoog als je letters.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Verdana</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">footer</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">line-height: 1</div><iframe class="demo-frame" loading="lazy" title="line-height: 1" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;p style=&quot;line-height:1;margin:0&quot;&gt;Ik ben Sam. Ik woon in Utrecht en fiets elke dag naar school. In het weekend game ik met vrienden.&lt;/p&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">line-height: 1.5</div><iframe class="demo-frame" loading="lazy" title="line-height: 1.5" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;p style=&quot;line-height:1.5;margin:0&quot;&gt;Ik ben Sam. Ik woon in Utrecht en fiets elke dag naar school. In het weekend game ik met vrienden.&lt;/p&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Probeer het in de DevTools</p>
+<p>Klik op een alinea en verander line-height van 1 naar 2. Zie je de regels uit elkaar schuiven?</p>
+</div>
+<details class="check">
+<summary>Check: lettertypes</summary>
+<p><strong>1. Wat betekent de komma in <code>font-family: Verdana, sans-serif;</code>?</strong></p>
+<ul>
+<li>A. Verdana, en anders sans-serif</li>
+<li>B. Gebruik ze allebei tegelijk</li>
+<li>C. Verdana wordt schuin</li>
+<li>D. Het is een typefout</li>
+</ul>
+<p><strong>2. Welke eigenschap zet meer ruimte tussen de regels?</strong></p>
+<ul>
+<li>A. font-size</li>
+<li>B. font-weight</li>
+<li>C. line-height</li>
+<li>D. padding</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. A – Verdana, en anders sans-serif.</strong> De browser probeert eerst het eerste lettertype. Heeft de computer dat niet, dan pakt hij het volgende uit het rijtje.</p>
+<p><strong>2. C – line-height.</strong> font-size maakt de letters zelf groter. padding maakt ruimte binnen de rand van een element, niet tussen de regels.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">2. Geef je site een eigen lettertype</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-2</code></p>
+<ol>
+<li>Kopieer <code>opdracht-1</code> naar een nieuwe map <code>opdracht-2</code>.</li>
+<li>Geef body een font-family en een reserve font-family.</li>
+<li>Kies een ander lettertype voor je h1.</li>
+<li>Geef body een line-height van 1.5.</li>
+<li>Maak de tekst in je footer schuin met font-style.</li>
+<li>Klik met F12 op een alinea. In de DevTools onderaan bij Computed staat welk lettertype echt gebruikt wordt.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Verdana</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Georgia</span><span class="p">,</span><span class="w"> </span><span class="kc">serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je kop heeft een ander lettertype dan je gewone tekst, je regels staan wat verder uit elkaar en je footer is schuin gedrukt.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-1.html">← Blok 1 · Opfrissen</a><a class="volgende" href="blok-3.html">Blok 3 · Google Fonts →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gap en richting · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html" class="actief"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 3</div>
+    <h2 class="paginatitel">gap en richting</h2>
+    <h2>Ruimte ertussen met gap</h2>
+<p class="sub"><code>gap</code> zet ruimte tussen de items, niet aan de buitenkant.</p>
+<ol>
+<li><strong>gap op de container.</strong> Net als <code>display: flex</code> zet je <code>gap</code> op de doos eromheen.</li>
+<li><strong>Alleen tussen de items.</strong> Aan de randen komt geen extra ruimte. Dat is het verschil met margin.</li>
+<li><strong>Eén getal is genoeg.</strong> <code>gap: 20px</code> zet 20 pixels tussen elk item.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaarten</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">Zonder gap</div><iframe class="demo-frame" loading="lazy" title="Zonder gap" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.k{display:flex;border:2px dashed #b8bddc}.k div{flex:1;background:#E8EAF6;border:1px solid #b8bddc;padding:10px;text-align:center}&lt;/style&gt;
+&lt;div class=&quot;k&quot;&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">Met gap: 20px</div><iframe class="demo-frame" loading="lazy" title="Met gap: 20px" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.k{display:flex;gap:20px;border:2px dashed #b8bddc}.k div{flex:1;background:#E8EAF6;border:1px solid #b8bddc;padding:10px;text-align:center}&lt;/style&gt;
+&lt;div class=&quot;k&quot;&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Waarom geen margin?</p>
+<p>Met margin krijgen ook de eerste en de laatste kaart ruimte aan de buitenkant. Met gap hoef je niet te rekenen.</p>
+</div>
+<h2>Rij of kolom: flex-direction</h2>
+<p class="sub">Je bepaalt zelf of de items naast of onder elkaar staan.</p>
+<ol>
+<li><strong>row is de standaard.</strong> Zonder <code>flex-direction</code> staan de items naast elkaar, van links naar rechts.</li>
+<li><strong>column zet ze onder elkaar.</strong> Handig op een telefoon. Daar kom je in blok 8 op terug.</li>
+<li><strong>De hoofdrichting.</strong> Bij row loopt de hoofdrichting van links naar rechts. Bij column van boven naar beneden.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaarten</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">flex-direction: row</div><iframe class="demo-frame" loading="lazy" title="flex-direction: row" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.k{display:flex;gap:8px}.k div{background:#E8EAF6;padding:8px 14px;border-radius:6px;font-weight:bold}&lt;/style&gt;
+&lt;div class=&quot;k&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">flex-direction: column</div><iframe class="demo-frame" loading="lazy" title="flex-direction: column" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.k{display:flex;flex-direction:column;gap:8px}.k div{background:#E8EAF6;padding:8px 14px;border-radius:6px;font-weight:bold}&lt;/style&gt;
+&lt;div class=&quot;k&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Waarom dan flex?</p>
+<p><code>column</code> lijkt op zonder flex. Maar nu kun je wel <code>gap</code> gebruiken en de items uitlijnen.</p>
+</div>
+<details class="check">
+<summary>Check: gap en richting</summary>
+<p><strong>1. Wat doet gap: 20px op een flex-container?</strong></p>
+<ul>
+<li>A. 20px om de container</li>
+<li>B. 20px tussen de items</li>
+<li>C. Items 20px breed</li>
+<li>D. Tekst 20px groot</li>
+</ul>
+<p><strong>2. Welke regel zet de items onder elkaar?</strong></p>
+<ul>
+<li>A. <code>flex-direction: row;</code></li>
+<li>B. <code>flex-direction: column;</code></li>
+<li>C. <code>display: column;</code></li>
+<li>D. <code>direction: down;</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – 20px tussen de items.</strong> gap werkt alleen tussen de items. Ruimte om de hele container geef je met margin of padding.</p>
+<p><strong>2. B – flex-direction: column;</strong> row is naast elkaar, en dat is de standaard. <code>display: column</code> en <code>direction: down</code> bestaan niet. De DevTools laten dan een geel driehoekje zien.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">3. Geef je kaarten ruimte</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-3</code></p>
+<ol>
+<li>Kopieer <code>opdracht-2</code> naar een nieuwe map <code>opdracht-3</code>.</li>
+<li>Geef <code>.kaarten</code> een gap van 20px.</li>
+<li>Zet in je footer nog twee alinea's, zoals je stad en © 2026 jouw naam. Doe dit op alle drie je pagina's.</li>
+<li>Zet de dingen in je footer met flexbox naast elkaar, met een gap.</li>
+<li>Zet in de DevTools <code>flex-direction: column</code> op <code>.kaarten</code>. Wat gebeurt er?</li>
+<li>Haal die regel in de DevTools weer weg.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">rij</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Tussen je kaarten zit ruimte. De drie dingen in je footer staan naast elkaar.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-2.html">← Blok 2 · display: flex</a><a class="volgende" href="blok-4.html">Blok 4 · justify-content →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

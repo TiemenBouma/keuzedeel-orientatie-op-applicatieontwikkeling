@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tags · Module 1 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 1</div>
+<div class="module-kop"><h1>Module 1 · HTML &amp; CSS basis</h1><p>Je bouwt je eerste eigen webpagina: een profielpagina met HTML, opgemaakt met CSS.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Aan de slag</a>
+<a href="blok-2.html" class="actief"><small>2</small>Tags</a>
+<a href="blok-3.html"><small>3</small>Het skelet</a>
+<a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
+<a href="blok-5.html"><small>5</small>CSS koppelen</a>
+<a href="blok-6.html"><small>6</small>Selectors</a>
+<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
+<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 2</div>
+    <h2 class="paginatitel">Tags</h2>
+    <h2>HTML werkt met tags</h2>
+<p class="sub">Een tag vertelt de browser wat iets is.</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sam Jansen<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+<ol>
+<li><strong>Elke tag staat tussen punthaken.</strong> <code>&lt;</code> en <code>&gt;</code> typ je met Shift en de toets naast de linker Shift.</li>
+<li><strong>Openen en sluiten hoort bij elkaar.</strong> De sluittag is hetzelfde, maar met een <code>/</code> erin: <code>&lt;/h1&gt;</code>.</li>
+<li><strong>Wat ertussen staat, zie je op de pagina.</strong> De tags zelf zie je niet in de browser.</li>
+</ol>
+<h2>Drie tags om mee te beginnen</h2>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Wat is het?</th>
+<th>Voorbeeld</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;h1&gt;</code></td>
+<td>Een grote kop. Gebruik je één keer, voor je naam bovenaan.</td>
+<td><code>&lt;h1&gt;Sam Jansen&lt;/h1&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;</code></td>
+<td>Een stukje tekst, een alinea. p staat voor paragraph.</td>
+<td><code>&lt;p&gt;Ik woon in Utrecht.&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;h2&gt;</code></td>
+<td>Een kleinere kop, voor een kopje boven een stukje tekst.</td>
+<td><code>&lt;h2&gt;Mijn hobby's&lt;/h2&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sam Jansen<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ik woon in Utrecht.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Mijn hobby's<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Zo ziet de code hierboven eruit in Chrome</div><iframe class="demo-frame" loading="lazy" title="Zo ziet de code hierboven eruit in Chrome" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;h1&gt;Sam Jansen&lt;/h1&gt;
+&lt;p&gt;Ik woon in Utrecht.&lt;/p&gt;
+&lt;h2&gt;Mijn hobby&#x27;s&lt;/h2&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<p>Er zijn honderden tags. Deze drie en die van straks zijn genoeg voor je eerste pagina.</p>
+<details class="check">
+<summary>Check: tags</summary>
+<p><strong>1. Hoe sluit je <code>&lt;h1&gt;</code> af?</strong></p>
+<ul>
+<li>A. <code>&lt;/h1&gt;</code></li>
+<li>B. <code>&lt;h1/&gt;</code></li>
+<li>C. <code>/h1</code></li>
+<li>D. <code>&lt;stop&gt;</code></li>
+</ul>
+<p><strong>2. Welke tag gebruik je voor een kopje onder je titel?</strong></p>
+<ul>
+<li>A. <code>&lt;p&gt;</code></li>
+<li>B. <code>&lt;h2&gt;</code></li>
+<li>C. <code>&lt;h6&gt;</code></li>
+<li>D. <code>&lt;kop&gt;</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. A – <code>&lt;/h1&gt;</code>.</strong> De sluittag is dezelfde tag als de openingstag, maar met een schuine streep erin.</p>
+<p><strong>2. B – <code>&lt;h2&gt;</code>.</strong> h1 is de grootste kop en gebruik je één keer, bovenaan. Daaronder gebruik je h2. h6 bestaat wel, maar is de kleinste. <code>&lt;kop&gt;</code> bestaat niet.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">2. Je eerste tekst op de pagina</p>
+<p class="meta">Ongeveer 5 minuten · Je werkt in: <code>opdracht-2</code></p>
+<ol>
+<li>Maak een map <code>opdracht-2</code> met daarin een nieuw bestand index.html.</li>
+<li>Maak een <code>&lt;h1&gt;</code> met je eigen naam erin.</li>
+<li>Zet daaronder een <code>&lt;p&gt;</code> met een zin over jezelf.</li>
+<li>Maak nog een <code>&lt;p&gt;</code> met je favoriete game of sport.</li>
+<li>Sla op met Ctrl + S en bekijk het met Live Server.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Jouw naam<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ik ben 17 jaar.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ik game graag.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je ziet je naam groot en dik. Daaronder staan twee stukjes gewone tekst.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-1.html">← Blok 1 · Aan de slag</a><a class="volgende" href="blok-3.html">Blok 3 · Het skelet →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

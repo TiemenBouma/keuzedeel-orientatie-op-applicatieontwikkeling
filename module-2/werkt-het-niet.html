@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Werkt het niet? · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html" class="actief">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Werkt het niet?</h2>
+    <p class="sub">Met meerdere bestanden gaat het vaker mis op dezelfde zes plekken.</p>
+<ol>
+<li><strong>Heb je alles opgeslagen?</strong> Ctrl + S werkt maar in één tabblad tegelijk.</li>
+<li><strong>Klopt de bestandsnaam precies?</strong> hobbys.html is iets anders dan Hobbys.html.</li>
+<li><strong>Staat style.css in elke head?</strong> Een witte pagina betekent bijna altijd: link-regel vergeten.</li>
+<li><strong>Klopt het pad naar je foto?</strong> <code>images/foto.jpg</code>, met een schuine streep vooruit.</li>
+<li><strong>Is elke tag gesloten en genest?</strong> Kijk of elke <code>&lt;tag&gt;</code> ook een <code>&lt;/tag&gt;</code> heeft. Shift + Alt + F helpt.</li>
+<li><strong>Puntkomma's in je CSS?</strong> Vergeet je er één, dan doet ook de regel eronder vaak niets.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Nog steeds niet?</p>
+<p>Rechtsklik in Chrome en kies Inspecteren. Vraag daarna je buurman, en dan je docent.</p>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="eindopdracht.html">← Eindopdracht</a><a class="volgende" href="naslag.html">Naslag →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

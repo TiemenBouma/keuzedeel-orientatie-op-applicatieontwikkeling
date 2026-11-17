@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS koppelen · Module 1 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 1</div>
+<div class="module-kop"><h1>Module 1 · HTML &amp; CSS basis</h1><p>Je bouwt je eerste eigen webpagina: een profielpagina met HTML, opgemaakt met CSS.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Aan de slag</a>
+<a href="blok-2.html"><small>2</small>Tags</a>
+<a href="blok-3.html"><small>3</small>Het skelet</a>
+<a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
+<a href="blok-5.html" class="actief"><small>5</small>CSS koppelen</a>
+<a href="blok-6.html"><small>6</small>Selectors</a>
+<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
+<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 5</div>
+    <h2 class="paginatitel">CSS koppelen</h2>
+    <h2>Wat is CSS eigenlijk?</h2>
+<p class="sub">HTML zegt <strong>wat</strong> er staat. CSS zegt <strong>hoe</strong> het eruitziet.</p>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">Zonder CSS</div><iframe class="demo-frame" loading="lazy" title="Zonder CSS" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;h1&gt;Sam Jansen&lt;/h1&gt;&lt;p&gt;Student ICT in Utrecht.&lt;/p&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">Met CSS (dezelfde HTML)</div><iframe class="demo-frame" loading="lazy" title="Met CSS (dezelfde HTML)" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;body{background:#E8EAF6;font-family:Arial}h1{background:#2965F1;color:#fff;text-align:center;padding:10px;border-radius:8px}a{background:#E44D26;color:#fff;padding:6px 16px;border-radius:8px;text-decoration:none}&lt;/style&gt;
+&lt;h1&gt;Sam Jansen&lt;/h1&gt;&lt;p&gt;Student ICT in Utrecht.&lt;/p&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<ol>
+<li><strong>De HTML is precies hetzelfde.</strong> Links en rechts staat dezelfde code. Alleen de opmaak is toegevoegd.</li>
+<li><strong>CSS betekent Cascading Style Sheets.</strong> Style sheet betekent letterlijk: opmaakblad.</li>
+<li><strong>Zonder CSS kiest de browser zelf.</strong> Dan wordt alles zwart, met een standaard lettertype.</li>
+</ol>
+<h2>Zo maak en koppel je je CSS</h2>
+<p class="sub">Je CSS komt in een apart bestand naast je HTML.</p>
+<ol>
+<li><strong>Maak het bestand.</strong> style.css hoort in dezelfde opdrachtmap als je index.html.</li>
+<li><strong>Koppel het aan je HTML.</strong> De link-regel zet je in de <code>&lt;head&gt;</code> van index.html.</li>
+<li><strong>Schrijf je regels.</strong> Zo ziet een CSS-regel eruit: <code>h1 { color: blue; }</code></li>
+</ol>
+<p class="bestandsnaam">style.css</p>
+<div class="code"><pre><span></span><code><span class="c">/* style.css */</span>
+<span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p class="bestandsnaam">index.html, in de head</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Onderdeel</th>
+<th>In het voorbeeld</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selector</td>
+<td><code>h1</code></td>
+<td>Wat pas je aan?</td>
+</tr>
+<tr>
+<td>eigenschap</td>
+<td><code>color</code></td>
+<td>Wat verander je?</td>
+</tr>
+<tr>
+<td>waarde</td>
+<td><code>blue</code></td>
+<td>Waarin verander je het?</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition onthoud">
+<p class="admonition-title">De vorm van elke regel</p>
+<p>Tussen eigenschap en waarde staat een dubbele punt. De puntkomma sluit de regel af.</p>
+</div>
+<details class="check">
+<summary>Check: CSS koppelen</summary>
+<p><strong>1. In welk deel van je HTML zet je de <code>&lt;link&gt;</code>?</strong></p>
+<ul>
+<li>A. In de body</li>
+<li>B. In de head</li>
+<li>C. Onderaan</li>
+<li>D. In de css</li>
+</ul>
+<p><strong>2. Welke CSS-regel is goed geschreven?</strong></p>
+<ul>
+<li>A. <code>color = blue;</code></li>
+<li>B. <code>color: blue;</code></li>
+<li>C. <code>color blue</code></li>
+<li>D. <code>{color blue}</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – in de head.</strong> De browser leest eerst de head. Zo weet hij meteen welke opmaak hij moet gebruiken.</p>
+<p><strong>2. B – <code>color: blue;</code></strong> Een dubbele punt tussen eigenschap en waarde, en een puntkomma erachter.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">5. Je eerste kleur op de pagina</p>
+<p class="meta">Ongeveer 5 minuten · Je werkt in: <code>opdracht-5</code></p>
+<ol>
+<li>Maak map <code>opdracht-5</code> met een nieuw index.html en neem je pagina over.</li>
+<li>Maak in <code>opdracht-5</code> een tweede bestand: style.css.</li>
+<li>Zet de link-regel in de head van index.html.</li>
+<li>Geef de body een achtergrondkleur en je h1 een andere kleur.</li>
+<li>Sla beide bestanden op met Ctrl + S.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">darkblue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je pagina heeft een gekleurde achtergrond en je naam heeft een andere kleur dan de rest.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-4.html">← Blok 4 · Koppen en lijstjes</a><a class="volgende" href="blok-6.html">Blok 6 · Selectors →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

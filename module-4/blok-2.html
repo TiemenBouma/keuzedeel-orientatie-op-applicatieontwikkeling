@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>display: flex · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html" class="actief"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 2</div>
+    <h2 class="paginatitel">display: flex</h2>
+    <h2>Dingen naast elkaar met flexbox</h2>
+<p class="sub">Met één regel CSS zet je blokken naast elkaar.</p>
+<ol>
+<li><strong>Een doos om je blokken.</strong> Zet een div om de dingen die naast elkaar moeten. Die div heet de container.</li>
+<li><strong>display: flex op de container.</strong> Niet op de kaarten zelf, maar op de doos eromheen.</li>
+<li><strong>De kinderen worden items.</strong> Alles wat direct in de container staat, schuift naast elkaar.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaarten"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>Gamen<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>Fietsen<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaarten</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">Zonder flex</div><iframe class="demo-frame" loading="lazy" title="Zonder flex" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.kaart{background:#E8EAF6;padding:8px 12px;border-radius:6px;margin:4px;font-weight:bold}&lt;/style&gt;
+&lt;div class=&quot;kaarten&quot;&gt;&lt;div class=&quot;kaart&quot;&gt;Gamen&lt;/div&gt;&lt;div class=&quot;kaart&quot;&gt;Fietsen&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">Met display: flex</div><iframe class="demo-frame" loading="lazy" title="Met display: flex" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.kaarten{display:flex}.kaart{background:#E8EAF6;padding:8px 12px;border-radius:6px;margin:4px;font-weight:bold}&lt;/style&gt;
+&lt;div class=&quot;kaarten&quot;&gt;&lt;div class=&quot;kaart&quot;&gt;Gamen&lt;/div&gt;&lt;div class=&quot;kaart&quot;&gt;Fietsen&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<div class="admonition onthoud">
+<p class="admonition-title">Onthoud: flex zet je op de ouder</p>
+<p>De doos met <code>display: flex</code> is de container. Wat erin staat, zijn de items.</p>
+</div>
+<h2>Alleen de kinderen doen mee</h2>
+<p class="sub">Flexbox werkt op de items die direct in de container staan.</p>
+<ol>
+<li><strong>Direct erin = item.</strong> De kaarten staan direct in <code>.kaarten</code>. Zij zijn de items en staan naast elkaar.</li>
+<li><strong>Dieper = gewoon.</strong> De h2 en de p in een kaart zijn geen items. Die staan nog gewoon onder elkaar.</li>
+<li><strong>Vanzelf even hoog.</strong> Items worden even hoog als het hoogste item. Handig voor kaarten met veel en weinig tekst.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">.kaarten is de container, de kaarten zijn de items. De h2 en p in een kaart doen niet mee.</div><iframe class="demo-frame" loading="lazy" title=".kaarten is de container, de kaarten zijn de items. De h2 en p in een kaart doen niet mee." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.kaarten{display:flex;gap:10px;border:2px dashed #2965F1;padding:8px;border-radius:8px}.kaart{flex:1;background:#E8EAF6;border:2px solid #E44D26;padding:8px;border-radius:6px}h2{font-size:15px;margin:0 0 4px}p{margin:0;font-size:13px}&lt;/style&gt;
+&lt;div class=&quot;kaarten&quot;&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;h2&gt;Gamen&lt;/h2&gt;&lt;p&gt;Elke vrijdag met vrienden online.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;h2&gt;Fietsen&lt;/h2&gt;&lt;p&gt;Kort.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Zie je het label flex?</p>
+<p>In Elements staat nu <code>flex</code> achter je container. Klik erop: je ziet paarse lijnen om elk item.</p>
+</div>
+<details class="check">
+<summary>Check: display: flex</summary>
+<p><strong>1. Waar zet je display: flex?</strong></p>
+<ul>
+<li>A. Op elke kaart</li>
+<li>B. Op de doos om de kaarten</li>
+<li>C. In de head</li>
+<li>D. Op de footer</li>
+</ul>
+<p><strong>2. In een kaart staan een h2 en een p. De doos om de kaarten heeft display: flex. Hoe staan de h2 en de p?</strong></p>
+<ul>
+<li>A. Naast elkaar</li>
+<li>B. Onder elkaar</li>
+<li>C. Ze verdwijnen</li>
+<li>D. Over elkaar</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – op de doos om de kaarten.</strong> Flex zet je op de ouder, de container. Die zet zijn kinderen naast elkaar. Zet je het op een kaart, dan komt de inhoud van díe kaart naast elkaar.</p>
+<p><strong>2. B – onder elkaar.</strong> Alleen de kaarten zijn items. De h2 en de p staan een laag dieper, dus daar verandert niets.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">2. Zet je kaarten naast elkaar</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-2</code></p>
+<ol>
+<li>Kopieer <code>opdracht-1</code> naar een nieuwe map <code>opdracht-2</code>.</li>
+<li>Zet in index.html een div met class <code>kaarten</code> om je kaarten heen.</li>
+<li>Doe hetzelfde op hobbys.html en contact.html.</li>
+<li>Geef <code>.kaarten</code> in style.css <code>display: flex</code>.</li>
+<li>Sla op en kijk: staan je kaarten naast elkaar?</li>
+<li>Klik in de DevTools op het label flex achter je div.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<p><div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">"rij"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">rij</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="o">...</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Op alle drie je pagina's staan je kaarten naast elkaar. Ze plakken nog tegen elkaar aan. Dat los je op in opdracht 3.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-1.html">← Blok 1 · Opfrissen</a><a class="volgende" href="blok-3.html">Blok 3 · gap en richting →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opfrissen · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html" class="actief"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 1</div>
+    <h2 class="paginatitel">Opfrissen</h2>
+    <h2>Je nieuwe gereedschap: de flex-knoppen</h2>
+<p class="sub">Chrome laat je precies zien wat flexbox doet.</p>
+<ol>
+<li><strong>Open je pagina.</strong> Met Live Server. Druk daarna op F12.</li>
+<li><strong>Zoek het label flex.</strong> In Elements staat een label <code>flex</code> achter elk element met <code>display: flex</code>.</li>
+<li><strong>Klik op flex.</strong> Op je pagina zie je paarse lijnen om elk item en de ruimte ertussen.</li>
+<li><strong>Klik op het icoontje.</strong> Bij Styles staat naast <code>display: flex</code> een klein icoontje met blokjes.</li>
+<li><strong>Probeer de knoppen.</strong> Je ziet knoppen voor <code>justify-content</code> en <code>align-items</code>. Klik en kijk wat er gebeurt.</li>
+</ol>
+<p>Zo ziet het stukje Elements eruit:</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaarten"</span><span class="p">&gt;</span>   flex
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Wat heb je eraan?</p>
+<p>Je ziet de ruimte die flexbox verdeelt. Zonder die lijnen is dat lastig te zien.</p>
+</div>
+<div class="admonition let-op">
+<p class="admonition-title">Zie je geen label flex?</p>
+<p>Dan staat <code>display: flex</code> nog niet in je CSS. Vanaf blok 2 heb je het nodig.</p>
+</div>
+<h2>Waar waren we gebleven?</h2>
+<p class="sub">Je site van module 3 is het startpunt.</p>
+<ol>
+<li><strong>Mooie opmaak.</strong> Een palet, een Google Font, een foto achter je header en schaduw op je kaarten.</li>
+<li><strong>main in het midden.</strong> Met <code>max-width</code> en <code>margin: 0 auto</code> staat je inhoud netjes in het midden.</li>
+<li><strong>Alles staat onder elkaar.</strong> Je kaarten staan nog onder elkaar. In deze module zet je ze naast elkaar.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">);</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">all</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Block en inline</h2>
+<p class="sub">Waarom staan sommige dingen onder elkaar, en andere naast elkaar?</p>
+<ol>
+<li><strong>block</strong> neemt de hele breedte. Het volgende element begint op een nieuwe regel. Bijvoorbeeld <code>div</code>, <code>p</code>, <code>h1</code> en <code>section</code>.</li>
+<li><strong>inline</strong> is zo breed als de inhoud en staat naast andere inline-elementen. Bijvoorbeeld <code>a</code>, <code>img</code> en <code>span</code>.</li>
+<li><strong>display</strong> verandert dat. In module 2 zette <code>display: inline-block</code> je menu naast elkaar.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">block: onder elkaar · inline: naast elkaar</div><iframe class="demo-frame" loading="lazy" title="block: onder elkaar · inline: naast elkaar" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.b{background:#E8EAF6;padding:6px 10px;margin:4px 0;border-radius:6px}.i{background:#ffe0d6;padding:4px 8px;border-radius:6px}&lt;/style&gt;
+&lt;div class=&quot;b&quot;&gt;div&lt;/div&gt;&lt;div class=&quot;b&quot;&gt;p&lt;/div&gt;&lt;div class=&quot;b&quot;&gt;section&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;i&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;i&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;i&quot;&gt;span&lt;/span&gt;&lt;/p&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Kijk het zelf na</p>
+<p>Klik in de DevTools op een element. Onderaan bij Computed staat bij <code>display</code> of het block of inline is.</p>
+</div>
+<details class="check">
+<summary>Check: block en inline</summary>
+<p><strong>1. Je hebt drie div's met een kaart erin. Hoe staan ze op je pagina?</strong></p>
+<ul>
+<li>A. Naast elkaar</li>
+<li>B. Onder elkaar</li>
+<li>C. Over elkaar heen</li>
+<li>D. Schuin</li>
+</ul>
+<p><strong>2. Welk element is inline?</strong></p>
+<ul>
+<li>A. div</li>
+<li>B. p</li>
+<li>C. a</li>
+<li>D. section</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – onder elkaar.</strong> Een div is een block: hij pakt de hele breedte, dus de volgende begint op een nieuwe regel. Naast elkaar kan wel, maar daar heb je CSS voor nodig.</p>
+<p><strong>2. C – a.</strong> Een link staat midden in een zin, dus is hij inline. div, p en section zijn blokken die de hele breedte pakken.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">1. Zet je werkmap klaar en kijk rond</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-1</code></p>
+<ol>
+<li>Maak een map <code>les4-jouwnaam</code>. Maak daarin een map <code>opdracht-1</code>.</li>
+<li>Kopieer alles uit je eindopdracht van module 3 naar <code>opdracht-1</code>.</li>
+<li>Open <code>les4-jouwnaam</code> in VS Code en start Live Server op index.html.</li>
+<li>Klik met F12 op een kaart. Kijk bij Computed wat er bij display staat.</li>
+<li>Doe hetzelfde bij een link in je menu en bij je foto.</li>
+<li>Schrijf bovenin style.css als opmerking wat block is en wat inline.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="c">/* block: div, ...</span>
+<span class="c">   inline: ... */</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je site van module 3 werkt in <code>opdracht-1</code>. Bovenin style.css staat een opmerking met minstens drie blokken en drie inline-elementen.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="index.html">← Start</a><a class="volgende" href="blok-2.html">Blok 2 · display: flex →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verloop en schaduw · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Lettertypes</a>
+<a href="blok-3.html"><small>3</small>Google Fonts</a>
+<a href="blok-4.html"><small>4</small>Kleuren</a>
+<a href="blok-5.html"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html" class="actief"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 6</div>
+    <h2 class="paginatitel">Verloop en schaduw</h2>
+    <h2>Een kleurverloop</h2>
+<p class="sub">Met <code>linear-gradient</code> loopt de ene kleur langzaam over in de andere.</p>
+<ol>
+<li><strong>Een verloop is een plaatje.</strong> Daarom schrijf je het bij <code>background-image</code>, niet bij <code>background-color</code>.</li>
+<li><strong>Eerst de richting, dan de kleuren.</strong> <code>to right</code> loopt van links naar rechts. Zonder richting gaat het van boven naar beneden.</li>
+<li><strong>Ook voor een donker laagje.</strong> Een verloop kan ook bovenop je foto liggen. Hoe dat werkt, zie je hieronder.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span><span class="w"> </span><span class="kc">right</span><span class="p">,</span><span class="w"> </span><span class="mh">#2965F1</span><span class="p">,</span><span class="w"> </span><span class="mh">#1B1F3B</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">linear-gradient(to right, #2965F1, #1B1F3B)</div><iframe class="demo-frame" loading="lazy" title="linear-gradient(to right, #2965F1, #1B1F3B)" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;div style=&quot;height:50px;border-radius:8px;background-image:linear-gradient(to right,#2965F1,#1B1F3B)&quot;&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<h2>Een donker laagje over je foto</h2>
+<p class="sub">Je foto wordt donkerder, zodat witte tekst er goed op te lezen is.</p>
+<ol>
+<li><strong>Wat is het?</strong> Een doorzichtige zwarte laag over je foto. Net een zonnebril: je ziet de foto nog, maar donkerder.</li>
+<li><strong>Waarom een verloop?</strong> <code>background-color</code> ligt altijd ónder je foto. Een verloop is een plaatje, en dat mag erbovenop.</li>
+<li><strong>Twee keer dezelfde kleur.</strong> Zwart naar hetzelfde zwart: geen verloop, maar één egale laag. 0.5 is half doorzichtig.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)),</span>
+<span class="w">    </span><span class="nb">url</span><span class="p">(</span><span class="s2">"images/header.jpg"</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">Zonder laagje</div><iframe class="demo-frame" loading="lazy" title="Zonder laagje" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;div style=&quot;padding:26px;color:#fff;text-align:center;font-size:20px;font-weight:bold;background:linear-gradient(135deg,#bcd3f5,#f5d7a8)&quot;&gt;Sam Jansen&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">Met donker laagje</div><iframe class="demo-frame" loading="lazy" title="Met donker laagje" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;div style=&quot;padding:26px;color:#fff;text-align:center;font-size:20px;font-weight:bold;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),linear-gradient(135deg,#bcd3f5,#f5d7a8)&quot;&gt;Sam Jansen&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<div class="admonition let-op">
+<p class="admonition-title">Eén background-image, met een komma</p>
+<p>Zet het laagje vóór je <code>url()</code>, in dezelfde regel. Wat je als eerste noemt, ligt bovenop. Typ je een tweede background-image eronder, dan wint die en is je foto weg.</p>
+</div>
+<h2>Schaduw geven</h2>
+<p class="sub">Een schaduw laat je kaart een beetje boven de pagina zweven.</p>
+<div class="code"><pre><span></span><code><span class="nt">box-shadow</span><span class="o">:</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">4px</span><span class="w"> </span><span class="nt">12px</span><span class="w"> </span><span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="p">.</span><span class="nc">15</span><span class="o">);</span>
+<span class="c">/*          opzij omlaag vaagheid  kleur      */</span>
+</code></pre></div>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">Zonder schaduw</div><iframe class="demo-frame" loading="lazy" title="Zonder schaduw" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;body{background:#E8EAF6}&lt;/style&gt;&lt;div style=&quot;background:#fff;padding:16px;border-radius:8px&quot;&gt;Plakt plat op de pagina&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">Met schaduw</div><iframe class="demo-frame" loading="lazy" title="Met schaduw" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;body{background:#E8EAF6}&lt;/style&gt;&lt;div style=&quot;background:#fff;padding:16px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.15)&quot;&gt;Lijkt los van de pagina&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<p>Houd het rustig: een lichte, vage schaduw ziet er netter uit dan een harde zwarte rand.</p>
+<div class="admonition tip">
+<p class="admonition-title">text-shadow werkt net zo</p>
+<p>Alleen om de letters, niet om een blok. Handig voor witte tekst op een foto. De vier waarden betekenen hetzelfde: <code>h1 { text-shadow: 1px 1px 3px black; }</code></p>
+</div>
+<details class="check">
+<summary>Check: verloop en schaduw</summary>
+<p><strong>1. Bij welke eigenschap schrijf je linear-gradient?</strong></p>
+<ul>
+<li>A. color</li>
+<li>B. background-image</li>
+<li>C. background-color</li>
+<li>D. border</li>
+</ul>
+<p><strong>2. Wat doet de 12px in <code>box-shadow: 0 4px 12px gray;</code>?</strong></p>
+<ul>
+<li>A. Schaduw 12px naar rechts</li>
+<li>B. Schaduw 12px omlaag</li>
+<li>C. Hoe dik de rand is</li>
+<li>D. Hoe vaag de schaduw is</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – background-image.</strong> Voor de browser is een verloop een plaatje. Daarom hoort het bij background-image, net als een foto.</p>
+<p><strong>2. D – hoe vaag de schaduw is.</strong> Het eerste getal is opzij, het tweede omlaag en het derde hoe vaag. Hoe groter dat getal, hoe zachter de schaduw.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">6. Verloop en schaduw</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-6</code></p>
+<ol>
+<li>Kopieer <code>opdracht-5</code> naar een nieuwe map <code>opdracht-6</code>.</li>
+<li>Geef je nav een verloop met twee kleuren uit je palet.</li>
+<li>Leg een donker laagje over de foto in je header. Hoe? Zie 'Een donker laagje over je foto' hierboven.</li>
+<li>Geef je h1 witte tekst en een text-shadow.</li>
+<li>Geef <code>.kaart</code> een box-shadow.</li>
+<li>Verander in de DevTools de getallen van je schaduw tot je hem mooi vindt.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span><span class="w"> </span><span class="kc">right</span><span class="p">,</span><span class="w"> </span><span class="mh">#2965F1</span><span class="p">,</span><span class="w"> </span><span class="mh">#1B1F3B</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je menubalk loopt van de ene kleur in de andere, je naam is goed te lezen op de foto, en je kaarten zweven een beetje.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-5.html">← Blok 5 · Achtergrondfoto</a><a class="volgende" href="blok-7.html">Blok 7 · Breedte en centreren →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

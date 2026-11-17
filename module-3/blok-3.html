@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Fonts · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Lettertypes</a>
+<a href="blok-3.html" class="actief"><small>3</small>Google Fonts</a>
+<a href="blok-4.html"><small>4</small>Kleuren</a>
+<a href="blok-5.html"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 3</div>
+    <h2 class="paginatitel">Google Fonts</h2>
+    <h2>Lettertypes van internet</h2>
+<p class="sub">Op Google Fonts kies je uit honderden gratis lettertypes.</p>
+<ol>
+<li><strong>Ga naar fonts.google.com.</strong> Typ het adres in Chrome.</li>
+<li><strong>Klik op een lettertype.</strong> Bijvoorbeeld Poppins of Roboto.</li>
+<li><strong>Klik op Get font.</strong> De knop staat rechtsboven.</li>
+<li><strong>Klik op Get embed code.</strong> Je ziet nu stukjes code.</li>
+<li><strong>Kopieer de link-regels.</strong> Onder het kopje Web staan drie regels. Kopieer ze alle drie.</li>
+</ol>
+<p>Dat plak je in de head:</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Sam Jansen<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"preconnect"</span> <span class="err">...</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"preconnect"</span> <span class="err">...</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://fonts..."</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Waarom boven style.css?</p>
+<p>Dan kent de browser het lettertype al als hij je CSS gaat lezen.</p>
+</div>
+<div class="admonition onthoud">
+<p class="admonition-title">Kies er hooguit twee</p>
+<p>Eén voor koppen, één voor tekst. Meer maakt je site onrustig en traag.</p>
+</div>
+<h2>Het lettertype gebruiken</h2>
+<p class="sub">Na het koppelen gebruik je de naam gewoon in je CSS.</p>
+<ol>
+<li><strong>Google geeft je een voorbeeld.</strong> Onder de link-regels staat een stukje CSS met font-family. Dat mag je overnemen.</li>
+<li><strong>Spatie in de naam? Aanhalingstekens.</strong> <code>"Open Sans"</code> schrijf je tussen aanhalingstekens. Een naam van één woord mag zonder.</li>
+<li><strong>Op elke pagina koppelen.</strong> De link-regels van Google horen in de head van al je drie pagina's.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open Sans"</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Poppins</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition let-op">
+<p class="admonition-title">Verandert er niets?</p>
+<p>Kijk of de naam precies zo gespeld is als op Google Fonts, met hoofdletter. Zonder internet laadt het lettertype niet.</p>
+</div>
+<details class="check">
+<summary>Check: Google Fonts</summary>
+<p><strong>1. Waar plak je de link-regels van Google Fonts?</strong></p>
+<ul>
+<li>A. In style.css</li>
+<li>B. In de body</li>
+<li>C. In de head</li>
+<li>D. In de footer</li>
+</ul>
+<p><strong>2. Welke regel is het best geschreven?</strong></p>
+<ul>
+<li>A. <code>font-family: "Open Sans", sans-serif;</code></li>
+<li>B. <code>font-family: Open Sans;</code></li>
+<li>C. <code>font: "Open Sans";</code></li>
+<li>D. <code>font-family = "Open Sans";</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. C – in de head.</strong> Net als de koppeling naar je style.css. Zet ze daarboven, en doe het op elke pagina.</p>
+<p><strong>2. A – <code>font-family: "Open Sans", sans-serif;</code></strong> Aanhalingstekens om een naam met een spatie, en een reserve erachter voor als het lettertype niet laadt. Bij B mist de reserve, C en D zijn geen goede CSS.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">3. Haal een lettertype van Google</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-3</code></p>
+<ol>
+<li>Kopieer <code>opdracht-2</code> naar een nieuwe map <code>opdracht-3</code>.</li>
+<li>Kies op fonts.google.com een lettertype voor je koppen.</li>
+<li>Kopieer de link-regels via Get font en Get embed code.</li>
+<li>Plak ze in de head van alle drie je pagina's, boven style.css.</li>
+<li>Gebruik het lettertype in style.css voor h1 en h2.</li>
+<li>Controleer met F12 bij Computed of het echt gebruikt wordt.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Poppins</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Poppins</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je koppen staan in het lettertype van Google, op alle drie je pagina's. Bij Computed in de DevTools zie je de naam van dat lettertype staan.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-2.html">← Blok 2 · Lettertypes</a><a class="volgende" href="blok-4.html">Blok 4 · Kleuren →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

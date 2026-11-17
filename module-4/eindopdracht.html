@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eindopdracht · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html" class="actief">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Eindopdracht</h2>
+    <div class="admonition opdracht eind">
+<p class="admonition-title">Zet je site in de rij</p>
+<p class="meta">Je werkt in een nieuwe map <code>eindopdracht</code>. Begin met een kopie van <code>opdracht-8</code>.</p>
+<p><strong>Op je site staat:</strong></p>
+<ul>
+<li>Map <code>eindopdracht</code> met je drie pagina's, style.css en de map images</li>
+<li>Een header met je naam links en je menu rechts, op dezelfde hoogte</li>
+<li>Een menu met <code>display: flex</code> en <code>gap</code>, zonder inline-block</li>
+<li>Kaarten naast elkaar met ruimte ertussen, op al je pagina's</li>
+<li>Minstens vier hobbykaarten, even breed, die doorschuiven</li>
+<li>Op je homepagina een foto met tekst ernaast, in het midden</li>
+<li>Een footer met minstens drie dingen, verdeeld over de breedte</li>
+<li class="checklist">Een media query: tot 600px staat alles onder elkaar</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Al klaar?</p>
+<p>Geef één kaart <code>flex: 2</code>, zodat hij twee keer zo breed wordt. Of zet op je contactpagina twee kaarten naast elkaar.</p>
+</div>
+</div>
+<p>Alles wat je nodig hebt, heb je in de mini-opdrachten al een keer gemaakt. Kijk gerust terug in je eigen mappen.</p>
+<h2>Inleveren</h2>
+<p>Zip de hele map <code>les4-jouwnaam</code>. Daarin zitten <code>opdracht-1</code> tot en met <code>opdracht-8</code> en de map <code>eindopdracht</code>. Noem de zip <code>les4-jouwnaam.zip</code>.</p>
+<p><strong>Checklist: vink af voordat je inlevert</strong></p>
+<ul>
+<li>Map <code>les4-jouwnaam</code> met <code>opdracht-1</code> tot en met <code>opdracht-8</code></li>
+<li>Map <code>eindopdracht</code> met drie html-bestanden en style.css</li>
+<li>Een div om je kaarten op elke pagina</li>
+<li>De media query helemaal onderaan style.css</li>
+<li>Geen gele driehoekjes meer in de DevTools</li>
+<li>Alle map- en bestandsnamen met kleine letters</li>
+<li>Alles opgeslagen met Ctrl + S</li>
+<li class="checklist">Elke pagina getest in de telefoonweergave</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Zo maak je een zip</p>
+<p>Rechtsklik op de map <code>les4-jouwnaam</code> en kies <strong>Comprimeren naar &gt; ZIP-bestand</strong>. Op oudere Windows: <strong>Kopiëren naar &gt; Gecomprimeerde map</strong>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Werk je thuis?</p>
+<p>Je hebt VS Code en Chrome nodig. De telefoonweergave zit in Chrome zelf, je hebt geen echte telefoon nodig. Kom je er niet uit? Schrijf je vraag op en neem hem mee.</p>
+</div>
+<p>Twijfel je of iets af is? Kijk bij <strong>Klaar als...</strong> bij die opdracht.</p>
+    <div class="vorige-volgende"><a class="vorige" href="blok-8.html">← Blok 8 · Op je telefoon</a><a class="volgende" href="werkt-het-niet.html">Werkt het niet? →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

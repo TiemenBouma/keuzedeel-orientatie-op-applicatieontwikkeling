@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Een tweede pagina · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html" class="actief"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 5</div>
+    <h2 class="paginatitel">Een tweede pagina</h2>
+    <h2>Een site is meer dan één bestand</h2>
+<p class="sub">Elke pagina van je site is een eigen .html-bestand.</p>
+<div class="code"><pre><span></span><code>opdracht-5/
+   index.html
+   hobbys.html
+   contact.html
+   style.css
+</code></pre></div>
+<ol>
+<li><strong>index.html is je startpagina.</strong> Die naam is geen toeval: een browser opent index.html automatisch als eerste.</li>
+<li><strong>Elke pagina een eigen naam:</strong> hobbys.html, contact.html. Allemaal in dezelfde map als je index.html.</li>
+<li><strong>Kleine letters, geen spaties.</strong> Gebruik een streepje: mijn-hobbys.html. Geen accenten, geen hoofdletters.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Waarom geen spaties?</p>
+<p>Een webadres kan niet tegen spaties. <code>Mijn Hobby's.html</code> wordt op internet <code>Mijn%20Hobby's.html</code> en dat gaat vroeg of laat fout.</p>
+</div>
+<h2>Linken en één style.css</h2>
+<p class="sub">Naar je eigen pagina linken is makkelijker dan naar internet.</p>
+<p class="bestandsnaam">Linken naar je eigen pagina, en naar een andere website</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hobbys.html"</span><span class="p">&gt;</span>Mijn hobby's<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://nu.nl"</span><span class="p">&gt;</span>Het nieuws<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="bestandsnaam">In de head van élke pagina</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hobby's<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<ol>
+<li><strong>Eigen bestand? Alleen de naam.</strong> Staat het bestand in dezelfde map, dan is de bestandsnaam genoeg. Geen https:// en geen www ervoor.</li>
+<li><strong>Eén style.css voor alles.</strong> Je maakt niet per pagina een nieuw CSS-bestand. Verander je een kleur, dan verandert hij meteen op alle pagina's.</li>
+</ol>
+<details class="check">
+<summary>Check: een tweede pagina</summary>
+<p><strong>1. Hoe link je naar hobbys.html in dezelfde map?</strong></p>
+<ul>
+<li>A. <code>href="www.hobbys.html"</code></li>
+<li>B. <code>href="hobbys.html"</code></li>
+<li>C. <code>src="hobbys.html"</code></li>
+<li>D. <code>href="#hobbys"</code></li>
+</ul>
+<p><strong>2. Hoeveel style.css-bestanden heb je nodig voor drie pagina's?</strong></p>
+<ul>
+<li>A. Drie, één per pagina</li>
+<li>B. Eén, gekoppeld in elke head</li>
+<li>C. Geen enkele</li>
+<li>D. Eén per map</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>href="hobbys.html"</code>.</strong> Voor een bestand in dezelfde map is de naam genoeg. src gebruik je bij een plaatje, niet bij een link. Met een hekje blijf je op dezelfde pagina.</p>
+<p><strong>2. B – één, gekoppeld in elke head.</strong> Je maakt één style.css en zet in elke pagina dezelfde link-regel in de head. Zo zien al je pagina's er hetzelfde uit.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">5. Maak je tweede pagina</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-5</code></p>
+<ol>
+<li>Kopieer <code>opdracht-4</code> naar een nieuwe map <code>opdracht-5</code>.</li>
+<li>Maak een nieuw bestand hobbys.html. Typ ! en druk op Tab.</li>
+<li>Koppel style.css in de head van hobbys.html.</li>
+<li>Zet op hobbys.html een <code>&lt;h1&gt;</code> en je lijstje met drie hobby's.</li>
+<li>Zet op index.html een link naar hobbys.html.</li>
+<li>Zet op hobbys.html een link terug naar index.html.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hobbys.html"</span><span class="p">&gt;</span>Mijn hobby's<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"index.html"</span><span class="p">&gt;</span>Terug<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je klikt heen en weer tussen je twee pagina's, en ze hebben allebei dezelfde achtergrondkleur. Is de tweede pagina wit? Dan mist de link-regel in de head.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-4.html">← Blok 4 · id en ankerlinks</a><a class="volgende" href="blok-6.html">Blok 6 · Paden →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

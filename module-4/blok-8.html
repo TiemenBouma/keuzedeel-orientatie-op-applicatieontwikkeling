@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Op je telefoon · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html" class="actief"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 8</div>
+    <h2 class="paginatitel">Op je telefoon</h2>
+    <h2>Je site op een telefoon</h2>
+<p class="sub">Drie kaarten naast elkaar passen niet op een smal scherm.</p>
+<ol>
+<li><strong>Een smal scherm.</strong> Een telefoon is zo'n 400px breed. Drie kaarten naast elkaar worden dan heel smal.</li>
+<li><strong>Test met Ctrl + Shift + M.</strong> In de DevTools kies je bovenin een telefoon, zoals iPhone SE.</li>
+<li><strong>De viewport-regel.</strong> In je head staat <code>&lt;meta name="viewport" ...&gt;</code>. Die kwam er met ! + Tab. Zonder die regel doet een telefoon alsof hij een groot scherm is.</li>
+</ol>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">Laptop: past</div><iframe class="demo-frame" loading="lazy" title="Laptop: past" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.k{display:flex;gap:8px}.k div{flex:1;background:#E8EAF6;padding:14px 6px;text-align:center;border-radius:6px}&lt;/style&gt;
+&lt;div class=&quot;k&quot;&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">Telefoon: te smal</div><iframe class="demo-frame" loading="lazy" title="Telefoon: te smal" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.t{width:150px;margin:0 auto;border:3px solid #1B1F3B;border-radius:14px;padding:8px}.k{display:flex;gap:4px}.k div{flex:1;background:#E8EAF6;padding:14px 0;text-align:center;border-radius:4px;font-size:10px;overflow:hidden}&lt;/style&gt;
+&lt;div class=&quot;t&quot;&gt;&lt;div class=&quot;k&quot;&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Eerst kijken, dan aanpassen</p>
+<p>Open al je pagina's in de telefoonweergave. Schrijf op wat te smal is of uitsteekt.</p>
+</div>
+<h2>Andere CSS voor een smal scherm</h2>
+<p class="sub">Met een media query geef je regels die alleen op een smal scherm gelden.</p>
+<ol>
+<li><strong>@media (max-width: 600px).</strong> Alles tussen de accolades geldt alleen als het scherm 600px of smaller is.</li>
+<li><strong>Twee paar accolades.</strong> Eén paar voor de media query. Daarbinnen staan je gewone regels, met hun eigen accolades.</li>
+<li><strong>Onderaan je style.css.</strong> Zet de media query helemaal onderaan. Dan wint hij van de regels erboven.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">600px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">kaarten</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">Breder dan 600px</div><iframe class="demo-frame" loading="lazy" title="Breder dan 600px" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.k{display:flex;gap:8px}.k div{flex:1;background:#E8EAF6;padding:10px;text-align:center;border-radius:6px}&lt;/style&gt;
+&lt;div class=&quot;k&quot;&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">600px of smaller</div><iframe class="demo-frame" loading="lazy" title="600px of smaller" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.k{display:flex;flex-direction:column;gap:6px;width:150px;margin:0 auto}.k div{background:#E8EAF6;padding:8px;text-align:center;border-radius:6px}&lt;/style&gt;
+&lt;div class=&quot;k&quot;&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;div&gt;kaart&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<div class="admonition let-op">
+<p class="admonition-title">Tel je accolades</p>
+<p>Mist er een <code>}</code>, dan werkt alles eronder niet meer. Prettier zet alles netjes ingesprongen, dan zie je het meteen.</p>
+</div>
+<details class="check">
+<summary>Check: op je telefoon</summary>
+<p><strong>1. Wanneer geldt de CSS in @media (max-width: 600px)?</strong></p>
+<ul>
+<li>A. Altijd</li>
+<li>B. Scherm 600px of smaller</li>
+<li>C. Scherm breder dan 600px</li>
+<li>D. Alleen bij printen</li>
+</ul>
+<p><strong>2. Waar zet je je media query in style.css?</strong></p>
+<ul>
+<li>A. Helemaal bovenaan</li>
+<li>B. In de head</li>
+<li>C. Helemaal onderaan</li>
+<li>D. In een apart bestand</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – als het scherm 600px of smaller is.</strong> max-width betekent: tot en met deze breedte. Op een laptop geldt de regel dus niet.</p>
+<p><strong>2. C – helemaal onderaan.</strong> Zeggen twee regels iets anders over hetzelfde element, dan wint de onderste. Staat je media query bovenaan, dan wint de gewone regel eronder.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">8. Maak je site geschikt voor een telefoon</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-8</code></p>
+<ol>
+<li>Kopieer <code>opdracht-7</code> naar een nieuwe map <code>opdracht-8</code>.</li>
+<li>Druk in de DevTools op Ctrl + Shift + M en kies bovenin een telefoon.</li>
+<li>Zet onderaan style.css een media query voor schermen tot 600px.</li>
+<li>Zet daarin je kaarten onder elkaar.</li>
+<li>Doe hetzelfde voor je header, je foto met tekst en je footer.</li>
+<li>Is je foto nu te klein? Maak hem in de media query weer breder.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">600px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">nav</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="o">...</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Op een laptop staan je kaarten naast elkaar. In de telefoonweergave staat alles onder elkaar en steekt er niets uit.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-7.html">← Blok 7 · Header en menu</a><a class="volgende" href="eindopdracht.html">Eindopdracht →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

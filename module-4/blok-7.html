@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header en menu · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html" class="actief"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 7</div>
+    <h2 class="paginatitel">Header en menu</h2>
+    <h2>Je menu met flexbox</h2>
+<p class="sub">In module 2 gebruikte je <code>inline-block</code>. Met flex gaat het makkelijker.</p>
+<ol>
+<li><strong>display: flex op de ul.</strong> De ul is de container, de li's zijn de items. Ze komen vanzelf naast elkaar.</li>
+<li><strong>gap in plaats van margin.</strong> Geen <code>margin-right</code> meer op elke li, maar één <code>gap</code> op de ul.</li>
+<li><strong>Haal de oude regels weg.</strong> <code>display: inline-block</code> en <code>margin-right</code> bij <code>nav li</code> heb je niet meer nodig.</li>
+</ol>
+<p class="bestandsnaam">Zo was het (module 2). Deze regels mogen weg:</p>
+<div class="code"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p class="bestandsnaam">Zo wordt het:</p>
+<div class="code"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">margin: 0 op de ul</p>
+<p>Een ul heeft uit zichzelf ruimte boven en onder. Met <code>margin: 0</code> staat je menu netjes in de balk.</p>
+</div>
+<h2>Naam links, menu rechts</h2>
+<p class="sub">Het bekendste patroon van het web: een header met flex.</p>
+<ol>
+<li><strong>De header is de container.</strong> De h1 en de nav zijn de items.</li>
+<li><strong>space-between.</strong> Je naam gaat naar links, je menu naar rechts.</li>
+<li><strong>align-items: center.</strong> Naam en menu staan even hoog, in het midden van de balk.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Zo ziet je header eruit</div><iframe class="demo-frame" loading="lazy" title="Zo ziet je header eruit" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;header{display:flex;justify-content:space-between;align-items:center;background:#1B1F3B;color:#fff;padding:12px 16px;border-radius:8px}h1{margin:0;font-size:20px}ul{list-style:none;padding:0;margin:0;display:flex;gap:10px}a{color:#fff;text-decoration:none;padding:4px 10px;border-radius:6px}a.actief{background:#E44D26}&lt;/style&gt;
+&lt;header&gt;&lt;h1&gt;Sam Jansen&lt;/h1&gt;&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a class=&quot;actief&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Hobby&#x27;s&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/header&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">text-align: center mag weg</p>
+<p>Stond je header in het midden met <code>text-align: center</code>? Flex regelt nu waar alles staat. Geef je h1 ook <code>margin: 0</code>.</p>
+</div>
+<details class="check">
+<summary>Check: header en menu</summary>
+<p><strong>1. Je li's staan met flex naast elkaar. Welke regel mag weg?</strong></p>
+<ul>
+<li>A. <code>display: flex</code> bij nav ul</li>
+<li>B. <code>display: inline-block</code> bij nav li</li>
+<li>C. <code>list-style: none</code></li>
+<li>D. <code>color</code> bij nav a</li>
+</ul>
+<p><strong>2. Header met display: flex. Naam en menu staan niet even hoog. Wat helpt?</strong></p>
+<ul>
+<li>A. <code>align-items: center;</code></li>
+<li>B. <code>justify-content: center;</code></li>
+<li>C. <code>text-align: center;</code></li>
+<li>D. <code>flex-wrap: wrap;</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – display: inline-block bij nav li.</strong> Flex zet de li's al naast elkaar. <code>list-style: none</code> heb je nog wel nodig, anders komen de bolletjes terug.</p>
+<p><strong>2. A – align-items: center;</strong> In een rij werkt align-items in de hoogte. <code>justify-content: center</code> zou je naam en je menu allebei naar het midden schuiven.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">7. Bouw je header met flex</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-7</code></p>
+<ol>
+<li>Kopieer <code>opdracht-6</code> naar een nieuwe map <code>opdracht-7</code>.</li>
+<li>Zet je menu met flexbox naast elkaar, met een gap.</li>
+<li>Haal de oude regels bij <code>nav li</code> weg.</li>
+<li>Zet in je header je naam links en je menu rechts.</li>
+<li>Zet je naam en je menu in de hoogte netjes in het midden.</li>
+<li>Haal <code>text-align: center</code> en overbodige margins weg als dat nodig is.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="o">...</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="o">...</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Op alle drie je pagina's staat je naam links en je menu rechts, op dezelfde hoogte. Bij <code>nav li</code> staat geen inline-block meer.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-6.html">← Blok 6 · Kaarten in een rij</a><a class="volgende" href="blok-8.html">Blok 8 · Op je telefoon →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

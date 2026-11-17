@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Het skelet · Module 1 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 1</div>
+<div class="module-kop"><h1>Module 1 · HTML &amp; CSS basis</h1><p>Je bouwt je eerste eigen webpagina: een profielpagina met HTML, opgemaakt met CSS.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Aan de slag</a>
+<a href="blok-2.html"><small>2</small>Tags</a>
+<a href="blok-3.html" class="actief"><small>3</small>Het skelet</a>
+<a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
+<a href="blok-5.html"><small>5</small>CSS koppelen</a>
+<a href="blok-6.html"><small>6</small>Selectors</a>
+<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
+<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 3</div>
+    <h2 class="paginatitel">Het skelet</h2>
+    <h2>Elke pagina heeft een vast skelet</h2>
+<p class="sub">Deze onderdelen staan op elke website ter wereld.</p>
+<div class="code"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"nl"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mijn pagina<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sam Jansen<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Onderdeel</th>
+<th>Wat doet het?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;!DOCTYPE html&gt;</code></td>
+<td>Zegt tegen de browser: dit is een moderne webpagina.</td>
+</tr>
+<tr>
+<td><code>&lt;html&gt;</code></td>
+<td>Hier begint je pagina. Alles zit hierin.</td>
+</tr>
+<tr>
+<td><code>&lt;head&gt;</code></td>
+<td>Informatie over de pagina. Dit ziet de bezoeker <strong>niet</strong>.</td>
+</tr>
+<tr>
+<td><code>&lt;body&gt;</code></td>
+<td>Alles wat de bezoeker <strong>wel</strong> ziet.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition onthoud">
+<p class="admonition-title">Snelle manier</p>
+<p>Typ in een leeg .html-bestand een uitroepteken (!) en druk op Tab. Het hele skelet verschijnt vanzelf.</p>
+</div>
+<h2>Head of body: waar hoort het?</h2>
+<p class="sub">Het verschil zie je meteen in de browser.</p>
+<table>
+<thead>
+<tr>
+<th>In de head</th>
+<th>In de body</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>De titel van het tabblad. En straks ook de koppeling naar je CSS-bestand.</td>
+<td>Al je tekst, koppen, lijstjes, links en plaatjes.</td>
+</tr>
+<tr>
+<td><code>&lt;title&gt;Sam Jansen&lt;/title&gt;</code></td>
+<td><code>&lt;h1&gt;Sam Jansen&lt;/h1&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<figure class="demo"><div class="demo-titel">De title zie je in het tabblad, de h1 op de pagina zelf</div><iframe class="demo-frame" loading="lazy" title="De title zie je in het tabblad, de h1 op de pagina zelf" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.tab{display:inline-block;background:#E8EAF6;border-radius:8px 8px 0 0;padding:6px 14px;font-size:13px}.pagina{border:1px solid #b8bddc;padding:10px 14px}small{color:#E44D26;font-size:12px}&lt;/style&gt;
+&lt;div class=&quot;tab&quot;&gt;Sam Jansen&lt;/div&gt; &lt;small&gt;← dit is de &amp;lt;title&amp;gt; uit de head&lt;/small&gt;
+&lt;div class=&quot;pagina&quot;&gt;&lt;h1 style=&quot;margin:0&quot;&gt;Sam Jansen&lt;/h1&gt;&lt;small&gt;↑ dit is de &amp;lt;h1&amp;gt; uit de body&lt;/small&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<details class="check">
+<summary>Check: het skelet</summary>
+<p><strong>1. Waar zet je de tekst die de bezoeker moet zien?</strong></p>
+<ul>
+<li>A. In de head</li>
+<li>B. In de body</li>
+<li>C. In de title</li>
+<li>D. In de meta</li>
+</ul>
+<p><strong>2. Wat typ je voor het skelet in VS Code?</strong></p>
+<ul>
+<li>A. ? en Tab</li>
+<li>B. ! en Tab</li>
+<li>C. # en Tab</li>
+<li>D. * en Tab</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – in de body.</strong> In de head staat alleen informatie over de pagina, zoals de titel van het tabblad.</p>
+<p><strong>2. B – ! en dan Tab.</strong> Dit werkt alleen in een leeg bestand dat op .html eindigt.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">3. Zet je pagina netjes in het skelet</p>
+<p class="meta">Ongeveer 5 minuten · Je werkt in: <code>opdracht-3</code></p>
+<ol>
+<li>Maak een map <code>opdracht-3</code> met een leeg bestand index.html.</li>
+<li>Typ een uitroepteken en druk op Tab.</li>
+<li>Zet tussen <code>&lt;title&gt;</code> en <code>&lt;/title&gt;</code> jouw naam.</li>
+<li>Neem je h1 en je alinea's uit opdracht-2 over in de body.</li>
+<li>Open met Live Server en kijk naar het tabblad bovenin Chrome.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Sam Jansen<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sam<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>In het tabblad van Chrome staat jouw naam. Op de pagina zelf staat je tekst.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-2.html">← Blok 2 · Tags</a><a class="volgende" href="blok-4.html">Blok 4 · Koppen en lijstjes →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De menubalk · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html" class="actief"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 7</div>
+    <h2 class="paginatitel">De menubalk</h2>
+    <h2>Een menu is een lijstje met links</h2>
+<p class="sub">Drie tags die je allemaal al kent, in elkaar gezet.</p>
+<ol>
+<li><strong><code>&lt;nav&gt;</code> zegt: dit is het menu.</strong> De doos eromheen. Hierin zet je je hele menu.</li>
+<li><strong><code>&lt;ul&gt;</code> is het lijstje.</strong> Precies hetzelfde lijstje als bij je hobby's. Straks halen we de bolletjes weg.</li>
+<li><strong>In elke <code>&lt;li&gt;</code> een <code>&lt;a&gt;</code>.</strong> Elke regel van het lijstje is een link naar een andere pagina van je site.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"index.html"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hobbys.html"</span><span class="p">&gt;</span>Hobby's<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"contact.html"</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Zonder CSS ziet je menu eruit als een gewoon lijstje met bolletjes. Dat is goed.</div><iframe class="demo-frame" loading="lazy" title="Zonder CSS ziet je menu eruit als een gewoon lijstje met bolletjes. Dat is goed." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Hobby&#x27;s&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">Op elke pagina precies hetzelfde</p>
+<p>Anders raakt je bezoeker de weg kwijt. Kopieer je nav dus letterlijk naar je andere pagina's.</p>
+</div>
+<h2>Laat zien waar je bent</h2>
+<p class="sub">Eén extra class maakt duidelijk welke pagina open is. Het enige verschil tussen de pagina's is waar <code>class="actief"</code> staat. De rest is letterlijk gelijk.</p>
+<p class="bestandsnaam">index.html</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"index.html"</span> <span class="na">class</span><span class="o">=</span><span class="s">"actief"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hobbys.html"</span><span class="p">&gt;</span>Hobby's<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="bestandsnaam">hobbys.html</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"index.html"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hobbys.html"</span> <span class="na">class</span><span class="o">=</span><span class="s">"actief"</span><span class="p">&gt;</span>Hobby's<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Werkvolgorde</p>
+<p>Kopieer eerst je nav naar alle pagina's. Pas daarna verplaats je op elke pagina de class. Zo vergeet je niets.</p>
+</div>
+<details class="check">
+<summary>Check: de menubalk</summary>
+<p><strong>1. Wat zet je binnen een <code>&lt;li&gt;</code> van je menu?</strong></p>
+<ul>
+<li>A. Een <code>&lt;ul&gt;</code></li>
+<li>B. Een <code>&lt;a&gt;</code></li>
+<li>C. Een <code>&lt;nav&gt;</code></li>
+<li>D. Een <code>&lt;div&gt;</code></li>
+</ul>
+<p><strong>2. Waarom geef je één link de class actief?</strong></p>
+<ul>
+<li>A. Anders werkt de link niet</li>
+<li>B. Om te laten zien op welke pagina je bent</li>
+<li>C. Om de link te openen</li>
+<li>D. Dat moet van HTML</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – een <code>&lt;a&gt;</code>.</strong> De li is de regel van het lijstje, en de link staat daarin. De nav en de ul zitten er juist omheen.</p>
+<p><strong>2. B – om te laten zien op welke pagina je bent.</strong> De link werkt ook zonder die class prima. Hij is er alleen zodat jij hem in je CSS een andere kleur kunt geven.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">7. Bouw je menu op alle pagina's</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-7</code></p>
+<ol>
+<li>Kopieer <code>opdracht-6</code> naar een nieuwe map <code>opdracht-7</code>.</li>
+<li>Maak een derde pagina contact.html en koppel style.css.</li>
+<li>Bouw op index.html een <code>&lt;nav&gt;</code> met een ul en drie li's met links.</li>
+<li>Kopieer die hele nav naar hobbys.html en contact.html.</li>
+<li>Geef op elke pagina de juiste link de class actief.</li>
+<li>Test: klik vanaf elke pagina naar elke andere pagina.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"index.html"</span> <span class="na">class</span><span class="o">=</span><span class="s">"actief"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je kunt vanaf elke pagina naar elke andere pagina klikken en je komt nooit vast te zitten. Het menu ziet er nog uit als een lijstje met bolletjes, dat is goed.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-6.html">← Blok 6 · Paden</a><a class="volgende" href="blok-8.html">Blok 8 · Menu opmaken →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

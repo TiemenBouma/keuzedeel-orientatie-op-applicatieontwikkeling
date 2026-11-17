@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Het gesprek · Module 6 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 6</div>
+<div class="module-kop"><h1>Module 6 · Eindopdracht</h1><p>Je maakt je eigen website met alles wat je geleerd hebt, en je vertelt erover in een gesprek. Hier komt niets nieuws bij.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Zo werkt het</a>
+<a href="website.html">Je website</a>
+<a href="gesprek.html" class="actief">Het gesprek</a>
+<a href="voorbereiden.html">Voorbereiden</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Het gesprek</h2>
+    <h2>Zo verloopt het gesprek</h2>
+<p class="sub">Je praat 20 minuten met twee beoordelaars over je eigen website. Je website, je code en je bijlage staan open op je laptop.</p>
+<table>
+<thead>
+<tr>
+<th>Tijd</th>
+<th>Wat gebeurt er?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 minuut</td>
+<td>De beoordelaars heten je welkom en leggen uit hoe het gesprek gaat.</td>
+</tr>
+<tr>
+<td>3 minuten</td>
+<td>Je laat je website zien alsof de beoordelaar je opdrachtgever is. Je vraagt of de opdrachtgever akkoord is.</td>
+</tr>
+<tr>
+<td>8 minuten</td>
+<td>Je legt je eigen code uit. Je zegt wat een kleine wijziging doet en probeert die daarna uit.</td>
+</tr>
+<tr>
+<td>2 minuten</td>
+<td>Je vertelt over de wensen van je opdrachtgever en waarom je website daarbij past.</td>
+</tr>
+<tr>
+<td>3 minuten</td>
+<td>Je vertelt hoe je hebt getest en hoe je een fout hebt opgelost.</td>
+</tr>
+<tr>
+<td>2 minuten</td>
+<td>Je krijgt een nieuwe wens en vertelt hoe je die zou aanpakken.</td>
+</tr>
+<tr>
+<td>1 minuut</td>
+<td>Je mag nog iets zeggen of vragen. Je hoort wanneer je de uitslag krijgt.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Je eigen woorden tellen</p>
+<p>Je hoeft niet alle Engelse vaktermen te kennen. Uitleggen in je eigen woorden telt ook. Je mag in je eigen code kijken en dingen aanwijzen.</p>
+</div>
+<h2>Waar letten de beoordelaars op?</h2>
+<ol>
+<li><strong>Je HTML en CSS uitleggen.</strong> Je legt aangewezen stukken van je eigen code in je eigen woorden uit.</li>
+<li><strong>Je JavaScript uitleggen.</strong> Stap voor stap: wat gebeurt er van de klik tot de melding? <em>Dit onderdeel moet voldoende zijn.</em></li>
+<li><strong>Voorspellen en testen.</strong> Je zegt wat een kleine wijziging in je code doet, probeert het uit en legt de uitkomst uit. <em>Dit onderdeel moet voldoende zijn.</em></li>
+<li><strong>Wensen.</strong> Je laat zien hoe de wensen van je opdrachtgever in je website zitten.</li>
+<li><strong>Testen.</strong> Je legt met je testlijstje uit wat je hebt getest, wat je verwachtte en wat er gebeurde.</li>
+<li><strong>Een fout.</strong> Je vertelt over een fout uit je eigen werk: wat ging er mis, wat was de oorzaak en hoe heb je het opgelost?</li>
+<li><strong>Opleveren.</strong> Je laat zien hoe je website werkt en vraagt of de opdrachtgever akkoord is.</li>
+<li><strong>Een nieuwe wens.</strong> Je legt uit hoe je een nieuwe wens zou aanpakken: welk bestand, wat verandert er en hoe test je het?</li>
+</ol>
+<p>Per onderdeel krijg je onvoldoende, voldoende of goed.</p>
+    <div class="vorige-volgende"><a class="vorige" href="website.html">← Je website</a><a class="volgende" href="voorbereiden.html">Voorbereiden →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Je website · Module 6 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 6</div>
+<div class="module-kop"><h1>Module 6 · Eindopdracht</h1><p>Je maakt je eigen website met alles wat je geleerd hebt, en je vertelt erover in een gesprek. Hier komt niets nieuws bij.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Zo werkt het</a>
+<a href="website.html" class="actief">Je website</a>
+<a href="gesprek.html">Het gesprek</a>
+<a href="voorbereiden.html">Voorbereiden</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Je website</h2>
+    <h2>Minimumeisen</h2>
+<p class="sub">Dit moet er minstens in je website zitten.</p>
+<table>
+<thead>
+<tr>
+<th>Onderdeel</th>
+<th>Dit moet er minstens zijn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bestanden</strong></td>
+<td>Je website opent zonder problemen met Live Server. Je hebt een eigen <code>style.css</code> en een eigen <code>script.js</code>.</td>
+</tr>
+<tr>
+<td><strong>HTML</strong></td>
+<td>Minstens twee pagina's, met een menu dat op elke pagina werkt. Koppen, tekst en minstens één foto met alt-tekst.</td>
+</tr>
+<tr>
+<td><strong>CSS</strong></td>
+<td>Eigen kleuren, een lettertype en ruimte (padding of margin). Minstens één keer dingen naast elkaar met flexbox.</td>
+</tr>
+<tr>
+<td><strong>JavaScript</strong></td>
+<td>Een invoerveld en een knop. Na een klik leest je code wat er is ingevuld. Met <code>if</code> en <code>else</code> kiest je code tussen minstens twee meldingen. De melding komt op de pagina te staan.</td>
+</tr>
+<tr>
+<td><strong>Console</strong></td>
+<td>Bij normaal gebruik staan er geen rode foutmeldingen in de Console.</td>
+</tr>
+</tbody>
+</table>
+<details class="hint">
+<summary>Waar vind je dit terug?</summary>
+<ul>
+<li>Pagina's, menu en foto: module 1 en 2</li>
+<li>Kleuren, lettertype en ruimte: module 1 en 3</li>
+<li>Flexbox: module 4</li>
+<li>Invoerveld, knop, if en else: module 5</li>
+<li>De Console: module 3 en 5</li>
+</ul>
+</details>
+<h2>De bijlage</h2>
+<p>Lever bij je website een korte bijlage in, van maximaal één A4. Daarin staan:</p>
+<ul>
+<li><strong>Wensenlijst:</strong> minstens 3 wensen van je opdrachtgever.</li>
+<li><strong>Testlijstje:</strong> minstens 5 tests, waarvan minstens één over je JavaScript.</li>
+<li><strong>Hulp:</strong> welke hulp of AI je hebt gebruikt en waarvoor. Geen hulp gehad? Schrijf dat dan op.</li>
+</ul>
+<p>Zo kan je testlijstje eruitzien:</p>
+<table>
+<thead>
+<tr>
+<th>Wat test ik?</th>
+<th>Wat verwacht ik?</th>
+<th>Wat gebeurde er?</th>
+<th>Goed of fout?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ik klik op de knop en vul niets in.</td>
+<td>Er komt een melding dat ik iets moet invullen.</td>
+<td>Er gebeurde niets.</td>
+<td>Fout, daarna opgelost.</td>
+</tr>
+</tbody>
+</table>
+<h2>Checklist voor je inlevert</h2>
+<ul>
+<li>Je website opent met Live Server, met eigen <code>style.css</code> en <code>script.js</code></li>
+<li>HTML: minstens twee pagina's, werkend menu, koppen, tekst, foto met alt-tekst</li>
+<li>CSS: kleuren, lettertype, ruimte en één keer flexbox</li>
+<li>JavaScript: invoerveld, knop, if en else, minstens twee meldingen op de pagina</li>
+<li>Console: geen rode foutmeldingen bij normaal gebruik</li>
+<li>Bijlage: minstens 3 wensen en 5 tests (minstens één over JavaScript)</li>
+<li>Bijlage: hulp en AI ingevuld</li>
+<li class="checklist">Alles in één zip: <code>eindopdracht-jouwnaam.zip</code></li>
+</ul>
+    <div class="vorige-volgende"><a class="vorige" href="index.html">← Zo werkt het</a><a class="volgende" href="gesprek.html">Het gesprek →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

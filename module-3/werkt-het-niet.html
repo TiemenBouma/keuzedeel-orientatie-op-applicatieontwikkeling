@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Werkt het niet? · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Lettertypes</a>
+<a href="blok-3.html"><small>3</small>Google Fonts</a>
+<a href="blok-4.html"><small>4</small>Kleuren</a>
+<a href="blok-5.html"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html" class="actief">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Werkt het niet?</h2>
+    <p class="sub">Met de DevTools vind je de fout meestal binnen een minuut.</p>
+<ol>
+<li><strong>Heb je alles opgeslagen?</strong> Een witte stip op een tabblad in VS Code betekent: nog niet opgeslagen.</li>
+<li><strong>Streep erdoor in de DevTools?</strong> Een andere regel wint. Kijk welke regel wel geldt, zonder streep.</li>
+<li><strong>Geel driehoekje?</strong> Typefout in de eigenschap of waarde. Controleer letter voor letter.</li>
+<li><strong>Google Font doet niets?</strong> Staan de link-regels in de head van déze pagina? Klopt de naam precies?</li>
+<li><strong>Achtergrondfoto zie je niet?</strong> Kijk in de Console naar een rode 404. Het pad begint bij style.css.</li>
+<li><strong>margin: 0 auto werkt niet?</strong> Heeft het blok een max-width? Zonder breedte valt er niets te verdelen.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Nog steeds niet?</p>
+<p>Vraag eerst je buurman, daarna je docent. Laat de DevTools openstaan, dan zoeken jullie samen.</p>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="eindopdracht.html">← Eindopdracht</a><a class="volgende" href="naslag.html">Naslag →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

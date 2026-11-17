@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Werkt het niet? · Module 1 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 1</div>
+<div class="module-kop"><h1>Module 1 · HTML &amp; CSS basis</h1><p>Je bouwt je eerste eigen webpagina: een profielpagina met HTML, opgemaakt met CSS.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Aan de slag</a>
+<a href="blok-2.html"><small>2</small>Tags</a>
+<a href="blok-3.html"><small>3</small>Het skelet</a>
+<a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
+<a href="blok-5.html"><small>5</small>CSS koppelen</a>
+<a href="blok-6.html"><small>6</small>Selectors</a>
+<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
+<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html" class="actief">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Werkt het niet?</h2>
+    <p class="sub">Bijna altijd is het een van deze vijf.</p>
+<ol>
+<li><strong>Heb je opgeslagen?</strong> Ctrl + S. Zonder opslaan verandert er niets in de browser.</li>
+<li><strong>Klopt de bestandsnaam?</strong> style.css met kleine letters. Style.CSS is iets anders. En geen spaties.</li>
+<li><strong>Staan de bestanden in dezelfde map?</strong> index.html, style.css en je foto horen in dezelfde opdrachtmap.</li>
+<li><strong>Is de sluittag er?</strong> Kijk of elke <code>&lt;tag&gt;</code> ook een <code>&lt;/tag&gt;</code> heeft.</li>
+<li><strong>Puntkomma vergeten in je CSS?</strong> Elke regel eindigt op een puntkomma.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Nog steeds niet?</p>
+<p>Vraag eerst je buurman, daarna je docent. Werk je zelfstandig? Kijk bij de naslag.</p>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="eindopdracht.html">← Eindopdracht</a><a class="volgende" href="naslag.html">Naslag →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

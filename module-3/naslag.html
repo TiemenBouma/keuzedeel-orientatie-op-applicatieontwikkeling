@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naslag · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Lettertypes</a>
+<a href="blok-3.html"><small>3</small>Google Fonts</a>
+<a href="blok-4.html"><small>4</small>Kleuren</a>
+<a href="blok-5.html"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html" class="actief">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Naslag</h2>
+    <h2>Letters, kleur en achtergrond</h2>
+<p class="sub">Alles van blok 1 t/m 5 bij elkaar. Kijk hier eerst als je iets kwijt bent.</p>
+<p class="bestandsnaam">Lettertypes en kleur</p>
+<div class="code"><pre><span></span><code><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="nt">Verdana</span><span class="o">,</span><span class="w"> </span><span class="nt">sans-serif</span><span class="o">;</span>
+<span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s2">"Open Sans"</span><span class="o">,</span><span class="w"> </span><span class="nt">sans-serif</span><span class="o">;</span>
+<span class="nt">font-weight</span><span class="o">:</span><span class="w"> </span><span class="nt">bold</span><span class="o">;</span>
+<span class="nt">font-style</span><span class="o">:</span><span class="w"> </span><span class="nt">italic</span><span class="o">;</span>
+<span class="nt">line-height</span><span class="o">:</span><span class="w"> </span><span class="nt">1</span><span class="p">.</span><span class="nc">5</span><span class="o">;</span>
+
+<span class="nt">color</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">1B1F3B</span><span class="o">;</span>
+<span class="nt">background-color</span><span class="o">:</span><span class="w"> </span><span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="p">.</span><span class="nc">5</span><span class="o">);</span>
+</code></pre></div>
+<p class="bestandsnaam">Achtergrondfoto</p>
+<div class="code"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">"images/header.jpg"</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-position</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">no-repeat</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1B1F3B</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Google Fonts in het kort</p>
+<p>fonts.google.com, Get font, Get embed code. Plak de link-regels in de head, boven style.css, op elke pagina.</p>
+</div>
+<div class="admonition onthoud">
+<p class="admonition-title">Paden in CSS</p>
+<p>Een pad in <code>url()</code> begint bij style.css, niet bij je HTML-bestand. Rode 404 in de Console? Dan klopt het pad niet.</p>
+</div>
+<h2>Schaduw, breedte en hover</h2>
+<p class="sub">Alles van blok 6 t/m 8, en de sneltoetsen van de DevTools.</p>
+<p class="bestandsnaam">Verloop, schaduw en breedte</p>
+<div class="code"><pre><span></span><code><span class="nt">background-image</span><span class="o">:</span><span class="w"> </span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">to</span><span class="w"> </span><span class="nt">right</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">2965F1</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">1B1F3B</span><span class="o">);</span>
+<span class="nt">box-shadow</span><span class="o">:</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">4px</span><span class="w"> </span><span class="nt">12px</span><span class="w"> </span><span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="p">.</span><span class="nc">15</span><span class="o">);</span>
+<span class="nt">text-shadow</span><span class="o">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">3px</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span>
+
+<span class="nt">main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">img</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p class="bestandsnaam">Hover en overgang</p>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">all</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">kaart</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-4</span><span class="kt">px</span><span class="p">);</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">DevTools</p>
+<p>F12 opent ze. Ctrl + Shift + C wijst iets aan. Ctrl + Shift + M toont een telefoon. Streep erdoor: andere regel wint. Geel driehoekje: typefout.</p>
+</div>
+<div class="admonition onthoud">
+<p class="admonition-title">Onthoud</p>
+<p>Wat je in de DevTools verandert, is weg na verversen. Typ het over in style.css en sla op met Ctrl + S.</p>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="werkt-het-niet.html">← Werkt het niet?</a><a class="volgende" href="woordenlijst.html">Woordenlijst →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

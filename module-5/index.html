@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html" class="actief">Start</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Start</h2>
+    <div class="admonition let-op">
+<p class="admonition-title">Deze module komt binnenkort</p>
+<p>De uitleg en de opdrachten van module 5 staan hier binnenkort. Hieronder zie je alvast wat je gaat leren.</p>
+</div>
+<h2>Dit ga je maken</h2>
+<p>Je bouwt het spel <strong>Raad het getal</strong> op een nieuwe pagina <code>spel.html</code> in je eigen site. De computer kiest een geheim getal van 1 tot 100. Jij raadt, en de pagina zegt of het hoger of lager is.</p>
+<figure class="demo"><div class="demo-titel">Zo kan je spel eruitzien. Probeer het maar.</div><iframe class="demo-frame" loading="lazy" title="Zo kan je spel eruitzien. Probeer het maar." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.kaart{background:#E8EAF6;border-radius:10px;padding:16px;max-width:360px}h2{margin:0 0 8px}input{width:80px;padding:6px;font-size:15px}button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;cursor:pointer}#melding{font-weight:bold;margin:10px 0 4px}.goed{color:#1E8E4E}.fout{color:#E44D26}small{color:#5b6075}&lt;/style&gt;
+&lt;div class=&quot;kaart&quot;&gt;&lt;h2&gt;Raad het getal&lt;/h2&gt;&lt;p&gt;Ik denk aan een getal van 1 tot 100.&lt;/p&gt;
+&lt;input id=&quot;gok&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;100&quot; placeholder=&quot;1-100&quot;&gt; &lt;button id=&quot;raad&quot;&gt;Raad!&lt;/button&gt; &lt;button id=&quot;opnieuw&quot; style=&quot;background:#1B1F3B&quot;&gt;Opnieuw&lt;/button&gt;
+&lt;p id=&quot;melding&quot;&gt;&lt;/p&gt;&lt;small&gt;Pogingen: &lt;span id=&quot;teller&quot;&gt;0&lt;/span&gt;&lt;/small&gt;&lt;/div&gt;
+&lt;script&gt;
+let geheim = Math.floor(Math.random() * 100) + 1;
+let pogingen = 0;
+const melding = document.querySelector(&quot;#melding&quot;);
+document.querySelector(&quot;#raad&quot;).addEventListener(&quot;click&quot;, function () {
+  const gok = Number(document.querySelector(&quot;#gok&quot;).value);
+  pogingen = pogingen + 1;
+  document.querySelector(&quot;#teller&quot;).textContent = pogingen;
+  melding.classList.remove(&quot;goed&quot;, &quot;fout&quot;);
+  if (gok &gt; geheim) { melding.textContent = &quot;Lager!&quot;; melding.classList.add(&quot;fout&quot;); }
+  else if (gok &lt; geheim) { melding.textContent = &quot;Hoger!&quot;; melding.classList.add(&quot;fout&quot;); }
+  else { melding.textContent = &quot;Goed geraden!&quot;; melding.classList.add(&quot;goed&quot;); }
+});
+document.querySelector(&quot;#opnieuw&quot;).addEventListener(&quot;click&quot;, function () {
+  geheim = Math.floor(Math.random() * 100) + 1; pogingen = 0;
+  document.querySelector(&quot;#teller&quot;).textContent = 0; melding.textContent = &quot;&quot;; document.querySelector(&quot;#gok&quot;).value = &quot;&quot;;
+});
+&lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<h2>Wat je leert</h2>
+<table>
+<thead>
+<tr>
+<th>Blok</th>
+<th>Onderwerp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kennismaken: wat is JavaScript, spel.html maken, script.js koppelen, console.log en de Console</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Variabelen: namen voor je waarden, <code>const</code> en <code>let</code>, tekst en getallen</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pagina aanpassen: <code>document.querySelector</code> en <code>textContent</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Een knop die werkt: <code>addEventListener</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Invoer lezen: een invoerveld, <code>.value</code> en <code>Number()</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Hoger of lager: <code>if</code>, <code>else if</code> en <code>else</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Toeval en tellen: <code>Math.random</code> en een teller</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Kleur en opnieuw: <code>classList</code> en een knop Opnieuw</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition onthoud">
+<p class="admonition-title">Vergelijk het met een huis</p>
+<p>HTML zijn de muren, CSS is de verf en JavaScript is de elektriciteit: daarmee gaat er iets gebeuren als je op een knop drukt.</p>
+</div>
+    <div class="vorige-volgende"><span></span><a class="volgende" href="woordenlijst.html">Woordenlijst →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

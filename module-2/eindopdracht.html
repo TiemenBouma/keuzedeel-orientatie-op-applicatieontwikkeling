@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eindopdracht · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html" class="actief">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Eindopdracht</h2>
+    <div class="admonition opdracht eind">
+<p class="admonition-title">Maak je eigen mini-site</p>
+<p class="meta">Je werkt in een nieuwe map <code>eindopdracht</code>, met drie pagina's en één style.css.</p>
+<p><strong>Op je site staat:</strong></p>
+<ul>
+<li>Map <code>eindopdracht</code> met index.html, hobbys.html, contact.html en style.css</li>
+<li>Een map images met minstens één foto erin</li>
+<li>Op elke pagina dezelfde nav met drie links naast elkaar</li>
+<li>De class actief op de link van de pagina waar je bent</li>
+<li>header, main en footer op elke pagina</li>
+<li>Minstens twee kaarten met een div of een section</li>
+<li>Een foto met alt-tekst uit de map images</li>
+<li class="checklist">Een link met een hekje die naar je footer met een id springt</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Al klaar?</p>
+<p>Geef je kaarten een schaduw met <code>box-shadow: 0 2px 8px gray;</code>. Of zet je footer-tekst in het midden met <code>text-align: center;</code>.</p>
+</div>
+</div>
+<p>Alles wat je nodig hebt, heb je in de mini-opdrachten al een keer gemaakt. Kijk gerust terug in je eigen mappen.</p>
+<h2>Inleveren</h2>
+<p>Zip de hele map <code>les2-jouwnaam</code>. Daarin zitten <code>opdracht-1</code> tot en met <code>opdracht-8</code> en de map <code>eindopdracht</code>. Noem de zip <code>les2-jouwnaam.zip</code>.</p>
+<p><strong>Checklist: vink af voordat je inlevert</strong></p>
+<ul>
+<li>Map <code>les2-jouwnaam</code> met <code>opdracht-1</code> tot en met <code>opdracht-8</code></li>
+<li>Map <code>eindopdracht</code> met drie html-bestanden</li>
+<li>Eén style.css, gekoppeld in de head van elke pagina</li>
+<li>Map images met je foto erin</li>
+<li>Op elke pagina precies dezelfde nav</li>
+<li>Alle map- en bestandsnamen met kleine letters</li>
+<li>Alles opgeslagen met Ctrl + S</li>
+<li class="checklist">Elke pagina opent goed met Live Server</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Zo maak je een zip</p>
+<p>Rechtsklik op de map <code>les2-jouwnaam</code> en kies <strong>Comprimeren naar &gt; ZIP-bestand</strong>. Op oudere Windows: <strong>Kopiëren naar &gt; Gecomprimeerde map</strong>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Werk je thuis?</p>
+<p>Je hebt alleen VS Code en Chrome nodig. Kom je er niet uit, schrijf je vraag op en neem hem mee naar de les.</p>
+</div>
+<p>Twijfel je of iets af is? Kijk bij <strong>Klaar als...</strong> bij die opdracht.</p>
+    <div class="vorige-volgende"><a class="vorige" href="blok-8.html">← Blok 8 · Menu opmaken</a><a class="volgende" href="werkt-het-niet.html">Werkt het niet? →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

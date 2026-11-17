@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>id en ankerlinks · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html" class="actief"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 4</div>
+    <h2 class="paginatitel">id en ankerlinks</h2>
+    <h2>id: de class die maar één keer mag</h2>
+<p class="sub">Naast de class is er nog een manier om iets aan te wijzen: het <strong>id</strong>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>class</th>
+<th>id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teken in CSS</td>
+<td>punt: <code>.kaart</code></td>
+<td>hekje: <code>#contact</code></td>
+</tr>
+<tr>
+<td>Hoe vaak?</td>
+<td>Zo vaak je wilt</td>
+<td>Eén keer per pagina</td>
+</tr>
+<tr>
+<td>Gebruik je voor</td>
+<td>Opmaak van alles wat vaker terugkomt: kaarten, knoppen, kopjes. Dat is verreweg het meest.</td>
+<td>Precies één plek op de pagina aanwijzen. Vooral handig om ergens naartoe te springen.</td>
+</tr>
+</tbody>
+</table>
+<p class="bestandsnaam">HTML</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">footer</span> <span class="na">id</span><span class="o">=</span><span class="s">"contact"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="bestandsnaam">CSS</p>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">contact</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">navy</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Springen naar een plek op je pagina</h2>
+<p class="sub">Een link met een hekje gaat niet naar een andere pagina, maar naar een plek op dezelfde pagina. Zo'n link heet een <strong>ankerlink</strong>.</p>
+<ol>
+<li><strong>Geef het doel een id.</strong> Bijvoorbeeld je footer: <code>&lt;footer id="contact"&gt;</code>. De naam verzin je zelf.</li>
+<li><strong>Verwijs ernaar met een hekje.</strong> In de link schrijf je <code>href="#contact"</code>. Dat hekje zegt: blijf op deze pagina.</li>
+<li><strong>Het hekje staat niet in je HTML-id.</strong> In de HTML: <code>id="contact"</code>. In de link en in je CSS: <code>#contact</code>. Net als bij de punt van een class.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#contact"</span><span class="p">&gt;</span>Mail mij<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">footer</span> <span class="na">id</span><span class="o">=</span><span class="s">"contact"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>sam@mail.nl<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Zie je niks gebeuren?</p>
+<p>Springen kan alleen als je pagina langer is dan je scherm. Zet er tijdelijk wat extra alinea's in en probeer het opnieuw.</p>
+</div>
+<details class="check">
+<summary>Check: id en ankerlinks</summary>
+<p><strong>1. Hoe schrijf je in CSS een regel voor <code>id="contact"</code>?</strong></p>
+<ul>
+<li>A. <code>.contact { }</code></li>
+<li>B. <code>#contact { }</code></li>
+<li>C. <code>contact { }</code></li>
+<li>D. <code>id=contact { }</code></li>
+</ul>
+<p><strong>2. Wat doet <code>&lt;a href="#contact"&gt;</code>?</strong></p>
+<ul>
+<li>A. Opent een nieuwe pagina</li>
+<li>B. Springt naar het element met dat id</li>
+<li>C. Maakt de tekst blauw</li>
+<li>D. Koppelt je CSS</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>#contact { }</code>.</strong> Een id herken je in CSS aan het hekje. Met een punt zoekt de browser naar een class, en die heet hier anders.</p>
+<p><strong>2. B – springt naar het element met dat id.</strong> Een href zonder hekje gaat naar een ander bestand. Met een hekje blijf je op dezelfde pagina en scrollt de browser erheen.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">4. Maak een link die naar je footer springt</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-4</code></p>
+<ol>
+<li>Kopieer <code>opdracht-3</code> naar een nieuwe map <code>opdracht-4</code>.</li>
+<li>Geef je <code>&lt;footer&gt;</code> het id contact.</li>
+<li>Zet in je header een link: <code>&lt;a href="#contact"&gt;Mail mij&lt;/a&gt;</code>.</li>
+<li>Maak in style.css een regel <code>#contact</code> met een eigen achtergrondkleur.</li>
+<li>Maak je pagina langer met een paar extra alinea's.</li>
+<li>Klik op de link en kijk of de pagina naar beneden springt.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<p><div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#contact"</span><span class="p">&gt;</span>Mail mij<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">footer</span> <span class="na">id</span><span class="o">=</span><span class="s">"contact"</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="code"><pre><span></span><code><span class="p">#</span><span class="nn">contact</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></p>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je klikt bovenaan op Mail mij en je komt onderaan bij je footer uit. Gebeurt er niets? Dan past je hele pagina nog op één scherm.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-3.html">← Blok 3 · Semantische tags</a><a class="volgende" href="blok-5.html">Blok 5 · Een tweede pagina →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

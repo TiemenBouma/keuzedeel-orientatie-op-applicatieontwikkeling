@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>align-items · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html" class="actief"><small>5</small>align-items</a>
+<a href="blok-6.html"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 5</div>
+    <h2 class="paginatitel">align-items</h2>
+    <h2>Uitlijnen met align-items</h2>
+<p class="sub"><code>justify-content</code> werkt in de rij, <code>align-items</code> in de hoogte.</p>
+<ol>
+<li><strong>stretch:</strong> even hoog. De standaard. Alle items rekken uit tot het hoogste.</li>
+<li><strong>flex-start:</strong> bovenaan. Elk item houdt zijn eigen hoogte en staat bovenaan.</li>
+<li><strong>center:</strong> in het midden. Elk item staat in het midden van de hoogte.</li>
+<li><strong>flex-end:</strong> onderaan. Elk item staat onderaan de rij.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">Drie items van verschillende hoogte</div><iframe class="demo-frame" loading="lazy" title="Drie items van verschillende hoogte" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.w{display:flex;gap:10px}.w&gt;div{flex:1}.r{display:flex;gap:4px;height:80px;background:#f6f7fc;border:1px dashed #b8bddc;border-radius:6px;padding:4px}.r div{background:#2965F1;color:#fff;flex:1;text-align:center;border-radius:4px}.a{height:30px}.b{height:50px}.c{height:20px}small{display:block;font-family:Consolas,monospace;font-size:12px;color:#5b6075;margin-bottom:2px}&lt;/style&gt;
+&lt;div class=&quot;w&quot;&gt;&lt;div&gt;&lt;small&gt;stretch&lt;/small&gt;&lt;div class=&quot;r&quot; style=&quot;align-items:stretch&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;small&gt;flex-start&lt;/small&gt;&lt;div class=&quot;r&quot; style=&quot;align-items:flex-start&quot;&gt;&lt;div class=&quot;a&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;b&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;c&quot;&gt;3&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;small&gt;center&lt;/small&gt;&lt;div class=&quot;r&quot; style=&quot;align-items:center&quot;&gt;&lt;div class=&quot;a&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;b&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;c&quot;&gt;3&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;small&gt;flex-end&lt;/small&gt;&lt;div class=&quot;r&quot; style=&quot;align-items:flex-end&quot;&gt;&lt;div class=&quot;a&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;b&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;c&quot;&gt;3&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">Twee richtingen</p>
+<p><code>justify-content</code> werkt in de hoofdrichting: bij row van links naar rechts. <code>align-items</code> werkt in de andere richting: bij row van boven naar beneden.</p>
+</div>
+<h2>Een foto naast tekst</h2>
+<p class="sub">Het bekendste voorbeeld van <code>align-items: center</code>.</p>
+<ol>
+<li><strong>Een div om foto en tekst.</strong> De div wordt de container. De img en de p zijn de items.</li>
+<li><strong>align-items: center.</strong> De tekst staat netjes in het midden naast de foto, niet bovenaan.</li>
+<li><strong>Maak de foto kleiner.</strong> Met <code>max-width: 40%</code> pakt de foto niet de hele rij.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"profiel"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/sam.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Sam op de fiets"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ik ben Sam ...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">profiel</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">profiel</span><span class="w"> </span><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Een foto links met de tekst in het midden van de hoogte ernaast</div><iframe class="demo-frame" loading="lazy" title="Een foto links met de tekst in het midden van de hoogte ernaast" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.profiel{display:flex;align-items:center;gap:20px}.foto{width:40%;height:110px;background:#c5cae9;border-radius:8px;display:grid;place-items:center;color:#5b6075}&lt;/style&gt;
+&lt;div class=&quot;profiel&quot;&gt;&lt;div class=&quot;foto&quot;&gt;foto&lt;/div&gt;&lt;p&gt;Ik ben Sam. Ik woon in Utrecht en fiets elke dag naar school.&lt;/p&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Waarom zijn je kaarten even hoog?</p>
+<p>Zonder <code>align-items</code> is de waarde <code>stretch</code>. Daarom zijn je kaarten sinds opdracht 2 even hoog.</p>
+</div>
+<details class="check">
+<summary>Check: align-items</summary>
+<p><strong>1. Kaarten in een rij zijn even hoog, ook met weinig tekst. Hoe komt dat?</strong></p>
+<ul>
+<li>A. Door gap</li>
+<li>B. Door stretch</li>
+<li>C. Door justify-content</li>
+<li>D. Door max-width</li>
+</ul>
+<p><strong>2. Tekst moet in de hoogte in het midden naast een foto staan. Wat gebruik je?</strong></p>
+<ul>
+<li>A. <code>justify-content: center;</code></li>
+<li>B. <code>text-align: center;</code></li>
+<li>C. <code>align-items: center;</code></li>
+<li>D. <code>margin: 0 auto;</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – door stretch.</strong> <code>align-items: stretch</code> is de standaard. De items rekken uit tot het hoogste item. gap en justify-content gaan over de ruimte in de rij, niet over de hoogte.</p>
+<p><strong>2. C – align-items: center;</strong> align-items werkt in de hoogte. <code>justify-content: center</code> zet de items in het midden van links naar rechts, en <code>text-align</code> zet alleen de tekst in het midden.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">5. Zet een foto naast je tekst</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-5</code></p>
+<ol>
+<li>Kopieer <code>opdracht-4</code> naar een nieuwe map <code>opdracht-5</code>.</li>
+<li>Zet op index.html een div met een eigen class om je foto en een nieuwe alinea over jezelf.</li>
+<li>Geef die div <code>display: flex</code> en een gap.</li>
+<li>Zet de tekst in de hoogte in het midden naast de foto.</li>
+<li>Maak de foto in die div kleiner met <code>max-width: 40%</code>.</li>
+<li>Zet in de DevTools <code>align-items: flex-start</code> op <code>.kaarten</code>. Wat zie je? Haal het daarna weer weg.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">rij</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="o">...</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">rij</span><span class="w"> </span><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="o">...</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Op je homepagina staat je foto met de tekst in het midden ernaast. En je weet waarom je kaarten even hoog zijn.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-4.html">← Blok 4 · justify-content</a><a class="volgende" href="blok-6.html">Blok 6 · Kaarten in een rij →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

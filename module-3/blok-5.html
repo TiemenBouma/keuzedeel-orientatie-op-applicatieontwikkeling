@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achtergrondfoto · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Lettertypes</a>
+<a href="blok-3.html"><small>3</small>Google Fonts</a>
+<a href="blok-4.html"><small>4</small>Kleuren</a>
+<a href="blok-5.html" class="actief"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 5</div>
+    <h2 class="paginatitel">Achtergrondfoto</h2>
+    <h2>Een foto als achtergrond</h2>
+<p class="sub">Met <code>background-image</code> zet je een plaatje achter je tekst.</p>
+<ol>
+<li><strong>background-image: url().</strong> Tussen de haakjes staat het pad naar je foto, tussen aanhalingstekens.</li>
+<li><strong>Het pad begint bij style.css.</strong> De browser zoekt vanaf je CSS-bestand. style.css staat naast images, dus: <code>images/header.jpg</code>.</li>
+<li><strong>Je tekst staat erbovenop.</strong> De foto ligt achter alles wat in het element staat. Je h1 staat er gewoon overheen.</li>
+</ol>
+<div class="code"><pre><span></span><code>opdracht-5/
+   index.html
+   style.css
+   images/
+      header.jpg
+</code></pre></div>
+<div class="code"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">"images/header.jpg"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Waarom geen &lt;img&gt;?</p>
+<p>Een <code>&lt;img&gt;</code> is inhoud: een foto die bij je verhaal hoort. Een achtergrond is versiering. Daar zet je tekst overheen, en hij staat in je CSS.</p>
+</div>
+<h2>De foto netjes laten passen</h2>
+<p class="sub">Zonder extra regels herhaalt de foto zich als tegels, of zie je maar een stukje.</p>
+<table>
+<thead>
+<tr>
+<th>Regel</th>
+<th>Wat doet het?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background-size: cover</code></td>
+<td>Vult het hele vlak. Geen lege plekken. Er valt een randje van de foto af.</td>
+</tr>
+<tr>
+<td><code>background-position: center</code></td>
+<td>Het midden blijft. Valt er iets af, dan aan de randen.</td>
+</tr>
+<tr>
+<td><code>background-repeat: no-repeat</code></td>
+<td>Zonder deze regel: tegels. Is je foto kleiner dan het vlak, dan herhaalt hij zich.</td>
+</tr>
+<tr>
+<td><code>background-color</code></td>
+<td>Kleur als reserve. Laadt de foto niet, dan zie je deze kleur. Kies er een die past.</td>
+</tr>
+</tbody>
+</table>
+<div class="code"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">"images/header.jpg"</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-position</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">no-repeat</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1B1F3B</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Is je tekst slecht te lezen?</p>
+<p>Kies een rustige foto en maak je tekst wit. In blok 6 leer je een donker laagje over de foto te leggen.</p>
+</div>
+<details class="check">
+<summary>Check: achtergrondfoto</summary>
+<p><strong>1. style.css en de map images staan naast elkaar. Wat is goed?</strong></p>
+<ul>
+<li>A. <code>url("header.jpg")</code></li>
+<li>B. <code>url("images/header.jpg")</code></li>
+<li>C. <code>url("../header.jpg")</code></li>
+<li>D. <code>src("images/header.jpg")</code></li>
+</ul>
+<p><strong>2. Waarmee vult de foto het hele vlak, zonder lege plekken?</strong></p>
+<ul>
+<li>A. <code>background-size: cover;</code></li>
+<li>B. <code>background-repeat: repeat;</code></li>
+<li>C. <code>background-color: cover;</code></li>
+<li>D. <code>width: 100%;</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>url("images/header.jpg")</code>.</strong> Het pad begint bij style.css. Vanaf daar ga je de map images in. src gebruik je bij <code>&lt;img&gt;</code>, niet in je CSS.</p>
+<p><strong>2. A – <code>background-size: cover;</code></strong> cover maakt de foto zo groot dat het hele vlak bedekt is. repeat zet hem juist als tegels naast elkaar, en cover is geen kleur.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">5. Zet een foto achter je header</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-5</code></p>
+<ol>
+<li>Kopieer <code>opdracht-4</code> naar een nieuwe map <code>opdracht-5</code>.</li>
+<li>Zet een brede foto in images, bijvoorbeeld van unsplash.com. Noem hem header.jpg.</li>
+<li>Geef je header een background-image met het pad naar die foto.</li>
+<li>Voeg <code>background-size: cover</code> en <code>background-position: center</code> toe.</li>
+<li>Geef je header <code>padding: 60px 20px</code>, zodat de foto ruimte krijgt.</li>
+<li>Zie je geen foto? Kijk met F12 in de Console naar een rode 404.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">"images/header.jpg"</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-position</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Achter je naam bovenaan staat een foto die het hele vlak vult, op alle drie je pagina's.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-4.html">← Blok 4 · Kleuren</a><a class="volgende" href="blok-6.html">Blok 6 · Verloop en schaduw →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

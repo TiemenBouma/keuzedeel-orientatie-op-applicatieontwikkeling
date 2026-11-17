@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kleuren · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Lettertypes</a>
+<a href="blok-3.html"><small>3</small>Google Fonts</a>
+<a href="blok-4.html" class="actief"><small>4</small>Kleuren</a>
+<a href="blok-5.html"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 4</div>
+    <h2 class="paginatitel">Kleuren</h2>
+    <h2>Kleuren die bij elkaar passen</h2>
+<p class="sub">Kies vooraf een klein palet, en houd je daaraan.</p>
+<ol>
+<li><strong>Kies drie of vier kleuren.</strong> Een donkere, een lichte en één opvallende. Meer heb je niet nodig.</li>
+<li><strong>Gebruik een palet-site.</strong> Op coolors.co druk je op de spatiebalk voor een nieuw palet. Met het slotje houd je een kleur vast.</li>
+<li><strong>Verdeel ze 60 · 30 · 10.</strong> 60% licht voor de achtergrond, 30% donker voor tekst en balken, 10% opvallend voor knoppen.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">Voorbeeld van een palet</div><iframe class="demo-frame" loading="lazy" title="Voorbeeld van een palet" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.r{display:flex;gap:8px}.r div{flex:1;border-radius:8px;padding:30px 8px 8px;font-size:12px;border:1px solid #b8bddc}b{display:block;font-size:13px}&lt;/style&gt;
+&lt;div class=&quot;r&quot;&gt;
+&lt;div style=&quot;background:#E8EAF6&quot;&gt;&lt;b&gt;Licht&lt;/b&gt;#E8EAF6&lt;br&gt;achtergrond&lt;/div&gt;
+&lt;div style=&quot;background:#FFFFFF&quot;&gt;&lt;b&gt;Wit&lt;/b&gt;#FFFFFF&lt;br&gt;kaarten&lt;/div&gt;
+&lt;div style=&quot;background:#1B1F3B;color:#fff&quot;&gt;&lt;b&gt;Donker&lt;/b&gt;#1B1F3B&lt;br&gt;tekst en balken&lt;/div&gt;
+&lt;div style=&quot;background:#E44D26;color:#fff&quot;&gt;&lt;b&gt;Opvallend&lt;/b&gt;#E44D26&lt;br&gt;knoppen en actief&lt;/div&gt;
+&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Twijfel je?</p>
+<p>Kijk hoe een site die je vaak gebruikt het doet. Ook daar zie je meestal maar een paar kleuren terugkomen.</p>
+</div>
+<h2>Leesbaar en doorzichtig</h2>
+<p class="sub">Een mooie kleur is pas goed als je de tekst ook kunt lezen.</p>
+<figure class="demo"><div class="demo-titel">Contrast: tekst tegen achtergrond</div><iframe class="demo-frame" loading="lazy" title="Contrast: tekst tegen achtergrond" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.r{display:flex;gap:8px}.r div{flex:1;padding:10px;border-radius:6px;font-weight:bold;text-align:center;border:1px solid #ddd}&lt;/style&gt;
+&lt;div class=&quot;r&quot;&gt;&lt;div style=&quot;background:#fff;color:#1B1F3B&quot;&gt;Goed&lt;/div&gt;&lt;div style=&quot;background:#fff;color:#ddd&quot;&gt;Slecht&lt;/div&gt;&lt;div style=&quot;background:#fff;color:#f5e663&quot;&gt;Slecht&lt;/div&gt;&lt;div style=&quot;background:#1B1F3B;color:#fff&quot;&gt;Goed&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<p>In de DevTools klik je bij Styles op het gekleurde vierkantje voor een kleur. Bij Contrast ratio zie je een vinkje als het goed is.</p>
+<p><strong>rgba: een kleur die doorzichtig is</strong></p>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><strong>255, 255, 255</strong> is rood, groen, blauw: elk van 0 tot 255. Dit is wit.</li>
+<li><strong>0.8</strong> is hoe doorzichtig: 0 is onzichtbaar, 1 is helemaal dicht.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Waar heb je dit straks voor nodig?</p>
+<p>In blok 5 zet je een foto achter je header. Met rgba leg je er een kaart of een donker laagje overheen, waar de foto nog een beetje doorheen schijnt.</p>
+</div>
+<details class="check">
+<summary>Check: kleuren</summary>
+<p><strong>1. Wat doet de 0.5 in <code>rgba(0, 0, 0, 0.5)</code>?</strong></p>
+<ul>
+<li>A. Maakt de kleur 5x meer doorzichtig</li>
+<li>B. Maakt de tekst half zo groot</li>
+<li>C. Maakt de kleur rood</li>
+<li>D. Alle 3 zijn fout</li>
+</ul>
+<p><strong>2. Wat is het best te lezen?</strong></p>
+<ul>
+<li>A. Lichtgrijze tekst op wit</li>
+<li>B. Gele tekst op wit</li>
+<li>C. Donkerblauwe tekst op wit</li>
+<li>D. Rode tekst op groen</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. D – alle 3 zijn fout.</strong> De eerste drie getallen zijn rood, groen en blauw. Het vierde getal is hoe doorzichtig: 0.5 is half.</p>
+<p><strong>2. C – donkerblauwe tekst op wit.</strong> Donker op licht geeft veel contrast. Lichtgrijs en geel op wit zijn slecht te lezen. Rood en groen kunnen sommige mensen niet goed uit elkaar houden.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">4. Kies je eigen palet</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-4</code></p>
+<ol>
+<li>Kopieer <code>opdracht-3</code> naar een nieuwe map <code>opdracht-4</code>.</li>
+<li>Maak op coolors.co een palet en kies drie of vier kleuren.</li>
+<li>Schrijf de hexcodes als opmerking bovenin style.css.</li>
+<li>Pas de kleuren van body, header, nav en footer aan je palet aan.</li>
+<li>Geef <code>.actief</code> en de hover van je menu je opvallende kleur.</li>
+<li>Controleer met de DevTools het contrast van je tekst.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="c">/* mijn palet</span>
+<span class="c">   #E8EAF6 licht</span>
+<span class="c">   #1B1F3B donker</span>
+<span class="c">   #E44D26 opvallend */</span>
+
+<span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#E8EAF6</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je hele site gebruikt alleen de kleuren uit je palet, en in de DevTools staat een vinkje bij het contrast van je tekst.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-3.html">← Blok 3 · Google Fonts</a><a class="volgende" href="blok-5.html">Blok 5 · Achtergrondfoto →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

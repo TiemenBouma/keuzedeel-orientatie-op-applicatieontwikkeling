@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu opmaken · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html" class="actief"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 8</div>
+    <h2 class="paginatitel">Menu opmaken</h2>
+    <h2>Van lijstje naar balk</h2>
+<p class="sub">Met drie regels CSS wordt je lijstje met bolletjes een balk.</p>
+<ol>
+<li><strong><code>list-style: none</code></strong> haalt de bolletjes voor je li's weg.</li>
+<li><strong><code>padding: 0</code></strong> zet de inspringing uit. De browser springt een lijstje standaard in.</li>
+<li><strong><code>display: inline-block</code></strong> zet de li's naast elkaar in plaats van onder elkaar.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition let-op">
+<p class="admonition-title">Let op die spatie</p>
+<p><code>nav ul</code> betekent: elke ul die binnen een nav staat. Zo raak je je lijstje met hobby's niet aan. Schrijf je alleen <code>ul</code>, dan pak je álle lijstjes.</p>
+</div>
+<h2>Kleur, hover en de actieve pagina</h2>
+<p class="sub">Nu maak je van de links echte knoppen in de balk.</p>
+<ol>
+<li><strong><code>text-decoration: none</code></strong> haalt de streep onder je links weg, net als bij de knop van module 1.</li>
+<li><strong>padding op de link zelf.</strong> Daardoor wordt het klikvlak groter en lijkt het een knop.</li>
+<li><strong><code>:hover</code> en <code>.actief</code>.</strong> hover is hoe het eruitziet als je muis erover gaat. actief is de pagina waar je nu bent.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#2965F1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">actief</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#E44D26</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Probeer het: beweeg je muis over Hobby&#x27;s of Contact</div><iframe class="demo-frame" loading="lazy" title="Probeer het: beweeg je muis over Hobby&#x27;s of Contact" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;nav{background:#1B1F3B;padding:10px}nav ul{list-style:none;padding:0;margin:0}nav li{display:inline-block;margin-right:15px}nav a{color:#fff;text-decoration:none;padding:10px 15px}nav a:hover{background-color:#2965F1}.actief{background-color:#E44D26}&lt;/style&gt;
+&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a class=&quot;actief&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Hobby&#x27;s&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Probeer het meteen uit</p>
+<p>Beweeg met je muis over je menu zonder te klikken. Verandert de kleur? Dan werkt je hover.</p>
+</div>
+<details class="check">
+<summary>Check: menu opmaken</summary>
+<p><strong>1. Waarmee haal je de bolletjes uit je menu?</strong></p>
+<ul>
+<li>A. <code>text-decoration: none</code></li>
+<li>B. <code>list-style: none</code></li>
+<li>C. <code>display: none</code></li>
+<li>D. <code>padding: 0</code></li>
+</ul>
+<p><strong>2. Wat betekent de spatie in <code>nav a { }</code>?</strong></p>
+<ul>
+<li>A. nav én alle links</li>
+<li>B. Alle links binnen een nav</li>
+<li>C. Een link met class nav</li>
+<li>D. Niets, dat is een typefout</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>list-style: none</code>.</strong> text-decoration haalt de streep onder een link weg. <code>display: none</code> laat het hele menu verdwijnen. <code>padding: 0</code> haalt alleen de inspringing weg.</p>
+<p><strong>2. B – alle links binnen een nav.</strong> Een spatie tussen twee selectors betekent binnen. <code>nav a</code> pakt dus wel je menulinks, maar niet de links in je footer.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">8. Maak van je lijstje een menubalk</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-8</code></p>
+<ol>
+<li>Kopieer <code>opdracht-7</code> naar een nieuwe map <code>opdracht-8</code>.</li>
+<li>Geef nav een achtergrondkleur en <code>padding: 10px</code>.</li>
+<li>Haal met list-style en padding de bolletjes en de inspringing weg.</li>
+<li>Zet de li's naast elkaar met <code>display: inline-block</code>.</li>
+<li>Haal de streep onder de links weg en geef ze een kleur.</li>
+<li>Maak een regel <code>nav a:hover</code> en een regel <code>.actief</code> met een eigen kleur.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">nav</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Bovenaan elke pagina staat een gekleurde balk met je drie links naast elkaar. Je ziet aan de kleur welke pagina open is, en de links reageren als je er met je muis overheen gaat.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-7.html">← Blok 7 · De menubalk</a><a class="volgende" href="eindopdracht.html">Eindopdracht →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

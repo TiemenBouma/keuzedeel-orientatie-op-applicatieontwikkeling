@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paden · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html" class="actief"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 6</div>
+    <h2 class="paginatitel">Paden</h2>
+    <h2>Waar staat dat bestand?</h2>
+<p class="sub">Een <strong>pad</strong> is de route van je HTML-bestand naar het bestand dat je zoekt.</p>
+<div class="code"><pre><span></span><code>opdracht-6/
+   index.html
+   hobbys.html
+   style.css
+   images/
+      foto.jpg
+      logo.png
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Waar staat het?</th>
+<th>Zo schrijf je het pad</th>
+<th>Uitleg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In dezelfde map</td>
+<td><code>href="style.css"</code></td>
+<td>Alleen de naam, want style.css staat ernaast.</td>
+</tr>
+<tr>
+<td>Een map naar beneden</td>
+<td><code>src="images/foto.jpg"</code></td>
+<td>Eerst de mapnaam, dan een schuine streep, dan het bestand.</td>
+</tr>
+<tr>
+<td>Een map naar boven</td>
+<td><code>src="../logo.png"</code></td>
+<td>Twee puntjes en een streep: ga één map omhoog. Die heb je pas nodig als je bestanden in verschillende mappen staan.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition let-op">
+<p class="admonition-title">Let op de richting</p>
+<p>Het is een schuine streep vooruit: <code>/</code> en niet <code>\</code>. Op je toetsenbord zit die naast de rechter Shift.</p>
+</div>
+<h2>Waarom je plaatje niet laadt</h2>
+<p class="sub">Er zijn zes bekende oorzaken. Je ziet ze allemaal hetzelfde: een leeg vlak met je alt-tekst.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Oorzaak</th>
+<th>Oplossing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Een hoofdletter te veel</td>
+<td><code>Foto.JPG</code> is voor de browser iets anders dan <code>foto.jpg</code>.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Een spatie in de naam</td>
+<td><code>mijn foto.jpg</code> werkt niet. Maak er <code>mijn-foto.jpg</code> van.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>De map vergeten</td>
+<td><code>src="foto.jpg"</code> terwijl hij in images staat. Het moet <code>images/foto.jpg</code> zijn.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>De streep de verkeerde kant op</td>
+<td><code>images\foto.jpg</code> werkt niet. Het is <code>images/foto.jpg</code>.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Het bestand staat er niet</td>
+<td>Hij staat nog in je map Downloads. Sleep hem eerst naar je opdrachtmap.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Je ziet het .jpg niet staan</td>
+<td>Windows verbergt dat stukje soms. Zet het aan in Verkenner bij Beeld &gt; Bestandsnaamextensies.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Laat VS Code het voor je typen</p>
+<p>Typ <code>src="</code> en druk daarna op Ctrl + Spatie. VS Code laat zien welke bestanden en mappen er echt zijn. Kies je er een, dan is het pad altijd goed.</p>
+</div>
+<details class="check">
+<summary>Check: paden</summary>
+<p><strong>1. Je foto staat in de map images. Wat zet je in src?</strong></p>
+<ul>
+<li>A. <code>foto.jpg</code></li>
+<li>B. <code>images/foto.jpg</code></li>
+<li>C. <code>images\foto.jpg</code></li>
+<li>D. <code>../images/foto.jpg</code></li>
+</ul>
+<p><strong>2. Wat betekent <code>../</code> aan het begin van een pad?</strong></p>
+<ul>
+<li>A. Ga één map omlaag</li>
+<li>B. Ga naar de hoofdmap</li>
+<li>C. Ga naar internet</li>
+<li>D. Ga één map omhoog</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>images/foto.jpg</code>.</strong> Eerst de mapnaam, dan een schuine streep vooruit, dan het bestand. De backslash werkt niet op het web. <code>../</code> zou je juist uit de map halen.</p>
+<p><strong>2. D – ga één map omhoog.</strong> Twee puntjes betekenen: één map terug. Dat heb je nodig als je HTML-bestand in een andere map staat dan het bestand dat je zoekt.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">6. Zet je foto in een eigen map</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-6</code></p>
+<ol>
+<li>Kopieer <code>opdracht-5</code> naar een nieuwe map <code>opdracht-6</code>.</li>
+<li>Maak in <code>opdracht-6</code> een map images.</li>
+<li>Zet een foto in die map. Kleine letters, geen spaties in de naam.</li>
+<li>Toon de foto op index.html met <code>&lt;img&gt;</code> en een alt-tekst.</li>
+<li>Zie je alleen je alt-tekst? Loop het lijstje 'Waarom je plaatje niet laadt' hierboven af.</li>
+<li>Geef de foto in style.css een border-radius van 8px.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<p><div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/foto.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Foto van Sam"</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="code"><pre><span></span><code><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je foto staat op de pagina, terwijl het bestand netjes in de map images zit en niet los in je opdrachtmap.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-5.html">← Blok 5 · Een tweede pagina</a><a class="volgende" href="blok-7.html">Blok 7 · De menubalk →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

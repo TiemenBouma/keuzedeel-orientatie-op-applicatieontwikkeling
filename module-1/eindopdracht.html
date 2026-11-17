@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eindopdracht · Module 1 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 1</div>
+<div class="module-kop"><h1>Module 1 · HTML &amp; CSS basis</h1><p>Je bouwt je eerste eigen webpagina: een profielpagina met HTML, opgemaakt met CSS.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Aan de slag</a>
+<a href="blok-2.html"><small>2</small>Tags</a>
+<a href="blok-3.html"><small>3</small>Het skelet</a>
+<a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
+<a href="blok-5.html"><small>5</small>CSS koppelen</a>
+<a href="blok-6.html"><small>6</small>Selectors</a>
+<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
+<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<hr>
+<a href="eindopdracht.html" class="actief">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Eindopdracht</h2>
+    <div class="admonition opdracht eind">
+<p class="admonition-title">Maak je profielpagina af</p>
+<p class="meta">Je werkt in een nieuwe map <code>eindopdracht</code>, met index.html en style.css.</p>
+<p><strong>Op je pagina staat:</strong></p>
+<ul>
+<li>Map <code>eindopdracht</code> met index.html, style.css en je foto</li>
+<li>Een compleet skelet met head en body</li>
+<li>Een <code>&lt;h1&gt;</code> met je naam en een eigen class</li>
+<li>Twee alinea's over jezelf</li>
+<li>Een lijstje met drie hobby's</li>
+<li>Een foto met alt-tekst</li>
+<li>Een link als knop met een class</li>
+<li class="checklist">Alles afgemaakt met mooie randen en kleuren</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Al klaar?</p>
+<p>Maak je foto rond met <code>border-radius: 50%</code> en geef je pagina een tweede kleur.</p>
+</div>
+</div>
+<p>Alles wat je nodig hebt, heb je in de mini-opdrachten al een keer gemaakt. Kijk gerust terug in je eigen mappen.</p>
+<h2>Inleveren</h2>
+<p>Zip de hele map <code>les1-jouwnaam</code>, met <code>opdracht-1</code> tot en met <code>opdracht-8</code> en de map <code>eindopdracht</code> erin. Noem de zip <code>les1-jouwnaam.zip</code>.</p>
+<p><strong>Checklist: vink af voordat je inlevert</strong></p>
+<ul>
+<li>Map <code>les1-jouwnaam</code> met <code>opdracht-1</code> tot en met <code>opdracht-8</code></li>
+<li>Map <code>eindopdracht</code> met index.html en style.css</li>
+<li>Je foto staat in dezelfde map als je HTML</li>
+<li>Alle namen met kleine letters: index.html, style.css</li>
+<li>Alles opgeslagen met Ctrl + S</li>
+<li class="checklist">De pagina opent goed met Live Server</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Zo maak je een zip</p>
+<p>Rechtsklik op de map <code>les1-jouwnaam</code> en kies <strong>Comprimeren naar &gt; ZIP-bestand</strong>. Op oudere Windows: <strong>Kopiëren naar &gt; Gecomprimeerde map</strong>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Werk je thuis?</p>
+<p>Je hebt alleen VS Code en Chrome nodig. Kom je er niet uit, schrijf je vraag op en neem hem mee naar de les.</p>
+</div>
+<p>Twijfel je of iets af is? Kijk bij <strong>Klaar als...</strong> bij die opdracht.</p>
+    <div class="vorige-volgende"><a class="vorige" href="blok-8.html">← Blok 8 · Boxmodel</a><a class="volgende" href="werkt-het-niet.html">Werkt het niet? →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html" class="actief">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Lettertypes</a>
+<a href="blok-3.html"><small>3</small>Google Fonts</a>
+<a href="blok-4.html"><small>4</small>Kleuren</a>
+<a href="blok-5.html"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Start</h2>
+    <h2>Dit ga je maken</h2>
+<p>Aan het eind van deze module ziet je mini-site eruit als een echte website.</p>
+<table>
+<thead>
+<tr>
+<th>Wat zie je?</th>
+<th>Hoe doe je dat?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Een eigen lettertype van Google</td>
+<td>een link en <code>font-family</code></td>
+</tr>
+<tr>
+<td>Een foto achter je naam</td>
+<td><code>background-image</code></td>
+</tr>
+<tr>
+<td>Kaarten die zweven</td>
+<td><code>box-shadow</code> en <code>:hover</code></td>
+</tr>
+<tr>
+<td>Alles netjes in het midden</td>
+<td><code>max-width</code> en <code>margin</code></td>
+</tr>
+</tbody>
+</table>
+<figure class="demo"><div class="demo-titel">Zo kan je site eruitzien. Ga met je muis over een kaart.</div><iframe class="demo-frame" loading="lazy" title="Zo kan je site eruitzien. Ga met je muis over een kaart." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;body{background:#E8EAF6;padding:0;font-family:Verdana,sans-serif}header{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),linear-gradient(135deg,#5b7bd5,#e48a5a);color:#fff;padding:28px 16px;text-align:center}h1{margin:0;font-family:Georgia,serif;text-shadow:1px 1px 3px #000}header p{margin:4px 0 0;font-size:14px}nav{background:linear-gradient(to right,#2965F1,#1B1F3B);padding:6px 10px}nav a{color:#fff;text-decoration:none;padding:6px 12px;font-size:14px}nav a.actief{background:#E44D26}main{max-width:420px;margin:0 auto;padding:12px}.kaart{background:#fff;padding:12px 14px;border-radius:8px;margin-bottom:10px;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:all .3s}.kaart:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.25)}.kaart h2{margin:0 0 2px;font-size:16px}.kaart p{margin:0;font-size:13px}&lt;/style&gt;
+&lt;header&gt;&lt;h1&gt;Sam Jansen&lt;/h1&gt;&lt;p&gt;Student ICT in Utrecht&lt;/p&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;a class=&quot;actief&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Hobby&#x27;s&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;main&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;h2&gt;Mijn hobby&#x27;s&lt;/h2&gt;&lt;p&gt;Gamen en fietsen&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;h2&gt;Over mij&lt;/h2&gt;&lt;p&gt;Ik woon in Utrecht&lt;/p&gt;&lt;/div&gt;&lt;/main&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<h2>Dit kun je al</h2>
+<ul>
+<li><strong>HTML:</strong> header, nav, main, footer en section. Een div als doos, en nesten met inspringen.</li>
+<li><strong>CSS:</strong> een tag, een <code>.class</code> en een <code>#id</code>. Een spatie betekent binnen: <code>nav a</code> pakt alleen je menulinks.</li>
+<li><strong>Site:</strong> drie pagina's met één style.css, een menubalk en paden naar je map images.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Iets kwijt?</p>
+<p>De naslag van module 1 en 2 mag je er de hele tijd bij houden. Blok 1 is een korte opfrisser, met één nieuw stuk gereedschap: de DevTools.</p>
+</div>
+<h2>Zo werk je</h2>
+<p>Maak een map <code>les3-jouwnaam</code>. In <code>opdracht-1</code> zet je een kopie van je eindopdracht van module 2. Daarna werk je weer door tot <code>opdracht-8</code> en een map <code>eindopdracht</code>. In deze module verandert vooral je style.css.</p>
+<table>
+<thead>
+<tr>
+<th>Blok</th>
+<th>Onderwerp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Opfrissen en de DevTools</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lettertypes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Google Fonts</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kleuren</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Achtergrondfoto</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Verloop en schaduw</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Breedte en centreren</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Hover en overgang</td>
+</tr>
+</tbody>
+</table>
+    <div class="vorige-volgende"><span></span><a class="volgende" href="blok-1.html">Blok 1 · Opfrissen →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

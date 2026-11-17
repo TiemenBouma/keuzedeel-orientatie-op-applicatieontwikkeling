@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Groeperen met div · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html" class="actief"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 2</div>
+    <h2 class="paginatitel">Groeperen met div</h2>
+    <h2>Een doos om je onderdelen heen</h2>
+<p class="sub">Met een <code>&lt;div&gt;</code> zet je dingen bij elkaar die bij elkaar horen.</p>
+<ol>
+<li><strong>Een div is een lege doos.</strong> Hij betekent niets en je ziet hem niet. Hij is er alleen om dingen te groeperen.</li>
+<li><strong>Alles ertussen hoort bij elkaar.</strong> De kop en de alinea zijn nu samen één blok op je pagina.</li>
+<li><strong>Geef hem een class.</strong> Anders kun je hem niet aanwijzen in je CSS. Met <code>.kaart { }</code> maak je hem opeens zichtbaar.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Mijn hobby's<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ik game graag.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Over mij<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ik woon in Utrecht.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Waarom zou je dat doen?</p>
+<p>Zodra je twee dingen samen een kleur wilt geven, of straks naast elkaar wilt zetten, heb je een doos nodig om ze in te stoppen.</p>
+</div>
+<h2>Nesten: een tag in een tag</h2>
+<p class="sub">De div gebruik je hier als doos waar andere elementen in zitten. Een tag binnen een andere tag heet <strong>nesten</strong>.</p>
+<ol>
+<li><strong>Wat je als laatste opent, sluit je als eerste.</strong> Dus <code>&lt;div&gt;&lt;p&gt;Hoi&lt;/p&gt;&lt;/div&gt;</code> en niet <code>&lt;div&gt;&lt;p&gt;Hoi&lt;/div&gt;&lt;/p&gt;</code>.</li>
+<li><strong>Spring in met Tab.</strong> Alles wat binnen een tag staat, zet je één Tab naar rechts. Snel rechtzetten: Shift + Alt + F.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">De h2 en de p staan in de code binnen de div, dus op de pagina ook</div><iframe class="demo-frame" loading="lazy" title="De h2 en de p staan in de code binnen de div, dus op de pagina ook" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.div{border:3px solid #2965F1;padding:8px;border-radius:8px;position:relative}.l{font-family:Consolas,monospace;font-size:11px;font-weight:bold;color:#fff;padding:1px 6px;border-radius:4px;margin-right:6px}h2,p{margin:4px 0;padding:4px;border-radius:4px}h2{border:2px solid #E44D26;font-size:17px}p{border:2px solid #1E8E4E}&lt;/style&gt;
+&lt;div class=&quot;div&quot;&gt;&lt;span class=&quot;l&quot; style=&quot;background:#2965F1&quot;&gt;div&lt;/span&gt;
+&lt;h2&gt;&lt;span class=&quot;l&quot; style=&quot;background:#E44D26&quot;&gt;h2&lt;/span&gt;Mijn hobby&#x27;s&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;l&quot; style=&quot;background:#1E8E4E&quot;&gt;p&lt;/span&gt;Ik game graag.&lt;/p&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<p>Zo maak je de doos zichtbaar. Zonder CSS zie je een div niet.</p>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#E8EAF6</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Twee kaarten met een achtergrond, padding, ronde hoeken en ruimte ertussen</div><iframe class="demo-frame" loading="lazy" title="Twee kaarten met een achtergrond, padding, ronde hoeken en ruimte ertussen" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;body{background:#f6f7fc}.kaart{background:#fff;padding:20px;border-radius:8px;margin-bottom:12px}h2{margin:0 0 4px;font-size:18px}p{margin:0}&lt;/style&gt;
+&lt;div class=&quot;kaart&quot;&gt;&lt;h2&gt;Mijn hobby&#x27;s&lt;/h2&gt;&lt;p&gt;Ik game graag.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;h2&gt;Over mij&lt;/h2&gt;&lt;p&gt;Ik woon in Utrecht.&lt;/p&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<details class="check">
+<summary>Check: groeperen met div</summary>
+<p><strong>1. Waarvoor gebruik je een <code>&lt;div&gt;</code>?</strong></p>
+<ul>
+<li>A. Om tekst dik te maken</li>
+<li>B. Om elementen te groeperen</li>
+<li>C. Om een link te maken</li>
+<li>D. Om je CSS te koppelen</li>
+</ul>
+<p><strong>2. Welke code is goed genest?</strong></p>
+<ul>
+<li>A. <code>&lt;div&gt;&lt;p&gt;Hoi&lt;/div&gt;&lt;/p&gt;</code></li>
+<li>B. <code>&lt;div&gt;&lt;p&gt;Hoi&lt;/p&gt;&lt;/div&gt;</code></li>
+<li>C. <code>&lt;p&gt;&lt;div&gt;Hoi&lt;/p&gt;&lt;/div&gt;</code></li>
+<li>D. <code>&lt;div&gt;&lt;p&gt;Hoi&lt;div&gt;&lt;/p&gt;</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – om elementen te groeperen.</strong> Een div doet uit zichzelf niets. Hij zet dingen bij elkaar, zodat je ze samen kunt opmaken of verplaatsen.</p>
+<p><strong>2. B – <code>&lt;div&gt;&lt;p&gt;Hoi&lt;/p&gt;&lt;/div&gt;</code>.</strong> De p is als laatste geopend, dus die sluit je als eerste. Bij de andere antwoorden lopen de tags door elkaar heen.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">2. Maak je eerste kaartje</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-2</code></p>
+<ol>
+<li>Kopieer de inhoud van <code>opdracht-1</code> naar een nieuwe map <code>opdracht-2</code>.</li>
+<li>Zet een <code>&lt;h2&gt;</code> en een alinea samen in een <code>&lt;div class="kaart"&gt;</code>.</li>
+<li>Geef <code>.kaart</code> in style.css een achtergrondkleur.</li>
+<li>Geef <code>.kaart</code> ook <code>padding: 20px</code> en <code>border-radius: 8px</code>.</li>
+<li>Maak eronder een tweede kaart met dezelfde class.</li>
+<li>Zet er ruimte tussen met <code>margin-bottom: 20px</code>.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je ziet twee gekleurde blokken onder elkaar staan, met ruimte tussen de rand en de tekst, en ruimte tussen de blokken.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-1.html">← Blok 1 · Opfrissen</a><a class="volgende" href="blok-3.html">Blok 3 · Semantische tags →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

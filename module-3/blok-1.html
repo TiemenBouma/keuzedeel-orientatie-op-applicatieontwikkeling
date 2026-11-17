@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opfrissen · Module 3 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 3</div>
+<div class="module-kop"><h1>Module 3 · Meer CSS</h1><p>Je mini-site gaat eruitzien als een echte website: lettertypes, kleuren, achtergronden en beweging.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html" class="actief"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Lettertypes</a>
+<a href="blok-3.html"><small>3</small>Google Fonts</a>
+<a href="blok-4.html"><small>4</small>Kleuren</a>
+<a href="blok-5.html"><small>5</small>Achtergrondfoto</a>
+<a href="blok-6.html"><small>6</small>Verloop en schaduw</a>
+<a href="blok-7.html"><small>7</small>Breedte en centreren</a>
+<a href="blok-8.html"><small>8</small>Hover en overgang</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 1</div>
+    <h2 class="paginatitel">Opfrissen</h2>
+    <h2>Je nieuwe gereedschap: de DevTools</h2>
+<p class="sub">In Chrome zit een venster waarmee je in de CSS van elke pagina kunt kijken.</p>
+<ol>
+<li><strong>Open je pagina.</strong> Met Live Server. Chrome opent vanzelf.</li>
+<li><strong>Druk op F12.</strong> Of rechtsklik op je pagina en kies Inspecteren.</li>
+<li><strong>Tabblad Elements.</strong> Links zie je je HTML, rechts je CSS.</li>
+<li><strong>Klik op het pijltje.</strong> Sneltoets: Ctrl + Shift + C. Klik daarna op iets op je pagina.</li>
+<li><strong>Kijk rechts bij Styles.</strong> Daar staat de CSS van het element dat je aanklikte.</li>
+</ol>
+<p>Zo ziet het stukje Styles eruit:</p>
+<div class="code"><pre><span></span><code><span class="nt">element</span><span class="p">.</span><span class="nc">style</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Wat heb je eraan?</p>
+<p>Je ziet precies welke CSS de browser gebruikt, en uit welke regel die komt.</p>
+</div>
+<div class="admonition let-op">
+<p class="admonition-title">Gebeurt er niets bij F12?</p>
+<p>Op veel laptops moet je Fn ingedrukt houden: Fn + F12.</p>
+</div>
+<h2>Waar waren we gebleven?</h2>
+<p class="sub">Je mini-site van module 2 is het startpunt.</p>
+<ol>
+<li><strong>Drie pagina's, één style.css.</strong> index.html, hobbys.html en contact.html gebruiken allemaal dezelfde opmaak.</li>
+<li><strong>Een nav op elke pagina.</strong> Een ul met links, naast elkaar gezet met <code>display: inline-block</code>.</li>
+<li><strong>Tag, punt of hekje.</strong> <code>nav</code> is een tag, <code>.kaart</code> een class en <code>#contact</code> een id. Een spatie betekent binnen.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">contact</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Wat vertellen de DevTools je?</h2>
+<p class="sub">Vier dingen die je in deze module steeds tegenkomt.</p>
+<table>
+<thead>
+<tr>
+<th>Wat zie je?</th>
+<th>Wat betekent het?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Streep erdoor</strong></td>
+<td>Een andere regel wint. Een andere regel zegt iets anders over dezelfde eigenschap, en die wint.</td>
+</tr>
+<tr>
+<td><strong>Geel driehoekje</strong></td>
+<td>Een typefout. Deze eigenschap of waarde bestaat niet, bijvoorbeeld <code>colr</code> in plaats van <code>color</code>.</td>
+</tr>
+<tr>
+<td><strong>Vinkje</strong></td>
+<td>Aan en uit zetten. Haal het vinkje voor een regel weg en kijk wat er verandert. Zet het daarna weer aan.</td>
+</tr>
+<tr>
+<td><strong>Console: 404</strong></td>
+<td>Bestand kwijt. Een plaatje of bestand staat niet waar jij zegt.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition let-op">
+<p class="admonition-title">Let op: niets wordt opgeslagen</p>
+<p>Wat je in de DevTools verandert, is weg zodra je de pagina ververst. Werkt het? Typ het dan over in je style.css en sla op met Ctrl + S.</p>
+</div>
+<details class="check">
+<summary>Check: opfrissen en DevTools</summary>
+<p><strong>1. Hoe open je de DevTools in Chrome?</strong></p>
+<ul>
+<li>A. F5</li>
+<li>B. Ctrl + P</li>
+<li>C. Ctrl + S</li>
+<li>D. F12</li>
+</ul>
+<p><strong>2. In Styles staat een regel met een streep erdoor. Wat betekent dat?</strong></p>
+<ul>
+<li>A. Er zit een typefout in</li>
+<li>B. Een andere regel wint</li>
+<li>C. De regel is opgeslagen</li>
+<li>D. Het bestand is kwijt</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. D – F12.</strong> Je kunt ook rechtsklikken op je pagina en Inspecteren kiezen. F5 ververst alleen de pagina.</p>
+<p><strong>2. B – een andere regel wint.</strong> De browser gebruikt voor die eigenschap een andere regel. Een typefout herken je juist aan het gele driehoekje.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">1. Zet je werkmap klaar en kijk rond</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-1</code></p>
+<ol>
+<li>Maak een map <code>les3-jouwnaam</code>. Maak daarin een map <code>opdracht-1</code>.</li>
+<li>Kopieer alles uit je eindopdracht van module 2 naar <code>opdracht-1</code>.</li>
+<li>Open <code>les3-jouwnaam</code> in VS Code en start Live Server op index.html.</li>
+<li>Druk op F12, klik op het pijltje en klik daarna op een kaart.</li>
+<li>Verander bij Styles de achtergrondkleur van <code>.kaart</code>.</li>
+<li>Typ die nieuwe kleur over in style.css en sla op met Ctrl + S.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FFF3E0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Je kaarten hebben een nieuwe kleur, en die kleur blijft staan als je de pagina ververst met F5.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="index.html">← Start</a><a class="volgende" href="blok-2.html">Blok 2 · Lettertypes →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

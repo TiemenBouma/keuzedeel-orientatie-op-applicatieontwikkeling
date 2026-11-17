@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaarten in een rij · Module 4 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 4</div>
+<div class="module-kop"><h1>Module 4 · Layout met flexbox</h1><p>Kaarten in een rij, je naam links en je menu rechts, en op een telefoon alles onder elkaar.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>display: flex</a>
+<a href="blok-3.html"><small>3</small>gap en richting</a>
+<a href="blok-4.html"><small>4</small>justify-content</a>
+<a href="blok-5.html"><small>5</small>align-items</a>
+<a href="blok-6.html" class="actief"><small>6</small>Kaarten in een rij</a>
+<a href="blok-7.html"><small>7</small>Header en menu</a>
+<a href="blok-8.html"><small>8</small>Op je telefoon</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 6</div>
+    <h2 class="paginatitel">Kaarten in een rij</h2>
+    <h2>Te veel kaarten voor één rij</h2>
+<p class="sub">Met <code>flex-wrap</code> schuiven items door naar de volgende regel.</p>
+<ol>
+<li><strong>Standaard: alles op één regel.</strong> Flexbox propt alle items in één rij. Bij veel kaarten worden ze heel smal.</li>
+<li><strong>flex-wrap: wrap.</strong> Past het niet meer, dan gaat het volgende item naar een nieuwe regel.</li>
+<li><strong>gap werkt ook tussen de regels.</strong> De ruimte tussen de rijen is net zo groot als tussen de kaarten.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaarten</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">Zonder wrap: te smal</div><iframe class="demo-frame" loading="lazy" title="Zonder wrap: te smal" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.k{display:flex;gap:8px}.k div{background:#E8EAF6;padding:10px 0;min-width:0;flex:1;text-align:center;border-radius:6px;font-weight:bold}&lt;/style&gt;
+&lt;div class=&quot;k&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">Met wrap: door naar de volgende regel</div><iframe class="demo-frame" loading="lazy" title="Met wrap: door naar de volgende regel" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.k{display:flex;flex-wrap:wrap;gap:8px}.k div{background:#E8EAF6;padding:10px 0;width:28%;text-align:center;border-radius:6px;font-weight:bold}&lt;/style&gt;
+&lt;div class=&quot;k&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Maak je venster smaller</p>
+<p>Pas bij een smal venster zie je wrap aan het werk. Sleep je Chrome-venster smaller en kijk hoe de kaarten doorschuiven.</p>
+</div>
+<h2>Even breed met flex: 1</h2>
+<p class="sub">Laat de items de ruimte eerlijk verdelen.</p>
+<ol>
+<li><strong>flex: 1 op de items.</strong> Nu op de kaart zelf, niet op de container. Elke kaart krijgt een even groot deel van de rij.</li>
+<li><strong>min-width als grens.</strong> Met <code>min-width: 200px</code> wordt een kaart nooit smaller. Past het niet, dan schuift hij door.</li>
+<li><strong>flex: 2 is dubbel.</strong> Een item met <code>flex: 2</code> wordt twee keer zo breed als een item met <code>flex: 1</code>.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kaart</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Boven: alle drie flex: 1. Onder: de eerste flex: 2</div><iframe class="demo-frame" loading="lazy" title="Boven: alle drie flex: 1. Onder: de eerste flex: 2" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.r{display:flex;gap:8px;margin-bottom:8px}.r div{background:#E8EAF6;padding:8px;text-align:center;border-radius:6px;font-family:Consolas,monospace;font-size:13px}&lt;/style&gt;
+&lt;div class=&quot;r&quot;&gt;&lt;div style=&quot;flex:1&quot;&gt;flex: 1&lt;/div&gt;&lt;div style=&quot;flex:1&quot;&gt;flex: 1&lt;/div&gt;&lt;div style=&quot;flex:1&quot;&gt;flex: 1&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;r&quot;&gt;&lt;div style=&quot;flex:2;background:#ffe0d6&quot;&gt;flex: 2&lt;/div&gt;&lt;div style=&quot;flex:1&quot;&gt;flex: 1&lt;/div&gt;&lt;div style=&quot;flex:1&quot;&gt;flex: 1&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">Container of item?</p>
+<p><code>display</code>, <code>gap</code>, <code>justify-content</code>, <code>align-items</code> en <code>flex-wrap</code> zet je op de container. <code>flex</code> en <code>min-width</code> zet je op het item.</p>
+</div>
+<details class="check">
+<summary>Check: kaarten in een rij</summary>
+<p><strong>1. Wat doet flex-wrap: wrap?</strong></p>
+<ul>
+<li>A. Items even breed</li>
+<li>B. Naar een nieuwe regel</li>
+<li>C. Een rand om de items</li>
+<li>D. Tekst afbreken</li>
+</ul>
+<p><strong>2. Drie kaarten hebben flex: 1. Hoe breed worden ze?</strong></p>
+<ul>
+<li>A. Allemaal even breed</li>
+<li>B. 1 pixel breed</li>
+<li>C. De eerste het breedst</li>
+<li>D. Zo breed als het scherm</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – naar een nieuwe regel.</strong> wrap betekent: laat het doorlopen. Items die niet meer passen, gaan naar de volgende regel. Even breed maken doe je met <code>flex: 1</code>, een rand met <code>border</code>.</p>
+<p><strong>2. A – allemaal even breed.</strong> <code>flex: 1</code> betekent: neem een even groot deel van de ruimte. Het is geen maat in pixels.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">6. Laat je kaarten meeschuiven</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-6</code></p>
+<ol>
+<li>Kopieer <code>opdracht-5</code> naar een nieuwe map <code>opdracht-6</code>.</li>
+<li>Maak main breder: een max-width van 1000px.</li>
+<li>Laat de kaarten in <code>.kaarten</code> doorschuiven naar een nieuwe regel.</li>
+<li>Geef <code>.kaart</code> <code>flex: 1</code> en een min-width.</li>
+<li>Rijen te ver uit elkaar? Haal margin-top en margin-bottom weg bij <code>.kaart</code>. Geef <code>.kaarten</code> <code>margin: 20px 0</code>.</li>
+<li>Maak je Chrome-venster smaller en kijk op hobbys.html hoe de kaarten doorschuiven.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">foto</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Op hobbys.html staan je kaarten naast elkaar en zijn ze even breed. Maak je het venster smaller, dan schuiven ze netjes door.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-5.html">← Blok 5 · align-items</a><a class="volgende" href="blok-7.html">Blok 7 · Header en menu →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

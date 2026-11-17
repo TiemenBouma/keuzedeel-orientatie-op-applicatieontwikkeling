@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semantische tags · Module 2 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 2</div>
+<div class="module-kop"><h1>Module 2 · Van pagina naar site</h1><p>Je pagina wordt een echte website: drie pagina&#x27;s met een menubalk die naar elkaar linken.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Opfrissen</a>
+<a href="blok-2.html"><small>2</small>Groeperen met div</a>
+<a href="blok-3.html" class="actief"><small>3</small>Semantische tags</a>
+<a href="blok-4.html"><small>4</small>id en ankerlinks</a>
+<a href="blok-5.html"><small>5</small>Een tweede pagina</a>
+<a href="blok-6.html"><small>6</small>Paden</a>
+<a href="blok-7.html"><small>7</small>De menubalk</a>
+<a href="blok-8.html"><small>8</small>Menu opmaken</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 3</div>
+    <h2 class="paginatitel">Semantische tags</h2>
+    <h2>Divs met een naam</h2>
+<p class="sub">Deze vier tags doen hetzelfde als een div, maar vertellen erbij wat het is.</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Wat is het?</th>
+<th>Wat staat erin?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;header&gt;</code></td>
+<td>De bovenkant</td>
+<td>Meestal je naam of het logo van de site.</td>
+</tr>
+<tr>
+<td><code>&lt;nav&gt;</code></td>
+<td>Het menu</td>
+<td>De links naar de andere pagina's van je site.</td>
+</tr>
+<tr>
+<td><code>&lt;main&gt;</code></td>
+<td>De hoofdinhoud</td>
+<td>Waar het op deze pagina echt om gaat. Eén keer per pagina, net als h1.</td>
+</tr>
+<tr>
+<td><code>&lt;footer&gt;</code></td>
+<td>De onderkant</td>
+<td>Contactgegevens, je mailadres, het jaartal.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Waarom niet gewoon overal div?</p>
+<p>Omdat jij zelf in een lange pagina zo terugziet wat waar staat. Google leest je pagina ook beter. En blinde bezoekers gebruiken een schermlezer die met deze tags meteen naar het menu of de hoofdinhoud kan springen. Dat heet <strong>semantiek</strong>: de tag zegt wat het is.</p>
+</div>
+<h2>Zo ziet je body er dan uit</h2>
+<p class="sub">Dezelfde inhoud als eerst, maar nu netjes verdeeld.</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sam Jansen<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"index.html"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Mijn hobby's<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>sam@mail.nl<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Zo verdelen de semantische tags je pagina</div><iframe class="demo-frame" loading="lazy" title="Zo verdelen de semantische tags je pagina" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;div{border:2px dashed;border-radius:6px;padding:6px 10px;margin-bottom:6px;font-family:Consolas,monospace;font-size:13px}&lt;/style&gt;
+&lt;div style=&quot;border-color:#2965F1&quot;&gt;header&lt;/div&gt;&lt;div style=&quot;border-color:#E44D26&quot;&gt;nav&lt;/div&gt;
+&lt;div style=&quot;border-color:#1E8E4E;padding-bottom:30px&quot;&gt;main&lt;div style=&quot;border-color:#b8bddc;margin-top:6px&quot;&gt;section class=&quot;kaart&quot;&lt;/div&gt;&lt;/div&gt;
+&lt;div style=&quot;border-color:#1B1F3B&quot;&gt;footer&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<ol>
+<li><strong>Alles zit nog steeds in de body.</strong> Je verandert niets aan je tekst. Je zet er dozen omheen.</li>
+<li><strong><code>&lt;section&gt;</code> is een stuk pagina.</strong> Een deel met een eigen kopje. Je mag er zoveel gebruiken als je wilt.</li>
+<li><strong>In CSS net als elke tag.</strong> <code>header { }</code> en <code>footer { }</code> werken precies zoals <code>p { }</code> of <code>h1 { }</code>.</li>
+</ol>
+<div class="admonition let-op">
+<p class="admonition-title">Let op de volgorde</p>
+<p>De browser tekent de tags van boven naar beneden. Zet je de footer bovenaan in je body, dan staat hij ook bovenaan op je pagina.</p>
+</div>
+<details class="check">
+<summary>Check: semantische tags</summary>
+<p><strong>1. Welke tag gebruik je voor je menu?</strong></p>
+<ul>
+<li>A. <code>&lt;navigatie&gt;</code></li>
+<li>B. <code>&lt;nav&gt;</code></li>
+<li>C. <code>&lt;menubalk&gt;</code></li>
+<li>D. <code>&lt;header&gt;</code></li>
+</ul>
+<p><strong>2. Wat hoort er in <code>&lt;main&gt;</code>?</strong></p>
+<ul>
+<li>A. De titel van het tabblad</li>
+<li>B. De koppeling naar je CSS</li>
+<li>C. De hoofdinhoud van de pagina</li>
+<li>D. Alleen plaatjes</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>&lt;nav&gt;</code>.</strong> nav komt van navigatie. <code>&lt;navigatie&gt;</code> en <code>&lt;menubalk&gt;</code> bestaan niet. <code>&lt;header&gt;</code> is de bovenkant van je pagina, en daar staat je nav vaak wel in.</p>
+<p><strong>2. C – de hoofdinhoud van de pagina.</strong> De titel van het tabblad en de link naar je CSS staan in de head. Die zie je niet op de pagina zelf.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">3. Verdeel je pagina in blokken</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-3</code></p>
+<ol>
+<li>Kopieer <code>opdracht-2</code> naar een nieuwe map <code>opdracht-3</code>.</li>
+<li>Zet je <code>&lt;h1&gt;</code> in een <code>&lt;header&gt;</code>.</li>
+<li>Zet je kaarten samen in een <code>&lt;main&gt;</code>.</li>
+<li>Maak onderaan een <code>&lt;footer&gt;</code> met je mailadres erin.</li>
+<li>Geef header en footer in style.css een achtergrondkleur en padding.</li>
+<li>Controleer of alles goed is ingesprongen: Shift + Alt + F.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1B1F3B</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Bovenaan je pagina staat een gekleurde balk met je naam, onderaan een balk met je mailadres, en je kaarten staan ertussen.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-2.html">← Blok 2 · Groeperen met div</a><a class="volgende" href="blok-4.html">Blok 4 · id en ankerlinks →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

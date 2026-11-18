@@ -24,10 +24,11 @@
 <a href="blok-2.html"><small>2</small>Tags</a>
 <a href="blok-3.html"><small>3</small>Het skelet</a>
 <a href="blok-4.html" class="actief"><small>4</small>Koppen en lijstjes</a>
-<a href="blok-5.html"><small>5</small>CSS koppelen</a>
-<a href="blok-6.html"><small>6</small>Selectors</a>
-<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
-<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<a href="blok-5.html"><small>5</small>Links en plaatjes</a>
+<a href="blok-6.html"><small>6</small>CSS koppelen</a>
+<a href="blok-7.html"><small>7</small>Selectors</a>
+<a href="blok-8.html"><small>8</small>Kleur en tekst</a>
+<a href="blok-9.html"><small>9</small>Boxmodel</a>
 <hr>
 <a href="eindopdracht.html">Eindopdracht</a>
 <a href="werkt-het-niet.html">Werkt het niet?</a>
@@ -64,28 +65,8 @@
 <p class="admonition-title">Engelse woorden</p>
 <p>ul staat voor <em>unordered list</em> (lijst zonder volgorde), ol voor <em>ordered list</em> (lijst met volgorde), li voor <em>list item</em> (regel van de lijst).</p>
 </div>
-<h2>Links en plaatjes</h2>
-<p class="sub">Deze twee tags hebben extra informatie nodig. Die extra informatie heet een <strong>attribuut</strong> en zet je in de openingstag.</p>
-<ol>
-<li><strong>Een link: <code>&lt;a&gt;</code>.</strong> <code>href</code> is het adres waar de link naartoe gaat. De tekst tussen <code>&lt;a&gt;</code> en <code>&lt;/a&gt;</code> is wat je aanklikt.</li>
-<li><strong>Een plaatje: <code>&lt;img&gt;</code>.</strong> <code>src</code> is de bestandsnaam van je foto. <code>alt</code> beschrijft wat erop staat. <code>&lt;img&gt;</code> sluit je niet: er is geen <code>&lt;/img&gt;</code>.</li>
-</ol>
-<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://nu.nl"</span><span class="p">&gt;</span>Naar het nieuws<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"foto.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Foto van Sam"</span><span class="p">&gt;</span>
-</code></pre></div>
-<figure class="demo"><div class="demo-titel">Een link, en een foto die niet gevonden wordt: dan zie je de alt-tekst</div><iframe class="demo-frame" loading="lazy" title="Een link, en een foto die niet gevonden wordt: dan zie je de alt-tekst" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;a href=&quot;#&quot;&gt;Naar het nieuws&lt;/a&gt;&lt;br&gt;&lt;br&gt;
-&lt;img src=&quot;bestaat-niet.jpg&quot; alt=&quot;Foto van Sam&quot; style=&quot;border:1px dashed #b8bddc;padding:20px&quot;&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
-<div class="admonition let-op">
-<p class="admonition-title">Let op: dezelfde map</p>
-<p>Je foto moet in dezelfde map staan als je index.html. Staat hij ergens anders, dan blijft de plek op je pagina leeg.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Waarom alt-tekst?</p>
-<p>Blinde bezoekers laten de tekst voorlezen door hun computer. En als je foto kapot is, zie je de alt-tekst staan.</p>
-</div>
 <details class="check">
-<summary>Check: koppen, lijstjes, links</summary>
+<summary>Check: koppen en lijstjes</summary>
 <p><strong>1. Welke tag maakt een lijstje met bolletjes?</strong></p>
 <ul>
 <li>A. <code>&lt;ol&gt;</code></li>
@@ -93,32 +74,33 @@
 <li>C. <code>&lt;ul&gt;</code></li>
 <li>D. <code>&lt;list&gt;</code></li>
 </ul>
-<p><strong>2. Wat hoort er bij <code>&lt;img&gt;</code> om het plaatje te vinden?</strong></p>
+<p><strong>2. Onder je h1 wil je een kopje zetten. Welke tag gebruik je?</strong></p>
 <ul>
-<li>A. href</li>
-<li>B. src</li>
-<li>C. link</li>
-<li>D. file</li>
+<li>A. <code>&lt;h0&gt;</code></li>
+<li>B. <code>&lt;h2&gt;</code></li>
+<li>C. <code>&lt;head&gt;</code></li>
+<li>D. <code>&lt;li&gt;</code></li>
 </ul>
 <details class="antwoord">
 <summary>Bekijk de antwoorden</summary>
-<p><strong>1. C – <code>&lt;ul&gt;</code>.</strong> <code>&lt;ul&gt;</code> is de lijst met bolletjes. De <code>&lt;li&gt;</code> daarbinnen zijn de losse regels. <code>&lt;ol&gt;</code> geeft nummers.</p>
-<p><strong>2. B – src.</strong> src betekent source, oftewel bron. href gebruik je bij een link, niet bij een plaatje.</p>
+<p><strong>1. C – <code>&lt;ul&gt;</code>.</strong> <code>&lt;ul&gt;</code> is de lijst met bolletjes. <code>&lt;ol&gt;</code> geeft nummers. <code>&lt;li&gt;</code> is één regel in de lijst, niet de lijst zelf. <code>&lt;list&gt;</code> bestaat niet.</p>
+<p><strong>2. B – <code>&lt;h2&gt;</code>.</strong> Onder de h1 komen de h2's. <code>&lt;h0&gt;</code> bestaat niet: de koppen gaan van h1 tot en met h6. <code>&lt;head&gt;</code> is het deel van je pagina dat je niet ziet. <code>&lt;li&gt;</code> is een regel in een lijstje.</p>
 </details>
 </details>
 <div class="admonition opdracht">
-<p class="admonition-title">4. Vul je pagina aan</p>
-<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-4</code></p>
+<p class="admonition-title">4. Koppen en lijstjes</p>
+<p class="meta">Ongeveer 5 minuten · Je werkt in: <code>opdracht-4</code></p>
 <ol>
 <li>Maak map <code>opdracht-4</code> met een nieuw index.html: ! en dan Tab.</li>
 <li>Neem je h1 en je alinea's uit opdracht-3 over in de body.</li>
-<li>Zet een <code>&lt;h2&gt;</code> met Mijn hobby's en daaronder een lijstje met drie hobby's.</li>
-<li>Zet er een link in naar een site die je vaak gebruikt.</li>
-<li>Zet een foto in <code>opdracht-4</code> en toon hem met <code>&lt;img&gt;</code> en een alt-tekst.</li>
+<li>Zet onder je alinea's een <code>&lt;h2&gt;</code> met Mijn hobby's.</li>
+<li>Zet daaronder een lijstje met bolletjes met drie hobby's.</li>
+<li>Zet er nog een <code>&lt;h2&gt;</code> onder met een eigen kopje, bijvoorbeeld Dit wil ik leren.</li>
+<li>Zet daaronder een lijstje met nummers met drie dingen.</li>
 </ol>
 <details class="hint">
 <summary>Codehint (niet het antwoord)</summary>
-<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Mijn hobby's<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Mijn favoriete eten<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -126,10 +108,10 @@
 </details>
 <div class="admonition klaar">
 <p class="admonition-title">Klaar als...</p>
-<p>Je pagina heeft nu een kop, tekst, een lijstje, een werkende link en een plaatje.</p>
+<p>Je pagina heeft een h1, je tekst, een kopje met een lijstje met bolletjes en een kopje met een lijstje met nummers.</p>
 </div>
 </div>
-    <div class="vorige-volgende"><a class="vorige" href="blok-3.html">← Blok 3 · Het skelet</a><a class="volgende" href="blok-5.html">Blok 5 · CSS koppelen →</a></div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-3.html">← Blok 3 · Het skelet</a><a class="volgende" href="blok-5.html">Blok 5 · Links en plaatjes →</a></div>
   </article>
 </div>
 <script>

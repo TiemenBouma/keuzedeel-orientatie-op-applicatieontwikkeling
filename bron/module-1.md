@@ -38,11 +38,12 @@ Elk blok werkt hetzelfde: eerst de **uitleg**, dan een **check** om te kijken of
 | 1 | Aan de slag: VS Code en Live Server installeren |
 | 2 | Tags: h1, h2, p |
 | 3 | Het skelet: head en body |
-| 4 | Koppen, lijstjes, links en plaatjes |
-| 5 | CSS koppelen |
-| 6 | Selectors: tagnaam en class |
-| 7 | Kleur en tekst |
-| 8 | Boxmodel: padding, border en margin |
+| 4 | Koppen en lijstjes |
+| 5 | Links en plaatjes |
+| 6 | CSS koppelen |
+| 7 | Selectors: tagnaam en class |
+| 8 | Kleur en tekst |
+| 9 | Boxmodel: padding, border en margin |
 
 ### Eén map per opdracht
 
@@ -53,14 +54,14 @@ les1-jouwnaam/
    opdracht-1/
    opdracht-2/
    ...
-   opdracht-8/
+   opdracht-9/
    eindopdracht/
 ```
 
 In elke opdrachtmap staan je bestanden, bijvoorbeeld:
 
 ```text
-opdracht-4/
+opdracht-6/
    index.html
    style.css
    foto.jpg
@@ -330,6 +331,49 @@ Zo krijgt je pagina structuur.
 !!! tip "Engelse woorden"
     ul staat voor *unordered list* (lijst zonder volgorde), ol voor *ordered list* (lijst met volgorde), li voor *list item* (regel van de lijst).
 
+??? check "Check: koppen en lijstjes"
+    **1. Welke tag maakt een lijstje met bolletjes?**
+
+    - A. `<ol>`
+    - B. `<li>`
+    - C. `<ul>`
+    - D. `<list>`
+
+    **2. Onder je h1 wil je een kopje zetten. Welke tag gebruik je?**
+
+    - A. `<h0>`
+    - B. `<h2>`
+    - C. `<head>`
+    - D. `<li>`
+
+    ??? antwoord "Bekijk de antwoorden"
+        **1. C – `<ul>`.** `<ul>` is de lijst met bolletjes. `<ol>` geeft nummers. `<li>` is één regel in de lijst, niet de lijst zelf. `<list>` bestaat niet.
+
+        **2. B – `<h2>`.** Onder de h1 komen de h2's. `<h0>` bestaat niet: de koppen gaan van h1 tot en met h6. `<head>` is het deel van je pagina dat je niet ziet. `<li>` is een regel in een lijstje.
+
+!!! opdracht "4. Koppen en lijstjes"
+    Ongeveer 5 minuten · Je werkt in: `opdracht-4`
+    {: .meta}
+
+    1. Maak map `opdracht-4` met een nieuw index.html: ! en dan Tab.
+    2. Neem je h1 en je alinea's uit opdracht-3 over in de body.
+    3. Zet onder je alinea's een `<h2>` met Mijn hobby's.
+    4. Zet daaronder een lijstje met bolletjes met drie hobby's.
+    5. Zet er nog een `<h2>` onder met een eigen kopje, bijvoorbeeld Dit wil ik leren.
+    6. Zet daaronder een lijstje met nummers met drie dingen.
+
+    ??? hint "Codehint (niet het antwoord)"
+        ```html
+        <h2>Mijn favoriete eten</h2>
+        <ul>
+          <li>...</li>
+        </ul>
+        ```
+
+    !!! klaar "Klaar als..."
+        Je pagina heeft een h1, je tekst, een kopje met een lijstje met bolletjes en een kopje met een lijstje met nummers.
+
+=== blok-5 | Links en plaatjes
 ## Links en plaatjes
 
 Deze twee tags hebben extra informatie nodig. Die extra informatie heet een **attribuut** en zet je in de openingstag.
@@ -355,48 +399,48 @@ Deze twee tags hebben extra informatie nodig. Die extra informatie heet een **at
 !!! tip "Waarom alt-tekst?"
     Blinde bezoekers laten de tekst voorlezen door hun computer. En als je foto kapot is, zie je de alt-tekst staan.
 
-??? check "Check: koppen, lijstjes, links"
-    **1. Welke tag maakt een lijstje met bolletjes?**
-
-    - A. `<ol>`
-    - B. `<li>`
-    - C. `<ul>`
-    - D. `<list>`
-
-    **2. Wat hoort er bij `<img>` om het plaatje te vinden?**
+??? check "Check: links en plaatjes"
+    **1. Wat hoort er bij `<img>` om het plaatje te vinden?**
 
     - A. href
     - B. src
     - C. link
     - D. file
 
+    **2. Welke regel maakt een link die werkt?**
+
+    - A. `<a src="https://nu.nl">Nieuws</a>`
+    - B. `<a href="https://nu.nl">Nieuws</a>`
+    - C. `<a>https://nu.nl</a>`
+    - D. `<link href="https://nu.nl">Nieuws</link>`
+
     ??? antwoord "Bekijk de antwoorden"
-        **1. C – `<ul>`.** `<ul>` is de lijst met bolletjes. De `<li>` daarbinnen zijn de losse regels. `<ol>` geeft nummers.
+        **1. B – src.** src betekent source, oftewel bron. href gebruik je bij een link, niet bij een plaatje. link en file bestaan niet als attribuut van `<img>`.
 
-        **2. B – src.** src betekent source, oftewel bron. href gebruik je bij een link, niet bij een plaatje.
+        **2. B.** Een link is een `<a>` met het adres in `href`. Bij A staat src: dat is voor plaatjes. Bij C mist href, dus de browser weet niet waar hij heen moet. D gebruikt `<link>`: dat is een andere tag, die zet je straks in de head om je CSS te koppelen.
 
-!!! opdracht "4. Vul je pagina aan"
-    Ongeveer 10 minuten · Je werkt in: `opdracht-4`
+!!! opdracht "5. Een link en een foto"
+    Ongeveer 10 minuten · Je werkt in: `opdracht-5`
     {: .meta}
 
-    1. Maak map `opdracht-4` met een nieuw index.html: ! en dan Tab.
-    2. Neem je h1 en je alinea's uit opdracht-3 over in de body.
-    3. Zet een `<h2>` met Mijn hobby's en daaronder een lijstje met drie hobby's.
-    4. Zet er een link in naar een site die je vaak gebruikt.
-    5. Zet een foto in `opdracht-4` en toon hem met `<img>` en een alt-tekst.
+    1. Maak map `opdracht-5` en kopieer je index.html uit opdracht-4 erin.
+    2. Zet onder je lijstjes een link naar een site die je vaak gebruikt.
+    3. Zoek een foto, van jezelf of van een hobby, en zet hem in de map `opdracht-5`.
+    4. Laat de foto op je pagina zien met `<img>`.
+    5. Geef de foto een alt-tekst die zegt wat erop staat.
+    6. Klik in Chrome op je link. Kom je op de goede site?
 
     ??? hint "Codehint (niet het antwoord)"
         ```html
-        <h2>Mijn hobby's</h2>
-        <ul>
-          <li>...</li>
-        </ul>
+        <a href="https://...">Tekst om op te klikken</a>
+
+        <img src="logo.png" alt="...">
         ```
 
     !!! klaar "Klaar als..."
-        Je pagina heeft nu een kop, tekst, een lijstje, een werkende link en een plaatje.
+        Je link opent de goede site en je foto staat op je pagina. Typ je de bestandsnaam van je foto even fout, dan zie je je alt-tekst.
 
-=== blok-5 | CSS koppelen
+=== blok-6 | CSS koppelen
 ## Wat is CSS eigenlijk?
 
 HTML zegt **wat** er staat. CSS zegt **hoe** het eruitziet.
@@ -474,12 +518,12 @@ index.html, in de head
 
         **2. B – `color: blue;`** Een dubbele punt tussen eigenschap en waarde, en een puntkomma erachter.
 
-!!! opdracht "5. Je eerste kleur op de pagina"
-    Ongeveer 5 minuten · Je werkt in: `opdracht-5`
+!!! opdracht "6. Je eerste kleur op de pagina"
+    Ongeveer 5 minuten · Je werkt in: `opdracht-6`
     {: .meta}
 
-    1. Maak map `opdracht-5` met een nieuw index.html en neem je pagina over.
-    2. Maak in `opdracht-5` een tweede bestand: style.css.
+    1. Maak map `opdracht-6` met een nieuw index.html en neem je pagina over.
+    2. Maak in `opdracht-6` een tweede bestand: style.css.
     3. Zet de link-regel in de head van index.html.
     4. Geef de body een achtergrondkleur en je h1 een andere kleur.
     5. Sla beide bestanden op met Ctrl + S.
@@ -497,7 +541,7 @@ index.html, in de head
     !!! klaar "Klaar als..."
         Je pagina heeft een gekleurde achtergrond en je naam heeft een andere kleur dan de rest.
 
-=== blok-6 | Selectors
+=== blok-7 | Selectors
 ## Wie krijgt de opmaak?
 
 Met een selector wijs je aan wat je wilt aanpassen. Je kent er nu twee.
@@ -563,11 +607,11 @@ p { color: gray; }
 
         **2. B – in je CSS.** In je HTML staat `class="knop"` zonder punt. In je CSS schrijf je `.knop { }`. Die punt zegt tegen de browser: zoek naar een class.
 
-!!! opdracht "6. Wijs je eigen elementen aan"
-    Ongeveer 5 minuten · Je werkt in: `opdracht-6`
+!!! opdracht "7. Wijs je eigen elementen aan"
+    Ongeveer 5 minuten · Je werkt in: `opdracht-7`
     {: .meta}
 
-    1. Maak map `opdracht-6` met index.html en style.css. Neem je pagina over.
+    1. Maak map `opdracht-7` met index.html en style.css. Neem je pagina over.
     2. Geef je link in index.html de class knop.
     3. Geef je h1 de class kop.
     4. Maak in style.css een regel voor `.knop` met een kleur.
@@ -586,7 +630,7 @@ p { color: gray; }
     !!! klaar "Klaar als..."
         Je link en je kop hebben allebei hun eigen kleur, terwijl je alinea's onveranderd blijven.
 
-=== blok-7 | Kleur en tekst
+=== blok-8 | Kleur en tekst
 ## Eigenschappen: kleur
 
 Twee eigenschappen die je constant gebruikt.
@@ -650,11 +694,11 @@ Hiermee bepaal je hoe je tekst eruitziet.
 
         **2. C – text-decoration.** Met `text-decoration: none` verdwijnt de streep. Dat is de eerste stap om van een link een knop te maken.
 
-!!! opdracht "7. Geef je pagina een eigen uitstraling"
-    Ongeveer 5 minuten · Je werkt in: `opdracht-7`
+!!! opdracht "8. Geef je pagina een eigen uitstraling"
+    Ongeveer 5 minuten · Je werkt in: `opdracht-8`
     {: .meta}
 
-    1. Maak map `opdracht-7` en neem je twee bestanden over.
+    1. Maak map `opdracht-8` en neem je twee bestanden over.
     2. Geef de body een font-family, bijvoorbeeld Arial.
     3. Geef `.kop` een achtergrondkleur, witte tekst en tekst in het midden.
     4. Geef `.knop` een achtergrondkleur met een hexcode.
@@ -672,7 +716,7 @@ Hiermee bepaal je hoe je tekst eruitziet.
     !!! klaar "Klaar als..."
         Je pagina heeft een eigen lettertype, een gekleurde balk bovenaan en je link ziet er niet meer uit als gewone linktekst.
 
-=== blok-8 | Boxmodel
+=== blok-9 | Boxmodel
 ## Ruimte maken: het boxmodel
 
 Elk element is een rechthoek met drie lagen ruimte eromheen.
@@ -739,11 +783,11 @@ Met `border` maak je de rand zelf: dikte, soort (`solid` is een doorgetrokken li
 
         **2. B – links en rechts.** Bij twee getallen is het eerste boven en onder, het tweede links en rechts.
 
-!!! opdracht "8. Maak je knop af en kijk in de browser"
-    Ongeveer 15 minuten · Je werkt in: `opdracht-8`
+!!! opdracht "9. Maak je knop af en kijk in de browser"
+    Ongeveer 15 minuten · Je werkt in: `opdracht-9`
     {: .meta}
 
-    1. Maak map `opdracht-8` met je index.html en style.css uit opdracht-7.
+    1. Maak map `opdracht-9` met je index.html en style.css uit opdracht-8.
     2. Geef `.knop` een padding van 12px 24px.
     3. Geef `.knop` een border-radius van 8px en een margin van 20px.
     4. Druk in Chrome op F12. Er opent een venster met code. (Gebeurt er niets? Probeer Fn + F12.)
@@ -786,11 +830,11 @@ Alles wat je nodig hebt, heb je in de mini-opdrachten al een keer gemaakt. Kijk 
 
 ## Inleveren
 
-Zip de hele map `les1-jouwnaam`, met `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht` erin. Noem de zip `les1-jouwnaam.zip`.
+Zip de hele map `les1-jouwnaam`, met `opdracht-1` tot en met `opdracht-9` en de map `eindopdracht` erin. Noem de zip `les1-jouwnaam.zip`.
 
 **Checklist: vink af voordat je inlevert**
 
-- Map `les1-jouwnaam` met `opdracht-1` tot en met `opdracht-8`
+- Map `les1-jouwnaam` met `opdracht-1` tot en met `opdracht-9`
 - Map `eindopdracht` met index.html en style.css
 - Je foto staat in dezelfde map als je HTML
 - Alle namen met kleine letters: index.html, style.css

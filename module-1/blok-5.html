@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS koppelen · Module 1 · Webdevelopment</title>
+<title>Links en plaatjes · Module 1 · Webdevelopment</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -24,10 +24,11 @@
 <a href="blok-2.html"><small>2</small>Tags</a>
 <a href="blok-3.html"><small>3</small>Het skelet</a>
 <a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
-<a href="blok-5.html" class="actief"><small>5</small>CSS koppelen</a>
-<a href="blok-6.html"><small>6</small>Selectors</a>
-<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
-<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<a href="blok-5.html" class="actief"><small>5</small>Links en plaatjes</a>
+<a href="blok-6.html"><small>6</small>CSS koppelen</a>
+<a href="blok-7.html"><small>7</small>Selectors</a>
+<a href="blok-8.html"><small>8</small>Kleur en tekst</a>
+<a href="blok-9.html"><small>9</small>Boxmodel</a>
 <hr>
 <a href="eindopdracht.html">Eindopdracht</a>
 <a href="werkt-het-niet.html">Werkt het niet?</a>
@@ -37,113 +38,73 @@
   </aside>
   <article>
     <div class="bloklabel">BLOK 5</div>
-    <h2 class="paginatitel">CSS koppelen</h2>
-    <h2>Wat is CSS eigenlijk?</h2>
-<p class="sub">HTML zegt <strong>wat</strong> er staat. CSS zegt <strong>hoe</strong> het eruitziet.</p>
-<div class="naast">
-<figure class="demo"><div class="demo-titel">Zonder CSS</div><iframe class="demo-frame" loading="lazy" title="Zonder CSS" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;h1&gt;Sam Jansen&lt;/h1&gt;&lt;p&gt;Student ICT in Utrecht.&lt;/p&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
-<figure class="demo"><div class="demo-titel">Met CSS (dezelfde HTML)</div><iframe class="demo-frame" loading="lazy" title="Met CSS (dezelfde HTML)" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;body{background:#E8EAF6;font-family:Arial}h1{background:#2965F1;color:#fff;text-align:center;padding:10px;border-radius:8px}a{background:#E44D26;color:#fff;padding:6px 16px;border-radius:8px;text-decoration:none}&lt;/style&gt;
-&lt;h1&gt;Sam Jansen&lt;/h1&gt;&lt;p&gt;Student ICT in Utrecht.&lt;/p&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+    <h2 class="paginatitel">Links en plaatjes</h2>
+    <h2>Links en plaatjes</h2>
+<p class="sub">Deze twee tags hebben extra informatie nodig. Die extra informatie heet een <strong>attribuut</strong> en zet je in de openingstag.</p>
+<ol>
+<li><strong>Een link: <code>&lt;a&gt;</code>.</strong> <code>href</code> is het adres waar de link naartoe gaat. De tekst tussen <code>&lt;a&gt;</code> en <code>&lt;/a&gt;</code> is wat je aanklikt.</li>
+<li><strong>Een plaatje: <code>&lt;img&gt;</code>.</strong> <code>src</code> is de bestandsnaam van je foto. <code>alt</code> beschrijft wat erop staat. <code>&lt;img&gt;</code> sluit je niet: er is geen <code>&lt;/img&gt;</code>.</li>
+</ol>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://nu.nl"</span><span class="p">&gt;</span>Naar het nieuws<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"foto.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Foto van Sam"</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Een link, en een foto die niet gevonden wordt: dan zie je de alt-tekst</div><iframe class="demo-frame" loading="lazy" title="Een link, en een foto die niet gevonden wordt: dan zie je de alt-tekst" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;a href=&quot;#&quot;&gt;Naar het nieuws&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;bestaat-niet.jpg&quot; alt=&quot;Foto van Sam&quot; style=&quot;border:1px dashed #b8bddc;padding:20px&quot;&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition let-op">
+<p class="admonition-title">Let op: dezelfde map</p>
+<p>Je foto moet in dezelfde map staan als je index.html. Staat hij ergens anders, dan blijft de plek op je pagina leeg.</p>
 </div>
-<ol>
-<li><strong>De HTML is precies hetzelfde.</strong> Links en rechts staat dezelfde code. Alleen de opmaak is toegevoegd.</li>
-<li><strong>CSS betekent Cascading Style Sheets.</strong> Style sheet betekent letterlijk: opmaakblad.</li>
-<li><strong>Zonder CSS kiest de browser zelf.</strong> Dan wordt alles zwart, met een standaard lettertype.</li>
-</ol>
-<h2>Zo maak en koppel je je CSS</h2>
-<p class="sub">Je CSS komt in een apart bestand naast je HTML.</p>
-<ol>
-<li><strong>Maak het bestand.</strong> style.css hoort in dezelfde opdrachtmap als je index.html.</li>
-<li><strong>Koppel het aan je HTML.</strong> De link-regel zet je in de <code>&lt;head&gt;</code> van index.html.</li>
-<li><strong>Schrijf je regels.</strong> Zo ziet een CSS-regel eruit: <code>h1 { color: blue; }</code></li>
-</ol>
-<p class="bestandsnaam">style.css</p>
-<div class="code"><pre><span></span><code><span class="c">/* style.css */</span>
-<span class="nt">body</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p class="bestandsnaam">index.html, in de head</p>
-<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Onderdeel</th>
-<th>In het voorbeeld</th>
-<th>Betekenis</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>selector</td>
-<td><code>h1</code></td>
-<td>Wat pas je aan?</td>
-</tr>
-<tr>
-<td>eigenschap</td>
-<td><code>color</code></td>
-<td>Wat verander je?</td>
-</tr>
-<tr>
-<td>waarde</td>
-<td><code>blue</code></td>
-<td>Waarin verander je het?</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition onthoud">
-<p class="admonition-title">De vorm van elke regel</p>
-<p>Tussen eigenschap en waarde staat een dubbele punt. De puntkomma sluit de regel af.</p>
+<div class="admonition tip">
+<p class="admonition-title">Waarom alt-tekst?</p>
+<p>Blinde bezoekers laten de tekst voorlezen door hun computer. En als je foto kapot is, zie je de alt-tekst staan.</p>
 </div>
 <details class="check">
-<summary>Check: CSS koppelen</summary>
-<p><strong>1. In welk deel van je HTML zet je de <code>&lt;link&gt;</code>?</strong></p>
+<summary>Check: links en plaatjes</summary>
+<p><strong>1. Wat hoort er bij <code>&lt;img&gt;</code> om het plaatje te vinden?</strong></p>
 <ul>
-<li>A. In de body</li>
-<li>B. In de head</li>
-<li>C. Onderaan</li>
-<li>D. In de css</li>
+<li>A. href</li>
+<li>B. src</li>
+<li>C. link</li>
+<li>D. file</li>
 </ul>
-<p><strong>2. Welke CSS-regel is goed geschreven?</strong></p>
+<p><strong>2. Welke regel maakt een link die werkt?</strong></p>
 <ul>
-<li>A. <code>color = blue;</code></li>
-<li>B. <code>color: blue;</code></li>
-<li>C. <code>color blue</code></li>
-<li>D. <code>{color blue}</code></li>
+<li>A. <code>&lt;a src="https://nu.nl"&gt;Nieuws&lt;/a&gt;</code></li>
+<li>B. <code>&lt;a href="https://nu.nl"&gt;Nieuws&lt;/a&gt;</code></li>
+<li>C. <code>&lt;a&gt;https://nu.nl&lt;/a&gt;</code></li>
+<li>D. <code>&lt;link href="https://nu.nl"&gt;Nieuws&lt;/link&gt;</code></li>
 </ul>
 <details class="antwoord">
 <summary>Bekijk de antwoorden</summary>
-<p><strong>1. B – in de head.</strong> De browser leest eerst de head. Zo weet hij meteen welke opmaak hij moet gebruiken.</p>
-<p><strong>2. B – <code>color: blue;</code></strong> Een dubbele punt tussen eigenschap en waarde, en een puntkomma erachter.</p>
+<p><strong>1. B – src.</strong> src betekent source, oftewel bron. href gebruik je bij een link, niet bij een plaatje. link en file bestaan niet als attribuut van <code>&lt;img&gt;</code>.</p>
+<p><strong>2. B.</strong> Een link is een <code>&lt;a&gt;</code> met het adres in <code>href</code>. Bij A staat src: dat is voor plaatjes. Bij C mist href, dus de browser weet niet waar hij heen moet. D gebruikt <code>&lt;link&gt;</code>: dat is een andere tag, die zet je straks in de head om je CSS te koppelen.</p>
 </details>
 </details>
 <div class="admonition opdracht">
-<p class="admonition-title">5. Je eerste kleur op de pagina</p>
-<p class="meta">Ongeveer 5 minuten · Je werkt in: <code>opdracht-5</code></p>
+<p class="admonition-title">5. Een link en een foto</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-5</code></p>
 <ol>
-<li>Maak map <code>opdracht-5</code> met een nieuw index.html en neem je pagina over.</li>
-<li>Maak in <code>opdracht-5</code> een tweede bestand: style.css.</li>
-<li>Zet de link-regel in de head van index.html.</li>
-<li>Geef de body een achtergrondkleur en je h1 een andere kleur.</li>
-<li>Sla beide bestanden op met Ctrl + S.</li>
+<li>Maak map <code>opdracht-5</code> en kopieer je index.html uit opdracht-4 erin.</li>
+<li>Zet onder je lijstjes een link naar een site die je vaak gebruikt.</li>
+<li>Zoek een foto, van jezelf of van een hobby, en zet hem in de map <code>opdracht-5</code>.</li>
+<li>Laat de foto op je pagina zien met <code>&lt;img&gt;</code>.</li>
+<li>Geef de foto een alt-tekst die zegt wat erop staat.</li>
+<li>Klik in Chrome op je link. Kom je op de goede site?</li>
 </ol>
 <details class="hint">
 <summary>Codehint (niet het antwoord)</summary>
-<div class="code"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">darkblue</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://..."</span><span class="p">&gt;</span>Tekst om op te klikken<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"logo.png"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
 </code></pre></div>
 </details>
 <div class="admonition klaar">
 <p class="admonition-title">Klaar als...</p>
-<p>Je pagina heeft een gekleurde achtergrond en je naam heeft een andere kleur dan de rest.</p>
+<p>Je link opent de goede site en je foto staat op je pagina. Typ je de bestandsnaam van je foto even fout, dan zie je je alt-tekst.</p>
 </div>
 </div>
-    <div class="vorige-volgende"><a class="vorige" href="blok-4.html">← Blok 4 · Koppen en lijstjes</a><a class="volgende" href="blok-6.html">Blok 6 · Selectors →</a></div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-4.html">← Blok 4 · Koppen en lijstjes</a><a class="volgende" href="blok-6.html">Blok 6 · CSS koppelen →</a></div>
   </article>
 </div>
 <script>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selectors · Module 1 · Webdevelopment</title>
+<title>CSS koppelen · Module 1 · Webdevelopment</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -24,10 +24,11 @@
 <a href="blok-2.html"><small>2</small>Tags</a>
 <a href="blok-3.html"><small>3</small>Het skelet</a>
 <a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
-<a href="blok-5.html"><small>5</small>CSS koppelen</a>
-<a href="blok-6.html" class="actief"><small>6</small>Selectors</a>
-<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
-<a href="blok-8.html"><small>8</small>Boxmodel</a>
+<a href="blok-5.html"><small>5</small>Links en plaatjes</a>
+<a href="blok-6.html" class="actief"><small>6</small>CSS koppelen</a>
+<a href="blok-7.html"><small>7</small>Selectors</a>
+<a href="blok-8.html"><small>8</small>Kleur en tekst</a>
+<a href="blok-9.html"><small>9</small>Boxmodel</a>
 <hr>
 <a href="eindopdracht.html">Eindopdracht</a>
 <a href="werkt-het-niet.html">Werkt het niet?</a>
@@ -37,100 +38,113 @@
   </aside>
   <article>
     <div class="bloklabel">BLOK 6</div>
-    <h2 class="paginatitel">Selectors</h2>
-    <h2>Wie krijgt de opmaak?</h2>
-<p class="sub">Met een selector wijs je aan wat je wilt aanpassen. Je kent er nu twee.</p>
+    <h2 class="paginatitel">CSS koppelen</h2>
+    <h2>Wat is CSS eigenlijk?</h2>
+<p class="sub">HTML zegt <strong>wat</strong> er staat. CSS zegt <strong>hoe</strong> het eruitziet.</p>
+<div class="naast">
+<figure class="demo"><div class="demo-titel">Zonder CSS</div><iframe class="demo-frame" loading="lazy" title="Zonder CSS" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;h1&gt;Sam Jansen&lt;/h1&gt;&lt;p&gt;Student ICT in Utrecht.&lt;/p&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<figure class="demo"><div class="demo-titel">Met CSS (dezelfde HTML)</div><iframe class="demo-frame" loading="lazy" title="Met CSS (dezelfde HTML)" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;body{background:#E8EAF6;font-family:Arial}h1{background:#2965F1;color:#fff;text-align:center;padding:10px;border-radius:8px}a{background:#E44D26;color:#fff;padding:6px 16px;border-radius:8px;text-decoration:none}&lt;/style&gt;
+&lt;h1&gt;Sam Jansen&lt;/h1&gt;&lt;p&gt;Student ICT in Utrecht.&lt;/p&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+</div>
+<ol>
+<li><strong>De HTML is precies hetzelfde.</strong> Links en rechts staat dezelfde code. Alleen de opmaak is toegevoegd.</li>
+<li><strong>CSS betekent Cascading Style Sheets.</strong> Style sheet betekent letterlijk: opmaakblad.</li>
+<li><strong>Zonder CSS kiest de browser zelf.</strong> Dan wordt alles zwart, met een standaard lettertype.</li>
+</ol>
+<h2>Zo maak en koppel je je CSS</h2>
+<p class="sub">Je CSS komt in een apart bestand naast je HTML.</p>
+<ol>
+<li><strong>Maak het bestand.</strong> style.css hoort in dezelfde opdrachtmap als je index.html.</li>
+<li><strong>Koppel het aan je HTML.</strong> De link-regel zet je in de <code>&lt;head&gt;</code> van index.html.</li>
+<li><strong>Schrijf je regels.</strong> Zo ziet een CSS-regel eruit: <code>h1 { color: blue; }</code></li>
+</ol>
+<p class="bestandsnaam">style.css</p>
+<div class="code"><pre><span></span><code><span class="c">/* style.css */</span>
+<span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p class="bestandsnaam">index.html, in de head</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
-<th>Soort</th>
-<th>Zo schrijf je het</th>
-<th>Wat pakt het?</th>
+<th>Onderdeel</th>
+<th>In het voorbeeld</th>
+<th>Betekenis</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Tagnaam</td>
-<td><code>p { }</code> (geen teken ervoor)</td>
-<td>Alle <code>&lt;p&gt;</code> op je hele pagina.</td>
+<td>selector</td>
+<td><code>h1</code></td>
+<td>Wat pas je aan?</td>
 </tr>
 <tr>
-<td>Class</td>
-<td><code>.knop { }</code> (punt ervoor)</td>
-<td>Alles met <code>class="knop"</code>. Zo vaak als je wilt.</td>
+<td>eigenschap</td>
+<td><code>color</code></td>
+<td>Wat verander je?</td>
+</tr>
+<tr>
+<td>waarde</td>
+<td><code>blue</code></td>
+<td>Waarin verander je het?</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition let-op">
-<p class="admonition-title">Let op: de punt staat alleen in je CSS</p>
-<p>In je HTML schrijf je <code>class="knop"</code>, zonder punt. In je CSS wordt dat <code>.knop { }</code>.</p>
-</div>
-<h2>Allebei in één voorbeeld</h2>
-<p class="sub">Links de HTML, rechts de CSS die erbij hoort.</p>
-<p class="bestandsnaam">index.html</p>
-<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"kop"</span><span class="p">&gt;</span>Sam<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ik woon in Utrecht.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ik game graag.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"knop"</span><span class="p">&gt;</span>Mail<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</code></pre></div>
-<p class="bestandsnaam">style.css</p>
-<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kop</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">navy</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">gray</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="p">.</span><span class="nc">knop</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div>
-<figure class="demo"><div class="demo-titel">Beide alinea&#x27;s worden grijs, want p pakt ze allebei. De h1 en de link hebben elk hun eigen class.</div><iframe class="demo-frame" loading="lazy" title="Beide alinea&#x27;s worden grijs, want p pakt ze allebei. De h1 en de link hebben elk hun eigen class." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.kop{color:navy}p{color:gray}.knop{color:red}&lt;/style&gt;
-&lt;h1 class=&quot;kop&quot;&gt;Sam&lt;/h1&gt;&lt;p&gt;Ik woon in Utrecht.&lt;/p&gt;&lt;p&gt;Ik game graag.&lt;/p&gt;&lt;a href=&quot;#&quot; class=&quot;knop&quot;&gt;Mail&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
-<div class="admonition tip">
-<p class="admonition-title">Er komt er later nog één bij</p>
-<p>Naast de tagnaam en de class bestaat er ook nog een id. Die leer je in module 2. Met deze twee kun je nu alles.</p>
+<div class="admonition onthoud">
+<p class="admonition-title">De vorm van elke regel</p>
+<p>Tussen eigenschap en waarde staat een dubbele punt. De puntkomma sluit de regel af.</p>
 </div>
 <details class="check">
-<summary>Check: selectors</summary>
-<p><strong>1. Je hebt <code>class="knop"</code>. Hoe schrijf je dat in je CSS?</strong></p>
+<summary>Check: CSS koppelen</summary>
+<p><strong>1. In welk deel van je HTML zet je de <code>&lt;link&gt;</code>?</strong></p>
 <ul>
-<li>A. <code>#knop</code></li>
-<li>B. <code>.knop</code></li>
-<li>C. <code>knop</code></li>
-<li>D. <code>*knop</code></li>
+<li>A. In de body</li>
+<li>B. In de head</li>
+<li>C. Onderaan</li>
+<li>D. In de css</li>
 </ul>
-<p><strong>2. Waar schrijf je de punt van .knop?</strong></p>
+<p><strong>2. Welke CSS-regel is goed geschreven?</strong></p>
 <ul>
-<li>A. In je HTML</li>
-<li>B. In je CSS</li>
-<li>C. In allebei</li>
-<li>D. Nergens</li>
+<li>A. <code>color = blue;</code></li>
+<li>B. <code>color: blue;</code></li>
+<li>C. <code>color blue</code></li>
+<li>D. <code>{color blue}</code></li>
 </ul>
 <details class="antwoord">
 <summary>Bekijk de antwoorden</summary>
-<p><strong>1. B – <code>.knop</code>.</strong> Een class herken je in CSS aan de punt ervoor. Zonder punt zoekt de browser naar een tag.</p>
-<p><strong>2. B – in je CSS.</strong> In je HTML staat <code>class="knop"</code> zonder punt. In je CSS schrijf je <code>.knop { }</code>. Die punt zegt tegen de browser: zoek naar een class.</p>
+<p><strong>1. B – in de head.</strong> De browser leest eerst de head. Zo weet hij meteen welke opmaak hij moet gebruiken.</p>
+<p><strong>2. B – <code>color: blue;</code></strong> Een dubbele punt tussen eigenschap en waarde, en een puntkomma erachter.</p>
 </details>
 </details>
 <div class="admonition opdracht">
-<p class="admonition-title">6. Wijs je eigen elementen aan</p>
+<p class="admonition-title">6. Je eerste kleur op de pagina</p>
 <p class="meta">Ongeveer 5 minuten · Je werkt in: <code>opdracht-6</code></p>
 <ol>
-<li>Maak map <code>opdracht-6</code> met index.html en style.css. Neem je pagina over.</li>
-<li>Geef je link in index.html de class knop.</li>
-<li>Geef je h1 de class kop.</li>
-<li>Maak in style.css een regel voor <code>.knop</code> met een kleur.</li>
-<li>Maak een regel voor <code>.kop</code> met een andere kleur.</li>
+<li>Maak map <code>opdracht-6</code> met een nieuw index.html en neem je pagina over.</li>
+<li>Maak in <code>opdracht-6</code> een tweede bestand: style.css.</li>
+<li>Zet de link-regel in de head van index.html.</li>
+<li>Geef de body een achtergrondkleur en je h1 een andere kleur.</li>
+<li>Sla beide bestanden op met Ctrl + S.</li>
 </ol>
 <details class="hint">
 <summary>Codehint (niet het antwoord)</summary>
-<p><div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"knop"</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"kop"</span><span class="p">&gt;</span>
+<div class="code"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">darkblue</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
-<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">knop</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="p">.</span><span class="nc">kop</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">navy</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div></p>
 </details>
 <div class="admonition klaar">
 <p class="admonition-title">Klaar als...</p>
-<p>Je link en je kop hebben allebei hun eigen kleur, terwijl je alinea's onveranderd blijven.</p>
+<p>Je pagina heeft een gekleurde achtergrond en je naam heeft een andere kleur dan de rest.</p>
 </div>
 </div>
-    <div class="vorige-volgende"><a class="vorige" href="blok-5.html">← Blok 5 · CSS koppelen</a><a class="volgende" href="blok-7.html">Blok 7 · Kleur en tekst →</a></div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-5.html">← Blok 5 · Links en plaatjes</a><a class="volgende" href="blok-7.html">Blok 7 · Selectors →</a></div>
   </article>
 </div>
 <script>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boxmodel · Module 1 · Webdevelopment</title>
+<title>Kleur en tekst · Module 1 · Webdevelopment</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -24,10 +24,11 @@
 <a href="blok-2.html"><small>2</small>Tags</a>
 <a href="blok-3.html"><small>3</small>Het skelet</a>
 <a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
-<a href="blok-5.html"><small>5</small>CSS koppelen</a>
-<a href="blok-6.html"><small>6</small>Selectors</a>
-<a href="blok-7.html"><small>7</small>Kleur en tekst</a>
-<a href="blok-8.html" class="actief"><small>8</small>Boxmodel</a>
+<a href="blok-5.html"><small>5</small>Links en plaatjes</a>
+<a href="blok-6.html"><small>6</small>CSS koppelen</a>
+<a href="blok-7.html"><small>7</small>Selectors</a>
+<a href="blok-8.html" class="actief"><small>8</small>Kleur en tekst</a>
+<a href="blok-9.html"><small>9</small>Boxmodel</a>
 <hr>
 <a href="eindopdracht.html">Eindopdracht</a>
 <a href="werkt-het-niet.html">Werkt het niet?</a>
@@ -37,117 +38,126 @@
   </aside>
   <article>
     <div class="bloklabel">BLOK 8</div>
-    <h2 class="paginatitel">Boxmodel</h2>
-    <h2>Ruimte maken: het boxmodel</h2>
-<p class="sub">Elk element is een rechthoek met drie lagen ruimte eromheen.</p>
+    <h2 class="paginatitel">Kleur en tekst</h2>
+    <h2>Eigenschappen: kleur</h2>
+<p class="sub">Twee eigenschappen die je constant gebruikt.</p>
 <table>
 <thead>
 <tr>
-<th>Laag</th>
-<th>Wat is het?</th>
+<th>Eigenschap</th>
+<th>Wat doet het?</th>
+<th>Voorbeeld</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>padding</code></td>
-<td>Ruimte <strong>binnen</strong> de rand. Je knop wordt er dikker van.</td>
+<td><code>color</code></td>
+<td>De kleur van de tekst zelf.</td>
+<td><code>h1 { color: white; }</code></td>
 </tr>
 <tr>
-<td><code>border</code></td>
-<td>De rand zelf: dikte, soort en kleur.</td>
-</tr>
-<tr>
-<td><code>margin</code></td>
-<td>Ruimte <strong>buiten</strong> de rand, tussen dit element en de buren.</td>
+<td><code>background-color</code></td>
+<td>De kleur van het vlak erachter.</td>
+<td><code>h1 { background-color: navy; }</code></td>
 </tr>
 </tbody>
 </table>
-<figure class="demo"><div class="demo-titel">Van binnen naar buiten: tekst (blauw), padding (groen), border (zwart), margin (oranje). Dezelfde kleuren zie je in Chrome bij F12 &gt; Computed.</div><iframe class="demo-frame" loading="lazy" title="Van binnen naar buiten: tekst (blauw), padding (groen), border (zwart), margin (oranje). Dezelfde kleuren zie je in Chrome bij F12 &gt; Computed." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.m{background:#f9cc9d;padding:16px;display:inline-block}.b{border:4px solid #1B1F3B}.p{background:#c3d08b;padding:16px}.t{background:#8cb6c0;padding:6px 14px}&lt;/style&gt;
-&lt;div class=&quot;m&quot;&gt;&lt;div class=&quot;b&quot;&gt;&lt;div class=&quot;p&quot;&gt;&lt;div class=&quot;t&quot;&gt;jouw tekst&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
-<div class="admonition onthoud">
-<p class="admonition-title">Ezelsbruggetje</p>
-<p>Padding is de vulling in je jas. Margin is de afstand tot degene die naast je staat.</p>
+<p>Een kleur opgeven kan op twee manieren:</p>
+<ol>
+<li><strong>Met een naam:</strong> red, blue, white, navy, lightblue, gray. Handig, maar er is maar een beperkt aantal namen.</li>
+<li><strong>Met een hexcode:</strong> een hekje met zes tekens, bijvoorbeeld <code>#2965F1</code>. Hiermee kun je elke kleur maken die bestaat. In VS Code zie je een gekleurd vierkantje naast de code. Klik erop voor de kleurenkiezer.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">Kleuren met een naam en met een hexcode. Onder: witte tekst op een navy achtergrond.</div><iframe class="demo-frame" loading="lazy" title="Kleuren met een naam en met een hexcode. Onder: witte tekst op een navy achtergrond." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.r{display:flex;gap:8px;margin-bottom:10px}.r div{color:#fff;padding:8px 12px;border-radius:6px;font-family:Consolas,monospace;font-size:13px}&lt;/style&gt;
+&lt;div class=&quot;r&quot;&gt;&lt;div style=&quot;background:red&quot;&gt;red&lt;/div&gt;&lt;div style=&quot;background:navy&quot;&gt;navy&lt;/div&gt;&lt;div style=&quot;background:#2965F1&quot;&gt;#2965F1&lt;/div&gt;&lt;div style=&quot;background:#1E8E4E&quot;&gt;#1E8E4E&lt;/div&gt;&lt;/div&gt;
+&lt;h1 style=&quot;color:white;background-color:navy;margin:0;padding:8px 12px&quot;&gt;Sam Jansen&lt;/h1&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<h2>Eigenschappen: tekst</h2>
+<p class="sub">Hiermee bepaal je hoe je tekst eruitziet.</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschap</th>
+<th>Wat doet het?</th>
+<th>Voorbeeld</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>font-size</code></td>
+<td>Hoe groot de letters zijn.</td>
+<td><code>font-size: 20px;</code></td>
+</tr>
+<tr>
+<td><code>font-family</code></td>
+<td>Welk lettertype je gebruikt.</td>
+<td><code>font-family: Arial;</code></td>
+</tr>
+<tr>
+<td><code>text-align</code></td>
+<td>Links, midden of rechts.</td>
+<td><code>text-align: center;</code></td>
+</tr>
+<tr>
+<td><code>text-decoration</code></td>
+<td>Hiermee haal je de streep onder een link weg.</td>
+<td><code>text-decoration: none;</code></td>
+</tr>
+</tbody>
+</table>
+<figure class="demo"><div class="demo-titel">Wat de vier tekst-eigenschappen doen</div><iframe class="demo-frame" loading="lazy" title="Wat de vier tekst-eigenschappen doen" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;p style=&quot;font-size:22px;margin:4px 0&quot;&gt;font-size: 22px&lt;/p&gt;
+&lt;p style=&quot;font-family:Georgia;margin:4px 0&quot;&gt;font-family: Georgia&lt;/p&gt;
+&lt;p style=&quot;text-align:center;margin:4px 0;background:#f6f7fc&quot;&gt;text-align: center&lt;/p&gt;
+&lt;a href=&quot;#&quot; style=&quot;text-decoration:none&quot;&gt;text-decoration: none (geen streep)&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Wat is px?</p>
+<p>px staat voor pixels: de puntjes waaruit je scherm bestaat. <code>font-size: 20px</code> betekent dus letters van twintig puntjes hoog.</p>
 </div>
-<h2>Hoeveel waarden schrijf je op?</h2>
-<p class="sub">Bij padding en margin mag je één, twee of vier getallen geven.</p>
-<table>
-<thead>
-<tr>
-<th>Zo schrijf je het</th>
-<th>Wat gebeurt er?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>padding: 20px;</code></td>
-<td>Eén getal: alle vier de kanten krijgen 20 pixels ruimte.</td>
-</tr>
-<tr>
-<td><code>padding: 12px 24px;</code></td>
-<td>Twee getallen: het eerste is boven én onder, het tweede links én rechts.</td>
-</tr>
-<tr>
-<td><code>padding: 10px 20px 30px 40px;</code></td>
-<td>Vier getallen: met de klok mee. Boven, rechts, onder, links.</td>
-</tr>
-</tbody>
-</table>
-<figure class="demo"><div class="demo-titel">Dezelfde knop met drie verschillende paddings</div><iframe class="demo-frame" loading="lazy" title="Dezelfde knop met drie verschillende paddings" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;a{display:inline-block;background:#2965F1;color:#fff;text-decoration:none;border-radius:8px;margin-right:10px}&lt;/style&gt;
-&lt;a style=&quot;padding:20px&quot;&gt;padding: 20px&lt;/a&gt;&lt;a style=&quot;padding:12px 24px&quot;&gt;padding: 12px 24px&lt;/a&gt;&lt;a style=&quot;padding:10px 20px 30px 40px&quot;&gt;10px 20px 30px 40px&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
-<p><code>margin</code> werkt precies hetzelfde: ook daar schrijf je één, twee of vier getallen.</p>
-<h3>De rand en ronde hoeken</h3>
-<div class="code"><pre><span></span><code><span class="nt">border</span><span class="o">:</span><span class="w"> </span><span class="nt">2px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span>
-<span class="nt">border-radius</span><span class="o">:</span><span class="w"> </span><span class="nt">8px</span><span class="o">;</span>
-</code></pre></div>
-<p>Met <code>border</code> maak je de rand zelf: dikte, soort (<code>solid</code> is een doorgetrokken lijn) en kleur. Met <code>border-radius</code> krijg je ronde hoeken.</p>
 <details class="check">
-<summary>Check: het boxmodel</summary>
-<p><strong>1. Welke ruimte zit binnen de rand?</strong></p>
+<summary>Check: eigenschappen</summary>
+<p><strong>1. Waarmee geef je iets een achtergrondkleur?</strong></p>
 <ul>
-<li>A. margin</li>
-<li>B. padding</li>
-<li>C. border</li>
-<li>D. radius</li>
+<li>A. color</li>
+<li>B. background-color</li>
+<li>C. bgcolor</li>
+<li>D. fill</li>
 </ul>
-<p><strong>2. Bij <code>padding: 10px 30px;</code> wat doet die 30px?</strong></p>
+<p><strong>2. Waarmee haal je de streep onder een link weg?</strong></p>
 <ul>
-<li>A. boven en onder</li>
-<li>B. links en rechts</li>
-<li>C. alleen links</li>
-<li>D. de rand</li>
+<li>A. font-size</li>
+<li>B. text-align</li>
+<li>C. text-decoration</li>
+<li>D. color</li>
 </ul>
 <details class="antwoord">
 <summary>Bekijk de antwoorden</summary>
-<p><strong>1. B – padding.</strong> Padding zit tussen de rand en je tekst. De ruimte buiten de rand heet margin.</p>
-<p><strong>2. B – links en rechts.</strong> Bij twee getallen is het eerste boven en onder, het tweede links en rechts.</p>
+<p><strong>1. B – background-color.</strong> color is de kleur van de tekst zelf. background-color is de kleur van het vlak erachter.</p>
+<p><strong>2. C – text-decoration.</strong> Met <code>text-decoration: none</code> verdwijnt de streep. Dat is de eerste stap om van een link een knop te maken.</p>
 </details>
 </details>
 <div class="admonition opdracht">
-<p class="admonition-title">8. Maak je knop af en kijk in de browser</p>
-<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-8</code></p>
+<p class="admonition-title">8. Geef je pagina een eigen uitstraling</p>
+<p class="meta">Ongeveer 5 minuten · Je werkt in: <code>opdracht-8</code></p>
 <ol>
-<li>Maak map <code>opdracht-8</code> met je index.html en style.css uit opdracht-7.</li>
-<li>Geef <code>.knop</code> een padding van 12px 24px.</li>
-<li>Geef <code>.knop</code> een border-radius van 8px en een margin van 20px.</li>
-<li>Druk in Chrome op F12. Er opent een venster met code. (Gebeurt er niets? Probeer Fn + F12.)</li>
-<li>Klik linksboven in dat venster op het pijltje-icoon en klik daarna op je knop.</li>
-<li>Klik in dat venster op het tabblad Computed.</li>
+<li>Maak map <code>opdracht-8</code> en neem je twee bestanden over.</li>
+<li>Geef de body een font-family, bijvoorbeeld Arial.</li>
+<li>Geef <code>.kop</code> een achtergrondkleur, witte tekst en tekst in het midden.</li>
+<li>Geef <code>.knop</code> een achtergrondkleur met een hexcode.</li>
+<li>Haal met text-decoration de streep onder je link weg.</li>
 </ol>
 <details class="hint">
-<summary>Codehint</summary>
-<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">knop</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">kop</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#2965F1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </details>
 <div class="admonition klaar">
 <p class="admonition-title">Klaar als...</p>
-<p>Bovenaan bij Computed zie je een gekleurde tekening van je knop: oranje is de margin, groen de padding. Klik in de tekening op een getal en verander het.</p>
+<p>Je pagina heeft een eigen lettertype, een gekleurde balk bovenaan en je link ziet er niet meer uit als gewone linktekst.</p>
 </div>
 </div>
-    <div class="vorige-volgende"><a class="vorige" href="blok-7.html">← Blok 7 · Kleur en tekst</a><a class="volgende" href="eindopdracht.html">Eindopdracht →</a></div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-7.html">← Blok 7 · Selectors</a><a class="volgende" href="blok-9.html">Blok 9 · Boxmodel →</a></div>
   </article>
 </div>
 <script>

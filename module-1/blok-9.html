@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boxmodel · Module 1 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 1</div>
+<div class="module-kop"><h1>Module 1 · HTML &amp; CSS basis</h1><p>Je bouwt je eerste eigen webpagina: een profielpagina met HTML, opgemaakt met CSS.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Aan de slag</a>
+<a href="blok-2.html"><small>2</small>Tags</a>
+<a href="blok-3.html"><small>3</small>Het skelet</a>
+<a href="blok-4.html"><small>4</small>Koppen en lijstjes</a>
+<a href="blok-5.html"><small>5</small>Links en plaatjes</a>
+<a href="blok-6.html"><small>6</small>CSS koppelen</a>
+<a href="blok-7.html"><small>7</small>Selectors</a>
+<a href="blok-8.html"><small>8</small>Kleur en tekst</a>
+<a href="blok-9.html" class="actief"><small>9</small>Boxmodel</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 9</div>
+    <h2 class="paginatitel">Boxmodel</h2>
+    <h2>Ruimte maken: het boxmodel</h2>
+<p class="sub">Elk element is een rechthoek met drie lagen ruimte eromheen.</p>
+<table>
+<thead>
+<tr>
+<th>Laag</th>
+<th>Wat is het?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>padding</code></td>
+<td>Ruimte <strong>binnen</strong> de rand. Je knop wordt er dikker van.</td>
+</tr>
+<tr>
+<td><code>border</code></td>
+<td>De rand zelf: dikte, soort en kleur.</td>
+</tr>
+<tr>
+<td><code>margin</code></td>
+<td>Ruimte <strong>buiten</strong> de rand, tussen dit element en de buren.</td>
+</tr>
+</tbody>
+</table>
+<figure class="demo"><div class="demo-titel">Van binnen naar buiten: tekst (blauw), padding (groen), border (zwart), margin (oranje). Dezelfde kleuren zie je in Chrome bij F12 &gt; Computed.</div><iframe class="demo-frame" loading="lazy" title="Van binnen naar buiten: tekst (blauw), padding (groen), border (zwart), margin (oranje). Dezelfde kleuren zie je in Chrome bij F12 &gt; Computed." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.m{background:#f9cc9d;padding:16px;display:inline-block}.b{border:4px solid #1B1F3B}.p{background:#c3d08b;padding:16px}.t{background:#8cb6c0;padding:6px 14px}&lt;/style&gt;
+&lt;div class=&quot;m&quot;&gt;&lt;div class=&quot;b&quot;&gt;&lt;div class=&quot;p&quot;&gt;&lt;div class=&quot;t&quot;&gt;jouw tekst&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">Ezelsbruggetje</p>
+<p>Padding is de vulling in je jas. Margin is de afstand tot degene die naast je staat.</p>
+</div>
+<h2>Hoeveel waarden schrijf je op?</h2>
+<p class="sub">Bij padding en margin mag je één, twee of vier getallen geven.</p>
+<table>
+<thead>
+<tr>
+<th>Zo schrijf je het</th>
+<th>Wat gebeurt er?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>padding: 20px;</code></td>
+<td>Eén getal: alle vier de kanten krijgen 20 pixels ruimte.</td>
+</tr>
+<tr>
+<td><code>padding: 12px 24px;</code></td>
+<td>Twee getallen: het eerste is boven én onder, het tweede links én rechts.</td>
+</tr>
+<tr>
+<td><code>padding: 10px 20px 30px 40px;</code></td>
+<td>Vier getallen: met de klok mee. Boven, rechts, onder, links.</td>
+</tr>
+</tbody>
+</table>
+<figure class="demo"><div class="demo-titel">Dezelfde knop met drie verschillende paddings</div><iframe class="demo-frame" loading="lazy" title="Dezelfde knop met drie verschillende paddings" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;a{display:inline-block;background:#2965F1;color:#fff;text-decoration:none;border-radius:8px;margin-right:10px}&lt;/style&gt;
+&lt;a style=&quot;padding:20px&quot;&gt;padding: 20px&lt;/a&gt;&lt;a style=&quot;padding:12px 24px&quot;&gt;padding: 12px 24px&lt;/a&gt;&lt;a style=&quot;padding:10px 20px 30px 40px&quot;&gt;10px 20px 30px 40px&lt;/a&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<p><code>margin</code> werkt precies hetzelfde: ook daar schrijf je één, twee of vier getallen.</p>
+<h3>De rand en ronde hoeken</h3>
+<div class="code"><pre><span></span><code><span class="nt">border</span><span class="o">:</span><span class="w"> </span><span class="nt">2px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span>
+<span class="nt">border-radius</span><span class="o">:</span><span class="w"> </span><span class="nt">8px</span><span class="o">;</span>
+</code></pre></div>
+<p>Met <code>border</code> maak je de rand zelf: dikte, soort (<code>solid</code> is een doorgetrokken lijn) en kleur. Met <code>border-radius</code> krijg je ronde hoeken.</p>
+<details class="check">
+<summary>Check: het boxmodel</summary>
+<p><strong>1. Welke ruimte zit binnen de rand?</strong></p>
+<ul>
+<li>A. margin</li>
+<li>B. padding</li>
+<li>C. border</li>
+<li>D. radius</li>
+</ul>
+<p><strong>2. Bij <code>padding: 10px 30px;</code> wat doet die 30px?</strong></p>
+<ul>
+<li>A. boven en onder</li>
+<li>B. links en rechts</li>
+<li>C. alleen links</li>
+<li>D. de rand</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – padding.</strong> Padding zit tussen de rand en je tekst. De ruimte buiten de rand heet margin.</p>
+<p><strong>2. B – links en rechts.</strong> Bij twee getallen is het eerste boven en onder, het tweede links en rechts.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">9. Maak je knop af en kijk in de browser</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-9</code></p>
+<ol>
+<li>Maak map <code>opdracht-9</code> met je index.html en style.css uit opdracht-8.</li>
+<li>Geef <code>.knop</code> een padding van 12px 24px.</li>
+<li>Geef <code>.knop</code> een border-radius van 8px en een margin van 20px.</li>
+<li>Druk in Chrome op F12. Er opent een venster met code. (Gebeurt er niets? Probeer Fn + F12.)</li>
+<li>Klik linksboven in dat venster op het pijltje-icoon en klik daarna op je knop.</li>
+<li>Klik in dat venster op het tabblad Computed.</li>
+</ol>
+<details class="hint">
+<summary>Codehint</summary>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">knop</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Bovenaan bij Computed zie je een gekleurde tekening van je knop: oranje is de margin, groen de padding. Klik in de tekening op een getal en verander het.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-8.html">← Blok 8 · Kleur en tekst</a><a class="volgende" href="eindopdracht.html">Eindopdracht →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

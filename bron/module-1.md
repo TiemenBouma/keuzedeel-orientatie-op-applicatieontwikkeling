@@ -335,15 +335,18 @@ Het verschil zie je meteen in de browser.
     1. Maak in je map `opdracht-3` een leeg bestand index.html.
     2. Typ een uitroepteken en druk op Tab.
     3. Zet tussen `<title>` en `</title>` jouw naam.
-    4. Neem je h1 en je alinea's uit opdracht-2 over in de body.
-    5. Open met Live Server en kijk naar het tabblad bovenin Chrome.
+    4. Open je index.html uit `opdracht-2`. Daar maakte je in blok 2 je `<h1>` en twee keer een `<p>`. Kopieer die regels.
+    5. Plak ze in je nieuwe bestand tussen `<body>` en `</body>`. Sla op met Ctrl + S.
+    6. Open met Live Server en kijk naar het tabblad bovenin Chrome.
 
     ??? hint "Codehint (niet het antwoord)"
         ```html
         <title>Sam Jansen</title>
 
         <body>
-          <h1>Sam</h1>
+          <h1>Sam Jansen</h1>
+          <p>...</p>
+          <p>...</p>
         </body>
         ```
 
@@ -408,7 +411,7 @@ Zo krijgt je pagina structuur.
     {: .meta}
 
     1. Maak in je map `opdracht-4` een nieuw index.html: ! en dan Tab.
-    2. Neem je h1 en je alinea's uit opdracht-3 over in de body.
+    2. Kopieer uit je index.html in `opdracht-3` alles tussen `<body>` en `</body>`. Plak het in je nieuwe bestand tussen `<body>` en `</body>`.
     3. Zet onder je alinea's een `<h2>` met Mijn hobby's.
     4. Zet daaronder een lijstje met bolletjes met drie hobby's.
     5. Zet er nog een `<h2>` onder met een eigen kopje, bijvoorbeeld Dit wil ik leren.

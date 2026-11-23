@@ -340,15 +340,23 @@ Het verschil zie je meteen in de browser.
     6. Open met Live Server en kijk naar het tabblad bovenin Chrome.
 
     ??? hint "Codehint (niet het antwoord)"
-        ```html
-        <title>Sam Jansen</title>
+        <div class="naast" markdown>
 
+        ```html
+        <head>
+          <title>Sam Jansen</title>
+        </head>
+        ```
+
+        ```html
         <body>
           <h1>Sam Jansen</h1>
           <p>...</p>
           <p>...</p>
         </body>
         ```
+
+        </div>
 
     !!! klaar "Klaar als..."
         In het tabblad van Chrome staat jouw naam. Op de pagina zelf staat je tekst.

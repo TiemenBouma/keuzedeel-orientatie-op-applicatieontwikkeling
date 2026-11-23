@@ -139,6 +139,9 @@ pre.boom { background: var(--zacht); color: var(--donker); border: 1px solid var
   .intro h1 { font-size: 28px; }
 }
 
+/* schermafbeeldingen */
+img.scherm { display: block; margin: 14px 0; border: 1px solid var(--lijn); border-radius: 10px; }
+
 /* codekleuren (pygments) */
 td.linenos .normal { color: #6e7681; background-color: #0d1117; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: #6e7681; background-color: #0d1117; padding-left: 5px; padding-right: 5px; }

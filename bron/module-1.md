@@ -71,7 +71,7 @@ opdracht-6/
     Altijd kleine letters. Geen spaties in map- of bestandsnamen.
 
 !!! tip "Tip"
-    Elke opdracht: nieuwe map, nieuwe index.html. Je kunt je werk kopiëren uit de vorige map en daarin verder werken. Je oude mappen laat je gewoon staan. Kopiëren doe je met Ctrl + A, Ctrl + C en Ctrl + V.
+    Alle mappen maak je in opdracht 1 in één keer. Bij elke volgende opdracht werk je in de volgende map. Je kunt je werk kopiëren uit de vorige map en daarin verder werken. Je oude mappen laat je gewoon staan. Kopiëren doe je met Ctrl + A, Ctrl + C en Ctrl + V.
 
 === blok-1 | Aan de slag
 ## Hoe werkt een webpagina?
@@ -116,15 +116,61 @@ Hiermee zie je meteen wat je typt, zonder steeds te verversen.
 !!! onthoud "Zo start je Live Server"
     Rechtsklik op je bestand index.html en kies **Open with Live Server**. Je pagina opent in Chrome en ververst zichzelf zodra je opslaat met Ctrl + S.
 
-!!! opdracht "1. Maak je werkmap en test Live Server"
-    Ongeveer 5 minuten · Je werkt in: `opdracht-1`
+## Stap 3: Een vaste plek voor je werk
+
+Kies één plek op je laptop. Dan vind je je werk altijd terug.
+{: .sub}
+
+1. **Je bewaart alles in Documenten.** Daar kun je makkelijk bij. Open de Verkenner met **Windows-toets + E**. Links in de balk staat **Documenten**.
+2. **Elke module krijgt een eigen map.** Voor deze module is dat `les1-jouwnaam`, met je eigen naam. Bijvoorbeeld `les1-sam`.
+3. **In die map komt een map voor elke opdracht.** Die maak je allemaal in opdracht 1.
+
+```text
+Documenten/
+   les1-jouwnaam/
+      eindopdracht/
+      opdracht-1/
+      opdracht-2/
+      ...
+      opdracht-9/
+```
+
+| Plek | Goed? | Waarom? |
+|---|---|---|
+| **Documenten** | Ja | Vind je snel terug, in de Verkenner en in VS Code |
+| Downloads | Nee | Daar komt van alles in. Je gooit het makkelijk per ongeluk weg. |
+| Bureaublad | Liever niet | Wordt snel rommelig |
+| USB-stick | Nee | Stick kwijt of vergeten? Dan kun je niet verder. |
+
+!!! tip "Waarom staat eindopdracht bovenaan?"
+    VS Code zet mappen op volgorde van het alfabet. De e van eindopdracht komt voor de o van opdracht.
+
+## Stap 4: Mappen en bestanden maken in VS Code
+
+Je maakt je mappen en bestanden in VS Code zelf. Dan zie je meteen of alles op de goede plek staat.
+{: .sub}
+
+![Schermafbeelding van VS Code. Links de map les1-jouwnaam. Bovenaan staan de icoontjes New File en New Folder.](../assets/img/vscode-nieuw-bestand-map.png){: .scherm}
+
+1. **Klik links op het icoon met de twee blaadjes.** Dat is Explorer, je mappen en bestanden. Sneltoets: Ctrl + Shift + E.
+2. **Ga met je muis over de naam van je map.** Er verschijnen vier icoontjes. Het eerste is **New File** (nieuw bestand), het tweede is **New Folder** (nieuwe map).
+3. **Typ de naam en druk op Enter.** Kleine letters, geen spaties.
+
+!!! let-op "Let op waar je nieuwe map komt"
+    Een nieuwe map komt **in** de map die je net hebt aangeklikt. Klik je eerst op `opdracht-1`, dan komt je nieuwe map daarin. Wil je hem gewoon in `les1-jouwnaam`? Klik dan eerst op een lege plek onder je mappen. Staat een map toch verkeerd? Sleep hem naar de lege plek.
+
+!!! tip "Verkeerde naam?"
+    Klik op de map of het bestand en druk op **F2**. Nu kun je de naam veranderen.
+
+!!! opdracht "1. Maak je mappen voor module 1"
+    Ongeveer 15 minuten · Je werkt in: `les1-jouwnaam`
     {: .meta}
 
-    1. Maak een map `les1-jouwnaam`. Maak daarin een map `opdracht-1`.
-    2. Open VS Code en kies File > Open Folder. Kies de map `les1-jouwnaam`.
-    3. Maak in `opdracht-1` een nieuw bestand: klik op het icoontje New File.
-    4. Noem het bestand index.html (kleine letters).
-    5. Typ de regel uit de codehint en sla op met Ctrl + S.
+    1. Open VS Code en kies File > Open Folder. Klik links in het venster op **Documenten**.
+    2. Klik bovenin op **Nieuwe map**. Noem hem `les1-` met je eigen naam erachter en druk op Enter.
+    3. Klik één keer op je nieuwe map en daarna op **Map selecteren**. Vraagt VS Code of je de makers vertrouwt? Klik op **Yes, I trust the authors**.
+    4. Maak met New Folder de mappen `opdracht-1` tot en met `opdracht-9` en de map `eindopdracht`.
+    5. Klik op `opdracht-1` en maak met New File het bestand index.html. Typ de regel uit de codehint en sla op met Ctrl + S.
     6. Rechtsklik op index.html > Open with Live Server.
 
     ??? hint "Codehint"
@@ -133,7 +179,7 @@ Hiermee zie je meteen wat je typt, zonder steeds te verversen.
         ```
 
     !!! klaar "Klaar als..."
-        Je ziet in Chrome de tekst 'Hallo, ik ben ...' staan. Verander de tekst, sla op, en kijk of de pagina meteen verandert.
+        Links in VS Code zie je `les1-jouwnaam` met 10 mappen erin, en index.html staat in `opdracht-1`. In Chrome zie je de tekst 'Hallo, ik ben ...'. Verander de tekst, sla op, en kijk of de pagina meteen verandert.
 
 === blok-2 | Tags
 ## HTML werkt met tags
@@ -195,7 +241,7 @@ Er zijn honderden tags. Deze drie en die van straks zijn genoeg voor je eerste p
     Ongeveer 5 minuten · Je werkt in: `opdracht-2`
     {: .meta}
 
-    1. Maak een map `opdracht-2` met daarin een nieuw bestand index.html.
+    1. Maak in je map `opdracht-2` een nieuw bestand index.html.
     2. Maak een `<h1>` met je eigen naam erin.
     3. Zet daaronder een `<p>` met een zin over jezelf.
     4. Maak nog een `<p>` met je favoriete game of sport.
@@ -280,7 +326,7 @@ Het verschil zie je meteen in de browser.
     Ongeveer 5 minuten · Je werkt in: `opdracht-3`
     {: .meta}
 
-    1. Maak een map `opdracht-3` met een leeg bestand index.html.
+    1. Maak in je map `opdracht-3` een leeg bestand index.html.
     2. Typ een uitroepteken en druk op Tab.
     3. Zet tussen `<title>` en `</title>` jouw naam.
     4. Neem je h1 en je alinea's uit opdracht-2 over in de body.
@@ -355,7 +401,7 @@ Zo krijgt je pagina structuur.
     Ongeveer 5 minuten · Je werkt in: `opdracht-4`
     {: .meta}
 
-    1. Maak map `opdracht-4` met een nieuw index.html: ! en dan Tab.
+    1. Maak in je map `opdracht-4` een nieuw index.html: ! en dan Tab.
     2. Neem je h1 en je alinea's uit opdracht-3 over in de body.
     3. Zet onder je alinea's een `<h2>` met Mijn hobby's.
     4. Zet daaronder een lijstje met bolletjes met drie hobby's.
@@ -423,7 +469,7 @@ Deze twee tags hebben extra informatie nodig. Die extra informatie heet een **at
     Ongeveer 10 minuten · Je werkt in: `opdracht-5`
     {: .meta}
 
-    1. Maak map `opdracht-5` en kopieer je index.html uit opdracht-4 erin.
+    1. Kopieer je index.html uit opdracht-4 naar je map `opdracht-5`.
     2. Zet onder je lijstjes een link naar een site die je vaak gebruikt.
     3. Zoek een foto, van jezelf of van een hobby, en zet hem in de map `opdracht-5`.
     4. Laat de foto op je pagina zien met `<img>`.
@@ -522,7 +568,7 @@ index.html, in de head
     Ongeveer 5 minuten · Je werkt in: `opdracht-6`
     {: .meta}
 
-    1. Maak map `opdracht-6` met een nieuw index.html en neem je pagina over.
+    1. Maak in je map `opdracht-6` een nieuw index.html en neem je pagina over.
     2. Maak in `opdracht-6` een tweede bestand: style.css.
     3. Zet de link-regel in de head van index.html.
     4. Geef de body een achtergrondkleur en je h1 een andere kleur.
@@ -611,7 +657,7 @@ p { color: gray; }
     Ongeveer 5 minuten · Je werkt in: `opdracht-7`
     {: .meta}
 
-    1. Maak map `opdracht-7` met index.html en style.css. Neem je pagina over.
+    1. Maak in je map `opdracht-7` een index.html en een style.css. Neem je pagina over.
     2. Geef je link in index.html de class knop.
     3. Geef je h1 de class kop.
     4. Maak in style.css een regel voor `.knop` met een kleur.
@@ -698,7 +744,7 @@ Hiermee bepaal je hoe je tekst eruitziet.
     Ongeveer 5 minuten · Je werkt in: `opdracht-8`
     {: .meta}
 
-    1. Maak map `opdracht-8` en neem je twee bestanden over.
+    1. Neem je twee bestanden over in je map `opdracht-8`.
     2. Geef de body een font-family, bijvoorbeeld Arial.
     3. Geef `.kop` een achtergrondkleur, witte tekst en tekst in het midden.
     4. Geef `.knop` een achtergrondkleur met een hexcode.
@@ -787,7 +833,7 @@ Met `border` maak je de rand zelf: dikte, soort (`solid` is een doorgetrokken li
     Ongeveer 15 minuten · Je werkt in: `opdracht-9`
     {: .meta}
 
-    1. Maak map `opdracht-9` met je index.html en style.css uit opdracht-8.
+    1. Zet je index.html en style.css uit opdracht-8 in je map `opdracht-9`.
     2. Geef `.knop` een padding van 12px 24px.
     3. Geef `.knop` een border-radius van 8px en een margin van 20px.
     4. Druk in Chrome op F12. Er opent een venster met code. (Gebeurt er niets? Probeer Fn + F12.)
@@ -808,7 +854,7 @@ Met `border` maak je de rand zelf: dikte, soort (`solid` is een doorgetrokken li
 
 === eindopdracht | Eindopdracht
 !!! opdracht eind "Maak je profielpagina af"
-    Je werkt in een nieuwe map `eindopdracht`, met index.html en style.css.
+    Je werkt in je map `eindopdracht`, met index.html en style.css.
     {: .meta}
 
     **Op je pagina staat:**

@@ -138,3 +138,6 @@ pre.boom { background: var(--zacht); color: var(--donker); border: 1px solid var
   .module-kop h1 { font-size: 25px; }
   .intro h1 { font-size: 28px; }
 }
+
+/* schermafbeeldingen */
+img.scherm { display: block; margin: 14px 0; border: 1px solid var(--lijn); border-radius: 10px; }

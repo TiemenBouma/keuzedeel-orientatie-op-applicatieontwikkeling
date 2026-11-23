@@ -55,7 +55,7 @@
 </tr>
 <tr>
 <td><code>border</code></td>
-<td>De rand zelf: dikte, soort en kleur.</td>
+<td>De <strong>lijn</strong> om het element heen. Die zit tussen de padding en de margin. Verderop lees je hoe je hem maakt.</td>
 </tr>
 <tr>
 <td><code>margin</code></td>
@@ -100,7 +100,36 @@
 <div class="code"><pre><span></span><code><span class="nt">border</span><span class="o">:</span><span class="w"> </span><span class="nt">2px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nt">black</span><span class="o">;</span>
 <span class="nt">border-radius</span><span class="o">:</span><span class="w"> </span><span class="nt">8px</span><span class="o">;</span>
 </code></pre></div>
-<p>Met <code>border</code> maak je de rand zelf: dikte, soort (<code>solid</code> is een doorgetrokken lijn) en kleur. Met <code>border-radius</code> krijg je ronde hoeken.</p>
+<p>Achter <code>border:</code> schrijf je drie dingen, met een spatie ertussen. In <code>border: 2px solid black;</code> betekent dat:</p>
+<table>
+<thead>
+<tr>
+<th>Wat?</th>
+<th>In het voorbeeld</th>
+<th>Wat betekent het?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dikte</td>
+<td><code>2px</code></td>
+<td>Hoe dik de lijn is, in pixels. Hoe hoger het getal, hoe dikker.</td>
+</tr>
+<tr>
+<td>Soort</td>
+<td><code>solid</code></td>
+<td>Hoe de lijn eruitziet. <code>solid</code> is een doorgetrokken lijn, <code>dashed</code> zijn streepjes en <code>dotted</code> zijn puntjes.</td>
+</tr>
+<tr>
+<td>Kleur</td>
+<td><code>black</code></td>
+<td>De kleur van de lijn. Een naam zoals <code>black</code> of een kleurcode zoals <code>#2965F1</code>.</td>
+</tr>
+</tbody>
+</table>
+<figure class="demo"><div class="demo-titel">Drie soorten rand: solid, dashed en dotted</div><iframe class="demo-frame" loading="lazy" title="Drie soorten rand: solid, dashed en dotted" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;div{display:inline-block;padding:10px 16px;margin-right:10px}&lt;/style&gt;
+&lt;div style=&quot;border:3px solid #1B1F3B&quot;&gt;3px solid&lt;/div&gt;&lt;div style=&quot;border:3px dashed #2965F1&quot;&gt;3px dashed&lt;/div&gt;&lt;div style=&quot;border:3px dotted #E4572E&quot;&gt;3px dotted&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<p>Met <code>border-radius</code> maak je de hoeken rond. Het getal zegt hoe rond: <code>8px</code> is een beetje rond, <code>30px</code> veel.</p>
 <details class="check">
 <summary>Check: het boxmodel</summary>
 <p><strong>1. Welke ruimte zit binnen de rand?</strong></p>
@@ -123,6 +152,27 @@
 <p><strong>2. B – links en rechts.</strong> Bij twee getallen is het eerste boven en onder, het tweede links en rechts.</p>
 </details>
 </details>
+<h2>Kijken in de browser: de DevTools</h2>
+<p class="sub">In Chrome zit een extra venster waarin je kunt zien hoe de browser jouw pagina opbouwt. Dat venster heet de DevTools.</p>
+<p>Je hoeft de DevTools nu nog niet te snappen. In deze opdracht gebruik je ze alleen om te <strong>kijken</strong>. Zo werkt het:</p>
+<ol>
+<li><strong>Open je pagina in Chrome.</strong> Bijvoorbeeld met Live Server.</li>
+<li><strong>Druk op F12.</strong> Er opent een venster vol code, rechts of onderaan je scherm. Dat zijn de DevTools. Je kunt ook rechtsklikken op je pagina en <em>Inspecteren</em> kiezen.</li>
+<li><strong>Kijk naar de linkerkant.</strong> Bovenaan staat het tabblad <em>Elements</em>. Daaronder zie je de HTML van je pagina.</li>
+<li><strong>Klik op het pijltje.</strong> Linksboven in de DevTools staat een icoontje van een pijltje in een vierkantje. Klik erop en klik daarna op iets op je pagina, bijvoorbeeld je knop. Dat element wordt nu blauw gemarkeerd.</li>
+<li><strong>Kijk naar de rechterkant.</strong> Daar staan tabbladen: <em>Styles</em>, <em>Computed</em>, <em>Layout</em> en meer. Klik op <em>Computed</em>.</li>
+<li><strong>Bovenaan bij Computed staat een tekening.</strong> Dat is het boxmodel van het element dat je aanklikte, met de getallen erbij.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">Zo ziet de tekening bij Computed eruit voor je knop (padding 12px 24px, margin 20px)</div><iframe class="demo-frame" loading="lazy" title="Zo ziet de tekening bij Computed eruit voor je knop (padding 12px 24px, margin 20px)" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.bx{font:12px Arial,sans-serif;color:#1B1F3B;position:relative;text-align:center;padding:4px 30px;display:block}.bx&gt;.l{position:absolute;left:6px;top:3px}.bx&gt;.t{display:block;margin-bottom:3px}.bx&gt;.o{display:block;margin-top:3px}.bx&gt;.zij{display:flex;align-items:center;gap:10px}.bx&gt;.zij&gt;.bx{flex:1}.mar{background:#f9cc9d;border:1px dashed #333;max-width:420px}.brd{background:#fddd9b;border:2px solid #1B1F3B}.pad{background:#c3d08b;border:1px dashed #333}.cnt{background:#8cb6c0;border:1px solid #555;padding:8px;flex:1}&lt;/style&gt;
+&lt;div class=&quot;bx mar&quot;&gt;&lt;span class=&quot;l&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;t&quot;&gt;20&lt;/span&gt;&lt;div class=&quot;zij&quot;&gt;&lt;span&gt;20&lt;/span&gt;&lt;div class=&quot;bx brd&quot;&gt;&lt;span class=&quot;l&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;t&quot;&gt;0&lt;/span&gt;&lt;div class=&quot;zij&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;div class=&quot;bx pad&quot;&gt;&lt;span class=&quot;l&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;t&quot;&gt;12&lt;/span&gt;&lt;div class=&quot;zij&quot;&gt;&lt;span&gt;24&lt;/span&gt;&lt;div class=&quot;cnt&quot;&gt;je knop&lt;/div&gt;&lt;span&gt;24&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;o&quot;&gt;12&lt;/span&gt;&lt;/div&gt;&lt;span&gt;0&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;o&quot;&gt;0&lt;/span&gt;&lt;/div&gt;&lt;span&gt;20&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;o&quot;&gt;20&lt;/span&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition let-op">
+<p class="admonition-title">Zie je geen Computed?</p>
+<p>Is het venster smal? Dan staan sommige tabbladen verstopt. Klik op het dubbele pijltje <strong>»</strong> naast de tabbladen en kies daar <em>Computed</em>. Staat er bovenaan een melding dat de DevTools ook in het Nederlands kunnen? Die mag je wegklikken met het kruisje.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Je kunt niets kapotmaken</p>
+<p>Wat je in de DevTools doet, verandert niets aan je bestanden. Sluit je het venster met F12, dan is alles weer zoals het was.</p>
+</div>
 <div class="admonition opdracht">
 <p class="admonition-title">9. Maak je knop af en kijk in de browser</p>
 <p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-9</code></p>
@@ -130,9 +180,10 @@
 <li>Zet je index.html en style.css uit opdracht-8 in je map <code>opdracht-9</code>.</li>
 <li>Geef <code>.knop</code> een padding van 12px 24px.</li>
 <li>Geef <code>.knop</code> een border-radius van 8px en een margin van 20px.</li>
-<li>Druk in Chrome op F12. Er opent een venster met code. (Gebeurt er niets? Probeer Fn + F12.)</li>
-<li>Klik linksboven in dat venster op het pijltje-icoon en klik daarna op je knop.</li>
-<li>Klik in dat venster op het tabblad Computed.</li>
+<li>Open je pagina in Chrome en druk op F12. De DevTools openen. (Gebeurt er niets? Probeer Fn + F12.)</li>
+<li>Klik linksboven in de DevTools op het pijltje-icoon en klik daarna op je knop.</li>
+<li>Klik rechts op het tabblad Computed. <strong>Je hoeft hier niets te veranderen.</strong> Je kijkt alleen, zodat je weet waar het staat.</li>
+<li>Zoek bovenaan de gekleurde tekening. Staat bij margin overal 20? Staat bij padding boven en onder 12 en links en rechts 24?</li>
 </ol>
 <details class="hint">
 <summary>Codehint</summary>
@@ -145,7 +196,7 @@
 </details>
 <div class="admonition klaar">
 <p class="admonition-title">Klaar als...</p>
-<p>Bovenaan bij Computed zie je een gekleurde tekening van je knop: oranje is de margin, groen de padding. Klik in de tekening op een getal en verander het.</p>
+<p>Je knop heeft ronde hoeken en ruimte eromheen. En je kunt in de tekening bij Computed aanwijzen waar de margin (oranje) en de padding (groen) van je knop staan.</p>
 </div>
 </div>
     <div class="vorige-volgende"><a class="vorige" href="blok-8.html">← Blok 8 · Kleur en tekst</a><a class="volgende" href="eindopdracht.html">Eindopdracht →</a></div>

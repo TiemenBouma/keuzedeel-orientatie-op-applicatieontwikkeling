@@ -788,7 +788,7 @@ Elk element is een rechthoek met drie lagen ruimte eromheen.
 | Laag | Wat is het? |
 |---|---|
 | `padding` | Ruimte **binnen** de rand. Je knop wordt er dikker van. |
-| `border` | De rand zelf: dikte, soort en kleur. |
+| `border` | De **lijn** om het element heen. Die zit tussen de padding en de margin. Verderop lees je hoe je hem maakt. |
 | `margin` | Ruimte **buiten** de rand, tussen dit element en de buren. |
 
 ```demo titel="Van binnen naar buiten: tekst (blauw), padding (groen), border (zwart), margin (oranje). Dezelfde kleuren zie je in Chrome bij F12 > Computed."
@@ -824,7 +824,20 @@ border: 2px solid black;
 border-radius: 8px;
 ```
 
-Met `border` maak je de rand zelf: dikte, soort (`solid` is een doorgetrokken lijn) en kleur. Met `border-radius` krijg je ronde hoeken.
+Achter `border:` schrijf je drie dingen, met een spatie ertussen. In `border: 2px solid black;` betekent dat:
+
+| Wat? | In het voorbeeld | Wat betekent het? |
+|---|---|---|
+| Dikte | `2px` | Hoe dik de lijn is, in pixels. Hoe hoger het getal, hoe dikker. |
+| Soort | `solid` | Hoe de lijn eruitziet. `solid` is een doorgetrokken lijn, `dashed` zijn streepjes en `dotted` zijn puntjes. |
+| Kleur | `black` | De kleur van de lijn. Een naam zoals `black` of een kleurcode zoals `#2965F1`. |
+
+```demo titel="Drie soorten rand: solid, dashed en dotted"
+<style>div{display:inline-block;padding:10px 16px;margin-right:10px}</style>
+<div style="border:3px solid #1B1F3B">3px solid</div><div style="border:3px dashed #2965F1">3px dashed</div><div style="border:3px dotted #E4572E">3px dotted</div>
+```
+
+Met `border-radius` maak je de hoeken rond. Het getal zegt hoe rond: `8px` is een beetje rond, `30px` veel.
 
 ??? check "Check: het boxmodel"
     **1. Welke ruimte zit binnen de rand?**
@@ -846,6 +859,31 @@ Met `border` maak je de rand zelf: dikte, soort (`solid` is een doorgetrokken li
 
         **2. B – links en rechts.** Bij twee getallen is het eerste boven en onder, het tweede links en rechts.
 
+## Kijken in de browser: de DevTools
+
+In Chrome zit een extra venster waarin je kunt zien hoe de browser jouw pagina opbouwt. Dat venster heet de DevTools.
+{: .sub}
+
+Je hoeft de DevTools nu nog niet te snappen. In deze opdracht gebruik je ze alleen om te **kijken**. Zo werkt het:
+
+1. **Open je pagina in Chrome.** Bijvoorbeeld met Live Server.
+2. **Druk op F12.** Er opent een venster vol code, rechts of onderaan je scherm. Dat zijn de DevTools. Je kunt ook rechtsklikken op je pagina en *Inspecteren* kiezen.
+3. **Kijk naar de linkerkant.** Bovenaan staat het tabblad *Elements*. Daaronder zie je de HTML van je pagina.
+4. **Klik op het pijltje.** Linksboven in de DevTools staat een icoontje van een pijltje in een vierkantje. Klik erop en klik daarna op iets op je pagina, bijvoorbeeld je knop. Dat element wordt nu blauw gemarkeerd.
+5. **Kijk naar de rechterkant.** Daar staan tabbladen: *Styles*, *Computed*, *Layout* en meer. Klik op *Computed*.
+6. **Bovenaan bij Computed staat een tekening.** Dat is het boxmodel van het element dat je aanklikte, met de getallen erbij.
+
+```demo titel="Zo ziet de tekening bij Computed eruit voor je knop (padding 12px 24px, margin 20px)"
+<style>.bx{font:12px Arial,sans-serif;color:#1B1F3B;position:relative;text-align:center;padding:4px 30px;display:block}.bx>.l{position:absolute;left:6px;top:3px}.bx>.t{display:block;margin-bottom:3px}.bx>.o{display:block;margin-top:3px}.bx>.zij{display:flex;align-items:center;gap:10px}.bx>.zij>.bx{flex:1}.mar{background:#f9cc9d;border:1px dashed #333;max-width:420px}.brd{background:#fddd9b;border:2px solid #1B1F3B}.pad{background:#c3d08b;border:1px dashed #333}.cnt{background:#8cb6c0;border:1px solid #555;padding:8px;flex:1}</style>
+<div class="bx mar"><span class="l">margin</span><span class="t">20</span><div class="zij"><span>20</span><div class="bx brd"><span class="l">border</span><span class="t">0</span><div class="zij"><span>0</span><div class="bx pad"><span class="l">padding</span><span class="t">12</span><div class="zij"><span>24</span><div class="cnt">je knop</div><span>24</span></div><span class="o">12</span></div><span>0</span></div><span class="o">0</span></div><span>20</span></div><span class="o">20</span></div>
+```
+
+!!! let-op "Zie je geen Computed?"
+    Is het venster smal? Dan staan sommige tabbladen verstopt. Klik op het dubbele pijltje **»** naast de tabbladen en kies daar *Computed*. Staat er bovenaan een melding dat de DevTools ook in het Nederlands kunnen? Die mag je wegklikken met het kruisje.
+
+!!! tip "Je kunt niets kapotmaken"
+    Wat je in de DevTools doet, verandert niets aan je bestanden. Sluit je het venster met F12, dan is alles weer zoals het was.
+
 !!! opdracht "9. Maak je knop af en kijk in de browser"
     Ongeveer 15 minuten · Je werkt in: `opdracht-9`
     {: .meta}
@@ -853,9 +891,10 @@ Met `border` maak je de rand zelf: dikte, soort (`solid` is een doorgetrokken li
     1. Zet je index.html en style.css uit opdracht-8 in je map `opdracht-9`.
     2. Geef `.knop` een padding van 12px 24px.
     3. Geef `.knop` een border-radius van 8px en een margin van 20px.
-    4. Druk in Chrome op F12. Er opent een venster met code. (Gebeurt er niets? Probeer Fn + F12.)
-    5. Klik linksboven in dat venster op het pijltje-icoon en klik daarna op je knop.
-    6. Klik in dat venster op het tabblad Computed.
+    4. Open je pagina in Chrome en druk op F12. De DevTools openen. (Gebeurt er niets? Probeer Fn + F12.)
+    5. Klik linksboven in de DevTools op het pijltje-icoon en klik daarna op je knop.
+    6. Klik rechts op het tabblad Computed. **Je hoeft hier niets te veranderen.** Je kijkt alleen, zodat je weet waar het staat.
+    7. Zoek bovenaan de gekleurde tekening. Staat bij margin overal 20? Staat bij padding boven en onder 12 en links en rechts 24?
 
     ??? hint "Codehint"
         ```css
@@ -867,7 +906,7 @@ Met `border` maak je de rand zelf: dikte, soort (`solid` is een doorgetrokken li
         ```
 
     !!! klaar "Klaar als..."
-        Bovenaan bij Computed zie je een gekleurde tekening van je knop: oranje is de margin, groen de padding. Klik in de tekening op een getal en verander het.
+        Je knop heeft ronde hoeken en ruimte eromheen. En je kunt in de tekening bij Computed aanwijzen waar de margin (oranje) en de padding (groen) van je knop staan.
 
 === eindopdracht | Eindopdracht
 !!! opdracht eind "Maak je profielpagina af"

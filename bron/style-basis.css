@@ -117,6 +117,8 @@ figure.demo { margin: 14px 0; border: 1px dashed var(--lijn); border-radius: 10p
 .demo-frame { display: block; width: 100%; border: 0; min-height: 40px; }
 .naast { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .naast > figure.demo { margin: 6px 0; }
+.naast > .code { min-width: 0; }
+.naast > .code pre { margin: 6px 0; }
 
 /* map- en bestandsbomen */
 pre.boom { background: var(--zacht); color: var(--donker); border: 1px solid var(--lijn); }
@@ -135,6 +137,7 @@ pre.boom { background: var(--zacht); color: var(--donker); border: 1px solid var
   .inhoudsopgave:not([open]) { padding-bottom: 4px; }
   article { padding: 22px 18px; }
   .naast { grid-template-columns: 1fr; }
+  .naast.omgekeerd > :first-child { order: 2; }
   .module-kop h1 { font-size: 25px; }
   .intro h1 { font-size: 28px; }
 }

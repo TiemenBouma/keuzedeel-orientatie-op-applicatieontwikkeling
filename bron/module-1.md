@@ -248,11 +248,17 @@ Er zijn honderden tags. Deze drie en die van straks zijn genoeg voor je eerste p
     5. Sla op met Ctrl + S en bekijk het met Live Server.
 
     ??? hint "Codehint (niet het antwoord)"
+        <div class="naast omgekeerd" markdown>
+
         ```html
         <h1>Jouw naam</h1>
-        <p>Ik ben 17 jaar.</p>
-        <p>Ik game graag.</p>
         ```
+
+        ```html
+        <p>Ik ben 17 jaar.</p>
+        ```
+
+        </div>
 
     !!! klaar "Klaar als..."
         Je ziet je naam groot en dik. Daaronder staan twee stukjes gewone tekst.

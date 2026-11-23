@@ -150,7 +150,7 @@ Documenten/
 Je maakt je mappen en bestanden in VS Code zelf. Dan zie je meteen of alles op de goede plek staat.
 {: .sub}
 
-![Schermafbeelding van VS Code. Links de map les1-jouwnaam. Bovenaan staan de icoontjes New File en New Folder.](../assets/img/vscode-nieuw-bestand-map.png){: .scherm}
+![Schermafbeelding van VS Code. 1 is het Explorer-icoon. Naast de mapnaam les1-jouwnaam staan 2 New File en 3 New Folder.](../assets/img/vscode-nieuw-bestand-map.png){: .scherm}
 
 1. **Klik links op het icoon met de twee blaadjes.** Dat is Explorer, je mappen en bestanden. Sneltoets: Ctrl + Shift + E.
 2. **Ga met je muis over de naam van je map.** Er verschijnen vier icoontjes. Het eerste is **New File** (nieuw bestand), het tweede is **New Folder** (nieuwe map).

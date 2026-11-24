@@ -520,7 +520,7 @@ In de head van élke pagina
 ```
 
 1. **Eigen bestand? Alleen de naam.** Staat het bestand in dezelfde map, dan is de bestandsnaam genoeg. Geen https:// en geen www ervoor.
-2. **Eén style.css voor alles.** Je maakt niet per pagina een nieuw CSS-bestand. Verander je een kleur, dan verandert hij meteen op alle pagina's.
+2. **Wij werken met één style.css.** In deze cursus koppel je één CSS-bestand aan al je pagina's. Verander je een kleur, dan verandert hij meteen op alle pagina's. Het is geen wet: bij een grote site, of als één pagina een heel eigen opmaak krijgt, kun je ook meerdere CSS-bestanden maken.
 
 ??? check "Check: een tweede pagina"
     **1. Hoe link je naar hobbys.html in dezelfde map?**

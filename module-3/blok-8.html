@@ -57,8 +57,8 @@
 <h2>Rustig veranderen met transition</h2>
 <p class="sub">Zonder transition springt een kleur in één keer om. Met transition glijdt hij.</p>
 <ol>
-<li><strong>Bij de gewone regel.</strong> Niet bij <code>:hover</code>, maar bij de gewone regel. Dan gaat het heen én terug soepel.</li>
-<li><strong>Wat, en hoe lang.</strong> <code>transition: background-color 0.3s;</code> 0.3s is drie tiende van een seconde.</li>
+<li><strong>Zet transition in de gewone regel.</strong> Dus in <code>.kaart</code>, niet in <code>.kaart:hover</code>. Dan gaat het heen én terug soepel.</li>
+<li><strong>Eerst schrijf je wát er verandert, dan hoe lang het duurt.</strong> <code>transition: background-color 0.3s;</code> 0.3s is drie tiende van een seconde.</li>
 <li><strong>all voor alles tegelijk.</strong> <code>transition: all 0.3s;</code> Handig als er meerdere dingen veranderen.</li>
 </ol>
 <div class="code"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
@@ -105,7 +105,7 @@
 <p class="admonition-title">8. Laat je site reageren</p>
 <p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-8</code></p>
 <ol>
-<li>Kopieer <code>opdracht-7</code> naar een nieuwe map <code>opdracht-8</code>.</li>
+<li>Kopieer alle bestanden en mappen uit <code>opdracht-7</code> naar <code>opdracht-8</code>.</li>
 <li>Maak een regel <code>.kaart:hover</code> met een grotere schaduw.</li>
 <li>Laat de kaart bij hover 4px omhoog schuiven met transform.</li>
 <li>Geef <code>.kaart</code> een <code>transition: all 0.3s</code>.</li>

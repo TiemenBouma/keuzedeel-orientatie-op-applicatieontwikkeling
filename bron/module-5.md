@@ -72,7 +72,7 @@ De Engelse woorden van module 5, met de Nederlandse vertaling en uitleg in gewon
 | **const** (constant) | vast | variabele waarvan de waarde hetzelfde blijft |
 | **string** | tekst | tekst tussen aanhalingstekens |
 | **number** | getal | getal waarmee je kunt rekenen |
-| **camelCase** | kameelletters | woorden aan elkaar met een hoofdletter: raadKnop |
+| **camelCase** | kameelletters | woorden aan elkaar, en elk nieuw woord begint met een hoofdletter: raadKnop |
 | **document** | document | de hele pagina, zoals JavaScript hem ziet |
 | **querySelector** | zoeken met een selector | vindt een element met #id of .class |
 | **textContent** | tekstinhoud | de tekst in een element |
@@ -80,12 +80,12 @@ De Engelse woorden van module 5, met de Nederlandse vertaling en uitleg in gewon
 | **event** | gebeurtenis | iets wat gebeurt, zoals een klik |
 | **click** | klik | het event als iemand op iets klikt |
 | **addEventListener** | luisteraar toevoegen | wacht op een event en doet dan iets |
-| **function** | functie | lijstje opdrachten dat later gebeurt |
+| **function** | functie | een groep opdrachten die pas wordt uitgevoerd als hij wordt aangeroepen, bijvoorbeeld na een klik |
 | **input** | invoer | vakje om in te typen |
 | **value** | waarde | wat er in het vakje staat |
 | **placeholder** | plaatshouder | grijze hulptekst in een leeg vakje |
 | **if / else** | als / anders | kiest wat er gebeurt |
-| **true / false** | waar / niet waar | het antwoord op een vraag |
+| **true / false** | waar / niet waar | de uitkomst van een vergelijking, zoals `gok > geheim` |
 | **random** | willekeurig | Math.random kiest een getal |
 | **floor** | vloer, naar beneden | Math.floor haalt alles na de komma weg |
 | **classList** | lijst met classes | add en remove zetten een class aan of uit |

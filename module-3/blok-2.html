@@ -49,14 +49,14 @@
 &lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition onthoud">
 <p class="admonition-title">Zet er altijd een reserve achter</p>
-<p><code>font-family: Verdana, sans-serif;</code> De komma betekent: anders dit. Heeft een computer Verdana niet, dan pakt de browser een ander lettertype zonder schreef.</p>
+<p><code>font-family: Verdana, sans-serif;</code> De komma betekent: lukt het eerste lettertype niet, gebruik dan het volgende. Heeft een computer Verdana niet, dan pakt de browser een ander lettertype zonder schreef (zonder de kleine voetjes onderaan de letters).</p>
 </div>
 <h2>Dikte, schuin en regelafstand</h2>
 <p class="sub">Drie eigenschappen die je tekst beter leesbaar maken.</p>
 <ol>
 <li><strong>font-weight.</strong> Hoe dik de letters zijn. <code>bold</code> is dik, <code>normal</code> is gewoon.</li>
 <li><strong>font-style.</strong> <code>italic</code> maakt je tekst schuin. <code>normal</code> zet het weer recht.</li>
-<li><strong>line-height.</strong> De ruimte tussen de regels. Zonder px erachter: <code>1.5</code> is anderhalf keer zo hoog als je letters.</li>
+<li><strong>line-height.</strong> De ruimte tussen de regels. Hier schrijf je een getal zonder px. <code>1.5</code> betekent: elke regel is anderhalf keer zo hoog als de letters.</li>
 </ol>
 <div class="code"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Verdana</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
@@ -103,12 +103,12 @@
 <p class="admonition-title">2. Geef je site een eigen lettertype</p>
 <p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-2</code></p>
 <ol>
-<li>Kopieer <code>opdracht-1</code> naar een nieuwe map <code>opdracht-2</code>.</li>
+<li>Kopieer alle bestanden en mappen uit <code>opdracht-1</code> naar <code>opdracht-2</code>.</li>
 <li>Geef body een font-family en een reserve font-family.</li>
 <li>Kies een ander lettertype voor je h1.</li>
 <li>Geef body een line-height van 1.5.</li>
 <li>Maak de tekst in je footer schuin met font-style.</li>
-<li>Klik met F12 op een alinea. In de DevTools onderaan bij Computed staat welk lettertype echt gebruikt wordt.</li>
+<li>Druk op F12 en klik met het pijltje op een alinea. Kijk rechts bij het tabblad Computed. Helemaal onderaan, bij <strong>Rendered Fonts</strong>, staat welk lettertype de browser echt gebruikt.</li>
 </ol>
 <details class="hint">
 <summary>Codehint (niet het antwoord)</summary>

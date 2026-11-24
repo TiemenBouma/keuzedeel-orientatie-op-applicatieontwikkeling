@@ -31,11 +31,11 @@ Aan het eind van deze module ziet je mini-site eruit als een echte website.
 - **Site:** drie pagina's met één style.css, een menubalk en paden naar je map images.
 
 !!! tip "Iets kwijt?"
-    De naslag van module 1 en 2 mag je er de hele tijd bij houden. Blok 1 is een korte opfrisser, met één nieuw stuk gereedschap: de DevTools.
+    De naslag van module 1 en 2 mag je er de hele tijd bij houden. Blok 1 herhaalt kort wat je in module 1 en 2 hebt geleerd, en je leert één nieuw stuk gereedschap: de DevTools.
 
 ## Zo werk je
 
-Maak een map `les3-jouwnaam`. In `opdracht-1` zet je een kopie van je eindopdracht van module 2. Daarna werk je weer door tot `opdracht-8` en een map `eindopdracht`. In deze module verandert vooral je style.css.
+In opdracht 1 maak je in Documenten de map `module3-jouwnaam`, met daarin de mappen `opdracht-1` tot en met `opdracht-8` en `eindopdracht`. In `opdracht-1` zet je een kopie van je eindopdracht van module 2. Bij elke volgende opdracht kopieer je alle bestanden en mappen uit de vorige opdrachtmap naar de volgende. In deze module verandert vooral je style.css.
 
 | Blok | Onderwerp |
 |---|---|
@@ -108,10 +108,10 @@ Vier dingen die je in deze module steeds tegenkomt.
 
 | Wat zie je? | Wat betekent het? |
 |---|---|
-| **Streep erdoor** | Een andere regel wint. Een andere regel zegt iets anders over dezelfde eigenschap, en die wint. |
+| **Streep erdoor** | Een andere regel wint. Er is nog een CSS-regel voor dezelfde eigenschap. De browser gebruikt die andere regel en slaat deze over. |
 | **Geel driehoekje** | Een typefout. Deze eigenschap of waarde bestaat niet, bijvoorbeeld `colr` in plaats van `color`. |
-| **Vinkje** | Aan en uit zetten. Haal het vinkje voor een regel weg en kijk wat er verandert. Zet het daarna weer aan. |
-| **Console: 404** | Bestand kwijt. Een plaatje of bestand staat niet waar jij zegt. |
+| **Vinkje** | Hiermee zet je een regel tijdelijk uit en weer aan. Haal het vinkje voor een regel weg en kijk wat er verandert. Zet het daarna weer aan. |
+| **Console: 404** | De browser kan een bestand (bijvoorbeeld een foto) niet vinden. Het staat niet op de plek die in je code staat. De Console is een tabblad bovenin de DevTools. |
 
 !!! let-op "Let op: niets wordt opgeslagen"
     Wat je in de DevTools verandert, is weg zodra je de pagina ververst. Werkt het? Typ het dan over in je style.css en sla op met Ctrl + S.
@@ -140,9 +140,9 @@ Vier dingen die je in deze module steeds tegenkomt.
     Ongeveer 10 minuten · Je werkt in: `opdracht-1`
     {: .meta}
 
-    1. Maak een map `les3-jouwnaam`. Maak daarin een map `opdracht-1`.
-    2. Kopieer alles uit je eindopdracht van module 2 naar `opdracht-1`.
-    3. Open `les3-jouwnaam` in VS Code en start Live Server op index.html.
+    1. Maak in Documenten een map `module3-jouwnaam`. Maak daarin de mappen `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht`.
+    2. Kopieer alle bestanden en mappen uit de map `eindopdracht` van module 2 naar `opdracht-1`.
+    3. Open `module3-jouwnaam` in VS Code en start Live Server op index.html.
     4. Druk op F12, klik op het pijltje en klik daarna op een kaart.
     5. Verander bij Styles de achtergrondkleur van `.kaart`.
     6. Typ die nieuwe kleur over in style.css en sla op met Ctrl + S.
@@ -174,7 +174,7 @@ Met `font-family` bepaal je welk lettertype de browser gebruikt.
 ```
 
 !!! onthoud "Zet er altijd een reserve achter"
-    `font-family: Verdana, sans-serif;` De komma betekent: anders dit. Heeft een computer Verdana niet, dan pakt de browser een ander lettertype zonder schreef.
+    `font-family: Verdana, sans-serif;` De komma betekent: lukt het eerste lettertype niet, gebruik dan het volgende. Heeft een computer Verdana niet, dan pakt de browser een ander lettertype zonder schreef (zonder de kleine voetjes onderaan de letters).
 
 ## Dikte, schuin en regelafstand
 
@@ -183,7 +183,7 @@ Drie eigenschappen die je tekst beter leesbaar maken.
 
 1. **font-weight.** Hoe dik de letters zijn. `bold` is dik, `normal` is gewoon.
 2. **font-style.** `italic` maakt je tekst schuin. `normal` zet het weer recht.
-3. **line-height.** De ruimte tussen de regels. Zonder px erachter: `1.5` is anderhalf keer zo hoog als je letters.
+3. **line-height.** De ruimte tussen de regels. Hier schrijf je een getal zonder px. `1.5` betekent: elke regel is anderhalf keer zo hoog als de letters.
 
 ```css
 body {
@@ -237,12 +237,12 @@ footer p {
     Ongeveer 10 minuten · Je werkt in: `opdracht-2`
     {: .meta}
 
-    1. Kopieer `opdracht-1` naar een nieuwe map `opdracht-2`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-1` naar `opdracht-2`.
     2. Geef body een font-family en een reserve font-family.
     3. Kies een ander lettertype voor je h1.
     4. Geef body een line-height van 1.5.
     5. Maak de tekst in je footer schuin met font-style.
-    6. Klik met F12 op een alinea. In de DevTools onderaan bij Computed staat welk lettertype echt gebruikt wordt.
+    6. Druk op F12 en klik met het pijltje op een alinea. Kijk rechts bij het tabblad Computed. Helemaal onderaan, bij **Rendered Fonts**, staat welk lettertype de browser echt gebruikt.
 
     ??? hint "Codehint (niet het antwoord)"
         ```css
@@ -307,7 +307,7 @@ h1 {
 ```
 
 !!! let-op "Verandert er niets?"
-    Kijk of de naam precies zo gespeld is als op Google Fonts, met hoofdletter. Zonder internet laadt het lettertype niet.
+    Kijk of de naam precies zo gespeld is als op Google Fonts, met precies dezelfde hoofdletters. Zonder internet laadt het lettertype niet.
 
 ??? check "Check: Google Fonts"
     **1. Waar plak je de link-regels van Google Fonts?**
@@ -333,12 +333,12 @@ h1 {
     Ongeveer 15 minuten · Je werkt in: `opdracht-3`
     {: .meta}
 
-    1. Kopieer `opdracht-2` naar een nieuwe map `opdracht-3`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-2` naar `opdracht-3`.
     2. Kies op fonts.google.com een lettertype voor je koppen.
     3. Kopieer de link-regels via Get font en Get embed code.
     4. Plak ze in de head van alle drie je pagina's, boven style.css.
     5. Gebruik het lettertype in style.css voor h1 en h2.
-    6. Controleer met F12 bij Computed of het echt gebruikt wordt.
+    6. Controleer met F12 bij Computed, helemaal onderaan bij **Rendered Fonts**, of het echt gebruikt wordt.
 
     ??? hint "Codehint (niet het antwoord)"
         ```css
@@ -356,7 +356,7 @@ h1 {
 === blok-4 | Kleuren
 ## Kleuren die bij elkaar passen
 
-Kies vooraf een klein palet, en houd je daaraan.
+Een palet is een vast rijtje kleuren voor je hele site. Kies het voordat je begint, en gebruik daarna alleen die kleuren.
 {: .sub}
 
 1. **Kies drie of vier kleuren.** Een donkere, een lichte en één opvallende. Meer heb je niet nodig.
@@ -386,7 +386,7 @@ Een mooie kleur is pas goed als je de tekst ook kunt lezen.
 <div class="r"><div style="background:#fff;color:#1B1F3B">Goed</div><div style="background:#fff;color:#ddd">Slecht</div><div style="background:#fff;color:#f5e663">Slecht</div><div style="background:#1B1F3B;color:#fff">Goed</div></div>
 ```
 
-In de DevTools klik je bij Styles op het gekleurde vierkantje voor een kleur. Bij Contrast ratio zie je een vinkje als het goed is.
+Klik in de DevTools bij Styles op het gekleurde vierkantje naast de tekstkleur (`color`). In het venster dat opent staat Contrast ratio. Staat daar een vinkje, dan is je tekst goed te lezen.
 
 **rgba: een kleur die doorzichtig is**
 
@@ -397,9 +397,9 @@ In de DevTools klik je bij Styles op het gekleurde vierkantje voor een kleur. Bi
 ```
 
 1. **255, 255, 255** is rood, groen, blauw: elk van 0 tot 255. Dit is wit.
-2. **0.8** is hoe doorzichtig: 0 is onzichtbaar, 1 is helemaal dicht.
+2. **0.8** is hoe dekkend de kleur is. 0 = helemaal doorzichtig (je ziet niets), 1 = helemaal niet doorzichtig.
 
-!!! tip "Waar heb je dit straks voor nodig?"
+!!! tip "Waar heb je dit in blok 5 en 6 voor nodig?"
     In blok 5 zet je een foto achter je header. Met rgba leg je er een kaart of een donker laagje overheen, waar de foto nog een beetje doorheen schijnt.
 
 ??? check "Check: kleuren"
@@ -408,7 +408,7 @@ In de DevTools klik je bij Styles op het gekleurde vierkantje voor een kleur. Bi
     - A. Maakt de kleur 5x meer doorzichtig
     - B. Maakt de tekst half zo groot
     - C. Maakt de kleur rood
-    - D. Alle 3 zijn fout
+    - D. Maakt de kleur half doorzichtig
 
     **2. Wat is het best te lezen?**
 
@@ -418,7 +418,7 @@ In de DevTools klik je bij Styles op het gekleurde vierkantje voor een kleur. Bi
     - D. Rode tekst op groen
 
     ??? antwoord "Bekijk de antwoorden"
-        **1. D – alle 3 zijn fout.** De eerste drie getallen zijn rood, groen en blauw. Het vierde getal is hoe doorzichtig: 0.5 is half.
+        **1. D – de kleur wordt half doorzichtig.** De eerste drie getallen zijn rood, groen en blauw. Het vierde getal is hoe doorzichtig: 0.5 is half.
 
         **2. C – donkerblauwe tekst op wit.** Donker op licht geeft veel contrast. Lichtgrijs en geel op wit zijn slecht te lezen. Rood en groen kunnen sommige mensen niet goed uit elkaar houden.
 
@@ -426,9 +426,9 @@ In de DevTools klik je bij Styles op het gekleurde vierkantje voor een kleur. Bi
     Ongeveer 15 minuten · Je werkt in: `opdracht-4`
     {: .meta}
 
-    1. Kopieer `opdracht-3` naar een nieuwe map `opdracht-4`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-3` naar `opdracht-4`.
     2. Maak op coolors.co een palet en kies drie of vier kleuren.
-    3. Schrijf de hexcodes als opmerking bovenin style.css.
+    3. Schrijf de hexcodes bovenaan in style.css tussen `/*` en `*/`. Zo'n stukje heet een opmerking: de browser slaat het over.
     4. Pas de kleuren van body, header, nav en footer aan je palet aan.
     5. Geef `.actief` en de hover van je menu je opvallende kleur.
     6. Controleer met de DevTools het contrast van je tekst.
@@ -482,9 +482,9 @@ Zonder extra regels herhaalt de foto zich als tegels, of zie je maar een stukje.
 
 | Regel | Wat doet het? |
 |---|---|
-| `background-size: cover` | Vult het hele vlak. Geen lege plekken. Er valt een randje van de foto af. |
-| `background-position: center` | Het midden blijft. Valt er iets af, dan aan de randen. |
-| `background-repeat: no-repeat` | Zonder deze regel: tegels. Is je foto kleiner dan het vlak, dan herhaalt hij zich. |
+| `background-size: cover` | Vult het hele vlak. Geen lege plekken. Past de foto niet precies, dan wordt er een stukje van de rand afgesneden. |
+| `background-position: center` | Het midden van de foto blijft altijd zichtbaar. Wordt er iets afgesneden, dan gebeurt dat aan de randen. |
+| `background-repeat: no-repeat` | Zonder deze regel herhaalt de browser een foto die kleiner is dan het vlak, als tegels naast en onder elkaar. |
 | `background-color` | Kleur als reserve. Laadt de foto niet, dan zie je deze kleur. Kies er een die past. |
 
 ```css
@@ -524,7 +524,7 @@ header {
     Ongeveer 15 minuten · Je werkt in: `opdracht-5`
     {: .meta}
 
-    1. Kopieer `opdracht-4` naar een nieuwe map `opdracht-5`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-4` naar `opdracht-5`.
     2. Zet een brede foto in images, bijvoorbeeld van unsplash.com. Noem hem header.jpg.
     3. Geef je header een background-image met het pad naar die foto.
     4. Voeg `background-size: cover` en `background-position: center` toe.
@@ -622,7 +622,7 @@ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 Houd het rustig: een lichte, vage schaduw ziet er netter uit dan een harde zwarte rand.
 
 !!! tip "text-shadow werkt net zo"
-    Alleen om de letters, niet om een blok. Handig voor witte tekst op een foto. De vier waarden betekenen hetzelfde: `h1 { text-shadow: 1px 1px 3px black; }`
+    Alleen om de letters, niet om een blok. Handig voor witte tekst op een foto. De vier waarden betekenen hetzelfde als bij box-shadow: opzij, omlaag, hoe vaag en de kleur. `h1 { text-shadow: 1px 1px 3px black; }`
 
 ??? check "Check: verloop en schaduw"
     **1. Bij welke eigenschap schrijf je linear-gradient?**
@@ -648,7 +648,7 @@ Houd het rustig: een lichte, vage schaduw ziet er netter uit dan een harde zwart
     Ongeveer 15 minuten · Je werkt in: `opdracht-6`
     {: .meta}
 
-    1. Kopieer `opdracht-5` naar een nieuwe map `opdracht-6`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-5` naar `opdracht-6`.
     2. Geef je nav een verloop met twee kleuren uit je palet.
     3. Leg een donker laagje over de foto in je header. Hoe? Zie 'Een donker laagje over je foto' hierboven.
     4. Geef je h1 witte tekst en een text-shadow.
@@ -674,8 +674,8 @@ Houd het rustig: een lichte, vage schaduw ziet er netter uit dan een harde zwart
 Uit zichzelf is een blok net zo breed als het scherm.
 {: .sub}
 
-1. **width.** Een vaste breedte, zoals `width: 300px`. Op een klein scherm past dat soms niet. Die heb je nu niet nodig.
-2. **max-width.** Nooit breder dan dit, bijvoorbeeld `max-width: 800px`. Op een klein scherm wordt hij smaller. Dit is de enige die je typt.
+1. **width.** Een vaste breedte, zoals `width: 300px`. Op een klein scherm past dat soms niet. In deze module gebruik je width niet.
+2. **max-width.** Nooit breder dan dit, bijvoorbeeld `max-width: 800px`. Op een klein scherm wordt hij smaller. In deze module gebruik je alleen max-width.
 3. **Procenten.** `width: 50%` is de helft van het blok waar hij in staat.
 
 ```demo titel="Boven: zo breed als het scherm. Onder: max-width, de rest blijft leeg."
@@ -739,7 +739,7 @@ img {
     Ongeveer 10 minuten · Je werkt in: `opdracht-7`
     {: .meta}
 
-    1. Kopieer `opdracht-6` naar een nieuwe map `opdracht-7`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-6` naar `opdracht-7`.
     2. Geef main een max-width van 800px.
     3. Zet main in het midden met `margin: 0 auto`.
     4. Geef img een max-width van 100%.
@@ -786,8 +786,8 @@ img {
 Zonder transition springt een kleur in één keer om. Met transition glijdt hij.
 {: .sub}
 
-1. **Bij de gewone regel.** Niet bij `:hover`, maar bij de gewone regel. Dan gaat het heen én terug soepel.
-2. **Wat, en hoe lang.** `transition: background-color 0.3s;` 0.3s is drie tiende van een seconde.
+1. **Zet transition in de gewone regel.** Dus in `.kaart`, niet in `.kaart:hover`. Dan gaat het heen én terug soepel.
+2. **Eerst schrijf je wát er verandert, dan hoe lang het duurt.** `transition: background-color 0.3s;` 0.3s is drie tiende van een seconde.
 3. **all voor alles tegelijk.** `transition: all 0.3s;` Handig als er meerdere dingen veranderen.
 
 ```css
@@ -841,7 +841,7 @@ nav a {
     Ongeveer 15 minuten · Je werkt in: `opdracht-8`
     {: .meta}
 
-    1. Kopieer `opdracht-7` naar een nieuwe map `opdracht-8`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-7` naar `opdracht-8`.
     2. Maak een regel `.kaart:hover` met een grotere schaduw.
     3. Laat de kaart bij hover 4px omhoog schuiven met transform.
     4. Geef `.kaart` een `transition: all 0.3s`.
@@ -864,13 +864,13 @@ nav a {
 
 === eindopdracht | Eindopdracht
 !!! opdracht eind "Maak je site echt mooi"
-    Je werkt in een nieuwe map `eindopdracht`. Begin met een kopie van `opdracht-8`.
+    Je werkt in je map `eindopdracht`. Kopieer eerst alle bestanden en mappen uit `opdracht-8` naar `eindopdracht`.
     {: .meta}
 
     **Op je site staat:**
 
     - Map `eindopdracht` met je drie pagina's, style.css en de map images
-    - Je palet als opmerking bovenin style.css, en alleen die kleuren
+    - Je palet als opmerking bovenin style.css, en je site gebruikt alleen die kleuren
     - Een Google Font, gekoppeld in de head van elke pagina
     - Een font-family met reserve en een line-height voor je tekst
     - Een foto achter je header, met cover en een donker laagje
@@ -886,11 +886,11 @@ Alles wat je nodig hebt, heb je in de mini-opdrachten al een keer gemaakt. Kijk 
 
 ## Inleveren
 
-Zip de hele map `les3-jouwnaam`. Daarin zitten `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht`. Noem de zip `les3-jouwnaam.zip`.
+Zip de hele map `module3-jouwnaam`. Daarin zitten `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht`. Noem de zip `module3-jouwnaam.zip`.
 
 **Checklist: vink af voordat je inlevert**
 
-- Map `les3-jouwnaam` met `opdracht-1` tot en met `opdracht-8`
+- Map `module3-jouwnaam` met `opdracht-1` tot en met `opdracht-8`
 - Map `eindopdracht` met drie html-bestanden en style.css
 - De Google Fonts-regels in de head van elke pagina
 - Je foto's in de map images
@@ -901,7 +901,7 @@ Zip de hele map `les3-jouwnaam`. Daarin zitten `opdracht-1` tot en met `opdracht
 {: .checklist}
 
 !!! tip "Zo maak je een zip"
-    Rechtsklik op de map `les3-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**. Op oudere Windows: **Kopiëren naar > Gecomprimeerde map**.
+    Rechtsklik op de map `module3-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**. Op oudere Windows: **Kopiëren naar > Gecomprimeerde map**.
 
 !!! tip "Werk je thuis?"
     Je hebt VS Code, Chrome en internet nodig. Zonder internet laadt je Google Font niet. Kom je er niet uit? Schrijf je vraag op en neem hem mee.
@@ -920,7 +920,7 @@ Met de DevTools vind je de fout meestal binnen een minuut.
 6. **margin: 0 auto werkt niet?** Heeft het blok een max-width? Zonder breedte valt er niets te verdelen.
 
 !!! tip "Nog steeds niet?"
-    Vraag eerst je buurman, daarna je docent. Laat de DevTools openstaan, dan zoeken jullie samen.
+    Vraag eerst een klasgenoot, daarna je docent. Laat de DevTools openstaan, dan zoeken jullie samen.
 
 === naslag | Naslag
 ## Letters, kleur en achtergrond

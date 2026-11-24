@@ -8,7 +8,7 @@ tags: display: flex | gap | justify-content | @media
 === start | Start
 ## Dit ga je maken
 
-Aan het eind van deze module staan de dingen op je site naast elkaar, en werkt hij ook op een telefoon.
+Aan het eind van deze module staan onderdelen van je site naast elkaar, en werkt hij ook op een telefoon.
 
 | Wat zie je? | Hoe doe je dat? |
 |---|---|
@@ -50,7 +50,7 @@ Alles in deze module bouwt verder op wat je al gemaakt hebt.
 
 ## Zo werk je
 
-Maak een map `les4-jouwnaam`. In `opdracht-1` zet je een kopie van je eindopdracht van module 3. Daarna werk je door tot `opdracht-8` en een map `eindopdracht`. In je HTML zet je één keer een div om je kaarten, de rest gebeurt in style.css.
+In opdracht 1 maak je in Documenten de map `module4-jouwnaam`, met daarin de mappen `opdracht-1` tot en met `opdracht-8` en `eindopdracht`. In `opdracht-1` zet je een kopie van je eindopdracht van module 3. Bij elke volgende opdracht kopieer je alle bestanden en mappen uit de vorige opdrachtmap naar de volgende. In je HTML verander je weinig: een div om je kaarten, twee extra alinea's in je footer en een div om je foto en tekst. De rest doe je in style.css.
 
 Elk blok werkt hetzelfde: eerst de **uitleg**, dan een **check** om te kijken of je het snapt, en daarna een **mini-opdracht** die je meteen in VS Code maakt.
 
@@ -92,7 +92,7 @@ Zo ziet het stukje Elements eruit:
     Je ziet de ruimte die flexbox verdeelt. Zonder die lijnen is dat lastig te zien.
 
 !!! let-op "Zie je geen label flex?"
-    Dan staat `display: flex` nog niet in je CSS. Vanaf blok 2 heb je het nodig.
+    Nu zie je dit label nog nergens, want je gebruikt `display: flex` pas vanaf blok 2. Kijk er in opdracht 2 opnieuw naar.
 
 ## Waar waren we gebleven?
 
@@ -130,7 +130,7 @@ Waarom staan sommige dingen onder elkaar, en andere naast elkaar?
 ```
 
 !!! tip "Kijk het zelf na"
-    Klik in de DevTools op een element. Onderaan bij Computed staat bij `display` of het block of inline is.
+    Klik in de DevTools op een element. Typ bij Computed in het zoekvak (Filter) het woord display. Dan zie je of het block of inline is.
 
 ??? check "Check: block en inline"
     **1. Je hebt drie div's met een kaart erin. Hoe staan ze op je pagina?**
@@ -156,12 +156,12 @@ Waarom staan sommige dingen onder elkaar, en andere naast elkaar?
     Ongeveer 10 minuten · Je werkt in: `opdracht-1`
     {: .meta}
 
-    1. Maak een map `les4-jouwnaam`. Maak daarin een map `opdracht-1`.
-    2. Kopieer alles uit je eindopdracht van module 3 naar `opdracht-1`.
-    3. Open `les4-jouwnaam` in VS Code en start Live Server op index.html.
-    4. Klik met F12 op een kaart. Kijk bij Computed wat er bij display staat.
+    1. Maak in Documenten een map `module4-jouwnaam`. Maak daarin de mappen `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht`.
+    2. Kopieer alle bestanden en mappen uit de map `eindopdracht` van module 3 naar `opdracht-1`.
+    3. Open `module4-jouwnaam` in VS Code en start Live Server op index.html.
+    4. Druk op F12 en klik met het pijltje op een kaart. Typ bij Computed in het zoekvak (Filter) het woord display en kijk wat er staat.
     5. Doe hetzelfde bij een link in je menu en bij je foto.
-    6. Schrijf bovenin style.css als opmerking wat block is en wat inline.
+    6. Schrijf bovenaan in style.css tussen `/*` en `*/` een opmerking met drie voorbeelden van block-elementen en drie voorbeelden van inline-elementen.
 
     ??? hint "Codehint (niet het antwoord)"
         ```css
@@ -178,9 +178,9 @@ Waarom staan sommige dingen onder elkaar, en andere naast elkaar?
 Met één regel CSS zet je blokken naast elkaar.
 {: .sub}
 
-1. **Een doos om je blokken.** Zet een div om de dingen die naast elkaar moeten. Die div heet de container.
+1. **Een doos om je blokken.** Zet een div om de elementen die naast elkaar moeten staan. Die div heet de container.
 2. **display: flex op de container.** Niet op de kaarten zelf, maar op de doos eromheen.
-3. **De kinderen worden items.** Alles wat direct in de container staat, schuift naast elkaar.
+3. **De kinderen worden items.** Alles wat direct in de container staat, heet een kind van de container. In flexbox noem je die kinderen items. Ze schuiven naast elkaar. De container zelf is de ouder.
 
 ```html
 <div class="kaarten">
@@ -218,7 +218,7 @@ Flexbox werkt op de items die direct in de container staan.
 {: .sub}
 
 1. **Direct erin = item.** De kaarten staan direct in `.kaarten`. Zij zijn de items en staan naast elkaar.
-2. **Dieper = gewoon.** De h2 en de p in een kaart zijn geen items. Die staan nog gewoon onder elkaar.
+2. **Wat dieper staat, verandert niet.** De h2 en de p in een kaart zijn geen items. Die staan nog gewoon onder elkaar.
 3. **Vanzelf even hoog.** Items worden even hoog als het hoogste item. Handig voor kaarten met veel en weinig tekst.
 
 ```demo titel=".kaarten is de container, de kaarten zijn de items. De h2 en p in een kaart doen niet mee."
@@ -253,7 +253,7 @@ Flexbox werkt op de items die direct in de container staan.
     Ongeveer 15 minuten · Je werkt in: `opdracht-2`
     {: .meta}
 
-    1. Kopieer `opdracht-1` naar een nieuwe map `opdracht-2`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-1` naar `opdracht-2`.
     2. Zet in index.html een div met class `kaarten` om je kaarten heen.
     3. Doe hetzelfde op hobbys.html en contact.html.
     4. Geef `.kaarten` in style.css `display: flex`.
@@ -308,7 +308,7 @@ Flexbox werkt op de items die direct in de container staan.
 </div>
 
 !!! tip "Waarom geen margin?"
-    Met margin krijgen ook de eerste en de laatste kaart ruimte aan de buitenkant. Met gap hoef je niet te rekenen.
+    Met margin krijgen ook de eerste en de laatste kaart ruimte aan de buitenkant. Met gap komt de ruimte alleen tussen de kaarten. Je hoeft niets weg te halen bij de eerste of de laatste kaart.
 
 ## Rij of kolom: flex-direction
 
@@ -340,8 +340,8 @@ Je bepaalt zelf of de items naast of onder elkaar staan.
 
 </div>
 
-!!! tip "Waarom dan flex?"
-    `column` lijkt op zonder flex. Maar nu kun je wel `gap` gebruiken en de items uitlijnen.
+!!! tip "Waarom dan flex met column?"
+    Met `column` ziet het er hetzelfde uit als zonder flex. Maar met flex kun je ook `gap` gebruiken en de items uitlijnen.
 
 ??? check "Check: gap en richting"
     **1. Wat doet gap: 20px op een flex-container?**
@@ -367,10 +367,10 @@ Je bepaalt zelf of de items naast of onder elkaar staan.
     Ongeveer 10 minuten · Je werkt in: `opdracht-3`
     {: .meta}
 
-    1. Kopieer `opdracht-2` naar een nieuwe map `opdracht-3`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-2` naar `opdracht-3`.
     2. Geef `.kaarten` een gap van 20px.
     3. Zet in je footer nog twee alinea's, zoals je stad en © 2026 jouw naam. Doe dit op alle drie je pagina's.
-    4. Zet de dingen in je footer met flexbox naast elkaar, met een gap.
+    4. Zet de drie onderdelen in je footer (je mailadres en de twee nieuwe alinea's) met flexbox naast elkaar, met een gap.
     5. Zet in de DevTools `flex-direction: column` op `.kaarten`. Wat gebeurt er?
     6. Haal die regel in de DevTools weer weg.
 
@@ -383,18 +383,18 @@ Je bepaalt zelf of de items naast of onder elkaar staan.
         ```
 
     !!! klaar "Klaar als..."
-        Tussen je kaarten zit ruimte. De drie dingen in je footer staan naast elkaar.
+        Tussen je kaarten zit ruimte. De drie onderdelen in je footer staan naast elkaar.
 
 === blok-4 | justify-content
 ## Items verdelen met justify-content
 
-Waar komt de lege ruimte in de rij?
+Met justify-content bepaal je waar de lege ruimte in de rij komt.
 {: .sub}
 
 1. **flex-start:** alles links. Dit is de standaard.
 2. **center:** alles in het midden.
 3. **flex-end:** alles rechts.
-4. **space-between:** eerste links, laatste rechts, de rest ertussen.
+4. **space-between:** eerste links, laatste rechts, de rest gelijk verdeeld ertussen.
 
 ```demo titel="Dezelfde drie items met vier waarden van justify-content"
 <style>.r{display:flex;gap:6px;background:#f6f7fc;border:1px dashed #b8bddc;border-radius:6px;padding:6px;margin-bottom:8px}.r div{background:#2965F1;color:#fff;width:34px;text-align:center;border-radius:4px;padding:3px 0}small{display:block;font-family:Consolas,monospace;font-size:12px;color:#5b6075;margin-bottom:2px}</style>
@@ -455,9 +455,9 @@ footer {
     Ongeveer 10 minuten · Je werkt in: `opdracht-4`
     {: .meta}
 
-    1. Kopieer `opdracht-3` naar een nieuwe map `opdracht-4`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-3` naar `opdracht-4`.
     2. Probeer in de DevTools met de flex-knop alle waarden van justify-content op je footer.
-    3. Kies de waarde die de drie dingen over de hele breedte verdeelt. Typ die over in style.css.
+    3. Kies de waarde die de drie onderdelen van je footer over de hele breedte verdeelt. Typ die over in style.css.
     4. Zet de kaarten in `.kaarten` in het midden van de rij.
     5. Kijk op contact.html: je ene kaart staat nu in het midden.
     6. Kijk op index.html: verandert er iets aan je kaarten? Waarom niet?
@@ -471,12 +471,12 @@ footer {
         ```
 
     !!! klaar "Klaar als..."
-        De dingen in je footer zijn verdeeld over de hele breedte. De kaart op je contactpagina staat in het midden.
+        De drie onderdelen in je footer zijn verdeeld over de hele breedte. De kaart op je contactpagina staat in het midden.
 
 === blok-5 | align-items
 ## Uitlijnen met align-items
 
-`justify-content` werkt in de rij, `align-items` in de hoogte.
+Bij een rij verdeelt `justify-content` de items van links naar rechts. `align-items` zet ze van boven naar beneden goed.
 {: .sub}
 
 1. **stretch:** even hoog. De standaard. Alle items rekken uit tot het hoogste.
@@ -554,7 +554,7 @@ Het bekendste voorbeeld van `align-items: center`.
     Ongeveer 15 minuten · Je werkt in: `opdracht-5`
     {: .meta}
 
-    1. Kopieer `opdracht-4` naar een nieuwe map `opdracht-5`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-4` naar `opdracht-5`.
     2. Zet op index.html een div met een eigen class om je foto en een nieuwe alinea over jezelf.
     3. Geef die div `display: flex` en een gap.
     4. Zet de tekst in de hoogte in het midden naast de foto.
@@ -659,7 +659,7 @@ Laat de items de ruimte eerlijk verdelen.
     Ongeveer 15 minuten · Je werkt in: `opdracht-6`
     {: .meta}
 
-    1. Kopieer `opdracht-5` naar een nieuwe map `opdracht-6`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-5` naar `opdracht-6`.
     2. Maak main breder: een max-width van 1000px.
     3. Laat de kaarten in `.kaarten` doorschuiven naar een nieuwe regel.
     4. Geef `.kaart` `flex: 1` en een min-width.
@@ -762,7 +762,7 @@ header {
     Ongeveer 15 minuten · Je werkt in: `opdracht-7`
     {: .meta}
 
-    1. Kopieer `opdracht-6` naar een nieuwe map `opdracht-7`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-6` naar `opdracht-7`.
     2. Zet je menu met flexbox naast elkaar, met een gap.
     3. Haal de oude regels bij `nav li` weg.
     4. Zet in je header je naam links en je menu rechts.
@@ -840,7 +840,7 @@ Met een media query geef je regels die alleen op een smal scherm gelden.
 </div>
 
 !!! let-op "Tel je accolades"
-    Mist er een `}`, dan werkt alles eronder niet meer. Prettier zet alles netjes ingesprongen, dan zie je het meteen.
+    Mist er een `}`, dan werkt alles eronder niet meer. Sla op, dan springt Prettier je code in. Staat de laatste `}` niet helemaal links? Dan mist er ergens een `}`.
 
 ??? check "Check: op je telefoon"
     **1. Wanneer geldt de CSS in @media (max-width: 600px)?**
@@ -866,7 +866,7 @@ Met een media query geef je regels die alleen op een smal scherm gelden.
     Ongeveer 15 minuten · Je werkt in: `opdracht-8`
     {: .meta}
 
-    1. Kopieer `opdracht-7` naar een nieuwe map `opdracht-8`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-7` naar `opdracht-8`.
     2. Druk in de DevTools op Ctrl + Shift + M en kies bovenin een telefoon.
     3. Zet onderaan style.css een media query voor schermen tot 600px.
     4. Zet daarin je kaarten onder elkaar.
@@ -887,7 +887,7 @@ Met een media query geef je regels die alleen op een smal scherm gelden.
 
 === eindopdracht | Eindopdracht
 !!! opdracht eind "Zet je site in de rij"
-    Je werkt in een nieuwe map `eindopdracht`. Begin met een kopie van `opdracht-8`.
+    Je werkt in je map `eindopdracht`. Kopieer eerst alle bestanden en mappen uit `opdracht-8` naar `eindopdracht`.
     {: .meta}
 
     **Op je site staat:**
@@ -896,9 +896,9 @@ Met een media query geef je regels die alleen op een smal scherm gelden.
     - Een header met je naam links en je menu rechts, op dezelfde hoogte
     - Een menu met `display: flex` en `gap`, zonder inline-block
     - Kaarten naast elkaar met ruimte ertussen, op al je pagina's
-    - Minstens vier hobbykaarten, even breed, die doorschuiven
-    - Op je homepagina een foto met tekst ernaast, in het midden
-    - Een footer met minstens drie dingen, verdeeld over de breedte
+    - Minstens vier hobbykaarten, even breed, die naar een nieuwe regel schuiven als het venster smaller wordt
+    - Op je homepagina een foto met tekst ernaast, met de tekst in de hoogte in het midden naast de foto
+    - Een footer met minstens drie onderdelen, zoals je mailadres, je stad en © met je naam, verdeeld over de breedte
     - Een media query: tot 600px staat alles onder elkaar
     {: .checklist}
 
@@ -909,11 +909,11 @@ Alles wat je nodig hebt, heb je in de mini-opdrachten al een keer gemaakt. Kijk 
 
 ## Inleveren
 
-Zip de hele map `les4-jouwnaam`. Daarin zitten `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht`. Noem de zip `les4-jouwnaam.zip`.
+Zip de hele map `module4-jouwnaam`. Daarin zitten `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht`. Noem de zip `module4-jouwnaam.zip`.
 
 **Checklist: vink af voordat je inlevert**
 
-- Map `les4-jouwnaam` met `opdracht-1` tot en met `opdracht-8`
+- Map `module4-jouwnaam` met `opdracht-1` tot en met `opdracht-8`
 - Map `eindopdracht` met drie html-bestanden en style.css
 - Een div om je kaarten op elke pagina
 - De media query helemaal onderaan style.css
@@ -924,7 +924,7 @@ Zip de hele map `les4-jouwnaam`. Daarin zitten `opdracht-1` tot en met `opdracht
 {: .checklist}
 
 !!! tip "Zo maak je een zip"
-    Rechtsklik op de map `les4-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**. Op oudere Windows: **Kopiëren naar > Gecomprimeerde map**.
+    Rechtsklik op de map `module4-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**. Op oudere Windows: **Kopiëren naar > Gecomprimeerde map**.
 
 !!! tip "Werk je thuis?"
     Je hebt VS Code en Chrome nodig. De telefoonweergave zit in Chrome zelf, je hebt geen echte telefoon nodig. Kom je er niet uit? Schrijf je vraag op en neem hem mee.
@@ -939,11 +939,10 @@ Met de DevTools en het label flex vind je de fout meestal binnen een minuut.
 2. **Staat display: flex op de goede plek?** Op de container, de ouder. Niet op de items zelf.
 3. **Staan je items direct in de container?** Alleen wat er direct in staat, doet mee. Kijk in Elements hoe je HTML genest is.
 4. **justify-content doet niets?** Er is geen ruimte over. De items vullen de rij al.
-5. **Doet iets in je header niet mee?** Staat er `position: absolute` bij? Haal dat weg, dan wordt het weer een item.
-6. **Media query werkt niet?** Staat hij onderaan? Kloppen alle accolades? Staat de viewport-regel in je head?
+5. **Media query werkt niet?** Staat hij onderaan? Kloppen alle accolades? Staat de viewport-regel in je head?
 
 !!! tip "Nog steeds niet?"
-    Vraag eerst je buurman, daarna je docent. Laat de DevTools openstaan en klik op het label flex, dan zoeken jullie samen.
+    Vraag eerst een klasgenoot, daarna je docent. Laat de DevTools openstaan en klik op het label flex, dan zoeken jullie samen.
 
 === naslag | Naslag
 ## flexbox

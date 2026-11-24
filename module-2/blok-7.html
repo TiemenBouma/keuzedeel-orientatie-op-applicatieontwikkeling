@@ -42,7 +42,7 @@
 <p class="sub">Drie tags die je allemaal al kent, in elkaar gezet.</p>
 <ol>
 <li><strong><code>&lt;nav&gt;</code> zegt: dit is het menu.</strong> De doos eromheen. Hierin zet je je hele menu.</li>
-<li><strong><code>&lt;ul&gt;</code> is het lijstje.</strong> Precies hetzelfde lijstje als bij je hobby's. Straks halen we de bolletjes weg.</li>
+<li><strong><code>&lt;ul&gt;</code> is het lijstje.</strong> Precies hetzelfde lijstje als bij je hobby's. In blok 8 haal je de bolletjes weg.</li>
 <li><strong>In elke <code>&lt;li&gt;</code> een <code>&lt;a&gt;</code>.</strong> Elke regel van het lijstje is een link naar een andere pagina van je site.</li>
 </ol>
 <div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
@@ -56,7 +56,7 @@
 <figure class="demo"><div class="demo-titel">Zonder CSS ziet je menu eruit als een gewoon lijstje met bolletjes. Dat is goed.</div><iframe class="demo-frame" loading="lazy" title="Zonder CSS ziet je menu eruit als een gewoon lijstje met bolletjes. Dat is goed." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Hobby&#x27;s&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition onthoud">
 <p class="admonition-title">Op elke pagina plaats je hetzelfde menu.</p>
-<p>Anders raakt je bezoeker de weg kwijt. Kopieer je nav dus letterlijk naar je andere pagina's.</p>
+<p>Staat het menu op elke pagina anders, dan raakt je bezoeker de weg kwijt. Kopieer daarom de hele <code>&lt;nav&gt;</code> van index.html naar je andere pagina's. Alleen <code>class="actief"</code> verplaats je (zie hieronder).</p>
 </div>
 <h2>Laat zien waar je bent</h2>
 <p class="sub">Eén extra class maakt duidelijk welke pagina open is. Het enige verschil tussen de pagina's is waar <code>class="actief"</code> staat. De rest is letterlijk gelijk.</p>
@@ -78,7 +78,7 @@
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Werkvolgorde</p>
-<p>Kopieer eerst je nav naar alle pagina's. Pas daarna verplaats je op elke pagina de class. Zo vergeet je niets.</p>
+<p>Kopieer eerst je nav naar alle pagina's. Zet daarna op elke pagina <code>class="actief"</code> bij de link naar die pagina zelf. Zo vergeet je niets.</p>
 </div>
 <details class="check">
 <summary>Check: de menubalk</summary>
@@ -106,7 +106,7 @@
 <p class="admonition-title">7. Bouw je menu op alle pagina's</p>
 <p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-7</code></p>
 <ol>
-<li>Kopieer <code>opdracht-6</code> naar een nieuwe map <code>opdracht-7</code>.</li>
+<li>Kopieer alle bestanden en mappen uit <code>opdracht-6</code> naar <code>opdracht-7</code>.</li>
 <li>Maak een derde pagina contact.html en koppel style.css.</li>
 <li>Bouw op index.html een <code>&lt;nav&gt;</code> met een ul en drie li's met links.</li>
 <li>Kopieer die hele nav naar hobbys.html en contact.html.</li>

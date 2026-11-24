@@ -31,7 +31,7 @@ Aan het eind van deze module heb je je eigen profielpagina.
 Elk blok werkt hetzelfde: eerst de **uitleg**, dan een **check** om te kijken of je het snapt, en daarna een **mini-opdracht** die je meteen in VS Code maakt.
 
 !!! tip "Er is geen haast"
-    We doen er meerdere lessen over. Snap je iets niet? Zeg het meteen. Werk je zelfstandig? Achteraan staan de naslag en een lijstje met veelgemaakte fouten.
+    We doen er meerdere lessen over. Snap je iets niet? Zeg het meteen. Werk je zelfstandig? Kijk dan in het menu bij **Naslag** (alles op een rij) en bij **Werkt het niet?** (veelgemaakte fouten).
 
 | Blok | Onderwerp |
 |---|---|
@@ -47,10 +47,10 @@ Elk blok werkt hetzelfde: eerst de **uitleg**, dan een **check** om te kijken of
 
 ### Eén map per opdracht
 
-Elke opdracht maak je in een eigen map. Zo kun je altijd terugkijken, en zo lever je het straks in.
+Elke opdracht maak je in een eigen map. Zo kun je altijd terugkijken, en zo lever je het aan het eind van de module in.
 
 ```text
-les1-jouwnaam/
+module1-jouwnaam/
    opdracht-1/
    opdracht-2/
    ...
@@ -67,11 +67,11 @@ opdracht-6/
    foto.jpg
 ```
 
-!!! let-op "De regel"
-    Altijd kleine letters. Geen spaties in map- of bestandsnamen.
+!!! let-op "Regel voor alle namen van mappen en bestanden"
+    Gebruik alleen kleine letters en geen spaties. Wil je twee woorden? Zet er een streepje tussen: `mijn-foto.jpg`.
 
 !!! tip "Tip"
-    Alle mappen maak je in opdracht 1 in één keer. Bij elke volgende opdracht werk je in de volgende map. Je kunt je werk kopiëren uit de vorige map en daarin verder werken. Je oude mappen laat je gewoon staan. Kopiëren doe je met Ctrl + A, Ctrl + C en Ctrl + V.
+    Alle mappen maak je in opdracht 1 in één keer. Bij elke volgende opdracht werk je in de volgende map. Vaak begin je dan met een kopie van je vorige opdracht: je kopieert alle bestanden uit de vorige opdrachtmap naar de volgende. Je oude mappen laat je gewoon staan. Zo kopieer je: open de vorige opdrachtmap in de Verkenner. Selecteer alle bestanden met Ctrl + A en kopieer ze met Ctrl + C. Open de volgende opdrachtmap en plak met Ctrl + V.
 
 === blok-1 | Aan de slag
 ## Hoe werkt een webpagina?
@@ -110,7 +110,7 @@ Hiermee zie je meteen wat je typt, zonder steeds te verversen.
 1. **Open VS Code.** Kijk in de balk helemaal links.
 2. **Klik op het blokjes-icoon.** Dat is Extensions. Sneltoets: Ctrl + Shift + X.
 3. **Zoek op: Live Server.** Typ het in het zoekvak bovenaan.
-4. **Kies die van Ritwick Dey.** Er zijn er meer met dezelfde naam. Kijk goed.
+4. **Kies die van Ritwick Dey.** Er zijn meer extensies die Live Server heten. Kies de extensie waar Ritwick Dey onder staat.
 5. **Klik op Install.** Klaar. Je hoeft niets in te stellen.
 
 !!! onthoud "Zo start je Live Server"
@@ -122,12 +122,12 @@ Kies één plek op je laptop. Dan vind je je werk altijd terug.
 {: .sub}
 
 1. **Je bewaart alles in Documenten.** Daar kun je makkelijk bij. Open de Verkenner met **Windows-toets + E**. Links in de balk staat **Documenten**.
-2. **Elke module krijgt een eigen map.** Voor deze module is dat `les1-jouwnaam`, met je eigen naam. Bijvoorbeeld `les1-sam`.
+2. **Elke module krijgt een eigen map.** Voor deze module is dat `module1-jouwnaam`, met je eigen naam. Bijvoorbeeld `module1-sam`.
 3. **In die map komt een map voor elke opdracht.** Die maak je allemaal in opdracht 1.
 
 ```text
 Documenten/
-   les1-jouwnaam/
+   module1-jouwnaam/
       eindopdracht/
       opdracht-1/
       opdracht-2/
@@ -150,24 +150,24 @@ Documenten/
 Je maakt je mappen en bestanden in VS Code zelf. Dan zie je meteen of alles op de goede plek staat.
 {: .sub}
 
-![Schermafbeelding van VS Code. 1 is het Explorer-icoon. Naast de mapnaam les1-jouwnaam staan 2 New File en 3 New Folder.](../assets/img/vscode-nieuw-bestand-map.png){: .scherm}
+![Schermafbeelding van VS Code. 1 is het Explorer-icoon. Naast de mapnaam module1-jouwnaam staan 2 New File en 3 New Folder.](../assets/img/vscode-nieuw-bestand-map.png){: .scherm}
 
 1. **Klik links op het icoon met de twee blaadjes.** Dat is Explorer, je mappen en bestanden. Sneltoets: Ctrl + Shift + E.
 2. **Ga met je muis over de naam van je map.** Er verschijnen vier icoontjes. Het eerste is **New File** (nieuw bestand), het tweede is **New Folder** (nieuwe map).
 3. **Typ de naam en druk op Enter.** Kleine letters, geen spaties.
 
 !!! let-op "Let op waar je nieuwe map komt"
-    Een nieuwe map komt **in** de map die je net hebt aangeklikt. Klik je eerst op `opdracht-1`, dan komt je nieuwe map daarin. Wil je hem gewoon in `les1-jouwnaam`? Klik dan eerst op een lege plek onder je mappen. Staat een map toch verkeerd? Sleep hem naar de lege plek.
+    Een nieuwe map komt **in** de map die je net hebt aangeklikt. Klik je eerst op `opdracht-1`, dan komt je nieuwe map daarin. Wil je hem gewoon in `module1-jouwnaam`? Klik dan eerst op een lege plek onder je mappen. Staat een map toch verkeerd? Sleep hem naar de lege plek.
 
 !!! tip "Verkeerde naam?"
     Klik op de map of het bestand en druk op **F2**. Nu kun je de naam veranderen.
 
 !!! opdracht "1. Maak je mappen voor module 1"
-    Ongeveer 15 minuten · Je werkt in: `les1-jouwnaam`
+    Ongeveer 15 minuten · Je werkt in: `module1-jouwnaam`
     {: .meta}
 
     1. Open VS Code en kies File > Open Folder. Klik links in het venster op **Documenten**.
-    2. Klik bovenin op **Nieuwe map**. Noem hem `les1-` met je eigen naam erachter en druk op Enter.
+    2. Klik bovenin op **Nieuwe map**. Noem hem `module1-` met je eigen naam erachter en druk op Enter.
     3. Klik één keer op je nieuwe map en daarna op **Map selecteren**. Vraagt VS Code of je de makers vertrouwt? Klik op **Yes, I trust the authors**.
     4. Maak met New Folder de mappen `opdracht-1` tot en met `opdracht-9` en de map `eindopdracht`.
     5. Klik op `opdracht-1` en maak met New File het bestand index.html. Typ de regel uit de codehint en sla op met Ctrl + S.
@@ -179,20 +179,20 @@ Je maakt je mappen en bestanden in VS Code zelf. Dan zie je meteen of alles op d
         ```
 
     !!! klaar "Klaar als..."
-        Links in VS Code zie je `les1-jouwnaam` met 10 mappen erin, en index.html staat in `opdracht-1`. In Chrome zie je de tekst 'Hallo, ik ben ...'. Verander de tekst, sla op, en kijk of de pagina meteen verandert.
+        Links in VS Code zie je `module1-jouwnaam` met 10 mappen erin, en index.html staat in `opdracht-1`. In Chrome zie je de tekst 'Hallo, ik ben ...'. Verander de tekst, sla op, en kijk of de pagina meteen verandert.
 
 === blok-2 | Tags
 ## HTML werkt met tags
 
-Een tag vertelt de browser wat iets is.
+Met een tag vertel je de browser wat voor soort tekst het is, bijvoorbeeld een kop, een alinea of een lijstje.
 {: .sub}
 
 ```html
 <h1>Sam Jansen</h1>
 ```
 
-1. **Elke tag staat tussen punthaken.** `<` en `>` typ je met Shift en de toets naast de linker Shift.
-2. **Openen en sluiten hoort bij elkaar.** De sluittag is hetzelfde, maar met een `/` erin: `</h1>`.
+1. **Elke tag staat tussen punthaken.** `<` typ je met Shift + komma, `>` met Shift + punt.
+2. **Openen en sluiten hoort bij elkaar.** De sluittag is dezelfde tag, met een `/` direct na de `<`. Dus `<h1>` wordt `</h1>`.
 3. **Wat ertussen staat, zie je op de pagina.** De tags zelf zie je niet in de browser.
 
 ## Drie tags om mee te beginnen
@@ -215,7 +215,7 @@ Een tag vertelt de browser wat iets is.
 <h2>Mijn hobby's</h2>
 ```
 
-Er zijn honderden tags. Deze drie en die van straks zijn genoeg voor je eerste pagina.
+Er zijn honderden tags. Deze drie en de tags uit de volgende blokken zijn genoeg voor je eerste pagina.
 
 ??? check "Check: tags"
     **1. Hoe sluit je `<h1>` af?**
@@ -289,7 +289,7 @@ Deze onderdelen staan op elke website ter wereld.
 | `<head>` | Informatie over de pagina. Dit ziet de bezoeker **niet**. |
 | `<body>` | Alles wat de bezoeker **wel** ziet. |
 
-!!! onthoud "Snelle manier"
+!!! onthoud "Het skelet in één keer typen"
     Typ in een leeg .html-bestand een uitroepteken (!) en druk op Tab. Het hele skelet verschijnt vanzelf.
 
 ## Head of body: waar hoort het?
@@ -299,7 +299,7 @@ Het verschil zie je meteen in de browser.
 
 | In de head | In de body |
 |---|---|
-| De titel van het tabblad. En straks ook de koppeling naar je CSS-bestand. | Al je tekst, koppen, lijstjes, links en plaatjes. |
+| De titel van het tabblad. In blok 6 zet je hier ook de koppeling naar je CSS-bestand. | Al je tekst, koppen, lijstjes, links en plaatjes. |
 | `<title>Sam Jansen</title>` | `<h1>Sam Jansen</h1>` |
 
 ```demo titel="De title zie je in het tabblad, de h1 op de pagina zelf"
@@ -369,7 +369,7 @@ Zo krijgt je pagina structuur.
 
 1. **Koppen: h1 tot en met h6.** h1 is de grootste, h6 de kleinste. Gebruik h1 voor de titel van je pagina en h2 voor de kopjes daaronder.
 2. **Lijstje: ul met li erin.** De `<ul>` is de lijst zelf. Elke `<li>` is één regel met een bolletje ervoor.
-3. **Nummers in plaats van bolletjes?** Gebruik dan `<ol>` in plaats van `<ul>`. De li's blijven precies hetzelfde.
+3. **Nummers in plaats van bolletjes?** Gebruik dan `<ol>` in plaats van `<ul>`. De `<li>`-regels erin verander je niet.
 
 ```html
 <h2>Mijn hobby's</h2>
@@ -423,7 +423,7 @@ Zo krijgt je pagina structuur.
     3. Zet onder je alinea's een `<h2>` met Mijn hobby's.
     4. Zet daaronder een lijstje met bolletjes met drie hobby's.
     5. Zet er nog een `<h2>` onder met een eigen kopje, bijvoorbeeld Dit wil ik leren.
-    6. Zet daaronder een lijstje met nummers met drie dingen.
+    6. Zet daaronder een lijstje met nummers met drie dingen die je wilt leren.
 
     ??? hint "Codehint (niet het antwoord)"
         ```html
@@ -480,13 +480,13 @@ Deze twee tags hebben extra informatie nodig. Die extra informatie heet een **at
     ??? antwoord "Bekijk de antwoorden"
         **1. B – src.** src betekent source, oftewel bron. href gebruik je bij een link, niet bij een plaatje. link en file bestaan niet als attribuut van `<img>`.
 
-        **2. B.** Een link is een `<a>` met het adres in `href`. Bij A staat src: dat is voor plaatjes. Bij C mist href, dus de browser weet niet waar hij heen moet. D gebruikt `<link>`: dat is een andere tag, die zet je straks in de head om je CSS te koppelen.
+        **2. B.** Een link is een `<a>` met het adres in `href`. Bij A staat src: dat is voor plaatjes. Bij C mist href, dus de browser weet niet waar hij heen moet. D gebruikt `<link>`: dat is een andere tag, die zet je in blok 6 in de head om je CSS te koppelen.
 
 !!! opdracht "5. Een link en een foto"
     Ongeveer 10 minuten · Je werkt in: `opdracht-5`
     {: .meta}
 
-    1. Kopieer je index.html uit opdracht-4 naar je map `opdracht-5`.
+    1. Kopieer alle bestanden uit `opdracht-4` naar `opdracht-5`.
     2. Zet onder je lijstjes een link naar een site die je vaak gebruikt.
     3. Zoek een foto, van jezelf of van een hobby, en zet hem in de map `opdracht-5`.
     4. Laat de foto op je pagina zien met `<img>`.
@@ -524,7 +524,7 @@ HTML zegt **wat** er staat. CSS zegt **hoe** het eruitziet.
 
 1. **De HTML is precies hetzelfde.** Links en rechts staat dezelfde code. Alleen de opmaak is toegevoegd.
 2. **CSS betekent Cascading Style Sheets.** Style sheet betekent letterlijk: opmaakblad.
-3. **Zonder CSS kiest de browser zelf.** Dan wordt alles zwart, met een standaard lettertype.
+3. **Zonder CSS kiest de browser zelf.** Dan krijg je zwarte tekst op een witte achtergrond, in een standaard lettertype.
 
 ## Zo maak en koppel je je CSS
 
@@ -554,9 +554,9 @@ index.html, in de head
 
 | Onderdeel | In het voorbeeld | Betekenis |
 |---|---|---|
-| selector | `h1` | Wat pas je aan? |
-| eigenschap | `color` | Wat verander je? |
-| waarde | `blue` | Waarin verander je het? |
+| selector | `h1` | Welk deel van je pagina pas je aan? |
+| eigenschap | `color` | Wat van dat deel verander je? |
+| waarde | `blue` | Hoe moet het worden? |
 
 !!! onthoud "De vorm van elke regel"
     Tussen eigenschap en waarde staat een dubbele punt. De puntkomma sluit de regel af.
@@ -585,10 +585,10 @@ index.html, in de head
     Ongeveer 5 minuten · Je werkt in: `opdracht-6`
     {: .meta}
 
-    1. Maak in je map `opdracht-6` een nieuw index.html en neem je pagina over.
+    1. Kopieer alle bestanden uit `opdracht-5` naar `opdracht-6`: je index.html en je foto.
     2. Maak in `opdracht-6` een tweede bestand: style.css.
     3. Zet de link-regel in de head van index.html.
-    4. Geef de body een achtergrondkleur en je h1 een andere kleur.
+    4. Geef de body een achtergrondkleur met `background-color` en je h1 een andere tekstkleur met `color`.
     5. Sla beide bestanden op met Ctrl + S.
 
     ??? hint "Codehint (niet het antwoord)"
@@ -613,7 +613,7 @@ Met een selector wijs je aan wat je wilt aanpassen. Je kent er nu twee.
 | Soort | Zo schrijf je het | Wat pakt het? |
 |---|---|---|
 | Tagnaam | `p { }` (geen teken ervoor) | Alle `<p>` op je hele pagina. |
-| Class | `.knop { }` (punt ervoor) | Alles met `class="knop"`. Zo vaak als je wilt. |
+| Class | `.knop { }` (punt ervoor) | Alles met `class="knop"`. Je mag dezelfde class aan zoveel elementen geven als je wilt. |
 
 !!! let-op "Let op: de punt staat alleen in je CSS"
     In je HTML schrijf je `class="knop"`, zonder punt. In je CSS wordt dat `.knop { }`.
@@ -648,7 +648,7 @@ p { color: gray; }
 ```
 
 !!! tip "Er komt er later nog één bij"
-    Naast de tagnaam en de class bestaat er ook nog een id. Die leer je in module 2. Met deze twee kun je nu alles.
+    Naast de tagnaam en de class bestaat er ook nog een id. Die leer je in module 2. Voor module 1 heb je genoeg aan deze twee.
 
 ??? check "Check: selectors"
     **1. Je hebt `class="knop"`. Hoe schrijf je dat in je CSS?**
@@ -674,7 +674,7 @@ p { color: gray; }
     Ongeveer 5 minuten · Je werkt in: `opdracht-7`
     {: .meta}
 
-    1. Maak in je map `opdracht-7` een index.html en een style.css. Neem je pagina over.
+    1. Kopieer alle bestanden uit `opdracht-6` naar `opdracht-7`: index.html, style.css en je foto.
     2. Geef je link in index.html de class knop.
     3. Geef je h1 de class kop.
     4. Maak in style.css een regel voor `.knop` met een kleur.
@@ -707,7 +707,7 @@ Twee eigenschappen die je constant gebruikt.
 Een kleur opgeven kan op twee manieren:
 
 1. **Met een naam:** red, blue, white, navy, lightblue, gray. Handig, maar er is maar een beperkt aantal namen.
-2. **Met een hexcode:** een hekje met zes tekens, bijvoorbeeld `#2965F1`. Hiermee kun je elke kleur maken die bestaat. In VS Code zie je een gekleurd vierkantje naast de code. Klik erop voor de kleurenkiezer.
+2. **Met een hexcode:** een `#` met daarachter zes cijfers of letters (0 t/m 9 en A t/m F), bijvoorbeeld `#2965F1`. Hiermee kun je elke kleur maken die bestaat. In VS Code zie je een gekleurd vierkantje naast de code. Klik erop voor de kleurenkiezer.
 
 ```demo titel="Kleuren met een naam en met een hexcode. Onder: witte tekst op een navy achtergrond."
 <style>.r{display:flex;gap:8px;margin-bottom:10px}.r div{color:#fff;padding:8px 12px;border-radius:6px;font-family:Consolas,monospace;font-size:13px}</style>
@@ -724,7 +724,7 @@ Hiermee bepaal je hoe je tekst eruitziet.
 |---|---|---|
 | `font-size` | Hoe groot de letters zijn. | `font-size: 20px;` |
 | `font-family` | Welk lettertype je gebruikt. | `font-family: Arial;` |
-| `text-align` | Links, midden of rechts. | `text-align: center;` |
+| `text-align` | Of de tekst links, in het midden of rechts staat. | `text-align: center;` |
 | `text-decoration` | Hiermee haal je de streep onder een link weg. | `text-decoration: none;` |
 
 ```demo titel="Wat de vier tekst-eigenschappen doen"
@@ -761,7 +761,7 @@ Hiermee bepaal je hoe je tekst eruitziet.
     Ongeveer 5 minuten · Je werkt in: `opdracht-8`
     {: .meta}
 
-    1. Neem je twee bestanden over in je map `opdracht-8`.
+    1. Kopieer alle bestanden uit `opdracht-7` naar `opdracht-8`: index.html, style.css en je foto.
     2. Geef de body een font-family, bijvoorbeeld Arial.
     3. Geef `.kop` een achtergrondkleur, witte tekst en tekst in het midden.
     4. Geef `.knop` een achtergrondkleur met een hexcode.
@@ -782,12 +782,12 @@ Hiermee bepaal je hoe je tekst eruitziet.
 === blok-9 | Boxmodel
 ## Ruimte maken: het boxmodel
 
-Elk element is een rechthoek met drie lagen ruimte eromheen.
+Elk element is een rechthoek. Om de inhoud heen zitten drie lagen: padding, border en margin.
 {: .sub}
 
 | Laag | Wat is het? |
 |---|---|
-| `padding` | Ruimte **binnen** de rand. Je knop wordt er dikker van. |
+| `padding` | Ruimte **binnen** de rand. Je knop wordt er groter van, want er komt meer ruimte om de tekst. |
 | `border` | De **lijn** om het element heen. Die zit tussen de padding en de margin. Verderop lees je hoe je hem maakt. |
 | `margin` | Ruimte **buiten** de rand, tussen dit element en de buren. |
 
@@ -888,7 +888,7 @@ Je hoeft de DevTools nu nog niet te snappen. In deze opdracht gebruik je ze alle
     Ongeveer 15 minuten · Je werkt in: `opdracht-9`
     {: .meta}
 
-    1. Zet je index.html en style.css uit opdracht-8 in je map `opdracht-9`.
+    1. Kopieer alle bestanden uit `opdracht-8` naar `opdracht-9`.
     2. Geef `.knop` een padding van 12px 24px.
     3. Geef `.knop` een border-radius van 8px en een margin van 20px.
     4. Open je pagina in Chrome en druk op F12. De DevTools openen. (Gebeurt er niets? Probeer Fn + F12.)
@@ -922,7 +922,7 @@ Je hoeft de DevTools nu nog niet te snappen. In deze opdracht gebruik je ze alle
     - Een lijstje met drie hobby's
     - Een foto met alt-tekst
     - Een link als knop met een class
-    - Alles afgemaakt met mooie randen en kleuren
+    - Minstens één element met een border en een border-radius, en minstens drie verschillende kleuren
     {: .checklist}
 
     !!! tip "Al klaar?"
@@ -932,11 +932,11 @@ Alles wat je nodig hebt, heb je in de mini-opdrachten al een keer gemaakt. Kijk 
 
 ## Inleveren
 
-Zip de hele map `les1-jouwnaam`, met `opdracht-1` tot en met `opdracht-9` en de map `eindopdracht` erin. Noem de zip `les1-jouwnaam.zip`.
+Zip de hele map `module1-jouwnaam`, met `opdracht-1` tot en met `opdracht-9` en de map `eindopdracht` erin. Noem de zip `module1-jouwnaam.zip`.
 
 **Checklist: vink af voordat je inlevert**
 
-- Map `les1-jouwnaam` met `opdracht-1` tot en met `opdracht-9`
+- Map `module1-jouwnaam` met `opdracht-1` tot en met `opdracht-9`
 - Map `eindopdracht` met index.html en style.css
 - Je foto staat in dezelfde map als je HTML
 - Alle namen met kleine letters: index.html, style.css
@@ -945,7 +945,7 @@ Zip de hele map `les1-jouwnaam`, met `opdracht-1` tot en met `opdracht-9` en de 
 {: .checklist}
 
 !!! tip "Zo maak je een zip"
-    Rechtsklik op de map `les1-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**.
+    Rechtsklik op de map `module1-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**.
 
 !!! tip "Werk je thuis?"
     Je hebt alleen VS Code en Chrome nodig. Kom je er niet uit, schrijf je vraag op en neem hem mee naar de les.
@@ -953,17 +953,17 @@ Zip de hele map `les1-jouwnaam`, met `opdracht-1` tot en met `opdracht-9` en de 
 Twijfel je of iets af is? Kijk bij **Klaar als...** bij die opdracht.
 
 === werkt-het-niet | Werkt het niet?
-Bijna altijd is het een van deze vijf.
+Werkt je pagina niet zoals je wilt? Bijna altijd komt het door een van deze vijf fouten.
 {: .sub}
 
 1. **Heb je opgeslagen?** Ctrl + S. Zonder opslaan verandert er niets in de browser.
-2. **Klopt de bestandsnaam?** style.css met kleine letters. Style.CSS is iets anders. En geen spaties.
+2. **Klopt de bestandsnaam?** style.css met kleine letters. Style.CSS (met hoofdletters) ziet de browser als een ander bestand dan style.css. En geen spaties.
 3. **Staan de bestanden in dezelfde map?** index.html, style.css en je foto horen in dezelfde opdrachtmap.
 4. **Is de sluittag er?** Kijk of elke `<tag>` ook een `</tag>` heeft.
-5. **Puntkomma vergeten in je CSS?** Elke regel eindigt op een puntkomma.
+5. **Puntkomma vergeten in je CSS?** Zet achter elke waarde een puntkomma, bijvoorbeeld `color: blue;`. Achter een selector zoals `h1 {` komt geen puntkomma.
 
 !!! tip "Nog steeds niet?"
-    Vraag eerst je buurman, daarna je docent. Werk je zelfstandig? Kijk bij de naslag.
+    Vraag eerst een klasgenoot, daarna je docent. Werk je zelfstandig? Kijk bij de naslag.
 
 === naslag | Naslag
 ## HTML
@@ -1003,7 +1003,7 @@ Een complete pagina
 ```
 
 !!! onthoud "Onthoud"
-    Openen en sluiten hoort bij elkaar: `<p> ... </p>`. Alleen `<img>` sluit je niet. Typ het skelet met ! en dan Tab.
+    Openen en sluiten hoort bij elkaar: `<p> ... </p>`. Alleen `<img>` en `<link>` sluit je niet. Die hebben geen sluittag. Typ het skelet met ! en dan Tab.
 
 ## CSS
 
@@ -1081,7 +1081,7 @@ De Engelse woorden van module 1, met de Nederlandse vertaling en uitleg in gewon
 | **selector** | aanwijzer | wat je aanpast: p of .knop |
 | **property** | eigenschap | wat je verandert: color |
 | **value** | waarde | waarin je het verandert: blue |
-| **class** | klasse, label | naam die je zo vaak mag gebruiken |
+| **class** | klasse, label | naam die je aan elementen geeft; je mag hem bij meerdere elementen gebruiken |
 | **color** | kleur | kleur van de tekst |
 | **background** | achtergrond | vlak achter iets |
 | **font** | lettertype | hoe de letters eruitzien |

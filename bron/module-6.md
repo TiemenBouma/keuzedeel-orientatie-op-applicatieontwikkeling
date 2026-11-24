@@ -16,9 +16,9 @@ Je kunt het vergelijken met een film navertellen aan iemand die er niet bij was.
 !!! onthoud "Er komt niets nieuws bij"
     Alles wat je nodig hebt, heb je in module 1 tot en met 5 al een keer gemaakt. Gebruik je eigen opdrachtmappen en de naslag van die modules.
 
-## In twee delen
+## In drie stappen
 
-1. **Maak je website.** Kies een van deze drie opdrachten en bespreek je keuze vooraf met je docent: een casus die je van je docent krijgt, een opdracht van je stage, of een eigen idee. Spreek ook af wie je opdrachtgever is: de casus, je stagebegeleider of je docent.
+1. **Maak je website.** Kies een van deze drie opdrachten en bespreek je keuze vooraf met je docent: een casus die je van je docent krijgt, een opdracht van je stage, of een eigen idee. Spreek ook af wie je opdrachtgever is. Bij een casus en bij een eigen idee is dat je docent, bij een stageopdracht je stagebegeleider.
 2. **Lever in.** Lever je website en je bijlage in als `eindopdracht-jouwnaam.zip`. Je docent controleert of alles erin zit. Dat heet de toegangscheck.
 3. **Voer het gesprek.** Je laat je website zien en beantwoordt vragen over je eigen code, de wensen van je opdrachtgever, testen en een nieuwe wens.
 
@@ -42,7 +42,7 @@ Dit moet er minstens in je website zitten.
 |---|---|
 | **Bestanden** | Je website opent zonder problemen met Live Server. Je hebt een eigen `style.css` en een eigen `script.js`. |
 | **HTML** | Minstens twee pagina's, met een menu dat op elke pagina werkt. Koppen, tekst en minstens één foto met alt-tekst. |
-| **CSS** | Eigen kleuren, een lettertype en ruimte (padding of margin). Minstens één keer dingen naast elkaar met flexbox. |
+| **CSS** | Eigen kleuren, een zelfgekozen lettertype (font-family) en ruimte (padding of margin). Minstens één keer elementen naast elkaar met `display: flex`. |
 | **JavaScript** | Een invoerveld en een knop. Na een klik leest je code wat er is ingevuld. Met `if` en `else` kiest je code tussen minstens twee meldingen. De melding komt op de pagina te staan. |
 | **Console** | Bij normaal gebruik staan er geen rode foutmeldingen in de Console. |
 
@@ -89,7 +89,7 @@ Je praat 20 minuten met twee beoordelaars over je eigen website. Je website, je 
 |---|---|
 | 1 minuut | De beoordelaars heten je welkom en leggen uit hoe het gesprek gaat. |
 | 3 minuten | Je laat je website zien alsof de beoordelaar je opdrachtgever is. Je vraagt of de opdrachtgever akkoord is. |
-| 8 minuten | Je legt je eigen code uit. Je zegt wat een kleine wijziging doet en probeert die daarna uit. |
+| 8 minuten | Je legt je eigen code uit. De beoordelaar noemt een kleine wijziging in je code. Jij zegt eerst wat er dan gebeurt en probeert het daarna uit. |
 | 2 minuten | Je vertelt over de wensen van je opdrachtgever en waarom je website daarbij past. |
 | 3 minuten | Je vertelt hoe je hebt getest en hoe je een fout hebt opgelost. |
 | 2 minuten | Je krijgt een nieuwe wens en vertelt hoe je die zou aanpakken. |
@@ -117,7 +117,7 @@ Per onderdeel krijg je onvoldoende, voldoende of goed.
 - Lees je eigen code door. Weet je van elk stuk wat het doet?
 - Vertel hardop aan een klasgenoot wat er gebeurt als iemand op je knop klikt.
 - Kies een fout die je bent tegengekomen. Wat ging er mis en hoe heb je het opgelost?
-- Bedenk waarom een website past bij je opdrachtgever.
+- Bedenk waarom jouw website past bij de wensen van je opdrachtgever.
 - Laad je laptop op. Zet VS Code, Live Server en je bijlage klaar.
 {: .checklist}
 
@@ -128,7 +128,7 @@ Per onderdeel krijg je onvoldoende, voldoende of goed.
     - Wat doet deze regel CSS?
     - Wat gebeurt er als iemand op je knop klikt?
     - Wat gebeurt er als je dit getal of dit teken verandert?
-    - Waarom past een website bij je opdrachtgever?
+    - Waarom past jouw website bij de wensen van je opdrachtgever?
     - Hoe heb je getest dat je knop werkt?
     - Je opdrachtgever wil een extra pagina. Hoe pak je dat aan?
 

@@ -32,11 +32,11 @@ Aan het eind van deze module heb je een site van drie pagina's (Home, Hobby's en
 - **Boxmodel:** padding binnen de rand, margin erbuiten en border ertussen.
 
 !!! tip "Iets kwijt?"
-    De naslag van module 1 mag je er de hele tijd bij houden. Blok 1 is een korte opfrisser.
+    De naslag van module 1 mag je er de hele tijd bij houden. Blok 1 herhaalt kort wat je in module 1 hebt geleerd.
 
 ## Zo werk je
 
-Begin met een lege map `les2-jouwnaam`. Daarin maak je weer `opdracht-1` tot en met `opdracht-8` en een map `eindopdracht`. Je mappen van module 1 laat je gewoon staan. Bij elke opdracht kopieer je de vorige opdrachtmap naar een nieuwe map en werk je daarin verder.
+In opdracht 1 maak je in Documenten de map `module2-jouwnaam`, met daarin de mappen `opdracht-1` tot en met `opdracht-8` en `eindopdracht`. Je mappen van module 1 laat je gewoon staan. Bij elke volgende opdracht kopieer je alle bestanden en mappen uit de vorige opdrachtmap naar de volgende, en werk je daarin verder.
 
 | Blok | Onderwerp |
 |---|---|
@@ -49,19 +49,19 @@ Begin met een lege map `les2-jouwnaam`. Daarin maak je weer `opdracht-1` tot en 
 | 7 | De menubalk |
 | 8 | Menu opmaken |
 
-!!! let-op "De regel"
-    Altijd kleine letters. Geen spaties in map- of bestandsnamen.
+!!! let-op "Regel voor alle namen van mappen en bestanden"
+    Gebruik alleen kleine letters en geen spaties. Wil je twee woorden? Zet er een streepje tussen: `mijn-foto.jpg`.
 
 === blok-1 | Opfrissen
 ## Nieuw gereedschap: Prettier
 
-Deze extensie zet je code bij elke keer opslaan netjes recht.
+Elke keer als je opslaat, zet deze extensie je code netjes onder elkaar en laat hij de regels goed inspringen.
 {: .sub}
 
 1. **Open VS Code.** Kijk in de balk helemaal links.
 2. **Klik op het blokjes-icoon.** Dat is Extensions. Sneltoets: Ctrl + Shift + X.
 3. **Zoek op: Prettier.** Kies **Prettier - Code formatter** van Prettier.
-4. **Klik op Install.** Onder de naam staat esbenp.prettier-vscode. Kijk goed.
+4. **Controleer de naam en klik op Install.** Controleer eerst dat onder de naam esbenp.prettier-vscode staat. Klik dan op Install.
 5. **Zet de instellingen erin.** Druk Ctrl + Shift + P, typ **settings json** en kies **Open User Settings (JSON)**. Zet de regels hieronder tussen de accolades { }.
 
 ```json
@@ -73,7 +73,7 @@ Deze extensie zet je code bij elke keer opslaan netjes recht.
 ```
 
 !!! tip "Wat doet het?"
-    Bij elke Ctrl + S zet Prettier je code netjes recht en springt hij goed in. Scheve of niet gesloten code valt meteen op. Handmatig rechtzetten: Shift + Alt + F.
+    Bij elke Ctrl + S zet Prettier je code netjes recht en springt hij goed in. Springt je code na het opslaan vreemd in? Dan ben je waarschijnlijk ergens vergeten een tag te sluiten. Handmatig rechtzetten: Shift + Alt + F.
 
 !!! let-op "Staat er al iets in je settings?"
     Staan er al regels tussen de accolades { }? Zet dan een komma achter de laatste regel en plak de drie nieuwe regels eronder. Er hoort maar één paar accolades { } in het bestand.
@@ -102,7 +102,7 @@ Elke pagina begint met hetzelfde skelet.
 ```
 
 !!! let-op "Let op die link-regel"
-    Zonder die regel in de head doet je style.css helemaal niets. Dit is fout nummer 1 van module 1.
+    Zonder die regel in de head doet je style.css helemaal niets. Dit was in module 1 de fout die het vaakst gemaakt werd.
 
 ## Tags en classes, kort herhaald
 
@@ -154,12 +154,12 @@ a { color: red; }
 
         **2. B – `.kaart { }`.** Een class herken je in CSS aan de punt ervoor. Zonder punt zoekt de browser naar een tag die kaart heet, en die bestaat niet.
 
-!!! opdracht "1. Zet je werkmap voor les 2 klaar"
+!!! opdracht "1. Zet je werkmap voor module 2 klaar"
     Ongeveer 10 minuten · Je werkt in: `opdracht-1`
     {: .meta}
 
-    1. Maak een map `les2-jouwnaam`. Maak daarin een map `opdracht-1`.
-    2. Open VS Code, kies File > Open Folder en kies `les2-jouwnaam`.
+    1. Maak in Documenten een map `module2-jouwnaam`. Maak daarin de mappen `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht`.
+    2. Open VS Code, kies File > Open Folder en kies `module2-jouwnaam`.
     3. Maak in `opdracht-1` een bestand index.html. Typ ! en druk op Tab.
     4. Zet je naam in de `<title>`. Maak een `<h1>` en twee alinea's.
     5. Maak style.css, koppel hem in de head en geef de body een kleur.
@@ -186,7 +186,7 @@ Met een `<div>` zet je dingen bij elkaar die bij elkaar horen.
 
 1. **Een div is een lege doos.** Hij betekent niets en je ziet hem niet. Hij is er alleen om dingen te groeperen.
 2. **Alles ertussen hoort bij elkaar.** De kop en de alinea zijn nu samen één blok op je pagina.
-3. **Geef hem een class.** Anders kun je hem niet aanwijzen in je CSS. Met `.kaart { }` maak je hem opeens zichtbaar.
+3. **Geef hem een class.** Anders kun je hem niet aanwijzen in je CSS. Pas als je in `.kaart { }` bijvoorbeeld een achtergrondkleur zet, zie je de div op je pagina.
 
 ```html
 <div class="kaart">
@@ -200,7 +200,7 @@ Met een `<div>` zet je dingen bij elkaar die bij elkaar horen.
 ```
 
 !!! tip "Waarom zou je dat doen?"
-    Zodra je twee dingen samen een kleur wilt geven, of straks naast elkaar wilt zetten, heb je een doos nodig om ze in te stoppen.
+    Zodra je twee dingen samen een kleur wilt geven, of in module 4 naast elkaar wilt zetten, heb je een doos nodig om ze in te stoppen.
 
 ## Nesten: een tag in een tag
 
@@ -256,7 +256,7 @@ Zo maak je de doos zichtbaar. Zonder CSS zie je een div niet.
     Ongeveer 10 minuten · Je werkt in: `opdracht-2`
     {: .meta}
 
-    1. Kopieer de inhoud van `opdracht-1` naar een nieuwe map `opdracht-2`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-1` naar `opdracht-2`.
     2. Zet een `<h2>` en een alinea samen in een `<div class="kaart">`.
     3. Geef `.kaart` in style.css een achtergrondkleur.
     4. Geef `.kaart` ook `padding: 20px` en `border-radius: 8px`.
@@ -279,7 +279,7 @@ Zo maak je de doos zichtbaar. Zonder CSS zie je een div niet.
 === blok-3 | Semantische tags
 ## Divs met een naam
 
-Deze vier tags doen hetzelfde als een div, maar vertellen erbij wat het is.
+Deze vier tags werken net als een div, maar de naam zegt welk deel van de pagina het is.
 {: .sub}
 
 | Tag | Wat is het? | Wat staat erin? |
@@ -290,11 +290,11 @@ Deze vier tags doen hetzelfde als een div, maar vertellen erbij wat het is.
 | `<footer>` | De onderkant | Contactgegevens, je mailadres, het jaartal. |
 
 !!! tip "Waarom niet gewoon overal div?"
-    Omdat jij zelf in een lange pagina zo terugziet wat waar staat. Google leest je pagina ook beter. En blinde bezoekers gebruiken een schermlezer die met deze tags meteen naar het menu of de hoofdinhoud kan springen. Dat heet **semantiek**: de tag zegt wat het is.
+    Omdat je dan in je code sneller ziet welk deel van de pagina waar staat. Google leest je pagina ook beter. En blinde bezoekers gebruiken een schermlezer die met deze tags meteen naar het menu of de hoofdinhoud kan springen. Dat heet **semantiek**: de tag zegt wat het is.
 
 ## Zo ziet je body er dan uit
 
-Dezelfde inhoud als eerst, maar nu netjes verdeeld.
+Dezelfde inhoud als in opdracht 2, maar nu netjes verdeeld.
 {: .sub}
 
 ```html
@@ -325,7 +325,7 @@ Dezelfde inhoud als eerst, maar nu netjes verdeeld.
 
 1. **Alles zit nog steeds in de body.** Je verandert niets aan je tekst. Je zet er dozen omheen.
 2. **`<section>` is een stuk pagina.** Een deel met een eigen kopje. Je mag er zoveel gebruiken als je wilt.
-3. **In CSS net als elke tag.** `header { }` en `footer { }` werken precies zoals `p { }` of `h1 { }`.
+3. **In CSS gebruik je ze net als elke andere tag.** `header { }` en `footer { }` werken precies zoals `p { }` of `h1 { }`.
 
 !!! let-op "Let op de volgorde"
     De browser tekent de tags van boven naar beneden. Zet je de footer bovenaan in je body, dan staat hij ook bovenaan op je pagina.
@@ -354,7 +354,7 @@ Dezelfde inhoud als eerst, maar nu netjes verdeeld.
     Ongeveer 10 minuten · Je werkt in: `opdracht-3`
     {: .meta}
 
-    1. Kopieer `opdracht-2` naar een nieuwe map `opdracht-3`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-2` naar `opdracht-3`.
     2. Zet je `<h1>` in een `<header>`.
     3. Zet je kaarten samen in een `<main>`.
     4. Maak onderaan een `<footer>` met je mailadres erin.
@@ -413,7 +413,7 @@ Een link met een hekje gaat niet naar een andere pagina, maar naar een plek op d
 
 1. **Geef het doel een id.** Bijvoorbeeld je footer: `<footer id="contact">`. De naam verzin je zelf.
 2. **Verwijs ernaar met een hekje.** In de link schrijf je `href="#contact"`. Dat hekje zegt: blijf op deze pagina.
-3. **Het hekje staat niet in je HTML-id.** In de HTML: `id="contact"`. In de link en in je CSS: `#contact`. Net als bij de punt van een class.
+3. **In `id="..."` zelf schrijf je geen hekje.** In de HTML: `id="contact"`. In de link en in je CSS: `#contact`. Net als bij de punt van een class.
 
 ```html
 <header>
@@ -452,7 +452,7 @@ Een link met een hekje gaat niet naar een andere pagina, maar naar een plek op d
     Ongeveer 10 minuten · Je werkt in: `opdracht-4`
     {: .meta}
 
-    1. Kopieer `opdracht-3` naar een nieuwe map `opdracht-4`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-3` naar `opdracht-4`.
     2. Geef je `<footer>` het id contact.
     3. Zet in je header een link: `<a href="#contact">Mail mij</a>`.
     4. Maak in style.css een regel `#contact` met een eigen achtergrondkleur.
@@ -493,11 +493,11 @@ opdracht-5/
 3. **Kleine letters, geen spaties.** Gebruik een streepje: mijn-hobbys.html. Geen accenten, geen hoofdletters en geen tekens als ' of &.
 
 !!! tip "Waarom geen spaties?"
-    Een webadres kan niet tegen spaties. `mijn hobbys.html` wordt op internet `mijn%20hobbys.html` en dat gaat vroeg of laat fout.
+    In een webadres mag geen spatie staan. De browser maakt van `mijn hobbys.html` dan `mijn%20hobbys.html`, en daardoor werken links naar die pagina vaak niet.
 
 ## Linken en één style.css
 
-Naar je eigen pagina linken is makkelijker dan naar internet.
+Een link naar een pagina van je eigen site is korter dan een link naar een andere website.
 {: .sub}
 
 Linken naar je eigen pagina, en naar een andere website
@@ -546,7 +546,7 @@ In de head van élke pagina
     Ongeveer 10 minuten · Je werkt in: `opdracht-5`
     {: .meta}
 
-    1. Kopieer `opdracht-4` naar een nieuwe map `opdracht-5`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-4` naar `opdracht-5`.
     2. Maak een nieuw bestand hobbys.html. Typ ! en druk op Tab.
     3. Koppel style.css in de head van hobbys.html.
     4. Zet op hobbys.html een `<h1>` en je lijstje met drie hobby's.
@@ -590,7 +590,7 @@ opdracht-6/
 
 ## Waarom je plaatje niet laadt
 
-Er zijn zes bekende oorzaken. Je ziet ze allemaal hetzelfde: een leeg vlak met je alt-tekst.
+Er zijn zes bekende oorzaken. Bij alle zes zie je hetzelfde: in plaats van je foto staat alleen je alt-tekst.
 {: .sub}
 
 | # | Oorzaak | Oplossing |
@@ -600,7 +600,7 @@ Er zijn zes bekende oorzaken. Je ziet ze allemaal hetzelfde: een leeg vlak met j
 | 3 | De map vergeten | `src="foto.jpg"` terwijl hij in images staat. Het moet `images/foto.jpg` zijn. |
 | 4 | De streep de verkeerde kant op | `images\foto.jpg` werkt niet. Het is `images/foto.jpg`. |
 | 5 | Het bestand staat er niet | Hij staat nog in je map Downloads. Sleep hem eerst naar je opdrachtmap. |
-| 6 | Je ziet het .jpg niet staan | Windows verbergt dat stukje soms. Zet het aan in Verkenner bij Beeld > Bestandsnaamextensies. |
+| 6 | De extensie klopt niet: je foto heet bijvoorbeeld foto.png of foto.jpeg en niet foto.jpg | Windows verbergt het stukje achter de punt soms. Zet het aan in de Verkenner bij Beeld > Bestandsnaamextensies. Dan zie je hoe je bestand echt heet. |
 
 !!! tip "Laat VS Code het voor je typen"
     Typ `src="` en druk daarna op Ctrl + Spatie. VS Code laat zien welke bestanden en mappen er echt zijn. Kies je er een, dan is het pad altijd goed.
@@ -629,7 +629,7 @@ Er zijn zes bekende oorzaken. Je ziet ze allemaal hetzelfde: een leeg vlak met j
     Ongeveer 10 minuten · Je werkt in: `opdracht-6`
     {: .meta}
 
-    1. Kopieer `opdracht-5` naar een nieuwe map `opdracht-6`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-5` naar `opdracht-6`.
     2. Maak in `opdracht-6` een map images.
     3. Zet een foto in die map. Kleine letters, geen spaties in de naam.
     4. Toon de foto op index.html met `<img>` en een alt-tekst.
@@ -656,7 +656,7 @@ Drie tags die je allemaal al kent, in elkaar gezet.
 {: .sub}
 
 1. **`<nav>` zegt: dit is het menu.** De doos eromheen. Hierin zet je je hele menu.
-2. **`<ul>` is het lijstje.** Precies hetzelfde lijstje als bij je hobby's. Straks halen we de bolletjes weg.
+2. **`<ul>` is het lijstje.** Precies hetzelfde lijstje als bij je hobby's. In blok 8 haal je de bolletjes weg.
 3. **In elke `<li>` een `<a>`.** Elke regel van het lijstje is een link naar een andere pagina van je site.
 
 ```html
@@ -674,7 +674,7 @@ Drie tags die je allemaal al kent, in elkaar gezet.
 ```
 
 !!! onthoud "Op elke pagina plaats je hetzelfde menu."
-    Anders raakt je bezoeker de weg kwijt. Kopieer je nav dus letterlijk naar je andere pagina's.
+    Staat het menu op elke pagina anders, dan raakt je bezoeker de weg kwijt. Kopieer daarom de hele `<nav>` van index.html naar je andere pagina's. Alleen `class="actief"` verplaats je (zie hieronder).
 
 ## Laat zien waar je bent
 
@@ -706,7 +706,7 @@ hobbys.html
 ```
 
 !!! tip "Werkvolgorde"
-    Kopieer eerst je nav naar alle pagina's. Pas daarna verplaats je op elke pagina de class. Zo vergeet je niets.
+    Kopieer eerst je nav naar alle pagina's. Zet daarna op elke pagina `class="actief"` bij de link naar die pagina zelf. Zo vergeet je niets.
 
 ??? check "Check: de menubalk"
     **1. Wat zet je binnen een `<li>` van je menu?**
@@ -732,7 +732,7 @@ hobbys.html
     Ongeveer 15 minuten · Je werkt in: `opdracht-7`
     {: .meta}
 
-    1. Kopieer `opdracht-6` naar een nieuwe map `opdracht-7`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-6` naar `opdracht-7`.
     2. Maak een derde pagina contact.html en koppel style.css.
     3. Bouw op index.html een `<nav>` met een ul en drie li's met links.
     4. Kopieer die hele nav naar hobbys.html en contact.html.
@@ -783,7 +783,7 @@ Nu maak je van de links echte knoppen in de balk.
 
 1. **`text-decoration: none`** haalt de streep onder je links weg, net als bij de knop van module 1.
 2. **padding op de link zelf.** Daardoor wordt het klikvlak groter en lijkt het een knop.
-3. **`:hover` en `.actief`.** hover is hoe het eruitziet als je muis erover gaat. actief is de pagina waar je nu bent.
+3. **`:hover` en `.actief`.** hover is hoe het eruitziet als je muis erover gaat. `.actief` is de class op de link van de pagina die nu open is.
 
 ```css
 nav a {
@@ -833,7 +833,7 @@ nav a:hover {
     Ongeveer 15 minuten · Je werkt in: `opdracht-8`
     {: .meta}
 
-    1. Kopieer `opdracht-7` naar een nieuwe map `opdracht-8`.
+    1. Kopieer alle bestanden en mappen uit `opdracht-7` naar `opdracht-8`.
     2. Geef nav een achtergrondkleur en `padding: 10px`.
     3. Haal met list-style en padding de bolletjes en de inspringing weg.
     4. Zet de li's naast elkaar met `display: inline-block`.
@@ -856,7 +856,7 @@ nav a:hover {
 
 === eindopdracht | Eindopdracht
 !!! opdracht eind "Maak je eigen mini-site"
-    Je werkt in een nieuwe map `eindopdracht`, met drie pagina's en één style.css.
+    Je werkt in je map `eindopdracht`, met drie pagina's en één style.css.
     {: .meta}
 
     **Op je site staat:**
@@ -878,22 +878,22 @@ Alles wat je nodig hebt, heb je in de mini-opdrachten al een keer gemaakt. Kijk 
 
 ## Inleveren
 
-Zip de hele map `les2-jouwnaam`. Daarin zitten `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht`. Noem de zip `les2-jouwnaam.zip`.
+Zip de hele map `module2-jouwnaam`. Daarin zitten `opdracht-1` tot en met `opdracht-8` en de map `eindopdracht`. Noem de zip `module2-jouwnaam.zip`.
 
 **Checklist: vink af voordat je inlevert**
 
-- Map `les2-jouwnaam` met `opdracht-1` tot en met `opdracht-8`
+- Map `module2-jouwnaam` met `opdracht-1` tot en met `opdracht-8`
 - Map `eindopdracht` met drie html-bestanden
 - Eén style.css, gekoppeld in de head van elke pagina
 - Map images met je foto erin
-- Op elke pagina precies dezelfde nav
+- Op elke pagina hetzelfde menu. Alleen `class="actief"` staat steeds bij een andere link.
 - Alle map- en bestandsnamen met kleine letters
 - Alles opgeslagen met Ctrl + S
 - Elke pagina opent goed met Live Server
 {: .checklist}
 
 !!! tip "Zo maak je een zip"
-    Rechtsklik op de map `les2-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**. Op oudere Windows: **Kopiëren naar > Gecomprimeerde map**.
+    Rechtsklik op de map `module2-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**. Op oudere Windows: **Kopiëren naar > Gecomprimeerde map**.
 
 !!! tip "Werk je thuis?"
     Je hebt alleen VS Code en Chrome nodig. Kom je er niet uit, schrijf je vraag op en neem hem mee naar de les.
@@ -904,15 +904,15 @@ Twijfel je of iets af is? Kijk bij **Klaar als...** bij die opdracht.
 Met meerdere bestanden gaat het vaker mis op dezelfde zes plekken.
 {: .sub}
 
-1. **Heb je alles opgeslagen?** Ctrl + S werkt maar in één tabblad tegelijk.
+1. **Heb je alles opgeslagen?** Ctrl + S slaat alleen het bestand op dat je nu open hebt. Heb je in meer bestanden iets veranderd? Sla ze allemaal op, of druk Ctrl + K en daarna S om alles in één keer op te slaan.
 2. **Klopt de bestandsnaam precies?** hobbys.html is iets anders dan Hobbys.html.
-3. **Staat style.css in elke head?** Een witte pagina betekent bijna altijd: link-regel vergeten.
+3. **Staat style.css in elke head?** Is je pagina wit, zonder je eigen kleuren? Dan mist bijna altijd de link-regel naar style.css in de head van die pagina.
 4. **Klopt het pad naar je foto?** `images/foto.jpg`, met een schuine streep vooruit.
 5. **Is elke tag gesloten en genest?** Kijk of elke `<tag>` ook een `</tag>` heeft. Shift + Alt + F helpt.
 6. **Puntkomma's in je CSS?** Vergeet je er één, dan doet ook de regel eronder vaak niets.
 
 !!! tip "Nog steeds niet?"
-    Rechtsklik in Chrome en kies Inspecteren. Vraag daarna je buurman, en dan je docent.
+    Rechtsklik op het stuk van je pagina dat niet goed is en kies Inspecteren. Kijk rechts bij Styles of je CSS-regel erbij staat. Vraag daarna een klasgenoot, en dan je docent.
 
 === naslag | Naslag
 ## HTML
@@ -991,7 +991,7 @@ nav a {
 ```
 
 !!! onthoud "Punt, hekje of niets"
-    `.kaart` is een class, `#contact` is een id, en `nav` is gewoon een tagnaam. Een spatie ertussen betekent binnen.
+    `.kaart` is een class, `#contact` is een id, en `nav` is gewoon een tagnaam. Een spatie tussen twee selectors betekent "binnen": `nav a` betekent alle links binnen de nav.
 
 !!! tip "Koppelen blijft hetzelfde"
     `<link rel="stylesheet" href="style.css">` in de head van élke pagina, en style.css in dezelfde map.

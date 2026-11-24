@@ -41,9 +41,9 @@
     <h2>Dingen naast elkaar met flexbox</h2>
 <p class="sub">Met één regel CSS zet je blokken naast elkaar.</p>
 <ol>
-<li><strong>Een doos om je blokken.</strong> Zet een div om de dingen die naast elkaar moeten. Die div heet de container.</li>
+<li><strong>Een doos om je blokken.</strong> Zet een div om de elementen die naast elkaar moeten staan. Die div heet de container.</li>
 <li><strong>display: flex op de container.</strong> Niet op de kaarten zelf, maar op de doos eromheen.</li>
-<li><strong>De kinderen worden items.</strong> Alles wat direct in de container staat, schuift naast elkaar.</li>
+<li><strong>De kinderen worden items.</strong> Alles wat direct in de container staat, heet een kind van de container. In flexbox noem je die kinderen items. Ze schuiven naast elkaar. De container zelf is de ouder.</li>
 </ol>
 <div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaarten"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"kaart"</span><span class="p">&gt;</span>Gamen<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -68,7 +68,7 @@
 <p class="sub">Flexbox werkt op de items die direct in de container staan.</p>
 <ol>
 <li><strong>Direct erin = item.</strong> De kaarten staan direct in <code>.kaarten</code>. Zij zijn de items en staan naast elkaar.</li>
-<li><strong>Dieper = gewoon.</strong> De h2 en de p in een kaart zijn geen items. Die staan nog gewoon onder elkaar.</li>
+<li><strong>Wat dieper staat, verandert niet.</strong> De h2 en de p in een kaart zijn geen items. Die staan nog gewoon onder elkaar.</li>
 <li><strong>Vanzelf even hoog.</strong> Items worden even hoog als het hoogste item. Handig voor kaarten met veel en weinig tekst.</li>
 </ol>
 <figure class="demo"><div class="demo-titel">.kaarten is de container, de kaarten zijn de items. De h2 en p in een kaart doen niet mee.</div><iframe class="demo-frame" loading="lazy" title=".kaarten is de container, de kaarten zijn de items. De h2 en p in een kaart doen niet mee." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;.kaarten{display:flex;gap:10px;border:2px dashed #2965F1;padding:8px;border-radius:8px}.kaart{flex:1;background:#E8EAF6;border:2px solid #E44D26;padding:8px;border-radius:6px}h2{font-size:15px;margin:0 0 4px}p{margin:0;font-size:13px}&lt;/style&gt;
@@ -103,7 +103,7 @@
 <p class="admonition-title">2. Zet je kaarten naast elkaar</p>
 <p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-2</code></p>
 <ol>
-<li>Kopieer <code>opdracht-1</code> naar een nieuwe map <code>opdracht-2</code>.</li>
+<li>Kopieer alle bestanden en mappen uit <code>opdracht-1</code> naar <code>opdracht-2</code>.</li>
 <li>Zet in index.html een div met class <code>kaarten</code> om je kaarten heen.</li>
 <li>Doe hetzelfde op hobbys.html en contact.html.</li>
 <li>Geef <code>.kaarten</code> in style.css <code>display: flex</code>.</li>

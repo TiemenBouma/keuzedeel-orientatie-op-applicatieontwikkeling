@@ -490,10 +490,10 @@ opdracht-5/
 
 1. **index.html is je startpagina.** Die naam is geen toeval: een browser opent index.html automatisch als eerste.
 2. **Elke pagina een eigen naam:** hobbys.html, contact.html. Allemaal in dezelfde map als je index.html.
-3. **Kleine letters, geen spaties.** Gebruik een streepje: mijn-hobbys.html. Geen accenten, geen hoofdletters.
+3. **Kleine letters, geen spaties.** Gebruik een streepje: mijn-hobbys.html. Geen accenten, geen hoofdletters en geen tekens als ' of &.
 
 !!! tip "Waarom geen spaties?"
-    Een webadres kan niet tegen spaties. `Mijn Hobby's.html` wordt op internet `Mijn%20Hobby's.html` en dat gaat vroeg of laat fout.
+    Een webadres kan niet tegen spaties. `mijn hobbys.html` wordt op internet `mijn%20hobbys.html` en dat gaat vroeg of laat fout.
 
 ## Linken en één style.css
 

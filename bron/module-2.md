@@ -374,7 +374,7 @@ Dezelfde inhoud als eerst, maar nu netjes verdeeld.
         Bovenaan je pagina staat een gekleurde balk met je naam, onderaan een balk met je mailadres, en je kaarten staan ertussen.
 
 === blok-4 | id en ankerlinks
-## id: de class die maar één keer mag
+## id: elke naam maar één keer per pagina
 
 Naast de class is er nog een manier om iets aan te wijzen: het **id**.
 {: .sub}
@@ -382,7 +382,7 @@ Naast de class is er nog een manier om iets aan te wijzen: het **id**.
 | | class | id |
 |---|---|---|
 | Teken in CSS | punt: `.kaart` | hekje: `#contact` |
-| Hoe vaak? | Zo vaak je wilt | Eén keer per pagina |
+| Hoe vaak? | Zo vaak je wilt | Elk id maar één keer per pagina |
 | Gebruik je voor | Opmaak van alles wat vaker terugkomt: kaarten, knoppen, kopjes. Dat is verreweg het meest. | Precies één plek op de pagina aanwijzen. Vooral handig om ergens naartoe te springen. |
 
 HTML
@@ -950,7 +950,7 @@ Een complete menubalk
 ```
 
 !!! onthoud "Onthoud"
-    Een class mag zo vaak je wilt, een id één keer per pagina. In je HTML staat er geen punt en geen hekje bij, in je CSS wel.
+    Een class mag zo vaak je wilt. Elk id mag maar één keer per pagina, maar je mag wel meerdere verschillende id's gebruiken. In je HTML staat er geen punt en geen hekje bij, in je CSS wel.
 
 ## CSS
 
@@ -1012,7 +1012,7 @@ De Engelse woorden van module 2, met de Nederlandse vertaling en uitleg in gewon
 | **main** | hoofdinhoud | waar het op de pagina om gaat |
 | **section** | deel, sectie | stuk pagina met een eigen kopje |
 | **footer** | voettekst | onderkant van je pagina |
-| **id** (identifier) | kenmerk | naam die maar één keer mag |
+| **id** (identifier) | kenmerk | naam die maar één keer per pagina mag |
 | **anchor link** | ankerlink | link met een hekje, blijft op de pagina |
 | **path** | pad | route naar een bestand |
 | **subfolder** | submap | map in een map, zoals images |

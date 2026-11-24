@@ -945,7 +945,7 @@ Zip de hele map `les1-jouwnaam`, met `opdracht-1` tot en met `opdracht-9` en de 
 {: .checklist}
 
 !!! tip "Zo maak je een zip"
-    Rechtsklik op de map `les1-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**. Op oudere Windows: **Kopiëren naar > Gecomprimeerde map**.
+    Rechtsklik op de map `les1-jouwnaam` en kies **Comprimeren naar > ZIP-bestand**.
 
 !!! tip "Werk je thuis?"
     Je hebt alleen VS Code en Chrome nodig. Kom je er niet uit, schrijf je vraag op en neem hem mee naar de les.

@@ -62,7 +62,7 @@ Deze extensie zet je code bij elke keer opslaan netjes recht.
 2. **Klik op het blokjes-icoon.** Dat is Extensions. Sneltoets: Ctrl + Shift + X.
 3. **Zoek op: Prettier.** Kies **Prettier - Code formatter** van Prettier.
 4. **Klik op Install.** Onder de naam staat esbenp.prettier-vscode. Kijk goed.
-5. **Zet de instellingen erin.** Druk Ctrl + Shift + P, typ **settings json** en kies **Open User Settings (JSON)**. Zet de regels hieronder tussen de accolades.
+5. **Zet de instellingen erin.** Druk Ctrl + Shift + P, typ **settings json** en kies **Open User Settings (JSON)**. Zet de regels hieronder tussen de accolades { }.
 
 ```json
 {
@@ -76,7 +76,7 @@ Deze extensie zet je code bij elke keer opslaan netjes recht.
     Bij elke Ctrl + S zet Prettier je code netjes recht en springt hij goed in. Scheve of niet gesloten code valt meteen op. Handmatig rechtzetten: Shift + Alt + F.
 
 !!! let-op "Staat er al iets in je settings?"
-    Staan er al regels tussen de accolades? Zet dan een komma achter de laatste regel en plak de drie nieuwe regels eronder. Er hoort maar één paar accolades in het bestand.
+    Staan er al regels tussen de accolades { }? Zet dan een komma achter de laatste regel en plak de drie nieuwe regels eronder. Er hoort maar één paar accolades { } in het bestand.
 
 ## Waar waren we gebleven?
 

@@ -579,7 +579,7 @@ opdracht-6/
       logo.png
 ```
 
-| Waar staat het? | Zo schrijf je het pad | Uitleg |
+| Locatie van bestand | Zo schrijf je het pad | Uitleg |
 |---|---|---|
 | In dezelfde map | `href="style.css"` | Alleen de naam, want style.css staat ernaast. |
 | Een map naar beneden | `src="images/foto.jpg"` | Eerst de mapnaam, dan een schuine streep, dan het bestand. |
@@ -673,7 +673,7 @@ Drie tags die je allemaal al kent, in elkaar gezet.
 <nav><ul><li><a href="#">Home</a></li><li><a href="#">Hobby's</a></li><li><a href="#">Contact</a></li></ul></nav>
 ```
 
-!!! onthoud "Op elke pagina precies hetzelfde"
+!!! onthoud "Op elke pagina plaats je hetzelfde menu."
     Anders raakt je bezoeker de weg kwijt. Kopieer je nav dus letterlijk naar je andere pagina's.
 
 ## Laat zien waar je bent

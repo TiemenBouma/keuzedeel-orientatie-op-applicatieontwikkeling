@@ -76,8 +76,8 @@ small{color:#5b6075}
 &lt;script&gt;document.querySelector(&quot;#raad&quot;).addEventListener(&quot;click&quot;, function () { document.querySelector(&quot;#melding&quot;).textContent = &quot;Je hebt geklikt!&quot;; });&lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition let-op">
 <p class="admonition-title">Sluit goed af met });</p>
-<p>De function sluit je af met }. Daarna sluit je addEventListener af met ). De puntkomma maakt de regel af. Samen: });</p>
 </div>
+<p>De function sluit je af met }. Daarna sluit je addEventListener af met ). De puntkomma maakt de regel af. Samen: });</p>
 <h2>Het recept: vind, wacht, verander</h2>
 <p class="sub">Bijna alles wat je met JavaScript op een pagina doet, gaat in deze drie stappen.</p>
 <ol>
@@ -112,57 +112,56 @@ small{color:#5b6075}
 &lt;/style&gt;&lt;div style=&quot;display:flex;gap:8px&quot;&gt;&lt;div style=&quot;flex:1;background:#E8EAF6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;1. Vind&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;querySelector zoekt de knop en de melding&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#ffe0d6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;2. Wacht&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;addEventListener wacht op een klik&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#e9f8ee;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;3. Verander&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;textContent of classList verandert de pagina&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition onthoud">
 <p class="admonition-title">// is een opmerking</p>
-<p>Een regel die begint met // is een opmerking. JavaScript slaat die over. Zo kun je in je eigen woorden opschrijven wat je code doet. Dat helpt je ook bij het examen.</p>
 </div>
+<p>Een regel die begint met // is een opmerking. JavaScript slaat die over. Zo kun je in je eigen woorden opschrijven wat je code doet. Dat helpt je ook bij het examen.</p>
 <details class="check">
 <summary>Check: een knop die werkt</summary>
+</details>
 <p><strong>1. Wanneer wordt de code tussen de { } van de function uitgevoerd?</strong></p>
-<ul>
-<li>A. Als de pagina laadt</li>
-<li>B. Als iemand op de knop klikt</li>
-<li>C. Als je opslaat in VS Code</li>
-<li>D. Nooit</li>
-</ul>
-<p><strong>2. Wat ontbreekt er aan het eind van deze code?</strong></p>
-<div class="code"><pre><span></span><code><span class="nx">knop</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Hoi"</span><span class="p">;</span>
+<div class="code"><pre><span></span><code>- A. Als de pagina laadt
+- B. Als iemand op de knop klikt
+- C. Als je opslaat in VS Code
+- D. Nooit
+
+**2. Wat ontbreekt er aan het eind van deze code?**
+
+```js
+knop.addEventListener("click", function () {
+  melding.textContent = "Hoi";
+```
+
+- A. Een punt .
+- B. `});`
+- C. `Een hekje #`
+- D. Niets, het werkt zo
+
+??? antwoord "Bekijk de antwoorden"
+    **1. B – Als iemand op de knop klikt.** addEventListener wacht op het event "click". Pas dan, en bij elke klik opnieuw, wordt de code tussen de { } uitgevoerd. De regels erbuiten worden wel meteen uitgevoerd als de pagina laadt.
+
+    **2. B – `});`.** De { van de function en de ( van addEventListener zijn nog open. Je sluit af met });. Zonder dat krijg je een rode fout in de Console. Een punt of een hekje helpt hier niet.
 </code></pre></div>
-<ul>
-<li>A. Een punt .</li>
-<li>B. <code>});</code></li>
-<li>C. <code>Een hekje #</code></li>
-<li>D. Niets, het werkt zo</li>
-</ul>
-<details class="antwoord">
-<summary>Bekijk de antwoorden</summary>
-<p><strong>1. B – Als iemand op de knop klikt.</strong> addEventListener wacht op het event "click". Pas dan, en bij elke klik opnieuw, wordt de code tussen de { } uitgevoerd. De regels erbuiten worden wel meteen uitgevoerd als de pagina laadt.</p>
-<p><strong>2. B – <code>});</code>.</strong> De { van de function en de ( van addEventListener zijn nog open. Je sluit af met });. Zonder dat krijg je een rode fout in de Console. Een punt of een hekje helpt hier niet.</p>
-</details>
-</details>
 <div class="admonition opdracht">
 <p class="admonition-title">4. Maak een knop die iets doet</p>
+</div>
 <p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-4</code></p>
-<ol>
-<li>Kopieer alle bestanden en mappen uit opdracht-3 naar opdracht-4.</li>
-<li>Zet in je kaart op spel.html, boven je melding, een button met de tekst Raad! en de id raad.</li>
-<li>Zoek de knop op in script.js en bewaar hem in een const.</li>
-<li>Laat de knop luisteren naar een klik.</li>
-<li>Zet na de klik een tekst in je melding, zoals Je hebt geklikt! Zet ook een console.log in de function.</li>
-<li>Klik een paar keer. Kijk in de Console: achter je bericht staat een getal. Dat telt hoe vaak het bericht kwam.</li>
-</ol>
-<details class="hint">
-<summary>Codehint (niet het antwoord)</summary>
-<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">hallo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#hallo"</span><span class="p">);</span>
-<span class="nx">hallo</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="p">...</span>
-<span class="p">});</span>
+<div class="code"><pre><span></span><code>1. Kopieer alle bestanden en mappen uit opdracht-3 naar opdracht-4.
+2. Zet in je kaart op spel.html, boven je melding, een button met de tekst Raad! en de id raad.
+3. Zoek de knop op in script.js en bewaar hem in een const.
+4. Laat de knop luisteren naar een klik.
+5. Zet na de klik een tekst in je melding, zoals Je hebt geklikt! Zet ook een console.log in de function.
+6. Klik een paar keer. Kijk in de Console: achter je bericht staat een getal. Dat telt hoe vaak het bericht kwam.
+
+??? hint "Codehint (niet het antwoord)"
+    ```js
+    const hallo = document.querySelector("#hallo");
+    hallo.addEventListener("click", function () {
+      ...
+    });
+    ```
+
+!!! klaar "Klaar als..."
+    Als je op Raad! klikt, verschijnt je tekst onder de knop. In de Console komt bij elke klik je bericht erbij.
 </code></pre></div>
-</details>
-<div class="admonition klaar">
-<p class="admonition-title">Klaar als...</p>
-<p>Als je op Raad! klikt, verschijnt je tekst onder de knop. In de Console komt bij elke klik je bericht erbij.</p>
-</div>
-</div>
     <div class="vorige-volgende"><a class="vorige" href="blok-3.html">← Blok 3 · Vind en verander</a><a class="volgende" href="blok-5.html">Blok 5 · Classes aan en uit →</a></div>
   </article>
 </div>

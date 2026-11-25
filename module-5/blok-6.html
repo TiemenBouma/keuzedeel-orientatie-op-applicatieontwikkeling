@@ -46,7 +46,7 @@
 <li><strong>placeholder.</strong> De placeholder is een grijze hulptekst in het lege vakje. Zodra je typt, verdwijnt hij.</li>
 </ol>
 <p class="bestandsnaam">spel.html</p>
-<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"gok"</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">min</span><span class="o">=</span><span class="s">"1"</span> <span class="na">max</span><span class="o">=</span><span class="s">"100"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"1 - 100"</span><span class="p">&gt;</span>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"gok"</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">min</span><span class="o">=</span><span class="s">"1"</span> <span class="na">max</span><span class="o">=</span><span class="s">"100"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"1 - 100"</span> <span class="p">/&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"raad"</span><span class="p">&gt;</span>Raad!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
 <figure class="demo"><div class="demo-titel">Leeg vakje met placeholder, en een vakje waarin 50 is getypt</div><iframe class="demo-frame" loading="lazy" title="Leeg vakje met placeholder, en een vakje waarin 50 is getypt" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
@@ -67,8 +67,8 @@ small{color:#5b6075}
 &lt;div&gt;&lt;p class=&quot;label&quot;&gt;Ingevuld&lt;/p&gt;&lt;div class=&quot;rij&quot;&gt;&lt;input type=&quot;number&quot; value=&quot;50&quot;&gt;&lt;button&gt;Raad!&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition onthoud">
 <p class="admonition-title">Een input heeft geen sluittag</p>
-<p>Je schrijft alleen &lt;input ...&gt;. Er bestaat geen &lt;/input&gt;, net als bij een img.</p>
 </div>
+<p>Je schrijft alleen &lt;input ...&gt;. Er bestaat geen &lt;/input&gt;, net als bij een img.</p>
 <h2>Lezen wat er is ingevuld</h2>
 <p class="sub">Met .value lees je wat er in het vakje staat.</p>
 <ol>
@@ -102,54 +102,51 @@ small{color:#5b6075}
 &lt;script&gt;const invoer = document.querySelector(&quot;#gok&quot;); document.querySelector(&quot;#raad&quot;).addEventListener(&quot;click&quot;, function () { const gok = Number(invoer.value); document.querySelector(&quot;#melding&quot;).textContent = &quot;Jij raadt &quot; + gok; });&lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition let-op">
 <p class="admonition-title">Vergeet Number() niet</p>
-<p>Zonder Number() is de invoer tekst. Typt iemand 50, dan wordt invoer.value + 1 niet 51 maar "501". Net als "5" + 5 in blok 2.</p>
 </div>
+<p>Zonder Number() is de invoer tekst. Typt iemand 50, dan wordt invoer.value + 1 niet 51 maar "501". Net als "5" + 5 in blok 2.</p>
 <details class="check">
 <summary>Check: invoer lezen</summary>
+</details>
 <p><strong>1. Welke regel leest wat er in &lt;input id="gok"&gt; is getypt? (invoer is dat element)</strong></p>
-<ul>
-<li>A. <code>invoer.textContent</code></li>
-<li>B. <code>invoer.value</code></li>
-<li>C. <code>invoer.input</code></li>
-<li>D. <code>invoer.number</code></li>
-</ul>
-<p><strong>2. Iemand typt 8 in het vakje. Wat geeft invoer.value + 2?</strong></p>
-<ul>
-<li>A. 10</li>
-<li>B. 82</li>
-<li>C. 8</li>
-<li>D. Een rode fout</li>
-</ul>
-<details class="antwoord">
-<summary>Bekijk de antwoorden</summary>
-<p><strong>1. B – <code>invoer.value</code>.</strong> Wat er in een invoerveld staat, is de value. textContent is de tekst tussen een openingstag en een sluittag, en die heeft een input niet. input en number bestaan niet: dan krijg je undefined.</p>
-<p><strong>2. B – 82.</strong> value is altijd tekst. Tekst + getal wordt tekst: 82. Voor 10 moet je eerst Number(invoer.value) gebruiken. Een fout krijg je niet, JavaScript plakt gewoon.</p>
-</details>
-</details>
+<div class="code"><pre><span></span><code>- A. `invoer.textContent`
+- B. `invoer.value`
+- C. `invoer.input`
+- D. `invoer.number`
+
+**2. Iemand typt 8 in het vakje. Wat geeft invoer.value + 2?**
+
+- A. 10
+- B. 82
+- C. 8
+- D. Een rode fout
+
+??? antwoord "Bekijk de antwoorden"
+    **1. B – `invoer.value`.** Wat er in een invoerveld staat, is de value. textContent is de tekst tussen een openingstag en een sluittag, en die heeft een input niet. input en number bestaan niet: dan krijg je undefined.
+
+    **2. B – 82.** value is altijd tekst. Tekst + getal wordt tekst: 82. Voor 10 moet je eerst Number(invoer.value) gebruiken. Een fout krijg je niet, JavaScript plakt gewoon.
+</code></pre></div>
 <div class="admonition opdracht">
 <p class="admonition-title">6. Lees wat de speler typt</p>
+</div>
 <p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-6</code></p>
-<ol>
-<li>Kopieer alle bestanden en mappen uit opdracht-5 naar opdracht-6.</li>
-<li>Zet vóór je knop Raad! een invoerveld voor getallen van 1 tot 100, met een id en een placeholder.</li>
-<li>Zet het vakje en de knop met flexbox naast elkaar, met een gap.</li>
-<li>Zoek het invoerveld op in script.js en bewaar het in een const.</li>
-<li>Lees in de function van je knop de value. Maak er een getal van en bewaar dat in een const gok.</li>
-<li>Zet in je melding een zin met het getal, zoals Jij raadt 50. Zet ook console.log(gok + 1) in de function: komt er 51?</li>
-</ol>
-<details class="hint">
-<summary>Codehint (niet het antwoord)</summary>
-<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">leeftijdVak</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#leeftijd"</span><span class="p">);</span>
+<div class="code"><pre><span></span><code>1. Kopieer alle bestanden en mappen uit opdracht-5 naar opdracht-6.
+2. Zet vóór je knop Raad! een invoerveld voor getallen van 1 tot 100, met een id en een placeholder.
+3. Zet het vakje en de knop met flexbox naast elkaar, met een gap.
+4. Zoek het invoerveld op in script.js en bewaar het in een const.
+5. Lees in de function van je knop de value. Maak er een getal van en bewaar dat in een const gok.
+6. Zet in je melding een zin met het getal, zoals Jij raadt 50. Zet ook console.log(gok + 1) in de function: komt er 51?
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">leeftijd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(...);</span>
-<span class="nx">uitslag</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Jij bent "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">leeftijd</span><span class="p">;</span>
+??? hint "Codehint (niet het antwoord)"
+    ```js
+    const leeftijdVak = document.querySelector("#leeftijd");
+
+    const leeftijd = Number(...);
+    uitslag.textContent = "Jij bent " + leeftijd;
+    ```
+
+!!! klaar "Klaar als..."
+    Typ je 50 en klik je op Raad!, dan staat er Jij raadt 50 op de pagina. In de Console staat 51.
 </code></pre></div>
-</details>
-<div class="admonition klaar">
-<p class="admonition-title">Klaar als...</p>
-<p>Typ je 50 en klik je op Raad!, dan staat er Jij raadt 50 op de pagina. In de Console staat 51.</p>
-</div>
-</div>
     <div class="vorige-volgende"><a class="vorige" href="blok-5.html">← Blok 5 · Classes aan en uit</a><a class="volgende" href="blok-7.html">Blok 7 · Hoger of lager →</a></div>
   </article>
 </div>

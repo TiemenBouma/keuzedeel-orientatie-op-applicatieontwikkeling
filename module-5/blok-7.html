@@ -77,8 +77,8 @@ small{color:#5b6075}
 &lt;div&gt;42&lt;/div&gt;&lt;div class=&quot;k&quot;&gt;geen van beide&lt;/div&gt;&lt;div class=&quot;goed&quot;&gt;&lt;b&gt;Goed geraden!&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition onthoud">
 <p class="admonition-title">Vergelijken</p>
-<p>&gt; betekent groter dan, &lt; betekent kleiner dan en === betekent is gelijk aan. Een vergelijking is waar (true) of niet waar (false). Eén = is geen vergelijking: dat geeft een waarde.</p>
 </div>
+<p>&gt; betekent groter dan, &lt; betekent kleiner dan en === betekent is gelijk aan. Een vergelijking is waar (true) of niet waar (false). Eén = is geen vergelijking: dat geeft een waarde.</p>
 <h2>Een leeg vakje en een kleur</h2>
 <p class="sub">Klik je zonder iets in te vullen, dan zegt je spel dat ook.</p>
 <ol>
@@ -121,59 +121,58 @@ small{color:#5b6075}
 &lt;div class=&quot;kaart&quot;&gt;&lt;p class=&quot;label&quot;&gt;Gok 42&lt;/p&gt;&lt;p class=&quot;goed&quot;&gt;&lt;b&gt;Goed geraden!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition tip">
 <p class="admonition-title">Test alle wegen</p>
-<p>Test je spel vier keer: met een leeg vakje, te hoog, te laag en precies goed. Zo weet je zeker dat elk stuk van je if werkt. Dit lijstje kun je straks ook gebruiken voor het testlijstje van je examen.</p>
 </div>
+<p>Test je spel vier keer: met een leeg vakje, te hoog, te laag en precies goed. Zo weet je zeker dat elk stuk van je if werkt. Dit lijstje kun je straks ook gebruiken voor het testlijstje van je examen.</p>
 <details class="check">
 <summary>Check: hoger of lager</summary>
+</details>
 <p><strong>1. geheim is 42 en gok is 30. Welke melding komt er?</strong></p>
-<div class="code"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nx">Lager</span><span class="o">!</span>
-<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nx">Hoger</span><span class="o">!</span>
-<span class="k">else</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nx">Goed</span><span class="w"> </span><span class="nx">geraden</span><span class="o">!</span>
+<div class="code"><pre><span></span><code>```js
+if (gok &gt; geheim) → Lager!
+else if (gok &lt; geheim) → Hoger!
+else → Goed geraden!
+```
+
+- A. Lager!
+- B. Hoger!
+- C. Goed geraden!
+- D. Geen melding
+
+**2. Met welke regel kijk je of gok gelijk is aan geheim?**
+
+- A. `if (gok = geheim)`
+- B. `if (gok === geheim)`
+- C. `if (gok is geheim)`
+- D. `if (gok =&gt; geheim)`
+
+??? antwoord "Bekijk de antwoorden"
+    **1. B – Hoger!.** 30 &amp;gt; 42 is niet waar, dus Lager! komt er niet. Dan kijkt JavaScript naar 30 &amp;lt; 42: dat is waar, dus Hoger!. Bij else komt hij niet meer, want er klopte al een vergelijking.
+
+    **2. B – `if (gok === geheim)`.** === vergelijkt. Eén = geeft gok de waarde van geheim, en dan klopt je spel niet meer. is bestaat niet in JavaScript, en =&amp;gt; betekent iets heel anders.
 </code></pre></div>
-<ul>
-<li>A. Lager!</li>
-<li>B. Hoger!</li>
-<li>C. Goed geraden!</li>
-<li>D. Geen melding</li>
-</ul>
-<p><strong>2. Met welke regel kijk je of gok gelijk is aan geheim?</strong></p>
-<ul>
-<li>A. <code>if (gok = geheim)</code></li>
-<li>B. <code>if (gok === geheim)</code></li>
-<li>C. <code>if (gok is geheim)</code></li>
-<li>D. <code>if (gok =&gt; geheim)</code></li>
-</ul>
-<details class="antwoord">
-<summary>Bekijk de antwoorden</summary>
-<p><strong>1. B – Hoger!.</strong> 30 &gt; 42 is niet waar, dus Lager! komt er niet. Dan kijkt JavaScript naar 30 &lt; 42: dat is waar, dus Hoger!. Bij else komt hij niet meer, want er klopte al een vergelijking.</p>
-<p><strong>2. B – <code>if (gok === geheim)</code>.</strong> === vergelijkt. Eén = geeft gok de waarde van geheim, en dan klopt je spel niet meer. is bestaat niet in JavaScript, en =&gt; betekent iets heel anders.</p>
-</details>
-</details>
 <div class="admonition opdracht">
 <p class="admonition-title">7. Zeg of het hoger of lager is</p>
+</div>
 <p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-7</code></p>
-<ol>
-<li>Kopieer alle bestanden en mappen uit opdracht-6 naar opdracht-7. Haal je console.log(gok + 1) weg.</li>
-<li>Je hebt al een geheim van 42 uit opdracht 2. Vergelijk in de function je gok met het geheim.</li>
-<li>Zet de melding Lager!, Hoger! of Goed geraden! op de pagina, met if, else if en else.</li>
-<li>Zet bovenaan je if een controle voor een leeg vakje, met een eigen melding.</li>
-<li>Haal aan het begin van de function de classes goed en fout weg. Geef daarna in elk stuk van je if de goede class.</li>
-<li>Test vier keer: leeg, 10, 90 en 42. Klopt elke melding en elke kleur?</li>
-</ol>
-<details class="hint">
-<summary>Codehint (niet het antwoord)</summary>
-<div class="code"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">leeftijd</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">17</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">uitslag</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"..."</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">uitslag</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"..."</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="code"><pre><span></span><code>1. Kopieer alle bestanden en mappen uit opdracht-6 naar opdracht-7. Haal je console.log(gok + 1) weg.
+2. Je hebt al een geheim van 42 uit opdracht 2. Vergelijk in de function je gok met het geheim.
+3. Zet de melding Lager!, Hoger! of Goed geraden! op de pagina, met if, else if en else.
+4. Zet bovenaan je if een controle voor een leeg vakje, met een eigen melding.
+5. Haal aan het begin van de function de classes goed en fout weg. Geef daarna in elk stuk van je if de goede class.
+6. Test vier keer: leeg, 10, 90 en 42. Klopt elke melding en elke kleur?
+
+??? hint "Codehint (niet het antwoord)"
+    ```js
+    if (leeftijd &gt; 17) {
+      uitslag.textContent = "...";
+    } else {
+      uitslag.textContent = "...";
+    }
+    ```
+
+!!! klaar "Klaar als..."
+    Bij een leeg vakje, bij 10, bij 90 en bij 42 krijg je steeds de goede melding. Goed geraden is groen, hoger en lager hebben een andere kleur.
 </code></pre></div>
-</details>
-<div class="admonition klaar">
-<p class="admonition-title">Klaar als...</p>
-<p>Bij een leeg vakje, bij 10, bij 90 en bij 42 krijg je steeds de goede melding. Goed geraden is groen, hoger en lager hebben een andere kleur.</p>
-</div>
-</div>
     <div class="vorige-volgende"><a class="vorige" href="blok-6.html">← Blok 6 · Invoer lezen</a><a class="volgende" href="blok-8.html">Blok 8 · Toeval, tellen en opnieuw →</a></div>
   </article>
 </div>

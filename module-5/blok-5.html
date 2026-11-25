@@ -47,10 +47,10 @@
 </ol>
 <p class="bestandsnaam">style.css</p>
 <div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">goed</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1E8E4E</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1e8e4e</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="p">.</span><span class="nc">fout</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#E44D26</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#e44d26</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p class="bestandsnaam">script.js</p>
@@ -75,8 +75,8 @@ small{color:#5b6075}
 &lt;div&gt;&lt;p class=&quot;label&quot;&gt;class fout&lt;/p&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;p class=&quot;fout&quot;&gt;&lt;b&gt;Lager!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition let-op">
 <p class="admonition-title">Geen punt in classList</p>
-<p>In CSS schrijf je .goed met een punt. In classList schrijf je "goed" zonder punt. JavaScript weet al dat het om een class gaat.</p>
 </div>
+<p>In CSS schrijf je .goed met een punt. In classList schrijf je "goed" zonder punt. JavaScript weet al dat het om een class gaat.</p>
 <h2>Aan en uit met toggle</h2>
 <p class="sub">Eén knop die iets aanzet, en bij de volgende klik weer uit.</p>
 <ol>
@@ -116,55 +116,52 @@ small{color:#5b6075}
 &lt;script&gt;document.querySelector(&quot;#regels-knop&quot;).addEventListener(&quot;click&quot;, function () { document.querySelector(&quot;#regels&quot;).classList.toggle(&quot;verborgen&quot;); });&lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition tip">
 <p class="admonition-title">Kijk in Elements</p>
-<p>Klik op je knop en kijk in Elements naar het element. Je ziet de class erbij komen en weer verdwijnen. Zo weet je zeker dat je JavaScript werkt, ook als je CSS nog niet klopt.</p>
 </div>
+<p>Klik op je knop en kijk in Elements naar het element. Je ziet de class erbij komen en weer verdwijnen. Zo weet je zeker dat je JavaScript werkt, ook als je CSS nog niet klopt.</p>
 <details class="check">
 <summary>Check: classes aan en uit</summary>
+</details>
 <p><strong>1. Welke regel geeft de melding de class goed?</strong></p>
-<ul>
-<li>A. <code>melding.classList.add(".goed");</code></li>
-<li>B. <code>melding.classList.add("goed");</code></li>
-<li>C. <code>melding.class = goed;</code></li>
-<li>D. <code>melding.classList.remove("goed");</code></li>
-</ul>
-<p><strong>2. Een p heeft de class verborgen. Je voert regels.classList.toggle("verborgen"); uit. Wat gebeurt er?</strong></p>
-<ul>
-<li>A. De class gaat weg en je ziet de tekst</li>
-<li>B. De class komt er nog een keer bij</li>
-<li>C. De p wordt uit de pagina gehaald</li>
-<li>D. Je krijgt een rode fout</li>
-</ul>
-<details class="antwoord">
-<summary>Bekijk de antwoorden</summary>
-<p><strong>1. B – <code>melding.classList.add("goed");</code>.</strong> In classList schrijf je de naam zonder punt, tussen aanhalingstekens. Met ".goed" zoekt JavaScript naar een class die .goed heet, met de punt erbij. melding.class bestaat niet, en remove haalt de class juist weg.</p>
-<p><strong>2. A – De class gaat weg en je ziet de tekst.</strong> toggle wisselt: de class was er, dus hij gaat weg. Dan geldt display: none niet meer en zie je de tekst. Bij de volgende klik komt de class terug. Het element zelf blijft gewoon in de pagina.</p>
-</details>
-</details>
+<div class="code"><pre><span></span><code>- A. `melding.classList.add(".goed");`
+- B. `melding.classList.add("goed");`
+- C. `melding.class = goed;`
+- D. `melding.classList.remove("goed");`
+
+**2. Een p heeft de class verborgen. Je voert regels.classList.toggle("verborgen"); uit. Wat gebeurt er?**
+
+- A. De class gaat weg en je ziet de tekst
+- B. De class komt er nog een keer bij
+- C. De p wordt uit de pagina gehaald
+- D. Je krijgt een rode fout
+
+??? antwoord "Bekijk de antwoorden"
+    **1. B – `melding.classList.add("goed");`.** In classList schrijf je de naam zonder punt, tussen aanhalingstekens. Met ".goed" zoekt JavaScript naar een class die .goed heet, met de punt erbij. melding.class bestaat niet, en remove haalt de class juist weg.
+
+    **2. A – De class gaat weg en je ziet de tekst.** toggle wisselt: de class was er, dus hij gaat weg. Dan geldt display: none niet meer en zie je de tekst. Bij de volgende klik komt de class terug. Het element zelf blijft gewoon in de pagina.
+</code></pre></div>
 <div class="admonition opdracht">
 <p class="admonition-title">5. Klap je spelregels open en dicht</p>
+</div>
 <p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-5</code></p>
-<ol>
-<li>Kopieer alle bestanden en mappen uit opdracht-4 naar opdracht-5.</li>
-<li>Maak in style.css de classes .goed (groene tekst), .fout (een andere kleur) en .verborgen (display: none).</li>
-<li>Zet in je kaart een knop Spelregels met een eigen id. Zet daaronder een p met een eigen id, de class verborgen en de spelregels in je eigen woorden.</li>
-<li>Zoek de knop en de p op in script.js. Laat de knop bij een klik de class verborgen toggelen.</li>
-<li>Geef in de function van je knop Raad! de melding ook de class goed. Klopt de kleur?</li>
-<li>Klik op je knoppen en kijk in Elements hoe de classes erbij komen en weggaan.</li>
-</ol>
-<details class="hint">
-<summary>Codehint (niet het antwoord)</summary>
-<div class="code"><pre><span></span><code><span class="nx">foto</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">"..."</span><span class="p">);</span>
+<div class="code"><pre><span></span><code>1. Kopieer alle bestanden en mappen uit opdracht-4 naar opdracht-5.
+2. Maak in style.css de classes .goed (groene tekst), .fout (een andere kleur) en .verborgen (display: none).
+3. Zet in je kaart een knop Spelregels met een eigen id. Zet daaronder een p met een eigen id, de class verborgen en de spelregels in je eigen woorden.
+4. Zoek de knop en de p op in script.js. Laat de knop bij een klik de class verborgen toggelen.
+5. Geef in de function van je knop Raad! de melding ook de class goed. Klopt de kleur?
+6. Klik op je knoppen en kijk in Elements hoe de classes erbij komen en weggaan.
 
-<span class="p">.</span><span class="nx">groot</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">300</span><span class="nx">px</span><span class="p">;</span>
-<span class="p">}</span>
+??? hint "Codehint (niet het antwoord)"
+    ```js
+    foto.classList.toggle("...");
+
+    .groot {
+      width: 300px;
+    }
+    ```
+
+!!! klaar "Klaar als..."
+    Met de knop Spelregels klap je de tekst open en weer dicht. Na een klik op Raad! is je melding groen.
 </code></pre></div>
-</details>
-<div class="admonition klaar">
-<p class="admonition-title">Klaar als...</p>
-<p>Met de knop Spelregels klap je de tekst open en weer dicht. Na een klik op Raad! is je melding groen.</p>
-</div>
-</div>
     <div class="vorige-volgende"><a class="vorige" href="blok-4.html">← Blok 4 · Een knop die werkt</a><a class="volgende" href="blok-6.html">Blok 6 · Invoer lezen →</a></div>
   </article>
 </div>

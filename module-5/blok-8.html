@@ -66,8 +66,8 @@ small{color:#5b6075}
 &lt;/style&gt;&lt;div style=&quot;display:flex;gap:6px&quot;&gt;&lt;div style=&quot;flex:1;background:#E8EAF6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;Math.random()&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;&lt;code&gt;0.7312&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#E8EAF6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;* 100&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;&lt;code&gt;73.12&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#E8EAF6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;Math.floor&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;&lt;code&gt;73&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#e9f8ee;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;+ 1&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;&lt;code&gt;74&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition tip">
 <p class="admonition-title">Spieken mag tijdens het testen</p>
-<p>Met console.log(geheim) zie je in de Console welk getal de computer heeft gekozen. Zo kun je testen of goed geraden werkt. Haal die regel weg als je spel af is.</p>
 </div>
+<p>Met console.log(geheim) zie je in de Console welk getal de computer heeft gekozen. Zo kun je testen of goed geraden werkt. Haal die regel weg als je spel af is.</p>
 <h2>Tellen en opnieuw beginnen</h2>
 <p class="sub">Een teller laat zien hoe vaak je hebt geraden.</p>
 <ol>
@@ -134,54 +134,51 @@ document.querySelector(&quot;#opnieuw&quot;).addEventListener(&quot;click&quot;,
 &lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition let-op">
 <p class="admonition-title">let pogingen buiten de function</p>
-<p>Staat let pogingen = 0; binnen de function, dan begint de teller bij elke klik weer bij 0. Daarom staat hij erbuiten, bovenaan je script.</p>
 </div>
+<p>Staat let pogingen = 0; binnen de function, dan begint de teller bij elke klik weer bij 0. Daarom staat hij erbuiten, bovenaan je script.</p>
 <details class="check">
 <summary>Check: toeval, tellen en opnieuw</summary>
+</details>
 <p><strong>1. Welke getallen kan Math.floor(Math.random() * 10) + 1 geven?</strong></p>
-<ul>
-<li>A. 0 tot en met 10</li>
-<li>B. 1 tot en met 10</li>
-<li>C. 1 tot en met 11</li>
-<li>D. Altijd 10</li>
-</ul>
-<p><strong>2. Waarom staat let pogingen = 0; buiten de function?</strong></p>
-<ul>
-<li>A. Anders begint de teller bij elke klik weer bij 0</li>
-<li>B. Dan staat het netter</li>
-<li>C. Binnen een function mag geen let</li>
-<li>D. <code>Anders werkt Math.random niet</code></li>
-</ul>
-<details class="antwoord">
-<summary>Bekijk de antwoorden</summary>
-<p><strong>1. B – 1 tot en met 10.</strong> Math.random() * 10 geeft 0 tot 10, maar nooit precies 10. Math.floor maakt daar 0 tot en met 9 van. Met + 1 wordt het 1 tot en met 10.</p>
-<p><strong>2. A – Anders begint de teller bij elke klik weer bij 0.</strong> Alles tussen de { } wordt bij elke klik opnieuw uitgevoerd. Staat let pogingen = 0; daar, dan begint de teller steeds opnieuw. let mag wel in een function, en met Math.random heeft het niets te maken.</p>
-</details>
-</details>
+<div class="code"><pre><span></span><code>- A. 0 tot en met 10
+- B. 1 tot en met 10
+- C. 1 tot en met 11
+- D. Altijd 10
+
+**2. Waarom staat let pogingen = 0; buiten de function?**
+
+- A. Anders begint de teller bij elke klik weer bij 0
+- B. Dan staat het netter
+- C. Binnen een function mag geen let
+- D. `Anders werkt Math.random niet`
+
+??? antwoord "Bekijk de antwoorden"
+    **1. B – 1 tot en met 10.** Math.random() \* 10 geeft 0 tot 10, maar nooit precies 10. Math.floor maakt daar 0 tot en met 9 van. Met + 1 wordt het 1 tot en met 10.
+
+    **2. A – Anders begint de teller bij elke klik weer bij 0.** Alles tussen de { } wordt bij elke klik opnieuw uitgevoerd. Staat let pogingen = 0; daar, dan begint de teller steeds opnieuw. let mag wel in een function, en met Math.random heeft het niets te maken.
+</code></pre></div>
 <div class="admonition opdracht">
 <p class="admonition-title">8. Maak je spel compleet</p>
+</div>
 <p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-8</code></p>
-<ol>
-<li>Kopieer alle bestanden en mappen uit opdracht-7 naar opdracht-8.</li>
-<li>Laat de computer een geheim getal van 1 tot 100 kiezen. Gebruik let, want bij Opnieuw verandert het. Zet het met console.log in de Console.</li>
-<li>Zet in je kaart een regel Pogingen: met daarachter een span met een id en het getal 0.</li>
-<li>Tel in je klik-functie de pogingen en zet het aantal op de pagina.</li>
-<li>Maak een knop Opnieuw die alles terugzet: een nieuw getal, de teller, de melding, de kleur en het vakje.</li>
-<li>Speel je spel een paar keer. Werkt alles? Haal dan console.log(geheim) weg.</li>
-</ol>
-<details class="hint">
-<summary>Codehint (niet het antwoord)</summary>
-<div class="code"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<div class="code"><pre><span></span><code>1. Kopieer alle bestanden en mappen uit opdracht-7 naar opdracht-8.
+2. Laat de computer een geheim getal van 1 tot 100 kiezen. Gebruik let, want bij Opnieuw verandert het. Zet het met console.log in de Console.
+3. Zet in je kaart een regel Pogingen: met daarachter een span met een id en het getal 0.
+4. Tel in je klik-functie de pogingen en zet het aantal op de pagina.
+5. Maak een knop Opnieuw die alles terugzet: een nieuw getal, de teller, de melding, de kleur en het vakje.
+6. Speel je spel een paar keer. Werkt alles? Haal dan console.log(geheim) weg.
 
-<span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">...;</span>
-<span class="nx">scoreVak</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+??? hint "Codehint (niet het antwoord)"
+    ```js
+    let score = 0;
+
+    score = score + ...;
+    scoreVak.textContent = ...;
+    ```
+
+!!! klaar "Klaar als..."
+    De computer kiest steeds een ander getal. De teller loopt op bij elke gok. Na Opnieuw staat alles weer zoals aan het begin.
 </code></pre></div>
-</details>
-<div class="admonition klaar">
-<p class="admonition-title">Klaar als...</p>
-<p>De computer kiest steeds een ander getal. De teller loopt op bij elke gok. Na Opnieuw staat alles weer zoals aan het begin.</p>
-</div>
-</div>
     <div class="vorige-volgende"><a class="vorige" href="blok-7.html">← Blok 7 · Hoger of lager</a><a class="volgende" href="eindopdracht.html">Eindopdracht →</a></div>
   </article>
 </div>

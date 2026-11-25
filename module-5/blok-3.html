@@ -74,8 +74,8 @@ small{color:#5b6075}
 &lt;/style&gt;&lt;div class=&quot;cl&quot;&gt;&lt;div class=&quot;st&quot;&gt;&lt;code style=&quot;border-color:#2965F1&quot;&gt;document&lt;/code&gt;&lt;span style=&quot;color:#2965F1&quot;&gt;de hele pagina&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;st&quot;&gt;&lt;code style=&quot;border-color:#E44D26&quot;&gt;.querySelector&lt;/code&gt;&lt;span style=&quot;color:#E44D26&quot;&gt;zoek een element&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;st&quot;&gt;&lt;code style=&quot;border-color:#1E8E4E&quot;&gt;(&quot;#melding&quot;)&lt;/code&gt;&lt;span style=&quot;color:#1E8E4E&quot;&gt;met deze selector&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition tip">
 <p class="admonition-title">Lees de regel van links naar rechts</p>
-<p>In gewone taal staat er: zoek in de pagina het element met de id melding. De punt tussen document en querySelector betekent: van de pagina.</p>
 </div>
+<p>In gewone taal staat er: zoek in de pagina het element met de id melding. De punt tussen document en querySelector betekent: van de pagina.</p>
 <h2>De tekst veranderen</h2>
 <p class="sub">Met textContent zet je nieuwe tekst in een element.</p>
 <ol>
@@ -105,52 +105,49 @@ small{color:#5b6075}
 &lt;div&gt;&lt;p class=&quot;label&quot;&gt;Met JavaScript&lt;/p&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;p&gt;&lt;b&gt;Raad maar!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition let-op">
 <p class="admonition-title">null in de Console?</p>
-<p>Staat er null of een rode fout met null erin? Dan heeft querySelector niets gevonden. Kijk of de id in je HTML precies hetzelfde is, en of je het hekje # niet bent vergeten.</p>
 </div>
+<p>Staat er null of een rode fout met null erin? Dan heeft querySelector niets gevonden. Kijk of de id in je HTML precies hetzelfde is, en of je het hekje # niet bent vergeten.</p>
 <details class="check">
 <summary>Check: vind en verander</summary>
+</details>
 <p><strong>1. Welke regel vindt het element &lt;p id="uitslag"&gt;?</strong></p>
-<ul>
-<li>A. <code>document.querySelector("uitslag");</code></li>
-<li>B. <code>document.querySelector("#uitslag");</code></li>
-<li>C. <code>document.querySelector(".uitslag");</code></li>
-<li>D. <code>document.find("#uitslag");</code></li>
-</ul>
-<p><strong>2. Wat doet melding.textContent = "Hoger!"; ?</strong></p>
-<ul>
-<li>A. Het schrijft Hoger! in de Console</li>
-<li>B. Het zet Hoger! in het element op de pagina</li>
-<li>C. <code>Het past spel.html aan in VS Code</code></li>
-<li>D. Het maakt een nieuwe p</li>
-</ul>
-<details class="antwoord">
-<summary>Bekijk de antwoorden</summary>
-<p><strong>1. B – <code>document.querySelector("#uitslag");</code>.</strong> Voor een id zet je een hekje, net als in CSS. Zonder hekje zoekt JavaScript naar een tag uitslag, en met een punt naar een class. find bestaat niet: dan krijg je een rode fout.</p>
-<p><strong>2. B – Het zet Hoger! in het element op de pagina.</strong> textContent is de tekst in het element. Met = komt er Hoger! te staan, op de pagina in Chrome. Je bestand in VS Code verandert niet. In de Console schrijf je met console.log, en er komt geen nieuw element bij.</p>
-</details>
-</details>
+<div class="code"><pre><span></span><code>- A. `document.querySelector("uitslag");`
+- B. `document.querySelector("#uitslag");`
+- C. `document.querySelector(".uitslag");`
+- D. `document.find("#uitslag");`
+
+**2. Wat doet melding.textContent = "Hoger!"; ?**
+
+- A. Het schrijft Hoger! in de Console
+- B. Het zet Hoger! in het element op de pagina
+- C. `Het past spel.html aan in VS Code`
+- D. Het maakt een nieuwe p
+
+??? antwoord "Bekijk de antwoorden"
+    **1. B – `document.querySelector("#uitslag");`.** Voor een id zet je een hekje, net als in CSS. Zonder hekje zoekt JavaScript naar een tag uitslag, en met een punt naar een class. find bestaat niet: dan krijg je een rode fout.
+
+    **2. B – Het zet Hoger! in het element op de pagina.** textContent is de tekst in het element. Met = komt er Hoger! te staan, op de pagina in Chrome. Je bestand in VS Code verandert niet. In de Console schrijf je met console.log, en er komt geen nieuw element bij.
+</code></pre></div>
 <div class="admonition opdracht">
 <p class="admonition-title">3. Zet tekst op je pagina met JavaScript</p>
+</div>
 <p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-3</code></p>
-<ol>
-<li>Kopieer alle bestanden en mappen uit opdracht-2 naar opdracht-3. Haal in script.js de oefenregels van opdracht 2 weg, behalve geheim en pogingen.</li>
-<li>Zet in de main van spel.html een div met de class kaart. Zet daar je h2 in, en een p met de tekst Ik denk aan een getal van 1 tot 100.</li>
-<li>Zet daaronder in de kaart een lege p met de id melding.</li>
-<li>Zoek in script.js dat element op en bewaar het in een const.</li>
-<li>Zet met textContent een tekst in je melding, bijvoorbeeld Succes!</li>
-<li>Kijk in de DevTools bij Elements: staat de tekst in je p? Kijk daarna in VS Code in spel.html: staat hij daar ook?</li>
-</ol>
-<details class="hint">
-<summary>Codehint (niet het antwoord)</summary>
-<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">titel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#titel"</span><span class="p">);</span>
-<span class="nx">titel</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"..."</span><span class="p">;</span>
+<div class="code"><pre><span></span><code>1. Kopieer alle bestanden en mappen uit opdracht-2 naar opdracht-3. Haal in script.js de oefenregels van opdracht 2 weg, behalve geheim en pogingen.
+2. Zet in de main van spel.html een div met de class kaart. Zet daar je h2 in, en een p met de tekst Ik denk aan een getal van 1 tot 100.
+3. Zet daaronder in de kaart een lege p met de id melding.
+4. Zoek in script.js dat element op en bewaar het in een const.
+5. Zet met textContent een tekst in je melding, bijvoorbeeld Succes!
+6. Kijk in de DevTools bij Elements: staat de tekst in je p? Kijk daarna in VS Code in spel.html: staat hij daar ook?
+
+??? hint "Codehint (niet het antwoord)"
+    ```js
+    const titel = document.querySelector("#titel");
+    titel.textContent = "...";
+    ```
+
+!!! klaar "Klaar als..."
+    Op spel.html staat in je melding de tekst die je in script.js hebt gezet. In spel.html in VS Code is de p nog leeg. Er staan geen rode fouten in de Console.
 </code></pre></div>
-</details>
-<div class="admonition klaar">
-<p class="admonition-title">Klaar als...</p>
-<p>Op spel.html staat in je melding de tekst die je in script.js hebt gezet. In spel.html in VS Code is de p nog leeg. Er staan geen rode fouten in de Console.</p>
-</div>
-</div>
     <div class="vorige-volgende"><a class="vorige" href="blok-2.html">← Blok 2 · Variabelen</a><a class="volgende" href="blok-4.html">Blok 4 · Een knop die werkt →</a></div>
   </article>
 </div>

@@ -30,7 +30,7 @@ Je kunt het vergelijken met een film navertellen aan iemand die er niet bij was.
 Je mag hulp vragen aan anderen en AI gebruiken, bijvoorbeeld ChatGPT. Dit zijn de regels:
 
 - Je schrijft in je bijlage welke hulp je hebt gehad en waarvoor.
-- Je moet alles op je website zelf kunnen uitleggen. Kun je het niet uitleggen, dan telt dat als onvoldoende.
+- Je moet alles op je website zelf kunnen uitleggen. Kun je iets niet uitleggen, dan krijg je bij dat onderdeel van het gesprek punten aftrek.
 
 === website | Je website
 ## Minimumeisen
@@ -110,6 +110,15 @@ Je praat 20 minuten met twee beoordelaars over je eigen website. Je website, je 
 8. **Een nieuwe wens.** Je legt uit hoe je een nieuwe wens zou aanpakken: welk bestand, wat verandert er en hoe test je het?
 
 Per onderdeel krijg je onvoldoende, voldoende of goed.
+
+## Wanneer ben je geslaagd?
+
+1. **Onderdeel 1 en 2 tellen twee keer mee.** Een onvoldoende voor onderdeel 1 of 2 telt als twee onvoldoendes. Een goed voor onderdeel 1 of 2 telt als twee keer goed.
+2. **Elke goed streept één onvoldoende weg.**
+3. **Daarna mag je nog hooguit één onvoldoende overhouden.** Heb je na het wegstrepen nul of één onvoldoende over, dan ben je geslaagd.
+
+!!! tip "Voorbeeld"
+    Je hebt een onvoldoende voor onderdeel 1 en een onvoldoende voor onderdeel 6. Onderdeel 1 telt twee keer, dus dat zijn samen drie onvoldoendes. Je hebt een goed voor onderdeel 4 en voor onderdeel 5. Die strepen twee onvoldoendes weg. Je houdt één onvoldoende over, dus je bent geslaagd.
 
 === voorbereiden | Voorbereiden
 ## Zo bereid je je voor

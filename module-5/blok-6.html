@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoer lezen · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html"><small>3</small>Vind en verander</a>
+<a href="blok-4.html"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html" class="actief"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 6</div>
+    <h2 class="paginatitel">Invoer lezen</h2>
+    <h2>Een invoerveld</h2>
+<p class="sub">Met een input kan de bezoeker zelf iets intypen.</p>
+<ol>
+<li><strong>type="number".</strong> Een input met type="number" is een vakje voor getallen, met pijltjes om hoger en lager te gaan.</li>
+<li><strong>min en max.</strong> min="1" en max="100" zijn het kleinste en het grootste getal voor de pijltjes.</li>
+<li><strong>placeholder.</strong> De placeholder is een grijze hulptekst in het lege vakje. Zodra je typt, verdwijnt hij.</li>
+</ol>
+<p class="bestandsnaam">spel.html</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"gok"</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">min</span><span class="o">=</span><span class="s">"1"</span> <span class="na">max</span><span class="o">=</span><span class="s">"100"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"1 - 100"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"raad"</span><span class="p">&gt;</span>Raad!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Leeg vakje met placeholder, en een vakje waarin 50 is getypt</div><iframe class="demo-frame" loading="lazy" title="Leeg vakje met placeholder, en een vakje waarin 50 is getypt" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div class=&quot;twee&quot;&gt;&lt;div&gt;&lt;p class=&quot;label&quot;&gt;Leeg&lt;/p&gt;&lt;div class=&quot;rij&quot;&gt;&lt;input type=&quot;number&quot; placeholder=&quot;1 - 100&quot;&gt;&lt;button&gt;Raad!&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p class=&quot;label&quot;&gt;Ingevuld&lt;/p&gt;&lt;div class=&quot;rij&quot;&gt;&lt;input type=&quot;number&quot; value=&quot;50&quot;&gt;&lt;button&gt;Raad!&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">Een input heeft geen sluittag</p>
+<p>Je schrijft alleen &lt;input ...&gt;. Er bestaat geen &lt;/input&gt;, net als bij een img.</p>
+</div>
+<h2>Lezen wat er is ingevuld</h2>
+<p class="sub">Met .value lees je wat er in het vakje staat.</p>
+<ol>
+<li><strong>value is wat er staat.</strong> invoer.value is wat de bezoeker in het vakje heeft getypt.</li>
+<li><strong>Lees het in de function.</strong> Lees de value pas tussen de { } van je klik-functie. Doe je het erbuiten, dan lees je het vakje als de pagina laadt, en dan is het nog leeg.</li>
+<li><strong>Maak er een getal van.</strong> value is altijd tekst, ook bij type="number". Met Number(invoer.value) maak je er een getal van, zodat je kunt rekenen en vergelijken.</li>
+</ol>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">invoer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#gok"</span><span class="p">);</span>
+
+<span class="nx">knop</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">gok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">invoer</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Jij raadt "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">gok</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Typ een getal en klik op Raad!</div><iframe class="demo-frame" loading="lazy" title="Typ een getal en klik op Raad!" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;div class=&quot;rij&quot;&gt;&lt;input id=&quot;gok&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;100&quot; placeholder=&quot;1 - 100&quot;&gt;&lt;button id=&quot;raad&quot;&gt;Raad!&lt;/button&gt;&lt;/div&gt;&lt;p id=&quot;melding&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;script&gt;const invoer = document.querySelector(&quot;#gok&quot;); document.querySelector(&quot;#raad&quot;).addEventListener(&quot;click&quot;, function () { const gok = Number(invoer.value); document.querySelector(&quot;#melding&quot;).textContent = &quot;Jij raadt &quot; + gok; });&lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition let-op">
+<p class="admonition-title">Vergeet Number() niet</p>
+<p>Zonder Number() is de invoer tekst. Typt iemand 50, dan wordt invoer.value + 1 niet 51 maar "501". Net als "5" + 5 in blok 2.</p>
+</div>
+<details class="check">
+<summary>Check: invoer lezen</summary>
+<p><strong>1. Welke regel leest wat er in &lt;input id="gok"&gt; is getypt? (invoer is dat element)</strong></p>
+<ul>
+<li>A. <code>invoer.textContent</code></li>
+<li>B. <code>invoer.value</code></li>
+<li>C. <code>invoer.input</code></li>
+<li>D. <code>invoer.number</code></li>
+</ul>
+<p><strong>2. Iemand typt 8 in het vakje. Wat geeft invoer.value + 2?</strong></p>
+<ul>
+<li>A. 10</li>
+<li>B. 82</li>
+<li>C. 8</li>
+<li>D. Een rode fout</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>invoer.value</code>.</strong> Wat er in een invoerveld staat, is de value. textContent is de tekst tussen een openingstag en een sluittag, en die heeft een input niet. input en number bestaan niet: dan krijg je undefined.</p>
+<p><strong>2. B – 82.</strong> value is altijd tekst. Tekst + getal wordt tekst: 82. Voor 10 moet je eerst Number(invoer.value) gebruiken. Een fout krijg je niet, JavaScript plakt gewoon.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">6. Lees wat de speler typt</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-6</code></p>
+<ol>
+<li>Kopieer alle bestanden en mappen uit opdracht-5 naar opdracht-6.</li>
+<li>Zet vóór je knop Raad! een invoerveld voor getallen van 1 tot 100, met een id en een placeholder.</li>
+<li>Zet het vakje en de knop met flexbox naast elkaar, met een gap.</li>
+<li>Zoek het invoerveld op in script.js en bewaar het in een const.</li>
+<li>Lees in de function van je knop de value. Maak er een getal van en bewaar dat in een const gok.</li>
+<li>Zet in je melding een zin met het getal, zoals Jij raadt 50. Zet ook console.log(gok + 1) in de function: komt er 51?</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">leeftijdVak</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#leeftijd"</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">leeftijd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(...);</span>
+<span class="nx">uitslag</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Jij bent "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">leeftijd</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Typ je 50 en klik je op Raad!, dan staat er Jij raadt 50 op de pagina. In de Console staat 51.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-5.html">← Blok 5 · Classes aan en uit</a><a class="volgende" href="blok-7.html">Blok 7 · Hoger of lager →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

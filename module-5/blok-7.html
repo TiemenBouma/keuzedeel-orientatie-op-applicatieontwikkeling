@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoger of lager · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html"><small>3</small>Vind en verander</a>
+<a href="blok-4.html"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html" class="actief"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 7</div>
+    <h2 class="paginatitel">Hoger of lager</h2>
+    <h2>Kiezen met if en else</h2>
+<p class="sub">Je code kiest zelf welke melding er komt.</p>
+<ol>
+<li><strong>if: als het klopt.</strong> if (gok &gt; geheim) { ... } betekent: als de gok groter is dan het geheim, doe dan wat tussen de { } staat.</li>
+<li><strong>else if: anders, als.</strong> Klopt de eerste niet, dan kijkt JavaScript naar de volgende: else if (gok &lt; geheim) { ... }.</li>
+<li><strong>else: in alle andere gevallen.</strong> Klopt geen van de vergelijkingen, dan doet JavaScript wat bij else staat. Hier betekent dat: de gok is goed.</li>
+</ol>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">geheim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">42</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Lager!"</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Hoger!"</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Goed geraden!"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Drie keer raden als het geheime getal 42 is</div><iframe class="demo-frame" loading="lazy" title="Drie keer raden als het geheime getal 42 is" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;style&gt;.w{display:grid;grid-template-columns:auto auto auto;gap:6px 12px;align-items:center;font-size:15px}.w div{padding:6px 10px;border-radius:6px;background:#E8EAF6}.w .k{font-family:Consolas,monospace}&lt;/style&gt;
+&lt;div class=&quot;w&quot;&gt;&lt;b&gt;Gok&lt;/b&gt;&lt;b&gt;Vergelijking&lt;/b&gt;&lt;b&gt;Melding&lt;/b&gt;
+&lt;div&gt;50&lt;/div&gt;&lt;div class=&quot;k&quot;&gt;50 &amp;gt; 42 is waar&lt;/div&gt;&lt;div class=&quot;fout&quot;&gt;&lt;b&gt;Lager!&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;30&lt;/div&gt;&lt;div class=&quot;k&quot;&gt;30 &amp;lt; 42 is waar&lt;/div&gt;&lt;div class=&quot;fout&quot;&gt;&lt;b&gt;Hoger!&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;42&lt;/div&gt;&lt;div class=&quot;k&quot;&gt;geen van beide&lt;/div&gt;&lt;div class=&quot;goed&quot;&gt;&lt;b&gt;Goed geraden!&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">Vergelijken</p>
+<p>&gt; betekent groter dan, &lt; betekent kleiner dan en === betekent is gelijk aan. Een vergelijking is waar (true) of niet waar (false). Eén = is geen vergelijking: dat geeft een waarde.</p>
+</div>
+<h2>Een leeg vakje en een kleur</h2>
+<p class="sub">Klik je zonder iets in te vullen, dan zegt je spel dat ook.</p>
+<ol>
+<li><strong>Eerst kijken of het vakje leeg is.</strong> invoer.value === "" is waar als er niets is ingevuld. Zet deze controle bovenaan, vóór hoger en lager.</li>
+<li><strong>Haal eerst de oude kleur weg.</strong> Haal met classList.remove de classes goed en fout weg. Zo begint elke klik zonder kleur.</li>
+<li><strong>Geef daarna de goede kleur.</strong> Zet in elk stuk van je if de class die erbij past: fout bij hoger en lager, goed bij goed geraden.</li>
+</ol>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="nx">melding</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">"goed"</span><span class="p">);</span>
+<span class="nx">melding</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">"fout"</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">invoer</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Vul eerst een getal in."</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Lager!"</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">"fout"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">De vier meldingen van je spel</div><iframe class="demo-frame" loading="lazy" title="De vier meldingen van je spel" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div class=&quot;twee&quot;&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;p class=&quot;label&quot;&gt;Leeg vakje&lt;/p&gt;&lt;p&gt;&lt;b&gt;Vul eerst een getal in.&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;kaart&quot;&gt;&lt;p class=&quot;label&quot;&gt;Gok 50&lt;/p&gt;&lt;p class=&quot;fout&quot;&gt;&lt;b&gt;Lager!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;kaart&quot;&gt;&lt;p class=&quot;label&quot;&gt;Gok 30&lt;/p&gt;&lt;p class=&quot;fout&quot;&gt;&lt;b&gt;Hoger!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;kaart&quot;&gt;&lt;p class=&quot;label&quot;&gt;Gok 42&lt;/p&gt;&lt;p class=&quot;goed&quot;&gt;&lt;b&gt;Goed geraden!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Test alle wegen</p>
+<p>Test je spel vier keer: met een leeg vakje, te hoog, te laag en precies goed. Zo weet je zeker dat elk stuk van je if werkt. Dit lijstje kun je straks ook gebruiken voor het testlijstje van je examen.</p>
+</div>
+<details class="check">
+<summary>Check: hoger of lager</summary>
+<p><strong>1. geheim is 42 en gok is 30. Welke melding komt er?</strong></p>
+<div class="code"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nx">Lager</span><span class="o">!</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nx">Hoger</span><span class="o">!</span>
+<span class="k">else</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nx">Goed</span><span class="w"> </span><span class="nx">geraden</span><span class="o">!</span>
+</code></pre></div>
+<ul>
+<li>A. Lager!</li>
+<li>B. Hoger!</li>
+<li>C. Goed geraden!</li>
+<li>D. Geen melding</li>
+</ul>
+<p><strong>2. Met welke regel kijk je of gok gelijk is aan geheim?</strong></p>
+<ul>
+<li>A. <code>if (gok = geheim)</code></li>
+<li>B. <code>if (gok === geheim)</code></li>
+<li>C. <code>if (gok is geheim)</code></li>
+<li>D. <code>if (gok =&gt; geheim)</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – Hoger!.</strong> 30 &gt; 42 is niet waar, dus Lager! komt er niet. Dan kijkt JavaScript naar 30 &lt; 42: dat is waar, dus Hoger!. Bij else komt hij niet meer, want er klopte al een vergelijking.</p>
+<p><strong>2. B – <code>if (gok === geheim)</code>.</strong> === vergelijkt. Eén = geeft gok de waarde van geheim, en dan klopt je spel niet meer. is bestaat niet in JavaScript, en =&gt; betekent iets heel anders.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">7. Zeg of het hoger of lager is</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-7</code></p>
+<ol>
+<li>Kopieer alle bestanden en mappen uit opdracht-6 naar opdracht-7. Haal je console.log(gok + 1) weg.</li>
+<li>Je hebt al een geheim van 42 uit opdracht 2. Vergelijk in de function je gok met het geheim.</li>
+<li>Zet de melding Lager!, Hoger! of Goed geraden! op de pagina, met if, else if en else.</li>
+<li>Zet bovenaan je if een controle voor een leeg vakje, met een eigen melding.</li>
+<li>Haal aan het begin van de function de classes goed en fout weg. Geef daarna in elk stuk van je if de goede class.</li>
+<li>Test vier keer: leeg, 10, 90 en 42. Klopt elke melding en elke kleur?</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">leeftijd</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">17</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">uitslag</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"..."</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">uitslag</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"..."</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Bij een leeg vakje, bij 10, bij 90 en bij 42 krijg je steeds de goede melding. Goed geraden is groen, hoger en lager hebben een andere kleur.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-6.html">← Blok 6 · Invoer lezen</a><a class="volgende" href="blok-8.html">Blok 8 · Toeval, tellen en opnieuw →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

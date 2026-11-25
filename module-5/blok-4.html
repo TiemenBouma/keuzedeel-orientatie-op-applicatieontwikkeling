@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Een knop die werkt · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html"><small>3</small>Vind en verander</a>
+<a href="blok-4.html" class="actief"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 4</div>
+    <h2 class="paginatitel">Een knop die werkt</h2>
+    <h2>Wachten op een klik</h2>
+<p class="sub">Met addEventListener doet je pagina pas iets als iemand klikt.</p>
+<ol>
+<li><strong>Een knop in je HTML.</strong> Zet een button in je HTML en geef hem een id.</li>
+<li><strong>Zoek de knop.</strong> Zoek de knop op met querySelector en bewaar hem in een const, net als in blok 3.</li>
+<li><strong>Luister naar de klik.</strong> knop.addEventListener("click", function () { ... }) betekent: wacht op een klik. Wat tussen de { } staat, gebeurt pas na de klik, en bij elke klik opnieuw.</li>
+</ol>
+<p class="bestandsnaam">spel.html</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"raad"</span><span class="p">&gt;</span>Raad!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"melding"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">knop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#raad"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">melding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#melding"</span><span class="p">);</span>
+
+<span class="nx">knop</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Je hebt geklikt!"</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Voor en na de klik. Probeer het maar.</div><iframe class="demo-frame" loading="lazy" title="Voor en na de klik. Probeer het maar." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div class=&quot;twee&quot;&gt;&lt;div&gt;&lt;p class=&quot;label&quot;&gt;Voor de klik&lt;/p&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;button&gt;Raad!&lt;/button&gt;&lt;p style=&quot;min-height:20px&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p class=&quot;label&quot;&gt;Na de klik&lt;/p&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;button id=&quot;raad&quot;&gt;Raad!&lt;/button&gt;&lt;p id=&quot;melding&quot; style=&quot;font-weight:bold;min-height:20px&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;script&gt;document.querySelector(&quot;#raad&quot;).addEventListener(&quot;click&quot;, function () { document.querySelector(&quot;#melding&quot;).textContent = &quot;Je hebt geklikt!&quot;; });&lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition let-op">
+<p class="admonition-title">Sluit goed af met });</p>
+<p>De function sluit je af met }. Daarna sluit je addEventListener af met ). De puntkomma maakt de regel af. Samen: });</p>
+</div>
+<h2>Het recept: vind, wacht, verander</h2>
+<p class="sub">Bijna alles wat je met JavaScript op een pagina doet, gaat in deze drie stappen.</p>
+<ol>
+<li><strong>Vind.</strong> Zoek het element op met querySelector. Bijvoorbeeld een knop of een melding.</li>
+<li><strong>Wacht.</strong> Wacht met addEventListener tot er iets gebeurt, meestal een klik. Zo'n gebeurtenis heet een event.</li>
+<li><strong>Verander.</strong> Verander iets op de pagina: de tekst met textContent, of de opmaak met classList. Dat leer je in blok 5.</li>
+</ol>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="c1">// 1. vind</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">knop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#raad"</span><span class="p">);</span>
+
+<span class="c1">// 2. wacht</span>
+<span class="nx">knop</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// 3. verander</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Je hebt geklikt!"</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Het recept in drie stappen</div><iframe class="demo-frame" loading="lazy" title="Het recept in drie stappen" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div style=&quot;display:flex;gap:8px&quot;&gt;&lt;div style=&quot;flex:1;background:#E8EAF6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;1. Vind&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;querySelector zoekt de knop en de melding&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#ffe0d6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;2. Wacht&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;addEventListener wacht op een klik&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#e9f8ee;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;3. Verander&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;textContent of classList verandert de pagina&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">// is een opmerking</p>
+<p>Een regel die begint met // is een opmerking. JavaScript slaat die over. Zo kun je in je eigen woorden opschrijven wat je code doet. Dat helpt je ook bij het examen.</p>
+</div>
+<details class="check">
+<summary>Check: een knop die werkt</summary>
+<p><strong>1. Wanneer wordt de code tussen de { } van de function uitgevoerd?</strong></p>
+<ul>
+<li>A. Als de pagina laadt</li>
+<li>B. Als iemand op de knop klikt</li>
+<li>C. Als je opslaat in VS Code</li>
+<li>D. Nooit</li>
+</ul>
+<p><strong>2. Wat ontbreekt er aan het eind van deze code?</strong></p>
+<div class="code"><pre><span></span><code><span class="nx">knop</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Hoi"</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>A. Een punt .</li>
+<li>B. <code>});</code></li>
+<li>C. <code>Een hekje #</code></li>
+<li>D. Niets, het werkt zo</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – Als iemand op de knop klikt.</strong> addEventListener wacht op het event "click". Pas dan, en bij elke klik opnieuw, wordt de code tussen de { } uitgevoerd. De regels erbuiten worden wel meteen uitgevoerd als de pagina laadt.</p>
+<p><strong>2. B – <code>});</code>.</strong> De { van de function en de ( van addEventListener zijn nog open. Je sluit af met });. Zonder dat krijg je een rode fout in de Console. Een punt of een hekje helpt hier niet.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">4. Maak een knop die iets doet</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-4</code></p>
+<ol>
+<li>Kopieer alle bestanden en mappen uit opdracht-3 naar opdracht-4.</li>
+<li>Zet in je kaart op spel.html, boven je melding, een button met de tekst Raad! en de id raad.</li>
+<li>Zoek de knop op in script.js en bewaar hem in een const.</li>
+<li>Laat de knop luisteren naar een klik.</li>
+<li>Zet na de klik een tekst in je melding, zoals Je hebt geklikt! Zet ook een console.log in de function.</li>
+<li>Klik een paar keer. Kijk in de Console: achter je bericht staat een getal. Dat telt hoe vaak het bericht kwam.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">hallo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#hallo"</span><span class="p">);</span>
+<span class="nx">hallo</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">});</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Als je op Raad! klikt, verschijnt je tekst onder de knop. In de Console komt bij elke klik je bericht erbij.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-3.html">← Blok 3 · Vind en verander</a><a class="volgende" href="blok-5.html">Blok 5 · Classes aan en uit →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

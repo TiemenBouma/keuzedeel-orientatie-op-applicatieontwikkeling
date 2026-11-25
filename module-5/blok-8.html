@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toeval, tellen en opnieuw · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html"><small>3</small>Vind en verander</a>
+<a href="blok-4.html"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html" class="actief"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 8</div>
+    <h2 class="paginatitel">Toeval, tellen en opnieuw</h2>
+    <h2>Een geheim getal kiezen</h2>
+<p class="sub">De computer kiest het getal, zodat jij het ook niet weet.</p>
+<ol>
+<li><strong>Math.random().</strong> Math.random() geeft een willekeurig kommagetal van 0 tot 1, zoals 0.7312.</li>
+<li><strong>Keer 100 en naar beneden.</strong> * 100 maakt er een getal van 0 tot 100 van, zoals 73.12. Math.floor haalt alles na de komma weg: 73.</li>
+<li><strong>Plus 1.</strong> Math.floor kan ook 0 geven, en nooit 100. Met + 1 krijg je een getal van 1 tot en met 100.</li>
+</ol>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">geheim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">geheim</span><span class="p">);</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Stap voor stap van Math.random() naar een getal van 1 tot 100</div><iframe class="demo-frame" loading="lazy" title="Stap voor stap van Math.random() naar een getal van 1 tot 100" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div style=&quot;display:flex;gap:6px&quot;&gt;&lt;div style=&quot;flex:1;background:#E8EAF6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;Math.random()&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;&lt;code&gt;0.7312&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#E8EAF6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;* 100&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;&lt;code&gt;73.12&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#E8EAF6;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;Math.floor&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;&lt;code&gt;73&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:26px;color:#2965F1;align-self:center&quot;&gt;&amp;#10140;&lt;/div&gt;&lt;div style=&quot;flex:1;background:#e9f8ee;border-radius:10px;padding:10px 12px&quot;&gt;&lt;b style=&quot;font-size:16px&quot;&gt;+ 1&lt;/b&gt;&lt;div style=&quot;font-size:14px;margin-top:4px&quot;&gt;&lt;code&gt;74&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Spieken mag tijdens het testen</p>
+<p>Met console.log(geheim) zie je in de Console welk getal de computer heeft gekozen. Zo kun je testen of goed geraden werkt. Haal die regel weg als je spel af is.</p>
+</div>
+<h2>Tellen en opnieuw beginnen</h2>
+<p class="sub">Een teller laat zien hoe vaak je hebt geraden.</p>
+<ol>
+<li><strong>De teller begint bij 0.</strong> Zet let pogingen = 0; bovenaan je script, buiten de function. Het is let, want de waarde verandert.</li>
+<li><strong>Bij elke klik eentje erbij.</strong> pogingen = pogingen + 1; betekent: pogingen wordt wat hij was, plus 1. Zet het getal daarna met textContent op de pagina.</li>
+<li><strong>Een knop Opnieuw.</strong> Een tweede knop zet alles terug: een nieuw geheim getal, de teller op 0, de melding leeg en het vakje leeg met invoer.value = "".</li>
+</ol>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">pogingen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+
+<span class="nx">knop</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">pogingen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pogingen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">teller</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pogingen</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// ... je if van blok 7</span>
+<span class="p">});</span>
+
+<span class="nx">opnieuwKnop</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">geheim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">pogingen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">teller</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pogingen</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">invoer</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Je hele spel. Probeer het maar.</div><iframe class="demo-frame" loading="lazy" title="Je hele spel. Probeer het maar." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;h2&gt;Raad het getal&lt;/h2&gt;&lt;p&gt;Ik denk aan een getal van 1 tot 100.&lt;/p&gt;
+&lt;div class=&quot;rij&quot;&gt;&lt;input id=&quot;gok&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;100&quot; placeholder=&quot;1 - 100&quot;&gt;&lt;button id=&quot;raad&quot;&gt;Raad!&lt;/button&gt;&lt;button id=&quot;opnieuw&quot; class=&quot;donkerknop&quot;&gt;Opnieuw&lt;/button&gt;&lt;/div&gt;
+&lt;p id=&quot;melding&quot;&gt;&lt;/p&gt;&lt;small&gt;Pogingen: &lt;span id=&quot;teller&quot;&gt;0&lt;/span&gt;&lt;/small&gt;&lt;/div&gt;&lt;script&gt;
+const invoer = document.querySelector(&quot;#gok&quot;);
+const melding = document.querySelector(&quot;#melding&quot;);
+const teller = document.querySelector(&quot;#teller&quot;);
+let geheim = Math.floor(Math.random() * 100) + 1;
+let pogingen = 0;
+document.querySelector(&quot;#raad&quot;).addEventListener(&quot;click&quot;, function () {
+  const gok = Number(invoer.value);
+  pogingen = pogingen + 1;
+  teller.textContent = pogingen;
+  melding.classList.remove(&quot;goed&quot;);
+  melding.classList.remove(&quot;fout&quot;);
+  if (invoer.value === &quot;&quot;) { melding.textContent = &quot;Vul eerst een getal in.&quot;; }
+  else if (gok &gt; geheim) { melding.textContent = &quot;Lager!&quot;; melding.classList.add(&quot;fout&quot;); }
+  else if (gok &lt; geheim) { melding.textContent = &quot;Hoger!&quot;; melding.classList.add(&quot;fout&quot;); }
+  else { melding.textContent = &quot;Goed geraden!&quot;; melding.classList.add(&quot;goed&quot;); }
+});
+document.querySelector(&quot;#opnieuw&quot;).addEventListener(&quot;click&quot;, function () {
+  geheim = Math.floor(Math.random() * 100) + 1;
+  pogingen = 0; teller.textContent = pogingen;
+  melding.textContent = &quot;&quot;; invoer.value = &quot;&quot;;
+  melding.classList.remove(&quot;goed&quot;); melding.classList.remove(&quot;fout&quot;);
+});
+&lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition let-op">
+<p class="admonition-title">let pogingen buiten de function</p>
+<p>Staat let pogingen = 0; binnen de function, dan begint de teller bij elke klik weer bij 0. Daarom staat hij erbuiten, bovenaan je script.</p>
+</div>
+<details class="check">
+<summary>Check: toeval, tellen en opnieuw</summary>
+<p><strong>1. Welke getallen kan Math.floor(Math.random() * 10) + 1 geven?</strong></p>
+<ul>
+<li>A. 0 tot en met 10</li>
+<li>B. 1 tot en met 10</li>
+<li>C. 1 tot en met 11</li>
+<li>D. Altijd 10</li>
+</ul>
+<p><strong>2. Waarom staat let pogingen = 0; buiten de function?</strong></p>
+<ul>
+<li>A. Anders begint de teller bij elke klik weer bij 0</li>
+<li>B. Dan staat het netter</li>
+<li>C. Binnen een function mag geen let</li>
+<li>D. <code>Anders werkt Math.random niet</code></li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – 1 tot en met 10.</strong> Math.random() * 10 geeft 0 tot 10, maar nooit precies 10. Math.floor maakt daar 0 tot en met 9 van. Met + 1 wordt het 1 tot en met 10.</p>
+<p><strong>2. A – Anders begint de teller bij elke klik weer bij 0.</strong> Alles tussen de { } wordt bij elke klik opnieuw uitgevoerd. Staat let pogingen = 0; daar, dan begint de teller steeds opnieuw. let mag wel in een function, en met Math.random heeft het niets te maken.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">8. Maak je spel compleet</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-8</code></p>
+<ol>
+<li>Kopieer alle bestanden en mappen uit opdracht-7 naar opdracht-8.</li>
+<li>Laat de computer een geheim getal van 1 tot 100 kiezen. Gebruik let, want bij Opnieuw verandert het. Zet het met console.log in de Console.</li>
+<li>Zet in je kaart een regel Pogingen: met daarachter een span met een id en het getal 0.</li>
+<li>Tel in je klik-functie de pogingen en zet het aantal op de pagina.</li>
+<li>Maak een knop Opnieuw die alles terugzet: een nieuw getal, de teller, de melding, de kleur en het vakje.</li>
+<li>Speel je spel een paar keer. Werkt alles? Haal dan console.log(geheim) weg.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+
+<span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">...;</span>
+<span class="nx">scoreVak</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>De computer kiest steeds een ander getal. De teller loopt op bij elke gok. Na Opnieuw staat alles weer zoals aan het begin.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-7.html">← Blok 7 · Hoger of lager</a><a class="volgende" href="eindopdracht.html">Eindopdracht →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

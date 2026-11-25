@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naslag · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html"><small>3</small>Vind en verander</a>
+<a href="blok-4.html"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html" class="actief">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Naslag</h2>
+    <h2>JavaScript: de basis</h2>
+<p class="sub">Alles van blok 1 t/m 5 bij elkaar. Kijk hier eerst als je iets kwijt bent.</p>
+<p class="bestandsnaam">Koppelen (in de head)</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"script.js"</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="bestandsnaam">Variabelen</p>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">naam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Sam"</span><span class="p">;</span><span class="w">   </span><span class="c1">// blijft hetzelfde</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">pogingen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w">     </span><span class="c1">// mag veranderen</span>
+<span class="nx">pogingen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pogingen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hoi "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">naam</span><span class="p">);</span>
+</code></pre></div>
+<p class="bestandsnaam">Vind, wacht, verander</p>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">knop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#raad"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">melding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#melding"</span><span class="p">);</span>
+
+<span class="nx">knop</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Hoi!"</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">"goed"</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">"fout"</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">regels</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">"verborgen"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="admonition onthoud">
+<p class="admonition-title">Het recept</p>
+<p>Vind het element met querySelector. Wacht op een klik met addEventListener. Verander de tekst met textContent of de opmaak met classList.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Selectors</p>
+<h1>voor een id, . voor een class, net als in CSS. In classList schrijf je de naam zonder punt.</h1>
+</div>
+<h2>Het spel</h2>
+<p class="sub">Alles van blok 6 t/m 8, en de Console.</p>
+<p class="bestandsnaam">Invoer lezen</p>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">gok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">invoer</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="nx">invoer</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">;</span><span class="w">   </span><span class="c1">// vakje leegmaken</span>
+</code></pre></div>
+<p class="bestandsnaam">Kiezen</p>
+<div class="code"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">invoer</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Vul eerst een getal in."</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Lager!"</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gok</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">geheim</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Hoger!"</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Goed geraden!"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p class="bestandsnaam">Toeval</p>
+<div class="code"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">geheim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Vergelijken</p>
+<p>&gt; groter dan, &lt; kleiner dan, === is gelijk aan. Eén = geeft een waarde.</p>
+</div>
+<div class="admonition onthoud">
+<p class="admonition-title">Console</p>
+<p>F12 en dan het tabblad Console. Rood is een fout: klik rechts op script.js met het regelnummer.</p>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="werkt-het-niet.html">← Werkt het niet?</a><a class="volgende" href="woordenlijst.html">Woordenlijst →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

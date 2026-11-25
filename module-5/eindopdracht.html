@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eindopdracht · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html"><small>3</small>Vind en verander</a>
+<a href="blok-4.html"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html" class="actief">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Eindopdracht</h2>
+    <div class="admonition opdracht eind">
+<p class="admonition-title">Bouw je spel Raad het getal</p>
+<p class="meta">Je werkt in je map eindopdracht. Kopieer eerst alle bestanden en mappen uit opdracht-8 naar eindopdracht.</p>
+<p><strong>Op je site staat:</strong></p>
+<ul>
+<li>Spel staat in het menu van al je pagina's, en is actief op spel.html</li>
+<li>Je spel staat in een kaart, met het vakje en de knoppen met flexbox naast elkaar</li>
+<li>Een vakje voor een getal van 1 tot 100 en een knop Raad!</li>
+<li>Een geheim getal dat de computer zelf kiest</li>
+<li>Een melding op de pagina: hoger, lager of goed geraden, en een melding bij een leeg vakje</li>
+<li>Een teller met het aantal pogingen</li>
+<li>Groen bij goed geraden, en een andere kleur bij hoger en lager</li>
+<li>Een knop Opnieuw die alles terugzet</li>
+<li>Een knop die met toggle iets open- en dichtklapt, zoals je spelregels</li>
+<li class="checklist">Geen rode fouten in de Console, en geen console.log(geheim) meer</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Al klaar?</p>
+<p>Geef de speler maximaal 10 pogingen. Bij de tiende foute gok staat er: Helaas, het getal was ... Of maak een knop die met toggle een donkere modus aan- en uitzet op spel.html.</p>
+</div>
+</div>
+<p>Alles wat je nodig hebt, heb je in de mini-opdrachten al een keer gemaakt. Kijk gerust terug in je eigen mappen.</p>
+<h2>Inleveren</h2>
+<p>Zip de hele map module5-jouwnaam. Daarin zitten opdracht-1 tot en met opdracht-8 en de map eindopdracht. Noem de zip module5-jouwnaam.zip.</p>
+<p><strong>Checklist: vink af voordat je inlevert</strong></p>
+<ul>
+<li>Map module5-jouwnaam met opdracht-1 tot en met opdracht-8</li>
+<li>Map eindopdracht met vier html-bestanden, style.css en script.js</li>
+<li>De script-regel met defer in de head van spel.html</li>
+<li>Geen rode fouten in de Console</li>
+<li>Je spel getest: leeg, te hoog, te laag en goed</li>
+<li>Alle map- en bestandsnamen met kleine letters</li>
+<li>Alles opgeslagen met Ctrl + S</li>
+<li class="checklist">Elke pagina heeft Spel in het menu</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Zo maak je een zip</p>
+<p>Rechtsklik op de map module5-jouwnaam en kies Comprimeren naar &gt; ZIP-bestand. Op oudere Windows: Kopiëren naar &gt; Gecomprimeerde map.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Werk je thuis?</p>
+<p>Je hebt VS Code en Chrome nodig. Kom je er niet uit? Schrijf je vraag op, met de rode fout uit de Console, en neem hem mee.</p>
+</div>
+<p>Twijfel je of iets af is? Kijk bij Klaar als... bij die opdracht.</p>
+    <div class="vorige-volgende"><a class="vorige" href="blok-8.html">← Blok 8 · Toeval, tellen en opnieuw</a><a class="volgende" href="werkt-het-niet.html">Werkt het niet? →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classes aan en uit · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html"><small>3</small>Vind en verander</a>
+<a href="blok-4.html"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html" class="actief"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 5</div>
+    <h2 class="paginatitel">Classes aan en uit</h2>
+    <h2>Een class toevoegen en weghalen</h2>
+<p class="sub">Met classList verander je de opmaak van een element.</p>
+<ol>
+<li><strong>Maak de class in CSS.</strong> In style.css maak je een class met de opmaak die je wilt, bijvoorbeeld .goed met een groene kleur.</li>
+<li><strong>classList.add zet hem aan.</strong> melding.classList.add("goed") geeft het element de class goed. Dan krijgt het meteen de opmaak uit je CSS.</li>
+<li><strong>classList.remove haalt hem weg.</strong> melding.classList.remove("goed") haalt de class weer weg. De opmaak verdwijnt dan ook.</li>
+</ol>
+<p class="bestandsnaam">style.css</p>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">goed</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1E8E4E</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">fout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#E44D26</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="nx">melding</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">"goed"</span><span class="p">);</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Dezelfde melding zonder class, met goed en met fout</div><iframe class="demo-frame" loading="lazy" title="Dezelfde melding zonder class, met goed en met fout" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div class=&quot;twee&quot;&gt;&lt;div&gt;&lt;p class=&quot;label&quot;&gt;Zonder class&lt;/p&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;p&gt;&lt;b&gt;Goed geraden!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p class=&quot;label&quot;&gt;class goed&lt;/p&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;p class=&quot;goed&quot;&gt;&lt;b&gt;Goed geraden!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p class=&quot;label&quot;&gt;class fout&lt;/p&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;p class=&quot;fout&quot;&gt;&lt;b&gt;Lager!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition let-op">
+<p class="admonition-title">Geen punt in classList</p>
+<p>In CSS schrijf je .goed met een punt. In classList schrijf je "goed" zonder punt. JavaScript weet al dat het om een class gaat.</p>
+</div>
+<h2>Aan en uit met toggle</h2>
+<p class="sub">Eén knop die iets aanzet, en bij de volgende klik weer uit.</p>
+<ol>
+<li><strong>toggle wisselt.</strong> classList.toggle("verborgen") zet de class aan als hij er niet is, en haalt hem weg als hij er wel is. Elke klik wisselt hij.</li>
+<li><strong>Uitklappen.</strong> Met .verborgen { display: none; } verdwijnt een element. Toggle je die class, dan klapt de tekst open en weer dicht.</li>
+<li><strong>Donkere modus.</strong> Toggle je een class donker op de body, dan kan je hele pagina donker worden. In CSS schrijf je dan body.donker { ... }.</li>
+</ol>
+<p class="bestandsnaam">style.css</p>
+<div class="code"><pre><span></span><code><span class="p">.</span><span class="nc">verborgen</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">regelsKnop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#regels-knop"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">regels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#regels"</span><span class="p">);</span>
+
+<span class="nx">regelsKnop</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">regels</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">"verborgen"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Klik op Spelregels: de tekst klapt open en weer dicht</div><iframe class="demo-frame" loading="lazy" title="Klik op Spelregels: de tekst klapt open en weer dicht" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div class=&quot;kaart&quot; style=&quot;min-height:105px;box-sizing:border-box&quot;&gt;&lt;button id=&quot;regels-knop&quot; class=&quot;donkerknop&quot;&gt;Spelregels&lt;/button&gt;
+&lt;p id=&quot;regels&quot; class=&quot;verborgen&quot;&gt;De computer kiest een getal van 1 tot 100. Jij raadt. Je hoort of het hoger of lager is.&lt;/p&gt;&lt;/div&gt;
+&lt;script&gt;document.querySelector(&quot;#regels-knop&quot;).addEventListener(&quot;click&quot;, function () { document.querySelector(&quot;#regels&quot;).classList.toggle(&quot;verborgen&quot;); });&lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Kijk in Elements</p>
+<p>Klik op je knop en kijk in Elements naar het element. Je ziet de class erbij komen en weer verdwijnen. Zo weet je zeker dat je JavaScript werkt, ook als je CSS nog niet klopt.</p>
+</div>
+<details class="check">
+<summary>Check: classes aan en uit</summary>
+<p><strong>1. Welke regel geeft de melding de class goed?</strong></p>
+<ul>
+<li>A. <code>melding.classList.add(".goed");</code></li>
+<li>B. <code>melding.classList.add("goed");</code></li>
+<li>C. <code>melding.class = goed;</code></li>
+<li>D. <code>melding.classList.remove("goed");</code></li>
+</ul>
+<p><strong>2. Een p heeft de class verborgen. Je voert regels.classList.toggle("verborgen"); uit. Wat gebeurt er?</strong></p>
+<ul>
+<li>A. De class gaat weg en je ziet de tekst</li>
+<li>B. De class komt er nog een keer bij</li>
+<li>C. De p wordt uit de pagina gehaald</li>
+<li>D. Je krijgt een rode fout</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>melding.classList.add("goed");</code>.</strong> In classList schrijf je de naam zonder punt, tussen aanhalingstekens. Met ".goed" zoekt JavaScript naar een class die .goed heet, met de punt erbij. melding.class bestaat niet, en remove haalt de class juist weg.</p>
+<p><strong>2. A – De class gaat weg en je ziet de tekst.</strong> toggle wisselt: de class was er, dus hij gaat weg. Dan geldt display: none niet meer en zie je de tekst. Bij de volgende klik komt de class terug. Het element zelf blijft gewoon in de pagina.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">5. Klap je spelregels open en dicht</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-5</code></p>
+<ol>
+<li>Kopieer alle bestanden en mappen uit opdracht-4 naar opdracht-5.</li>
+<li>Maak in style.css de classes .goed (groene tekst), .fout (een andere kleur) en .verborgen (display: none).</li>
+<li>Zet in je kaart een knop Spelregels met een eigen id. Zet daaronder een p met een eigen id, de class verborgen en de spelregels in je eigen woorden.</li>
+<li>Zoek de knop en de p op in script.js. Laat de knop bij een klik de class verborgen toggelen.</li>
+<li>Geef in de function van je knop Raad! de melding ook de class goed. Klopt de kleur?</li>
+<li>Klik op je knoppen en kijk in Elements hoe de classes erbij komen en weggaan.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="nx">foto</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">"..."</span><span class="p">);</span>
+
+<span class="p">.</span><span class="nx">groot</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">300</span><span class="nx">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Met de knop Spelregels klap je de tekst open en weer dicht. Na een klik op Raad! is je melding groen.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-4.html">← Blok 4 · Een knop die werkt</a><a class="volgende" href="blok-6.html">Blok 6 · Invoer lezen →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

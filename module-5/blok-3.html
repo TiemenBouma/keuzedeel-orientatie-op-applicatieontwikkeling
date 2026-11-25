@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vind en verander · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html" class="actief"><small>3</small>Vind en verander</a>
+<a href="blok-4.html"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 3</div>
+    <h2 class="paginatitel">Vind en verander</h2>
+    <h2>Een element vinden</h2>
+<p class="sub">Eerst zoek je op je pagina het element dat je wilt veranderen.</p>
+<ol>
+<li><strong>Geef het element een id.</strong> In je HTML geef je het element een id, bijvoorbeeld &lt;p id="melding"&gt;. Een id mag maar één keer op een pagina staan.</li>
+<li><strong>Zoek het met querySelector.</strong> document.querySelector("#melding") zoekt op de pagina het element met die id. Je gebruikt dezelfde selector als in CSS: # voor een id.</li>
+<li><strong>Bewaar het in een const.</strong> Je zet het gevonden element in een const. Dan hoef je het maar één keer te zoeken en kun je de naam steeds gebruiken.</li>
+</ol>
+<p class="bestandsnaam">spel.html</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"melding"</span><span class="p">&gt;</span>Ik denk aan een getal.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">melding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#melding"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">melding</span><span class="p">);</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">De zoekregel in stukjes</div><iframe class="demo-frame" loading="lazy" title="De zoekregel in stukjes" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;style&gt;
+.cl{display:flex;flex-wrap:wrap;gap:4px;align-items:flex-start}
+.cl .st{display:flex;flex-direction:column;align-items:center;gap:6px}
+.cl code{font-family:Consolas,monospace;font-size:17px;background:#1B1F3B;color:#fff;padding:6px 8px;border-radius:6px;border-bottom:4px solid}
+.cl span{font-size:13px;font-weight:bold;text-align:center;max-width:130px}
+&lt;/style&gt;&lt;div class=&quot;cl&quot;&gt;&lt;div class=&quot;st&quot;&gt;&lt;code style=&quot;border-color:#2965F1&quot;&gt;document&lt;/code&gt;&lt;span style=&quot;color:#2965F1&quot;&gt;de hele pagina&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;st&quot;&gt;&lt;code style=&quot;border-color:#E44D26&quot;&gt;.querySelector&lt;/code&gt;&lt;span style=&quot;color:#E44D26&quot;&gt;zoek een element&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;st&quot;&gt;&lt;code style=&quot;border-color:#1E8E4E&quot;&gt;(&quot;#melding&quot;)&lt;/code&gt;&lt;span style=&quot;color:#1E8E4E&quot;&gt;met deze selector&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Lees de regel van links naar rechts</p>
+<p>In gewone taal staat er: zoek in de pagina het element met de id melding. De punt tussen document en querySelector betekent: van de pagina.</p>
+</div>
+<h2>De tekst veranderen</h2>
+<p class="sub">Met textContent zet je nieuwe tekst in een element.</p>
+<ol>
+<li><strong>textContent is de tekst.</strong> melding.textContent is de tekst die in het element staat.</li>
+<li><strong>Een nieuwe tekst met =.</strong> Met = geef je het element een nieuwe tekst. De oude tekst verdwijnt.</li>
+<li><strong>Je HTML-bestand verandert niet.</strong> JavaScript verandert de pagina in Chrome. In spel.html in VS Code blijft de oude tekst staan. In Elements zie je de nieuwe tekst wel.</li>
+</ol>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">melding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#melding"</span><span class="p">);</span>
+<span class="nx">melding</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Raad maar!"</span><span class="p">;</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">Zonder en met deze twee regels JavaScript</div><iframe class="demo-frame" loading="lazy" title="Zonder en met deze twee regels JavaScript" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div class=&quot;twee&quot;&gt;&lt;div&gt;&lt;p class=&quot;label&quot;&gt;Zonder JavaScript&lt;/p&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;p id=&quot;a&quot;&gt;Ik denk aan een getal.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p class=&quot;label&quot;&gt;Met JavaScript&lt;/p&gt;&lt;div class=&quot;kaart&quot;&gt;&lt;p&gt;&lt;b&gt;Raad maar!&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition let-op">
+<p class="admonition-title">null in de Console?</p>
+<p>Staat er null of een rode fout met null erin? Dan heeft querySelector niets gevonden. Kijk of de id in je HTML precies hetzelfde is, en of je het hekje # niet bent vergeten.</p>
+</div>
+<details class="check">
+<summary>Check: vind en verander</summary>
+<p><strong>1. Welke regel vindt het element &lt;p id="uitslag"&gt;?</strong></p>
+<ul>
+<li>A. <code>document.querySelector("uitslag");</code></li>
+<li>B. <code>document.querySelector("#uitslag");</code></li>
+<li>C. <code>document.querySelector(".uitslag");</code></li>
+<li>D. <code>document.find("#uitslag");</code></li>
+</ul>
+<p><strong>2. Wat doet melding.textContent = "Hoger!"; ?</strong></p>
+<ul>
+<li>A. Het schrijft Hoger! in de Console</li>
+<li>B. Het zet Hoger! in het element op de pagina</li>
+<li>C. <code>Het past spel.html aan in VS Code</code></li>
+<li>D. Het maakt een nieuwe p</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>document.querySelector("#uitslag");</code>.</strong> Voor een id zet je een hekje, net als in CSS. Zonder hekje zoekt JavaScript naar een tag uitslag, en met een punt naar een class. find bestaat niet: dan krijg je een rode fout.</p>
+<p><strong>2. B – Het zet Hoger! in het element op de pagina.</strong> textContent is de tekst in het element. Met = komt er Hoger! te staan, op de pagina in Chrome. Je bestand in VS Code verandert niet. In de Console schrijf je met console.log, en er komt geen nieuw element bij.</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">3. Zet tekst op je pagina met JavaScript</p>
+<p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-3</code></p>
+<ol>
+<li>Kopieer alle bestanden en mappen uit opdracht-2 naar opdracht-3. Haal in script.js de oefenregels van opdracht 2 weg, behalve geheim en pogingen.</li>
+<li>Zet in de main van spel.html een div met de class kaart. Zet daar je h2 in, en een p met de tekst Ik denk aan een getal van 1 tot 100.</li>
+<li>Zet daaronder in de kaart een lege p met de id melding.</li>
+<li>Zoek in script.js dat element op en bewaar het in een const.</li>
+<li>Zet met textContent een tekst in je melding, bijvoorbeeld Succes!</li>
+<li>Kijk in de DevTools bij Elements: staat de tekst in je p? Kijk daarna in VS Code in spel.html: staat hij daar ook?</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">titel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#titel"</span><span class="p">);</span>
+<span class="nx">titel</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"..."</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Op spel.html staat in je melding de tekst die je in script.js hebt gezet. In spel.html in VS Code is de p nog leeg. Er staan geen rode fouten in de Console.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="blok-2.html">← Blok 2 · Variabelen</a><a class="volgende" href="blok-4.html">Blok 4 · Een knop die werkt →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

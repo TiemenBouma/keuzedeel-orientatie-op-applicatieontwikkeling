@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Werkt het niet? · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html"><small>3</small>Vind en verander</a>
+<a href="blok-4.html"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html" class="actief">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    
+    <h2 class="paginatitel">Werkt het niet?</h2>
+    <p class="sub">Open de Console. Daar staat meestal precies wat er misgaat.</p>
+<ol>
+<li><strong>Heb je alles opgeslagen?</strong> Een witte stip op een tabblad in VS Code betekent: nog niet opgeslagen. Sla op met Ctrl + S.</li>
+<li><strong>Er gebeurt helemaal niets?</strong> Kijk of de script-regel in de head van spel.html staat, met defer en de goede bestandsnaam. Zet een console.log bovenaan je script: zie je hem in de Console?</li>
+<li><strong>Rode fout met null?</strong> querySelector heeft niets gevonden. Klopt de id in je HTML precies? Staat het hekje # ervoor?</li>
+<li><strong>is not defined?</strong> Je gebruikt een naam die niet bestaat. Vaak is het een typfout of een hoofdletter: Melding is iets anders dan melding.</li>
+<li><strong>Unexpected end of input?</strong> Er mist een } of een ). Kijk of elke function eindigt met });. Prettier zet alles netjes ingesprongen, dan zie je het sneller.</li>
+<li><strong>Hoger en lager kloppen niet?</strong> Ben je Number() vergeten? Of staan &gt; en &lt; verkeerd om? Zet console.log(gok, geheim) in je function en kijk wat er echt in staat.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Nog steeds niet?</p>
+<p>Vraag eerst een klasgenoot, daarna je docent. Laat de Console openstaan, dan zoeken jullie samen.</p>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="eindopdracht.html">← Eindopdracht</a><a class="volgende" href="naslag.html">Naslag →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

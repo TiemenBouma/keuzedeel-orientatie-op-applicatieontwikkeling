@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kennismaken · Module 5 · Webdevelopment</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="merk" href="../index.html"><span>&lt;/&gt;</span> Webdevelopment</a>
+    <nav><a href="../index.html">Alle modules</a></nav>
+  </div>
+</header>
+<div class="kruimel"><a href="../index.html">Modules</a> › Module 5</div>
+<div class="module-kop"><h1>Module 5 · JavaScript: je pagina reageert</h1><p>Je bouwt het spel Raad het getal op een nieuwe pagina in je eigen site.</p></div>
+<div class="layout">
+  <aside>
+    <details class="inhoudsopgave" open>
+      <summary>In deze module</summary>
+      <nav><a href="index.html">Start</a>
+<a href="blok-1.html" class="actief"><small>1</small>Kennismaken</a>
+<a href="blok-2.html"><small>2</small>Variabelen</a>
+<a href="blok-3.html"><small>3</small>Vind en verander</a>
+<a href="blok-4.html"><small>4</small>Een knop die werkt</a>
+<a href="blok-5.html"><small>5</small>Classes aan en uit</a>
+<a href="blok-6.html"><small>6</small>Invoer lezen</a>
+<a href="blok-7.html"><small>7</small>Hoger of lager</a>
+<a href="blok-8.html"><small>8</small>Toeval, tellen en opnieuw</a>
+<hr>
+<a href="eindopdracht.html">Eindopdracht</a>
+<a href="werkt-het-niet.html">Werkt het niet?</a>
+<a href="naslag.html">Naslag</a>
+<a href="woordenlijst.html">Woordenlijst</a></nav>
+    </details>
+  </aside>
+  <article>
+    <div class="bloklabel">BLOK 1</div>
+    <h2 class="paginatitel">Kennismaken</h2>
+    <h2>Je nieuwe gereedschap: de Console</h2>
+<p class="sub">Hier zie je wat je JavaScript doet, en wat er misgaat.</p>
+<ol>
+<li><strong>Open de DevTools.</strong> Open je pagina met Live Server en druk op F12.</li>
+<li><strong>Klik op Console.</strong> Bovenin staan tabbladen. Console staat naast Elements. Zie je hem niet? Klik op &gt;&gt; om meer tabbladen te zien.</li>
+<li><strong>Lees je berichten.</strong> Wat je met console.log opschrijft, staat hier. Rechts staat in welk bestand en op welke regel.</li>
+<li><strong>Rood is een fout.</strong> Een rode regel betekent: hier stopt je JavaScript. Lees wat er staat en klik rechts op script.js:2. Chrome laat dan de regel zien.</li>
+<li><strong>Maak hem leeg.</strong> Met het rondje met de streep erdoor, linksboven in de Console, haal je oude berichten weg.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">Zo ziet de Console eruit: een bericht en een rode fout op regel 2</div><iframe class="demo-frame" loading="lazy" title="Zo ziet de Console eruit: een bericht en een rode fout op regel 2" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+.dt{font-family:Consolas,monospace;font-size:13px;border:1px solid #c9ccd8;border-radius:6px;overflow:hidden;background:#fff}
+.dt .tabs{background:#f1f3f4;border-bottom:1px solid #c9ccd8;padding:5px 8px;font-family:Arial,sans-serif;font-size:12px;color:#5f6368}
+.dt .tabs b{color:#1a73e8;border-bottom:2px solid #1a73e8;padding-bottom:3px;margin:0 8px}
+.dt .r{display:flex;justify-content:space-between;gap:10px;padding:4px 10px;border-bottom:1px solid #eee}
+.dt .r u{color:#5f6368;text-decoration:underline}
+.dt .r.fout{background:#fdeceb;color:#c5221f;border-color:#f6c6c2}
+.dt .r.in{color:#1a73e8}
+&lt;/style&gt;&lt;div class=&quot;dt&quot;&gt;&lt;div class=&quot;tabs&quot;&gt;Elements &lt;b&gt;Console&lt;/b&gt; Sources&lt;/div&gt;&lt;div class=&quot;r&quot;&gt;&lt;span&gt;Hallo vanuit script.js!&lt;/span&gt;&lt;u&gt;script.js:1&lt;/u&gt;&lt;/div&gt;&lt;div class=&quot;r fout&quot;&gt;&lt;span&gt;&amp;#9940; Uncaught ReferenceError: consol is not defined&lt;/span&gt;&lt;u&gt;script.js:2&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">Zet hem altijd open</p>
+<p>Werk je met JavaScript, laat dan de Console de hele tijd openstaan. Dan zie je een fout meteen.</p>
+</div>
+<div class="admonition let-op">
+<p class="admonition-title">Typfout = fout</p>
+<p>consol in plaats van console is al genoeg voor een rode melding. JavaScript let op elke letter, ook op hoofdletters.</p>
+</div>
+<h2>Wat is JavaScript?</h2>
+<p class="sub">HTML en CSS maken je pagina. JavaScript laat hem reageren..</p>
+<ol>
+<li><strong>Vergelijk het met een huis.</strong> HTML zijn de muren, CSS is de verf en JavaScript is de elektriciteit. Pas met elektriciteit gaat er een lamp aan als je op de knop drukt.</li>
+<li><strong>Het werkt in de browser.</strong> Chrome leest je JavaScript en voert het uit, regel voor regel, van boven naar beneden. Je hebt geen extra programma nodig.</li>
+<li><strong>Een eigen bestand.</strong> Je CSS staat in style.css. Je JavaScript zet je in een eigen bestand: script.js.</li>
+</ol>
+<figure class="demo"><div class="demo-titel">Dezelfde knop met HTML, met CSS en met JavaScript. Klik maar op de derde.</div><iframe class="demo-frame" loading="lazy" title="Dezelfde knop met HTML, met CSS en met JavaScript. Klik maar op de derde." srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+body{font-family:Arial,sans-serif;color:#1B1F3B;margin:0;padding:14px;font-size:15px;background:#fff}
+.kaart{background:#E8EAF6;border-radius:10px;padding:14px 16px}
+.kaart h2{margin:0 0 6px;font-size:19px}.kaart p{margin:6px 0}
+button{padding:7px 14px;border:0;border-radius:6px;background:#2965F1;color:#fff;font-size:15px;cursor:pointer;font-family:Arial,sans-serif}
+button.donkerknop{background:#1B1F3B}
+input{width:90px;padding:6px;font-size:15px;border:1px solid #9aa0c3;border-radius:5px}
+.rij{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#melding{font-weight:bold;min-height:20px}
+.goed{color:#1E8E4E}.fout{color:#E44D26}
+.verborgen{display:none}
+small{color:#5b6075}
+.label{font-size:12px;color:#5b6075;margin:0 0 4px}
+.twee{display:flex;gap:14px}.twee&gt;div{flex:1}
+&lt;/style&gt;&lt;div class=&quot;twee&quot;&gt;
+&lt;div&gt;&lt;p class=&quot;label&quot;&gt;Alleen HTML&lt;/p&gt;&lt;button style=&quot;all:revert&quot;&gt;Klik mij&lt;/button&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p class=&quot;label&quot;&gt;HTML + CSS&lt;/p&gt;&lt;button&gt;Klik mij&lt;/button&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p class=&quot;label&quot;&gt;HTML + CSS + JavaScript&lt;/p&gt;&lt;button id=&quot;k&quot;&gt;Klik mij&lt;/button&gt;&lt;p id=&quot;m&quot; style=&quot;font-weight:bold;margin:6px 0;min-height:20px&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;script&gt;document.querySelector(&quot;#k&quot;).addEventListener(&quot;click&quot;, function () { document.querySelector(&quot;#m&quot;).textContent = &quot;Je hebt geklikt!&quot;; });&lt;/script&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition onthoud">
+<p class="admonition-title">Eerst bouwen, dan laten reageren</p>
+<p>Je JavaScript werkt altijd samen met je HTML. In je HTML zet je de knop. In script.js zeg je wat er gebeurt als iemand erop klikt.</p>
+</div>
+<h2>script.js koppelen</h2>
+<p class="sub">Net als style.css koppel je script.js in de head.</p>
+<ol>
+<li><strong>Maak script.js.</strong> Maak in dezelfde map als spel.html een nieuw bestand script.js.</li>
+<li><strong>Koppel het in de head.</strong> Zet in de head van spel.html een script-regel met src="script.js". Vergeet de sluittag &lt;/script&gt; niet.</li>
+<li><strong>defer betekent: wacht even.</strong> Met defer voert Chrome je script pas uit als de hele pagina geladen is. Anders zoekt je script naar knoppen die er nog niet zijn.</li>
+</ol>
+<p class="bestandsnaam">spel.html</p>
+<div class="code"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"script.js"</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<p class="bestandsnaam">script.js</p>
+<div class="code"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hallo vanuit script.js!"</span><span class="p">);</span>
+</code></pre></div>
+<figure class="demo"><div class="demo-titel">In de Console zie je het bericht uit script.js</div><iframe class="demo-frame" loading="lazy" title="In de Console zie je het bericht uit script.js" srcdoc="&lt;style&gt;body{margin:0;padding:14px;font-family:Arial,sans-serif;font-size:15px;color:#1B1F3B;background:#fff}&lt;/style&gt;&lt;style&gt;
+.dt{font-family:Consolas,monospace;font-size:13px;border:1px solid #c9ccd8;border-radius:6px;overflow:hidden;background:#fff}
+.dt .tabs{background:#f1f3f4;border-bottom:1px solid #c9ccd8;padding:5px 8px;font-family:Arial,sans-serif;font-size:12px;color:#5f6368}
+.dt .tabs b{color:#1a73e8;border-bottom:2px solid #1a73e8;padding-bottom:3px;margin:0 8px}
+.dt .r{display:flex;justify-content:space-between;gap:10px;padding:4px 10px;border-bottom:1px solid #eee}
+.dt .r u{color:#5f6368;text-decoration:underline}
+.dt .r.fout{background:#fdeceb;color:#c5221f;border-color:#f6c6c2}
+.dt .r.in{color:#1a73e8}
+&lt;/style&gt;&lt;div class=&quot;dt&quot;&gt;&lt;div class=&quot;tabs&quot;&gt;Elements &lt;b&gt;Console&lt;/b&gt; Sources&lt;/div&gt;&lt;div class=&quot;r&quot;&gt;&lt;span&gt;Hallo vanuit script.js!&lt;/span&gt;&lt;u&gt;script.js:1&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
+<div class="admonition tip">
+<p class="admonition-title">console.log is je controle</p>
+<p>Met console.log("...") schrijf je een bericht in de Console. Zo kun je altijd even controleren of je script werkt. Bezoekers van je site zien dit niet.</p>
+</div>
+<details class="check">
+<summary>Check: kennismaken</summary>
+<p><strong>1. Waar zet je de regel &lt;script src="script.js" defer&gt;&lt;/script&gt;?</strong></p>
+<ul>
+<li>A. <code>In style.css</code></li>
+<li>B. <code>In de head van spel.html</code></li>
+<li>C. <code>In script.js zelf</code></li>
+<li>D. <code>Achter de &lt;/html&gt;</code></li>
+</ul>
+<p><strong>2. In de Console staat een rode regel. Wat betekent dat?</strong></p>
+<ul>
+<li>A. Er zit een fout in je JavaScript</li>
+<li>B. <code>Je bericht van console.log</code></li>
+<li>C. Je CSS is niet goed</li>
+<li>D. Je pagina is helemaal klaar</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>In de head van spel.html</code>.</strong> Net als de link naar style.css staat de script-regel in de head. Door defer wacht Chrome tot de hele pagina klaar is. In style.css en script.js zelf hoort geen HTML, en achter &lt;/html&gt; mag niets meer staan.</p>
+<p><strong>2. A – Er zit een fout in je JavaScript.</strong> Rood betekent een fout: daar stopt je JavaScript. Een gewoon bericht van console.log is zwart. Fouten in je CSS zie je niet in de Console, maar bij Styles (een streep of een geel driehoekje).</p>
+</details>
+</details>
+<div class="admonition opdracht">
+<p class="admonition-title">1. Maak je spelpagina en koppel script.js</p>
+<p class="meta">Ongeveer 15 minuten · Je werkt in: <code>opdracht-1</code></p>
+<ol>
+<li>Maak in Documenten een map module5-jouwnaam. Maak daarin de mappen opdracht-1 tot en met opdracht-8 en de map eindopdracht.</li>
+<li>Kopieer alle bestanden en mappen uit de map eindopdracht van module 4 naar opdracht-1.</li>
+<li>Maak een kopie van contact.html en noem die spel.html. Haal alles uit de main weg en zet er een h2 met de tekst Raad het getal in.</li>
+<li>Zet in het menu van al je pagina's een link Spel naar spel.html. Op spel.html krijgt die link de class actief.</li>
+<li>Maak een bestand script.js naast style.css. Koppel het in de head van spel.html, met defer.</li>
+<li>Zet in script.js een console.log met een eigen bericht. Open spel.html met Live Server, druk op F12 en kijk in de Console.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s2">"..."</span><span class="w"> </span><span class="nx">defer</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"..."</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>Op elke pagina staat Spel in het menu. Op spel.html staat je kop, en in de Console staat jouw bericht. Er staan geen rode fouten.</p>
+</div>
+</div>
+    <div class="vorige-volgende"><a class="vorige" href="index.html">← Start</a><a class="volgende" href="blok-2.html">Blok 2 · Variabelen →</a></div>
+  </article>
+</div>
+<script>
+  (function () {
+    var d = document.querySelector('.inhoudsopgave');
+    if (!d) return;
+    var smal = window.matchMedia('(max-width: 860px)');
+    if (smal.matches) d.removeAttribute('open');
+    d.querySelector('summary').addEventListener('click', function (e) { if (!smal.matches) e.preventDefault(); });
+  })();
+</script>
+<footer class="site">Keuzedeel Oriëntatie op applicatieontwikkeling · ROC Midden Nederland</footer>
+</body>
+</html>

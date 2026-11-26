@@ -70,7 +70,7 @@ Alles in deze module bouwt verder op wat je al gemaakt hebt.
 - **DevTools:** Met Elements en Styles kijk je hoe je pagina gemaakt is. Het tabblad Console heb je al een keer gezien.
 
 !!! tip "Iets kwijt?"
-De naslag van module 1 tot en met 4 mag je er de hele tijd bij houden. Vooral de selectors heb je nodig: # voor een id en . voor een class. Die gebruik je in JavaScript ook.
+    De naslag van module 1 tot en met 4 mag je er de hele tijd bij houden. Vooral de selectors heb je nodig: # voor een id en . voor een class. Die gebruik je in JavaScript ook.
 
 ## Zo werk je
 
@@ -90,7 +90,7 @@ Elk blok werkt hetzelfde: eerst de **uitleg**, dan een **check** om te kijken of
 | 8    | Toeval, tellen en opnieuw: Math.random en een teller           |
 
 !!! onthoud "Vergelijk het met een huis"
-HTML zijn de muren, CSS is de verf en JavaScript is de elektriciteit: daarmee gaat er iets gebeuren als je op een knop drukt.
+    HTML zijn de muren, CSS is de verf en JavaScript is de elektriciteit: daarmee gaat er iets gebeuren als je op een knop drukt.
 
 === blok-1 | Kennismaken
 
@@ -118,10 +118,10 @@ Hier zie je wat je JavaScript doet, en wat er misgaat.
 ```
 
 !!! tip "Zet hem altijd open"
-Werk je met JavaScript, laat dan de Console de hele tijd openstaan. Dan zie je een fout meteen.
+    Werk je met JavaScript, laat dan de Console de hele tijd openstaan. Dan zie je een fout meteen.
 
 !!! let-op "Typfout = fout"
-consol in plaats van console is al genoeg voor een rode melding. JavaScript let op elke letter, ook op hoofdletters.
+    consol in plaats van console is al genoeg voor een rode melding. JavaScript let op elke letter, ook op hoofdletters.
 
 ## Wat is JavaScript?
 
@@ -155,7 +155,7 @@ small{color:#5b6075}
 ```
 
 !!! onthoud "Eerst bouwen, dan laten reageren"
-Je JavaScript werkt altijd samen met je HTML. In je HTML zet je de knop. In script.js zeg je wat er gebeurt als iemand erop klikt.
+    Je JavaScript werkt altijd samen met je HTML. In je HTML zet je de knop. In script.js zeg je wat er gebeurt als iemand erop klikt.
 
 ## script.js koppelen
 
@@ -196,20 +196,20 @@ console.log("Hallo vanuit script.js!");
 ```
 
 !!! tip "console.log is je controle"
-Met console.log("...") schrijf je een bericht in de Console. Zo kun je altijd even controleren of je script werkt. Bezoekers van je site zien dit niet.
+    Met console.log("...") schrijf je een bericht in de Console. Zo kun je altijd even controleren of je script werkt. Bezoekers van je site zien dit niet.
 
 ??? check "Check: kennismaken"
-**1. Waar zet je de regel &lt;script src="script.js" defer&gt;&lt;/script&gt;?**
+    **1. Waar zet je de regel &lt;script src="script.js" defer&gt;&lt;/script&gt;?**
 
-    - A. `In style.css`
-    - B. `In de head van spel.html`
-    - C. `In script.js zelf`
-    - D. `Achter de </html>`
+    - A. In style.css
+    - B. In de head van spel.html
+    - C. In script.js zelf
+    - D. Achter de &lt;/html&gt;
 
     **2. In de Console staat een rode regel. Wat betekent dat?**
 
     - A. Er zit een fout in je JavaScript
-    - B. `Je bericht van console.log`
+    - B. Je bericht van console.log
     - C. Je CSS is niet goed
     - D. Je pagina is helemaal klaar
 
@@ -219,8 +219,8 @@ Met console.log("...") schrijf je een bericht in de Console. Zo kun je altijd ev
         **2. A – Er zit een fout in je JavaScript.** Rood betekent een fout: daar stopt je JavaScript. Een gewoon bericht van console.log is zwart. Fouten in je CSS zie je niet in de Console, maar bij Styles (een streep of een geel driehoekje).
 
 !!! opdracht "1. Maak je spelpagina en koppel script.js"
-Ongeveer 15 minuten · Je werkt in: `opdracht-1`
-{: .meta}
+    Ongeveer 15 minuten · Je werkt in: `opdracht-1`
+    {: .meta}
 
     1. Maak in Documenten een map module5-jouwnaam. Maak daarin de mappen opdracht-1 tot en met opdracht-8 en de map eindopdracht.
     2. Kopieer alle bestanden en mappen uit de map eindopdracht van module 4 naar opdracht-1.
@@ -295,7 +295,7 @@ small{color:#5b6075}
 ```
 
 !!! tip "Namen in camelCase"
-Een naam heeft geen spaties. Bestaat hij uit meer woorden, dan plak je ze aan elkaar en begint elk nieuw woord met een hoofdletter: geheimGetal, raadKnop. Dat heet camelCase, omdat de hoofdletters bulten zijn, net als bij een kameel.
+    Een naam heeft geen spaties. Bestaat hij uit meer woorden, dan plak je ze aan elkaar en begint elk nieuw woord met een hoofdletter: geheimGetal, raadKnop. Dat heet camelCase, omdat de hoofdletters bulten zijn, net als bij een kameel.
 
 ## Tekst en getallen
 
@@ -331,10 +331,10 @@ console.log("5" + 5);
 ```
 
 !!! let-op ""5" + 5 is geen 10"
-Is één van de twee tekst, dan wordt het samen tekst. "5" + 5 wordt dan "55". Dit kom je in blok 6 weer tegen bij een invoerveld.
+    Is één van de twee tekst, dan wordt het samen tekst. "5" + 5 wordt dan "55". Dit kom je in blok 6 weer tegen bij een invoerveld.
 
 ??? check "Check: variabelen"
-**1. Het aantal pogingen wordt later groter. Hoe maak je die variabele?**
+    **1. Het aantal pogingen wordt later groter. Hoe maak je die variabele?**
 
     - A. `const pogingen = 0;`
     - B. `let pogingen = 0;`
@@ -354,8 +354,8 @@ Is één van de twee tekst, dan wordt het samen tekst. "5" + 5 wordt dan "55". D
         **2. B – 34.** "3" staat tussen aanhalingstekens, dus het is tekst. Tekst + getal wordt samen tekst: 34. Er komt geen 7, want er wordt niet gerekend. Een fout is het ook niet: JavaScript plakt gewoon.
 
 !!! opdracht "2. Maak je eerste variabelen"
-Ongeveer 10 minuten · Je werkt in: `opdracht-2`
-{: .meta}
+    Ongeveer 10 minuten · Je werkt in: `opdracht-2`
+    {: .meta}
 
     1. Kopieer alle bestanden en mappen uit opdracht-1 naar opdracht-2.
     2. Maak in script.js een variabele met je eigen naam. Kies zelf of je const of let gebruikt.
@@ -484,10 +484,10 @@ small{color:#5b6075}
 ```
 
 !!! let-op "null in de Console?"
-Staat er null of een rode fout met null erin? Dan heeft querySelector niets gevonden. Kijk of de id in je HTML precies hetzelfde is, en of je het hekje # niet bent vergeten.
+    Staat er null of een rode fout met null erin? Dan heeft querySelector niets gevonden. Kijk of de id in je HTML precies hetzelfde is, en of je het hekje # niet bent vergeten.
 
 ??? check "Check: vind en verander"
-**1. Welke regel vindt het element &lt;p id="uitslag"&gt;?**
+    **1. Welke regel vindt het element &lt;p id="uitslag"&gt;?**
 
     - A. `document.querySelector("uitslag");`
     - B. `document.querySelector("#uitslag");`
@@ -498,7 +498,7 @@ Staat er null of een rode fout met null erin? Dan heeft querySelector niets gevo
 
     - A. Het schrijft Hoger! in de Console
     - B. Het zet Hoger! in het element op de pagina
-    - C. `Het past spel.html aan in VS Code`
+    - C. Het past spel.html aan in VS Code
     - D. Het maakt een nieuwe p
 
     ??? antwoord "Bekijk de antwoorden"
@@ -507,8 +507,8 @@ Staat er null of een rode fout met null erin? Dan heeft querySelector niets gevo
         **2. B – Het zet Hoger! in het element op de pagina.** textContent is de tekst in het element. Met = komt er Hoger! te staan, op de pagina in Chrome. Je bestand in VS Code verandert niet. In de Console schrijf je met console.log, en er komt geen nieuw element bij.
 
 !!! opdracht "3. Zet tekst op je pagina met JavaScript"
-Ongeveer 10 minuten · Je werkt in: `opdracht-3`
-{: .meta}
+    Ongeveer 10 minuten · Je werkt in: `opdracht-3`
+    {: .meta}
 
     1. Kopieer alle bestanden en mappen uit opdracht-2 naar opdracht-3. Haal in script.js de oefenregels van opdracht 2 weg, behalve geheim en pogingen.
     2. Zet in de main van spel.html een div met de class kaart. Zet daar je h2 in, en een p met de tekst Ik denk aan een getal van 1 tot 100.
@@ -578,7 +578,7 @@ small{color:#5b6075}
 ```
 
 !!! let-op "Sluit goed af met });"
-De function sluit je af met }. Daarna sluit je addEventListener af met ). De puntkomma maakt de regel af. Samen: });
+    De function sluit je af met }. Daarna sluit je addEventListener af met ). De puntkomma maakt de regel af. Samen: });
 
 ## Het recept: vind, wacht, verander
 
@@ -622,10 +622,10 @@ small{color:#5b6075}
 ```
 
 !!! onthoud "// is een opmerking"
-Een regel die begint met // is een opmerking. JavaScript slaat die over. Zo kun je in je eigen woorden opschrijven wat je code doet. Dat helpt je ook bij het examen.
+    Een regel die begint met // is een opmerking. JavaScript slaat die over. Zo kun je in je eigen woorden opschrijven wat je code doet. Dat helpt je ook bij het examen.
 
 ??? check "Check: een knop die werkt"
-**1. Wanneer wordt de code tussen de { } van de function uitgevoerd?**
+    **1. Wanneer wordt de code tussen de { } van de function uitgevoerd?**
 
     - A. Als de pagina laadt
     - B. Als iemand op de knop klikt
@@ -641,7 +641,7 @@ Een regel die begint met // is een opmerking. JavaScript slaat die over. Zo kun 
 
     - A. Een punt .
     - B. `});`
-    - C. `Een hekje #`
+    - C. Een hekje #
     - D. Niets, het werkt zo
 
     ??? antwoord "Bekijk de antwoorden"
@@ -650,8 +650,8 @@ Een regel die begint met // is een opmerking. JavaScript slaat die over. Zo kun 
         **2. B – `});`.** De { van de function en de ( van addEventListener zijn nog open. Je sluit af met });. Zonder dat krijg je een rode fout in de Console. Een punt of een hekje helpt hier niet.
 
 !!! opdracht "4. Maak een knop die iets doet"
-Ongeveer 10 minuten · Je werkt in: `opdracht-4`
-{: .meta}
+    Ongeveer 10 minuten · Je werkt in: `opdracht-4`
+    {: .meta}
 
     1. Kopieer alle bestanden en mappen uit opdracht-3 naar opdracht-4.
     2. Zet in je kaart op spel.html, boven je melding, een button met de tekst Raad! en de id raad.
@@ -722,7 +722,7 @@ small{color:#5b6075}
 ```
 
 !!! let-op "Geen punt in classList"
-In CSS schrijf je .goed met een punt. In classList schrijf je "goed" zonder punt. JavaScript weet al dat het om een class gaat.
+    In CSS schrijf je .goed met een punt. In classList schrijf je "goed" zonder punt. JavaScript weet al dat het om een class gaat.
 
 ## Aan en uit met toggle
 
@@ -775,10 +775,10 @@ small{color:#5b6075}
 ```
 
 !!! tip "Kijk in Elements"
-Klik op je knop en kijk in Elements naar het element. Je ziet de class erbij komen en weer verdwijnen. Zo weet je zeker dat je JavaScript werkt, ook als je CSS nog niet klopt.
+    Klik op je knop en kijk in Elements naar het element. Je ziet de class erbij komen en weer verdwijnen. Zo weet je zeker dat je JavaScript werkt, ook als je CSS nog niet klopt.
 
 ??? check "Check: classes aan en uit"
-**1. Welke regel geeft de melding de class goed?**
+    **1. Welke regel geeft de melding de class goed?**
 
     - A. `melding.classList.add(".goed");`
     - B. `melding.classList.add("goed");`
@@ -798,8 +798,8 @@ Klik op je knop en kijk in Elements naar het element. Je ziet de class erbij kom
         **2. A – De class gaat weg en je ziet de tekst.** toggle wisselt: de class was er, dus hij gaat weg. Dan geldt display: none niet meer en zie je de tekst. Bij de volgende klik komt de class terug. Het element zelf blijft gewoon in de pagina.
 
 !!! opdracht "5. Klap je spelregels open en dicht"
-Ongeveer 15 minuten · Je werkt in: `opdracht-5`
-{: .meta}
+    Ongeveer 15 minuten · Je werkt in: `opdracht-5`
+    {: .meta}
 
     1. Kopieer alle bestanden en mappen uit opdracht-4 naar opdracht-5.
     2. Maak in style.css de classes .goed (groene tekst), .fout (een andere kleur) en .verborgen (display: none).
@@ -859,7 +859,7 @@ small{color:#5b6075}
 ```
 
 !!! onthoud "Een input heeft geen sluittag"
-Je schrijft alleen &lt;input ...&gt;. Er bestaat geen &lt;/input&gt;, net als bij een img.
+    Je schrijft alleen &lt;input ...&gt;. Er bestaat geen &lt;/input&gt;, net als bij een img.
 
 ## Lezen wat er is ingevuld
 
@@ -902,10 +902,10 @@ small{color:#5b6075}
 ```
 
 !!! let-op "Vergeet Number() niet"
-Zonder Number() is de invoer tekst. Typt iemand 50, dan wordt invoer.value + 1 niet 51 maar "501". Net als "5" + 5 in blok 2.
+    Zonder Number() is de invoer tekst. Typt iemand 50, dan wordt invoer.value + 1 niet 51 maar "501". Net als "5" + 5 in blok 2.
 
 ??? check "Check: invoer lezen"
-**1. Welke regel leest wat er in &lt;input id="gok"&gt; is getypt? (invoer is dat element)**
+    **1. Welke regel leest wat er in &lt;input id="gok"&gt; is getypt? (invoer is dat element)**
 
     - A. `invoer.textContent`
     - B. `invoer.value`
@@ -925,8 +925,8 @@ Zonder Number() is de invoer tekst. Typt iemand 50, dan wordt invoer.value + 1 n
         **2. B – 82.** value is altijd tekst. Tekst + getal wordt tekst: 82. Voor 10 moet je eerst Number(invoer.value) gebruiken. Een fout krijg je niet, JavaScript plakt gewoon.
 
 !!! opdracht "6. Lees wat de speler typt"
-Ongeveer 15 minuten · Je werkt in: `opdracht-6`
-{: .meta}
+    Ongeveer 15 minuten · Je werkt in: `opdracht-6`
+    {: .meta}
 
     1. Kopieer alle bestanden en mappen uit opdracht-5 naar opdracht-6.
     2. Zet vóór je knop Raad! een invoerveld voor getallen van 1 tot 100, met een id en een placeholder.
@@ -995,7 +995,7 @@ small{color:#5b6075}
 ```
 
 !!! onthoud "Vergelijken"
-&gt; betekent groter dan, &lt; betekent kleiner dan en === betekent is gelijk aan. Een vergelijking is waar (true) of niet waar (false). Eén = is geen vergelijking: dat geeft een waarde.
+    &gt; betekent groter dan, &lt; betekent kleiner dan en === betekent is gelijk aan. Een vergelijking is waar (true) of niet waar (false). Eén = is geen vergelijking: dat geeft een waarde.
 
 ## Een leeg vakje en een kleur
 
@@ -1047,10 +1047,10 @@ small{color:#5b6075}
 ```
 
 !!! tip "Test alle wegen"
-Test je spel vier keer: met een leeg vakje, te hoog, te laag en precies goed. Zo weet je zeker dat elk stuk van je if werkt. Dit lijstje kun je straks ook gebruiken voor het testlijstje van je examen.
+    Test je spel vier keer: met een leeg vakje, te hoog, te laag en precies goed. Zo weet je zeker dat elk stuk van je if werkt. Dit lijstje kun je straks ook gebruiken voor het testlijstje van je examen.
 
 ??? check "Check: hoger of lager"
-**1. geheim is 42 en gok is 30. Welke melding komt er?**
+    **1. geheim is 42 en gok is 30. Welke melding komt er?**
 
     ```js
     if (gok > geheim) → Lager!
@@ -1076,8 +1076,8 @@ Test je spel vier keer: met een leeg vakje, te hoog, te laag en precies goed. Zo
         **2. B – `if (gok === geheim)`.** === vergelijkt. Eén = geeft gok de waarde van geheim, en dan klopt je spel niet meer. is bestaat niet in JavaScript, en =&gt; betekent iets heel anders.
 
 !!! opdracht "7. Zeg of het hoger of lager is"
-Ongeveer 15 minuten · Je werkt in: `opdracht-7`
-{: .meta}
+    Ongeveer 15 minuten · Je werkt in: `opdracht-7`
+    {: .meta}
 
     1. Kopieer alle bestanden en mappen uit opdracht-6 naar opdracht-7. Haal je console.log(gok + 1) weg.
     2. Je hebt al een geheim van 42 uit opdracht 2. Vergelijk in de function je gok met het geheim.
@@ -1136,7 +1136,7 @@ small{color:#5b6075}
 ```
 
 !!! tip "Spieken mag tijdens het testen"
-Met console.log(geheim) zie je in de Console welk getal de computer heeft gekozen. Zo kun je testen of goed geraden werkt. Haal die regel weg als je spel af is.
+    Met console.log(geheim) zie je in de Console welk getal de computer heeft gekozen. Zo kun je testen of goed geraden werkt. Haal die regel weg als je spel af is.
 
 ## Tellen en opnieuw beginnen
 
@@ -1212,10 +1212,10 @@ document.querySelector("#opnieuw").addEventListener("click", function () {
 ```
 
 !!! let-op "let pogingen buiten de function"
-Staat let pogingen = 0; binnen de function, dan begint de teller bij elke klik weer bij 0. Daarom staat hij erbuiten, bovenaan je script.
+    Staat let pogingen = 0; binnen de function, dan begint de teller bij elke klik weer bij 0. Daarom staat hij erbuiten, bovenaan je script.
 
 ??? check "Check: toeval, tellen en opnieuw"
-**1. Welke getallen kan Math.floor(Math.random() \* 10) + 1 geven?**
+    **1. Welke getallen kan Math.floor(Math.random() \* 10) + 1 geven?**
 
     - A. 0 tot en met 10
     - B. 1 tot en met 10
@@ -1227,7 +1227,7 @@ Staat let pogingen = 0; binnen de function, dan begint de teller bij elke klik w
     - A. Anders begint de teller bij elke klik weer bij 0
     - B. Dan staat het netter
     - C. Binnen een function mag geen let
-    - D. `Anders werkt Math.random niet`
+    - D. Anders werkt Math.random niet
 
     ??? antwoord "Bekijk de antwoorden"
         **1. B – 1 tot en met 10.** Math.random() \* 10 geeft 0 tot 10, maar nooit precies 10. Math.floor maakt daar 0 tot en met 9 van. Met + 1 wordt het 1 tot en met 10.
@@ -1235,8 +1235,8 @@ Staat let pogingen = 0; binnen de function, dan begint de teller bij elke klik w
         **2. A – Anders begint de teller bij elke klik weer bij 0.** Alles tussen de { } wordt bij elke klik opnieuw uitgevoerd. Staat let pogingen = 0; daar, dan begint de teller steeds opnieuw. let mag wel in een function, en met Math.random heeft het niets te maken.
 
 !!! opdracht "8. Maak je spel compleet"
-Ongeveer 15 minuten · Je werkt in: `opdracht-8`
-{: .meta}
+    Ongeveer 15 minuten · Je werkt in: `opdracht-8`
+    {: .meta}
 
     1. Kopieer alle bestanden en mappen uit opdracht-7 naar opdracht-8.
     2. Laat de computer een geheim getal van 1 tot 100 kiezen. Gebruik let, want bij Opnieuw verandert het. Zet het met console.log in de Console.
@@ -1258,8 +1258,8 @@ Ongeveer 15 minuten · Je werkt in: `opdracht-8`
 
 === eindopdracht | Eindopdracht
 !!! opdracht eind "Bouw je spel Raad het getal"
-Je werkt in je map eindopdracht. Kopieer eerst alle bestanden en mappen uit opdracht-8 naar eindopdracht.
-{: .meta}
+    Je werkt in je map eindopdracht. Kopieer eerst alle bestanden en mappen uit opdracht-8 naar eindopdracht.
+    {: .meta}
 
     **Op je site staat:**
 
@@ -1297,10 +1297,10 @@ Zip de hele map module5-jouwnaam. Daarin zitten opdracht-1 tot en met opdracht-8
   {: .checklist}
 
 !!! tip "Zo maak je een zip"
-Rechtsklik op de map module5-jouwnaam en kies Comprimeren naar &gt; ZIP-bestand. Op oudere Windows: Kopiëren naar &gt; Gecomprimeerde map.
+    Rechtsklik op de map module5-jouwnaam en kies Comprimeren naar &gt; ZIP-bestand. Op oudere Windows: Kopiëren naar &gt; Gecomprimeerde map.
 
 !!! tip "Werk je thuis?"
-Je hebt VS Code en Chrome nodig. Kom je er niet uit? Schrijf je vraag op, met de rode fout uit de Console, en neem hem mee.
+    Je hebt VS Code en Chrome nodig. Kom je er niet uit? Schrijf je vraag op, met de rode fout uit de Console, en neem hem mee.
 
 Twijfel je of iets af is? Kijk bij Klaar als... bij die opdracht.
 
@@ -1316,7 +1316,7 @@ Open de Console. Daar staat meestal precies wat er misgaat.
 6. **Hoger en lager kloppen niet?** Ben je Number() vergeten? Of staan &gt; en &lt; verkeerd om? Zet console.log(gok, geheim) in je function en kijk wat er echt in staat.
 
 !!! tip "Nog steeds niet?"
-Vraag eerst een klasgenoot, daarna je docent. Laat de Console openstaan, dan zoeken jullie samen.
+    Vraag eerst een klasgenoot, daarna je docent. Laat de Console openstaan, dan zoeken jullie samen.
 
 === naslag | Naslag
 
@@ -1358,9 +1358,10 @@ knop.addEventListener("click", function () {
 ```
 
 !!! onthoud "Het recept"
-Vind het element met querySelector. Wacht op een klik met addEventListener. Verander de tekst met textContent of de opmaak met classList.
+    Vind het element met querySelector. Wacht op een klik met addEventListener. Verander de tekst met textContent of de opmaak met classList.
 
-!!! tip "Selectors" # voor een id, . voor een class, net als in CSS. In classList schrijf je de naam zonder punt.
+!!! tip "Selectors"
+    # voor een id, . voor een class, net als in CSS. In classList schrijf je de naam zonder punt.
 
 ## Het spel
 
@@ -1398,10 +1399,10 @@ let geheim = Math.floor(Math.random() * 100) + 1;
 ```
 
 !!! tip "Vergelijken"
-&gt; groter dan, &lt; kleiner dan, === is gelijk aan. Eén = geeft een waarde.
+    &gt; groter dan, &lt; kleiner dan, === is gelijk aan. Eén = geeft een waarde.
 
 !!! onthoud "Console"
-F12 en dan het tabblad Console. Rood is een fout: klik rechts op script.js met het regelnummer.
+    F12 en dan het tabblad Console. Rood is een fout: klik rechts op script.js met het regelnummer.
 
 === woordenlijst | Woordenlijst
 De Engelse woorden van module 5, met de Nederlandse vertaling en uitleg in gewone taal. De woorden van module 1 t/m 4 staan in de woordenlijst van die modules.

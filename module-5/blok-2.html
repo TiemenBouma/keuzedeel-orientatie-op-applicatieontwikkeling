@@ -84,8 +84,8 @@ small{color:#5b6075}
 &lt;/style&gt;&lt;div class=&quot;dt&quot;&gt;&lt;div class=&quot;tabs&quot;&gt;Elements &lt;b&gt;Console&lt;/b&gt; Sources&lt;/div&gt;&lt;div class=&quot;r&quot;&gt;&lt;span&gt;Sam&lt;/span&gt;&lt;u&gt;script.js:3&lt;/u&gt;&lt;/div&gt;&lt;div class=&quot;r&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;u&gt;script.js:4&lt;/u&gt;&lt;/div&gt;&lt;div class=&quot;r&quot;&gt;&lt;span&gt;10&lt;/span&gt;&lt;u&gt;script.js:7&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition tip">
 <p class="admonition-title">Namen in camelCase</p>
-</div>
 <p>Een naam heeft geen spaties. Bestaat hij uit meer woorden, dan plak je ze aan elkaar en begint elk nieuw woord met een hoofdletter: geheimGetal, raadKnop. Dat heet camelCase, omdat de hoofdletters bulten zijn, net als bij een kameel.</p>
+</div>
 <h2>Tekst en getallen</h2>
 <p class="sub">JavaScript kent het verschil tussen tekst en een getal.</p>
 <ol>
@@ -112,51 +112,54 @@ small{color:#5b6075}
 &lt;/style&gt;&lt;div class=&quot;dt&quot;&gt;&lt;div class=&quot;tabs&quot;&gt;Elements &lt;b&gt;Console&lt;/b&gt; Sources&lt;/div&gt;&lt;div class=&quot;r&quot;&gt;&lt;span&gt;18&lt;/span&gt;&lt;u&gt;script.js:4&lt;/u&gt;&lt;/div&gt;&lt;div class=&quot;r&quot;&gt;&lt;span&gt;Hoi Sam&lt;/span&gt;&lt;u&gt;script.js:5&lt;/u&gt;&lt;/div&gt;&lt;div class=&quot;r&quot;&gt;&lt;span&gt;55&lt;/span&gt;&lt;u&gt;script.js:6&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition let-op">
 <p class="admonition-title">"5" + 5 is geen 10</p>
-</div>
 <p>Is één van de twee tekst, dan wordt het samen tekst. "5" + 5 wordt dan "55". Dit kom je in blok 6 weer tegen bij een invoerveld.</p>
+</div>
 <details class="check">
 <summary>Check: variabelen</summary>
-</details>
 <p><strong>1. Het aantal pogingen wordt later groter. Hoe maak je die variabele?</strong></p>
-<div class="code"><pre><span></span><code>- A. `const pogingen = 0;`
-- B. `let pogingen = 0;`
-- C. `change pogingen = 0;`
-- D. `pogingen == 0;`
-
-**2. Wat staat er in de Console na console.log("3" + 4); ?**
-
-- A. 7
-- B. 34
-- C. `"3" + 4`
-- D. Een rode fout
-
-??? antwoord "Bekijk de antwoorden"
-    **1. B – `let pogingen = 0;`.** De waarde verandert later, dus gebruik je let. Met const krijg je een rode fout zodra je de waarde verandert. change bestaat niet, en == vergelijkt alleen, het geeft geen waarde.
-
-    **2. B – 34.** "3" staat tussen aanhalingstekens, dus het is tekst. Tekst + getal wordt samen tekst: 34. Er komt geen 7, want er wordt niet gerekend. Een fout is het ook niet: JavaScript plakt gewoon.
-</code></pre></div>
+<ul>
+<li>A. <code>const pogingen = 0;</code></li>
+<li>B. <code>let pogingen = 0;</code></li>
+<li>C. <code>change pogingen = 0;</code></li>
+<li>D. <code>pogingen == 0;</code></li>
+</ul>
+<p><strong>2. Wat staat er in de Console na console.log("3" + 4); ?</strong></p>
+<ul>
+<li>A. 7</li>
+<li>B. 34</li>
+<li>C. <code>"3" + 4</code></li>
+<li>D. Een rode fout</li>
+</ul>
+<details class="antwoord">
+<summary>Bekijk de antwoorden</summary>
+<p><strong>1. B – <code>let pogingen = 0;</code>.</strong> De waarde verandert later, dus gebruik je let. Met const krijg je een rode fout zodra je de waarde verandert. change bestaat niet, en == vergelijkt alleen, het geeft geen waarde.</p>
+<p><strong>2. B – 34.</strong> "3" staat tussen aanhalingstekens, dus het is tekst. Tekst + getal wordt samen tekst: 34. Er komt geen 7, want er wordt niet gerekend. Een fout is het ook niet: JavaScript plakt gewoon.</p>
+</details>
+</details>
 <div class="admonition opdracht">
 <p class="admonition-title">2. Maak je eerste variabelen</p>
-</div>
 <p class="meta">Ongeveer 10 minuten · Je werkt in: <code>opdracht-2</code></p>
-<div class="code"><pre><span></span><code>1. Kopieer alle bestanden en mappen uit opdracht-1 naar opdracht-2.
-2. Maak in script.js een variabele met je eigen naam. Kies zelf of je const of let gebruikt.
-3. Maak een const geheim met het getal 42. Maak ook een variabele pogingen die begint bij 0. Die moet later kunnen veranderen.
-4. Schrijf met console.log een zin in de Console, zoals Hoi Sam. Plak daarvoor tekst en je naam aan elkaar.
-5. Maak pogingen daarna 1 en schrijf pogingen opnieuw in de Console.
-6. Probeer ook geheim te veranderen naar 50. Lees de rode fout in de Console. Haal die regel daarna weer weg.
-
-??? hint "Codehint (niet het antwoord)"
-    ```js
-    const stad = "Utrecht";
-    let score = 0;
-    score = 5;
-    console.log("Ik woon in " + ...);
-    ```
-
-!!! klaar "Klaar als..."
-    In de Console staan je zin met je naam, en daarna de getallen 0 en 1. Je hebt de rode fout gezien en weer opgelost.
+<ol>
+<li>Kopieer alle bestanden en mappen uit opdracht-1 naar opdracht-2.</li>
+<li>Maak in script.js een variabele met je eigen naam. Kies zelf of je const of let gebruikt.</li>
+<li>Maak een const geheim met het getal 42. Maak ook een variabele pogingen die begint bij 0. Die moet later kunnen veranderen.</li>
+<li>Schrijf met console.log een zin in de Console, zoals Hoi Sam. Plak daarvoor tekst en je naam aan elkaar.</li>
+<li>Maak pogingen daarna 1 en schrijf pogingen opnieuw in de Console.</li>
+<li>Probeer ook geheim te veranderen naar 50. Lees de rode fout in de Console. Haal die regel daarna weer weg.</li>
+</ol>
+<details class="hint">
+<summary>Codehint (niet het antwoord)</summary>
+<div class="code"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">stad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Utrecht"</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Ik woon in "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">...);</span>
 </code></pre></div>
+</details>
+<div class="admonition klaar">
+<p class="admonition-title">Klaar als...</p>
+<p>In de Console staan je zin met je naam, en daarna de getallen 0 en 1. Je hebt de rode fout gezien en weer opgelost.</p>
+</div>
+</div>
     <div class="vorige-volgende"><a class="vorige" href="blok-1.html">← Blok 1 · Kennismaken</a><a class="volgende" href="blok-3.html">Blok 3 · Vind en verander →</a></div>
   </article>
 </div>

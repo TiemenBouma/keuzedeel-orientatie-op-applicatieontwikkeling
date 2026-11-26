@@ -74,8 +74,18 @@ small{color:#5b6075}
 &lt;/style&gt;&lt;div class=&quot;cl&quot;&gt;&lt;div class=&quot;st&quot;&gt;&lt;code style=&quot;border-color:#2965F1&quot;&gt;document&lt;/code&gt;&lt;span style=&quot;color:#2965F1&quot;&gt;de hele pagina&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;st&quot;&gt;&lt;code style=&quot;border-color:#E44D26&quot;&gt;.querySelector&lt;/code&gt;&lt;span style=&quot;color:#E44D26&quot;&gt;zoek een element&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;st&quot;&gt;&lt;code style=&quot;border-color:#1E8E4E&quot;&gt;(&quot;#melding&quot;)&lt;/code&gt;&lt;span style=&quot;color:#1E8E4E&quot;&gt;met deze selector&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="height:40px" onload="this.style.height=(this.contentDocument.body.offsetHeight+4)+'px'"></iframe></figure>
 <div class="admonition tip">
 <p class="admonition-title">Lees de regel van links naar rechts</p>
+<p>In gewone taal staat er: zoek in de pagina het element met de id melding.</p>
+<p><strong>Wat betekent de punt?</strong> De punt betekent: gebruik iets wat hierbij hoort. Links van de punt staat het ding. Rechts van de punt staat wat je van dat ding gebruikt.</p>
+<p><strong>Voorbeeld 1</strong></p>
+<div class="code"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#melding"</span><span class="p">);</span>
+</code></pre></div>
+<p>Links van de punt staat document, dus de pagina. Rechts van de punt staat querySelector. Dat is een functie die bij de pagina hoort. Samen betekent het: zoek in de pagina het element met de id melding.</p>
+<p><strong>Voorbeeld 2</strong></p>
+<div class="code"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">melding</span><span class="p">);</span>
+</code></pre></div>
+<p>Links van de punt staat console, dus de Console in Chrome. Rechts van de punt staat log. Dat is een functie die bij de Console hoort. Samen betekent het: schrijf melding op in de Console.</p>
+<p>Je kunt de punt dus lezen als "van", maar dan van rechts naar links: console.log is de log van de Console.</p>
 </div>
-<p>In gewone taal staat er: zoek in de pagina het element met de id melding. De punt tussen document en querySelector betekent: van de pagina.</p>
 <h2>De tekst veranderen</h2>
 <p class="sub">Met textContent zet je nieuwe tekst in een element.</p>
 <ol>

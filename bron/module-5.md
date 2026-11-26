@@ -425,7 +425,27 @@ small{color:#5b6075}
 ```
 
 !!! tip "Lees de regel van links naar rechts"
-In gewone taal staat er: zoek in de pagina het element met de id melding. De punt tussen document en querySelector betekent: van de pagina.
+    In gewone taal staat er: zoek in de pagina het element met de id melding.
+
+    **Wat betekent de punt?** De punt betekent: gebruik iets wat hierbij hoort. Links van de punt staat het ding. Rechts van de punt staat wat je van dat ding gebruikt.
+
+    **Voorbeeld 1**
+
+    ```js
+    document.querySelector("#melding");
+    ```
+
+    Links van de punt staat document, dus de pagina. Rechts van de punt staat querySelector. Dat is een functie die bij de pagina hoort. Samen betekent het: zoek in de pagina het element met de id melding.
+
+    **Voorbeeld 2**
+
+    ```js
+    console.log(melding);
+    ```
+
+    Links van de punt staat console, dus de Console in Chrome. Rechts van de punt staat log. Dat is een functie die bij de Console hoort. Samen betekent het: schrijf melding op in de Console.
+
+    Je kunt de punt dus lezen als "van", maar dan van rechts naar links: console.log is de log van de Console.
 
 ## De tekst veranderen
 
